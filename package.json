@@ -1,0 +1,18 @@
+{
+  "name": "vision-grid-express",
+  "version": "1.0.0",
+  "description": "Goals and projects planning using Unsplash API",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "author": "James Kernicky",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

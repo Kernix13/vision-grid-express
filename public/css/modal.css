@@ -1,0 +1,126 @@
+/* 4 modal styles in style.css for the buttons, and 1 in a media query for .modal */
+.modal-container {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  display: flex;
+  gap: 1rem;
+
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  /* Do I need a box-shadow? */
+  box-shadow: 0 0 10px rgba(128, 128, 128, 0.8);
+
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 90%;
+  height: auto;
+
+  animation-name: modalopen;
+  animation-duration: 1000ms;
+}
+
+.modal-text {
+  margin: 0;
+}
+
+/* Landscape layout: image above buttons */
+.modal.landscape {
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal.landscape .modal-image {
+  width: 65vw;
+  height: auto;
+  max-height: 80vh;
+}
+
+.modal.landscape .modal-buttons {
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Portrait layout: image beside buttons */
+.modal.portrait {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.portrait .modal-image {
+  height: 90vh;
+  width: auto;
+  max-width: 60vw;
+}
+
+.modal.portrait .modal-buttons {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.modal-save:hover,
+.modal-remove:hover {
+  border: 1px solid white;
+}
+
+.modal .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.125rem .5rem 0.5rem;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.modal .prev,
+.modal .next {
+  background-color: #555;
+  border: 1px solid transparent;
+}
+
+.modal .prev:hover,
+.modal .next:hover {
+  border: 1px solid #fff;
+}
+
+.modal .prev {
+  left: 0.5rem;
+}
+
+.modal .next {
+  right: 0.5rem;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

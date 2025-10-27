@@ -1,0 +1,124 @@
+body {
+  overflow-x: hidden;
+}
+
+.board-page {
+  margin-top: 3rem;
+}
+
+.board-container {
+  width: 95%;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.layout-one {
+  margin-bottom: 3rem;
+}
+
+.thumbnails-btn {
+  font: inherit;
+  font-size: 1.125rem;
+  position: absolute;
+  top: 6.5rem;
+  right: 0;
+  max-width: 16rem;
+}
+
+/* Board page styles */
+.thumbnail-wrapper {
+  position: relative;
+  margin: 4rem 0 2rem;
+}
+
+.thumbnails {
+  position: absolute;
+  top: 0;
+  right: -4rem;
+  width: 100px;
+  max-height: 100vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: white;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.thumbnails.offscreen {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* visible */
+.thumbnails.onscreen {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.thumbnails>* {
+  border: 1px solid black;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnails img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.image-text {
+  margin: 1rem 0;
+  display: flex;
+
+  gap: 1rem;
+}
+
+.regular {
+  max-width: 100%;
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.project-layout {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1rem;
+}
+
+.editable {
+  margin: 0;
+  padding: 1rem 1rem;
+  background-color: #efefef;
+  color: #111;
+  caret-color: red;
+  text-align: left;
+  width: 50%;
+}
+
+/* goal-heading, figure and goal are old styles - I may not keep these */
+.goal-heading {
+  margin-top: 4rem;
+}
+
+figure {
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.goal {
+  padding: 1rem 0;
+  background-color: #eee;
+  color: #111;
+}
+
+.goal h3 {
+  margin: 0;
+}

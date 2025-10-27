@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Tags -->
+  <title>VisualGrid | My Vision Board</title>
+  <link rel="canonical" href="https://yourdomain.com/board">
+  <meta name="title" content="VisualGrid | My Vision Board">
+  <meta name="description"
+    content="Organize your saved images, add notes, and visualize your goals and projects on your personal VisualGrid board.">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="VisualGrid">
+  <meta property="og:title" content="VisualGrid | My Vision Board">
+  <meta property="og:description"
+    content="Organize your saved images, add notes, and visualize your goals and projects on your personal VisualGrid board.">
+  <meta property="og:url" content="https://yourdomain.com/board">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yourdomain.com/og-image-board.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VisualGrid | My Vision Board">
+  <meta name="twitter:description"
+    content="Organize your saved images, add notes, and visualize your goals and projects on your personal VisualGrid board.">
+  <meta name="twitter:image" content="https://yourdomain.com/twitter-image-board.jpg">
+
+  <!-- Favicon, Font Awesome and Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+
+  <header aria-label="top navigation bar">
+    <div class="container">
+
+      <nav class="nav-bar" aria-label="Main navigation">
+        <span class="logo"><a class="home-link" href="index.html">vG</a></span>
+
+        <button id="hamburger" class="hamburger" aria-label="open navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="./board.html" class="nav-link">Your Board</a></li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <form id="settings-form" class="settings-form offscreen" aria-label="Do I need this">
+    <h3 class="settings-form-title">Project boards settings</h3>
+    <!-- Instruments -->
+    <div id="instrument-list" class="instrument-list">
+      <div class="select-radio">
+        <label for="instruments">Select board name:</label>
+        <select name="instruments" id="instruments" class="select instruments" aria-label="Default select example">
+          <option value="1" data-length="6">Board 1</option>
+          <option value="2" data-length="5">Board 2</option>
+          <option value="3" data-length="4">Board 3</option>
+        </select>
+      </div>
+
+      <!-- Landscape/Portrait radio buttons -->
+      <fieldset>
+        <legend>Landscape image text field:</legend>
+        <div id="landscape-position" class="landscape-position">
+          <div>
+            <input type="radio" name="landscape-above-below" id="above" value="above" />
+            <label for="above">Above</label>
+          </div>
+
+          <div>
+            <input type="radio" name="landscape-above-below" id="below" value="below" checked="" />
+            <label for="below">Below</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Portrait image text field:</legend>
+        <div id="potrait-position" class="potrait-position">
+          <div>
+            <input type="radio" name="portrait-above-below" id="left" value="left" />
+            <label for="left">Left</label>
+          </div>
+
+          <div>
+            <input type="radio" name="portrait-above-below" id="right" value="right" checked="" />
+            <label for="right">Right</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+
+  <button id="settings-btn" class="settings-btn">Hide Settings</button>
+
+  <main>
+    <div class="board-container">
+      <h1 class="board-page">Your Project Board</h1>
+
+      <h2 class="layout-one">Layout One - Project based: focus is on the large editable text block.</h2>
+
+      <button id="thumbnails-btn" class="thumbnails-btn">Show thumbnails</button>
+      <div class="thumbnail-wrapper">
+        <div class="thumbnails offscreen"></div>
+      </div>
+
+      <div id="img-text-container" class="img-text-container">
+        <!-- <div id="image-text" class="image-text"></div> -->
+      </div>
+
+      <h2 class="goal-heading layout-two">Layout Two - Goal & Affirmation based: focus is one the figcaption below the
+        image.</h2>
+      <p>For this to be a vision board with a goal or a mantra or an affirmation below each image</p>
+
+      <div class="goal-layout">
+        <figure>
+          <!-- <img src="./images/1080px.jfif" alt=""> -->
+          <figcaption class="goal" contenteditable="true">
+            <h3>Mantra, affirmation, or goal goes here...</h3>
+          </figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <!-- <button id="open" class="clear-btn">Open modal</button> -->
+    <div class="container">
+      <p>Footer content here</p>
+    </div>
+  </footer>
+
+  <!-- <div class="modal-container" id="modal-bg">
+    <button class="close-btn" id="close" aria-label="Close">
+      <i class="fa fa-times"></i>
+    </button>
+    <div class="modal"></div>
+  </div> -->
+
+
+  <script src="./js/board.js" type="module"></script>
+</body>
+
+</html>

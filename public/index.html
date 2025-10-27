@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Tags -->
+  <title>VisualGrid | Explore and Save Inspiring Images</title>
+  <link rel="canonical" href="https://yourdomain.com/">
+  <meta name="title" content="VisualGrid | Explore and Save Inspiring Images">
+  <meta name="description"
+    content="Search, save, and visualize images for your personal projects and goals using VisualGrid. Find inspiration and build your vision.">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="VisualGrid">
+  <meta property="og:title" content="VisualGrid | Explore and Save Inspiring Images">
+  <meta property="og:description"
+    content="Search, save, and visualize images for your personal projects and goals using VisualGrid.">
+  <meta property="og:url" content="https://yourdomain.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yourdomain.com/og-image-home.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VisualGrid | Explore and Save Inspiring Images">
+  <meta name="twitter:description"
+    content="Search, save, and visualize images for your personal projects and goals using VisualGrid.">
+  <meta name="twitter:image" content="https://yourdomain.com/twitter-image-home.jpg">
+
+  <!-- Favicon, Font Awesome and Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+
+  <header aria-label="top navigation bar">
+    <div class="container">
+      <nav class="nav-bar" aria-label="Main navigation">
+        <span class="logo"><a class="home-link" href="index.html">vG</a></span>
+        <button id="hamburger" class="hamburger" aria-label="open navigation" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="./board.html" class="nav-link">Your Board</a></li>
+          <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Search images that reflect your goal</h1>
+      <form id="search-form" class="search-form" aria-label="Find images supporting your project">
+        <input type="search" spellcheck="true" title="Search Unsplash" autocomplete="off" aria-autocomplete="list"
+          name="search" id="search" placeholder="Enter your search phrase . . .">
+      </form>
+
+      <div id="search-terms" class="search-terms"></div>
+      <button id="clear-searches" class="clear-searches">Start new search & clear search results</button>
+
+      <h2 id="results-title" class="results-title"></h2>
+      <div id="search-grid" class="search-grid"></div>
+
+      <button id="load-more" class="load-more"></button>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Footer content here</p>
+    </div>
+  </footer>
+
+  <div class="modal-container" id="modal-bg">
+    <button class="close-btn" id="close" aria-label="Close">
+      <i class="fa fa-times"></i>
+    </button>
+    <div class="modal"></div>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
