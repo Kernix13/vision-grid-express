@@ -1,9 +1,4 @@
-"use strict";
-
-import { setLocalStorage, getLocalStorage, removeLocalStorage } from "./utils/localStorage.js";
-import { menuButton, closeMenu } from "./ui/menu.js";
-
-async function fetchData() {
+export async function fetchData() {
   const DOMAIN = 'http://localhost:8080';
   try {
     const response = await fetch(DOMAIN + '/api/photos');
