@@ -72,3 +72,13 @@ form.addEventListener('submit', e => {
 
   input.value = '';
 });
+
+// 3. Open/close hamburger menu
+hamburger.addEventListener("click", () => {
+  menuButton(hamburger, navMenu);
+})
+
+// 4.Close mobile menu (only useful for on-page anchor links) 
+navLinks.forEach(n => n.addEventListener("click", () => {
+  closeMenu(hamburger, navMenu);
+}))
