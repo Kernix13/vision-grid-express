@@ -4,6 +4,9 @@ import { setLocalStorage, getLocalStorage, removeLocalStorage } from "./utils/lo
 import { menuButton, closeMenu } from "./ui/menu.js";
 import { onPageVisits } from "./ui/initPage.js";
 import { getSearchResults } from "./api/unsplash.js";
+import { saveSearchTerm, renderSearchEls } from "./ui/searchEls.js";
+import { addRemoveClass } from "./utils/classUtils.js";
+import { createImgCard } from "./ui/cards.js";
 
 // Form
 const form = document.getElementById('search-form');
@@ -28,27 +31,13 @@ const navLinks = document.querySelectorAll(".nav-link");
 let searchPage = 0;
 const savedSearches = getLocalStorage('search-phrases') || [];
 
-// async function fetchData() {
-//   const DOMAIN = 'http://localhost:8080';
-//   try {
-//     const response = await fetch(DOMAIN + '/api/photos');
-//     if (!response.ok) {
-//       throw new Error(`Response status: ${response.status}`);
-//     }
-//     const data = await response.json();
-//     console.log(data);
-//   } catch (err) {
-//     console.error(err);
-//   }
-// }
-
 /**
  * * EVENT LISTENERS
 */
 
 // 1. Set initial state on visit to home page
 document.addEventListener("DOMContentLoaded", onPageVisits);
-
+const images = getLocalStorage('fetched-search-results') || [];
 // 2. Search form event listener
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -58,11 +47,11 @@ form.addEventListener('submit', e => {
     console.log(`Initial search for '${input.value}', page ${searchPage}`)
     searchGrid.textContent = '';
 
-    getSearchResults(input.value, searchPage);
+    getSearchResults(input.value, searchPage, searchGrid);
     console.log(input.value)
 
-    // saveSearchTerm(input.value, searchTerms, savedSearches)
-    // renderSearchEls(input.value);
+    saveSearchTerm(input.value, searchTerms, savedSearches)
+    renderSearchEls(input.value);
 
     setLocalStorage('current-search', {
       search: input.value,
@@ -75,9 +64,9 @@ form.addEventListener('submit', e => {
     setLocalStorage('search-phrases-page', searchPhrasesPages);
   }
 
-  // addRemoveClass(clearSearches, 'inline', 'none');
-  // addRemoveClass(loadMore, 'inline', 'none');
-  // addRemoveClass(resultsTitle, 'block', 'none');
+  addRemoveClass(clearSearches, 'inline', 'none');
+  addRemoveClass(loadMore, 'inline', 'none');
+  addRemoveClass(resultsTitle, 'block', 'none');
   
   resultsTitle.scrollIntoView({ behavior: 'smooth' });
 
