@@ -1,4 +1,4 @@
-export async function fetchData() {
+export async function getSearchResults() {
   const DOMAIN = 'http://localhost:8080';
   try {
     const response = await fetch(DOMAIN + '/api/photos');
@@ -11,4 +11,4 @@ export async function fetchData() {
     console.error(err);
   }
 }
-fetchData();
+getSearchResults();

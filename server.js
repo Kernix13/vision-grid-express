@@ -12,8 +12,8 @@ app.get('/api/photos', async (req, res) => {
   const BASE_URL = 'https://api.unsplash.com/search/photos';
   const endpoint = `?query=beaches&per_page=12&page=1&client_id=${process.env.CLIENT_ID}`;
   try {
-    const apiResponse = await fetch(BASE_URL + endpoint);
-    const data = await apiResponse.json();
+    const response = await fetch(BASE_URL + endpoint);
+    const data = await response.json();
     res.json(data);
   } catch (err) {
     console.error(err);
