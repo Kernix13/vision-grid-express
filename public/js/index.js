@@ -25,7 +25,7 @@ const navMenu = document.getElementById("nav-menu");
 const navLinks = document.querySelectorAll(".nav-link");
 
 // Why do I have these in the global scope? 
-let page = 0;
+let searchPage = 0;
 const savedSearches = getLocalStorage('search-phrases') || [];
 
 // async function fetchData() {
@@ -50,29 +50,36 @@ const savedSearches = getLocalStorage('search-phrases') || [];
 document.addEventListener("DOMContentLoaded", onPageVisits);
 
 // 2. Search form event listener
-form.addEventListener('submit', async e => {
+form.addEventListener('submit', e => {
   e.preventDefault();
 
   if (input.value) {
-    page = 1;
+    searchPage = 1;
+    console.log(`Initial search for '${input.value}', page ${searchPage}`)
     searchGrid.textContent = '';
 
-    const results = await getSearchResults(input.value, page);
-    if (results) {
-      console.log(input.value)
-      // call your render function here, e.g. renderSearchResults(results)
-    }
+    getSearchResults(input.value, searchPage);
+    console.log(input.value)
+
+    // saveSearchTerm(input.value, searchTerms, savedSearches)
+    // renderSearchEls(input.value);
 
     setLocalStorage('current-search', {
       search: input.value,
-      page: page,
+      page: searchPage,
     });
 
-    const newSearch = { search: input.value, page: page };
+    const newSearch = { search: input.value, page: searchPage };
     const searchPhrasesPages = getLocalStorage('search-phrases-page') || [];
     searchPhrasesPages.push(newSearch);
     setLocalStorage('search-phrases-page', searchPhrasesPages);
   }
+
+  // addRemoveClass(clearSearches, 'inline', 'none');
+  // addRemoveClass(loadMore, 'inline', 'none');
+  // addRemoveClass(resultsTitle, 'block', 'none');
+  
+  resultsTitle.scrollIntoView({ behavior: 'smooth' });
 
   input.value = '';
 });
