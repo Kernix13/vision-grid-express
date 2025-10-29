@@ -99,8 +99,23 @@ loadMore.addEventListener('click', () => {
 })
 
 // 5. Search terms fetch
-// Issue #9: Create function to fetch more results for search phrases buttons
-// branch: core/search-terms-fetch | commit msg: "core: fetch more results on search terms click"
+searchTerms.addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if (!btn) return; 
+
+  const searchTerm = btn.textContent;
+  
+  const page = incrementSearchPage(searchTerm);
+  console.log(`Clicked search term for '${searchTerm}', page # ${page}`)
+
+  searchGrid.textContent = '';
+  
+  getSearchResults(searchTerm, page, searchGrid);
+  
+  setLocalStorage('last-search', searchTerm);
+  saveSearchTerm(searchTerm, searchTerms, savedSearches)
+  renderSearchEls(searchTerm);
+});
 
 // 6. Search images grid: Save and Remove buttons
 // Issue #6: Create function to remove a result card from the DOM
