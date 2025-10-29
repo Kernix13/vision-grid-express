@@ -1,3 +1,4 @@
+/* Why do I have this? Consider removing */
 body {
   overflow-x: hidden;
 }
@@ -61,7 +62,7 @@ body {
   pointer-events: auto;
 }
 
-.thumbnails>* {
+.thumbnails > * {
   border: 1px solid black;
   transition: opacity 0.3s ease;
 }

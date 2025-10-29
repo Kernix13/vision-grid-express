@@ -4,34 +4,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --white: #ffffff;
-  --black: #000000;
-  --text: #333333;
-  --middle-gray: #787878;
-  --primary-light: hsl(231, 10%, 80%);
-  --primary-dark: hsl(231, 28%, 25%);
-  --accent: hsl(39, 63%, 53%);
-  --link-hover: hsl(39, 97%, 28%);
-}
-
-/* I need to get this for the Logo */
-@font-face {
-  font-family: "Dancing Script";
-  src: url("./fonts/DancingScript-Regular.ttf");
-  format: "ttf";
-  font-style: normal;
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: "Dancing Script";
-  src: url("./fonts/DancingScript-Medium.ttf");
-  format: "ttf";
-  font-style: normal;
-  font-weight: 600;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -39,6 +11,27 @@ html {
 body {
   margin: 0;
   padding: 0;
+  text-rendering: optimizeSpeed;
+}
+
+blockquote,
+body,
+figure,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-stretch: 100%;
+  font-weight: 700;
+  line-height: 1.1;
 }
 
 ul {
@@ -49,12 +42,14 @@ ul {
 
 img {
   max-width: 100%;
+  // display: block;
 }
 
 button,
 input,
-textarea,
-select {
-  /* inherit all the font settings from the body or html elements */
+optgroup,
+select,
+textarea {
   font: inherit;
+  margin: 0;
 }

@@ -50,15 +50,15 @@
   margin-bottom: 0.5rem;
 }
 
-/* instrument-list */
-.instrument-list,
-.tunings {
+/* board-list */
+.board-list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.375rem;
 }
 
 /* select-radio */
+/* this class is on the container for the select element - WRONG! */
 .select-radio {
   display: grid;
   gap: 1rem;
@@ -80,6 +80,7 @@ option {
   font-size: 1rem;
 }
 
+/* I do not think this works, but the JS has not been created yet */
 option:hover {
   color: white;
   background-color: black;
@@ -99,7 +100,7 @@ button {
   border: 1px solid black;
 }
 
-/* fieldset legend - no css */
+/* fieldset, legend: no css */
 /* key */
 .potrait-position, .landscape-position {
   display: flex;
