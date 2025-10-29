@@ -5,7 +5,7 @@ import { onPageVisits } from "./ui/initPage.js";
 // Functions used in form event listener
 import { setLocalStorage, getLocalStorage } from "./utils/localStorage.js";
 import { getSearchResults } from "./api/unsplash.js";
-import { saveSearchTerm, renderSearchEls } from "./ui/searchEls.js";
+import { saveSearchTerm, renderSearchEls, clearSearchElements } from "./ui/searchEls.js";
 import { addRemoveClass } from "./utils/classUtils.js";
 // Hamburger menu listener
 import { menuButton } from "./ui/menu.js";
@@ -77,9 +77,12 @@ form.addEventListener('submit', e => {
 
 // 3. Clear save searches and related buttons from the DOM
 // Issue #7: Create function for clear-searches button
-// branch: ui/clear-searches-btn | commit msg: "ui: clear ui of all search elements"
+// branch: ui/clear-searches | commit msg: "ui: clear ui of all search elements"
 clearSearches.addEventListener('click', (e) => {
-  console.log('clear-searches button clicked');
+  // These 2 lines added to clear an Aria warning in console
+  e.target.inert = true;
+  e.target.hidden = true;
+  clearSearchElements();
 });
 
 // 4. Load More button fetch (uses fetchFromButtons)
