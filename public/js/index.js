@@ -9,6 +9,8 @@ import { saveSearchTerm, renderSearchEls, clearSearchElements } from "./ui/searc
 import { addRemoveClass } from "./utils/classUtils.js";
 // Hamburger menu listener
 import { menuButton } from "./ui/menu.js";
+// searchGrid listener
+import { removeImageCard } from "./ui/cards.js";
 
 // Form
 const form = document.getElementById('search-form');
@@ -118,8 +120,14 @@ searchTerms.addEventListener('click', (e) => {
 });
 
 // 6. Search images grid: Save and Remove buttons
-// Issue #6: Create function to remove a result card from the DOM
-// branch: ui/remove-card | commit msg: "remove card from DOM, save image object to storage" 
+searchGrid.addEventListener('click', e => {
+  removeImageCard(e)
+
+  const renderedImages = searchGrid.querySelectorAll('img')
+  if (renderedImages.length === 0) {
+    addRemoveClass(resultsTitle, 'none', 'block');
+  }
+});
 
 // 7. Search images grid: open image in modal on image click
 // Issue #5: Create functionality for modal
