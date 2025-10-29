@@ -37,7 +37,7 @@
 </head>
 
 <body>
-  <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
+  <a href="#main" class="skip-to-content">Skip to main content</a>
 
   <header aria-label="top navigation bar">
     <div class="container">
@@ -64,10 +64,10 @@
   <form id="settings-form" class="settings-form offscreen" aria-label="Do I need this">
     <h3 class="settings-form-title">Project boards settings</h3>
     <!-- Instruments -->
-    <div id="instrument-list" class="instrument-list">
+    <div id="board-list" class="board-list">
       <div class="select-radio">
-        <label for="instruments">Select board name:</label>
-        <select name="instruments" id="instruments" class="select instruments" aria-label="Default select example">
+        <label for="boards">Select board name:</label>
+        <select name="boards" id="boards" class="select boards" aria-label="Default select example">
           <option value="1" data-length="6">Board 1</option>
           <option value="2" data-length="5">Board 2</option>
           <option value="3" data-length="4">Board 3</option>
@@ -109,7 +109,7 @@
 
   <button id="settings-btn" class="settings-btn">Hide Settings</button>
 
-  <main>
+  <main id="main">
     <div class="board-container">
       <h1 class="board-page">Your Project Board</h1>
 
