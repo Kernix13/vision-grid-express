@@ -3,7 +3,7 @@
 // For DOMContentLoaded listener
 import { onPageVisits } from "./ui/initPage.js";
 // Functions used in form event listener
-import { setLocalStorage, getLocalStorage } from "./utils/localStorage.js";
+import { setLocalStorage, getLocalStorage, incrementSearchPage } from "./utils/localStorage.js";
 import { getSearchResults } from "./api/unsplash.js";
 import { saveSearchTerm, renderSearchEls, clearSearchElements } from "./ui/searchEls.js";
 import { addRemoveClass } from "./utils/classUtils.js";
@@ -46,7 +46,7 @@ form.addEventListener('submit', e => {
   if (input.value) {
     searchPage = 1;
     // Log page # to check against other page # calculations - remove later
-    console.log(`Initial search for '${input.value}', page ${searchPage}`)
+    console.log(`Initial search for '${input.value}', page # ${searchPage}`)
     searchGrid.textContent = '';
 
     getSearchResults(input.value, searchPage, searchGrid);
@@ -76,8 +76,6 @@ form.addEventListener('submit', e => {
 });
 
 // 3. Clear save searches and related buttons from the DOM
-// Issue #7: Create function for clear-searches button
-// branch: ui/clear-searches | commit msg: "ui: clear ui of all search elements"
 clearSearches.addEventListener('click', (e) => {
   // These 2 lines added to clear an Aria warning in console
   e.target.inert = true;
@@ -86,10 +84,18 @@ clearSearches.addEventListener('click', (e) => {
 });
 
 // 4. Load More button fetch (uses fetchFromButtons)
-// Issue #8: Create function to fetch more results for current search
-// branch: core/load-more-fetch | commit msg: "core: fetch more results on load-more click" 
 loadMore.addEventListener('click', () => {
-  console.log('load-more button clicked');
+  const lastSearch = getLocalStorage('last-search');
+  const page = incrementSearchPage(lastSearch);
+
+  console.log(`Clicked load more for '${lastSearch}', page # ${page}`);
+
+  searchGrid.textContent = '';
+  getSearchResults(lastSearch, page, searchGrid);
+
+  saveSearchTerm(lastSearch, searchTerms, savedSearches);
+  renderSearchEls(lastSearch);
+
 })
 
 // 5. Search terms fetch
