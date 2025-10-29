@@ -77,24 +77,29 @@ form.addEventListener('submit', e => {
 
 // 3. Clear save searches and related buttons from the DOM
 // Issue #7: Create function for clear-searches button
+// branch: ui/clear-searches-btn | commit msg: "ui: clear ui of all search elements"
 clearSearches.addEventListener('click', (e) => {
   console.log('clear-searches button clicked');
 });
 
 // 4. Load More button fetch (uses fetchFromButtons)
 // Issue #8: Create function to fetch more results for current search
+// branch: core/load-more-fetch | commit msg: "core: fetch more results on load-more click" 
 loadMore.addEventListener('click', () => {
   console.log('load-more button clicked');
 })
 
 // 5. Search terms fetch
 // Issue #9: Create function to fetch more results for search phrases buttons
+// branch: core/search-terms-fetch | commit msg: "core: fetch more results on search terms click"
 
 // 6. Search images grid: Save and Remove buttons
 // Issue #6: Create function to remove a result card from the DOM
+// branch: ui/remove-card | commit msg: "remove card from DOM, save image object to storage" 
 
 // 7. Search images grid: open image in modal on image click
 // Issue #5: Create functionality for modal
+// branch: core/image-modal | commit msg: "core: open image in modal on image click"
 
 // 8. Modal listeners: Close modal on click of: 1. close button, 2. window
 
