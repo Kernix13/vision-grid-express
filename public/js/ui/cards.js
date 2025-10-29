@@ -1,3 +1,4 @@
+import { getLocalStorage, setLocalStorage } from "../utils/localStorage.js";
 
 export function createImgCard(arr, element) {
   arr.forEach(obj => {
