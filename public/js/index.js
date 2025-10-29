@@ -1,12 +1,14 @@
 "use strict";
 
-import { setLocalStorage, getLocalStorage, removeLocalStorage } from "./utils/localStorage.js";
-import { menuButton, closeMenu } from "./ui/menu.js";
+// For DOMContentLoaded listener
 import { onPageVisits } from "./ui/initPage.js";
+// Functions used in form event listener
+import { setLocalStorage, getLocalStorage } from "./utils/localStorage.js";
 import { getSearchResults } from "./api/unsplash.js";
 import { saveSearchTerm, renderSearchEls } from "./ui/searchEls.js";
 import { addRemoveClass } from "./utils/classUtils.js";
-import { createImgCard } from "./ui/cards.js";
+// Hamburger menu listener
+import { menuButton } from "./ui/menu.js";
 
 // Form
 const form = document.getElementById('search-form');
@@ -18,16 +20,16 @@ const loadMore = document.getElementById('load-more');
 // Search grid
 const searchGrid = document.getElementById('search-grid');
 const resultsTitle = document.getElementById('results-title');
-/* Modal - HOME & MAYBE BOARD PAGE (though with changes)  */
-const close = document.getElementById('close');
-const modalBg = document.getElementById('modal-bg');
-const innerModal = document.querySelector('.modal');
 // Mobile menu elements
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
-const navLinks = document.querySelectorAll(".nav-link");
+// Modal 1 - HOME PAGE
+const close = document.getElementById('close');
+const modalBg = document.getElementById('modal-bg');
+const innerModal = document.querySelector('.modal');
 
-// Why do I have these in the global scope? 
+
+// Why do I have these in the global scope? Do I need them here?
 let searchPage = 0;
 const savedSearches = getLocalStorage('search-phrases') || [];
 
@@ -37,13 +39,14 @@ const savedSearches = getLocalStorage('search-phrases') || [];
 
 // 1. Set initial state on visit to home page
 document.addEventListener("DOMContentLoaded", onPageVisits);
-const images = getLocalStorage('fetched-search-results') || [];
+
 // 2. Search form event listener
 form.addEventListener('submit', e => {
   e.preventDefault();
 
   if (input.value) {
     searchPage = 1;
+    // Log page # to check against other page # calculations - remove later
     console.log(`Initial search for '${input.value}', page ${searchPage}`)
     searchGrid.textContent = '';
 
@@ -58,10 +61,10 @@ form.addEventListener('submit', e => {
       page: searchPage,
     });
 
-    const newSearch = { search: input.value, page: searchPage };
-    const searchPhrasesPages = getLocalStorage('search-phrases-page') || [];
-    searchPhrasesPages.push(newSearch);
-    setLocalStorage('search-phrases-page', searchPhrasesPages);
+    const saveNewSearch = { search: input.value, page: searchPage };
+    const searchPhrasesPage = getLocalStorage('search-phrases-page') || [];
+    searchPhrasesPage.push(saveNewSearch);
+    setLocalStorage('search-phrases-page', searchPhrasesPage);
   }
 
   addRemoveClass(clearSearches, 'inline', 'none');
@@ -77,8 +80,3 @@ form.addEventListener('submit', e => {
 hamburger.addEventListener("click", () => {
   menuButton(hamburger, navMenu);
 })
-
-// 4.Close mobile menu (only useful for on-page anchor links) 
-navLinks.forEach(n => n.addEventListener("click", () => {
-  closeMenu(hamburger, navMenu);
-}))

@@ -2,11 +2,11 @@ import { setLocalStorage, getLocalStorage } from "../utils/localStorage.js";
 import { addSearchTerm, addSearchText } from "./searchEls.js";
 import { createImgCard } from "./cards.js";
 
-const clearSearches = document.getElementById('clear-searches');
-const loadMore = document.getElementById('load-more');
-const resultsTitle = document.getElementById('results-title');
 const searchTerms = document.getElementById('search-terms');
+const clearSearches = document.getElementById('clear-searches');
+const resultsTitle = document.getElementById('results-title');
 const searchGrid = document.getElementById('search-grid');
+const loadMore = document.getElementById('load-more');
 
 // 1. For Home page DOMContentLoaded listener
 export function onPageVisits() {
