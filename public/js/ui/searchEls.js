@@ -1,8 +1,11 @@
-import { setLocalStorage, getLocalStorage } from "../utils/localStorage.js";
+import { setLocalStorage, getLocalStorage, removeLocalStorage } from "../utils/localStorage.js";
+import { addRemoveClass } from "../utils/classUtils.js";
 
 const searchTerms = document.getElementById('search-terms');
-const loadMore = document.getElementById('load-more');
+const clearSearches = document.getElementById('clear-searches');
 const resultsTitle = document.getElementById('results-title');
+const searchGrid = document.getElementById('search-grid');
+const loadMore = document.getElementById('load-more');
 
 export function saveSearchTerm(str, el, arr) {
   if (str !== arr[arr.length - 1]) {
@@ -45,9 +48,10 @@ export function addSearchTerm(parent, arr) {
 export function clearSearchElements() {
   setLocalStorage('search-phrases', []);
   setLocalStorage('search-phrases-page', []);
-  removeLocalStorageItem('fetched-search-results')
-  removeLocalStorageItem('last-search')
-  removeLocalStorageItem('current-search')
+
+  removeLocalStorage('fetched-search-results')
+  removeLocalStorage('last-search')
+  removeLocalStorage('current-search')
 
   searchTerms.textContent = '';
   searchGrid.textContent = '';
@@ -58,7 +62,5 @@ export function clearSearchElements() {
   addRemoveClass(loadMore, 'none', 'inline');
 
   resultsTitle.textContent = '';
-  addRemoveClass(resultsTitle, 'none', 'inline');
-
-  input.value = '';
+  addRemoveClass(resultsTitle, 'none', 'block');
 }
