@@ -28,7 +28,6 @@ const close = document.getElementById('close');
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
-
 // Why do I have these in the global scope? Do I need them here?
 let searchPage = 0;
 const savedSearches = getLocalStorage('search-phrases') || [];
@@ -76,7 +75,25 @@ form.addEventListener('submit', e => {
   input.value = '';
 });
 
-// 3. Open/close hamburger menu
+// 3. Clear save searches and related buttons from the DOM
+clearSearches.addEventListener('click', (e) => {
+  console.log('clear-searches button clicked');
+});
+
+// 4. Load More button fetch (uses fetchFromButtons)
+loadMore.addEventListener('click', () => {
+  console.log('load-more button clicked');
+})
+
+// 5. Search terms fetch
+
+// 6. Search images grid: Save and Remove buttons
+
+// 7. Search images grid: open image in modal on image click
+
+// 8. Modal listeners: Close modal on click of: 1. close button, 2. window
+
+// 9. Open/close hamburger menu
 hamburger.addEventListener("click", () => {
   menuButton(hamburger, navMenu);
 })
