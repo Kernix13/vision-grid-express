@@ -1,5 +1,6 @@
 import { setLocalStorage, getLocalStorage } from "../utils/localStorage.js";
 
+const searchTerms = document.getElementById('search-terms');
 const loadMore = document.getElementById('load-more');
 const resultsTitle = document.getElementById('results-title');
 
