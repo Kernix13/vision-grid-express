@@ -1,6 +1,5 @@
 import { getLocalStorage, setLocalStorage } from "../utils/localStorage.js";
 
-const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
 // WHAT IMAGE SIZE AM I LOADING? It should be .regular, I think it is .small
@@ -26,16 +25,26 @@ export function setModalContent(element, item, id) {
 
   // Detect aspect ratio for layout
   image.onload = () => {
-    element.classList.remove('portrait', 'landscape');
-    if (image.naturalHeight > image.naturalWidth) {
-      element.classList.add('portrait');
-    } else {
+    const { naturalWidth: w, naturalHeight: h } = image;
+    const ratio = w / h; 
+    const tolerance = 0.15; 
+    
+    let orientation;
+    
+    element.classList.remove('portrait', 'landscape', 'square');
+
+    if (Math.abs(1 - ratio) <= tolerance) {
+      element.classList.add('square');
+    } else if (w > h) {
       element.classList.add('landscape');
+    } else {
+      element.classList.add('portrait');
     }
+
   };
 }
 
-/* HELPER FUNCTION 1 */
+/* HELPER FUNCTION 1: prev and next buttons */
 function modalNav(btnsContainer, id, innerModal) {
   const navItems = [
     { name: 'prev', symbol: '<', direction: -1 },
@@ -65,7 +74,7 @@ function modalNav(btnsContainer, id, innerModal) {
   });
 }
 
-/* HELPER FUNCTION 2 */
+/* HELPER FUNCTION 2: Save and Remove buttons */
 function modalSaveRemove(btnsContainer, id, innerModal) {
   const arr = ['Save', 'Remove'];
 
@@ -78,8 +87,14 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
       const images = getLocalStorage('fetched-search-results');
       const imageItem = images.find(img => img.id === id);
       const imageItemIndex = images.findIndex(img => img.id === id);
-      const advanceToIndex =
-        imageItemIndex > 0 ? imageItemIndex - 1 : imageItemIndex + 1;
+      let advanceToIndex;
+      if (imageItemIndex === 0) {
+        advanceToIndex = 0;
+      } else if (imageItemIndex > 0) {
+        advanceToIndex = imageItemIndex - 1;
+      } else {
+        advanceToIndex = imageItemIndex + 1;
+      }
 
       if (item === 'Save') {
         const savedImages = getLocalStorage('saved-images') || [];
@@ -104,6 +119,10 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
         const domImage = domImageContainer.querySelector('img.result-image');
 
         setModalContent(innerModal, domImage, nextImageObj.id);
+      }
+
+      if (updatedImages.length === 1) {
+        modalBg.classList.remove('show-modal');
       }
     });
 

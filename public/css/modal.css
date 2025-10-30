@@ -22,7 +22,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   padding: 1rem 0;
   border-radius: 0.5rem;
-  /* Do I need a box-shadow? */
+
   box-shadow: 0 0 10px rgba(128, 128, 128, 0.8);
 
   position: absolute;
@@ -38,19 +38,26 @@
   animation-duration: 1000ms;
 }
 
-/* Landscape layout: image above buttons */
-.modal.landscape {
+/* Landscape & Square layout: image above buttons */
+.modal.landscape, .modal.square {
   flex-direction: column;
   align-items: center;
 }
 
-.modal.landscape .modal-image {
-  width: 55vw;
+.modal.landscape .modal-image, .modal.square .modal-image {
   height: auto;
   max-height: 80vh;
 }
 
-.modal.landscape .modal-buttons {
+.modal.landscape .modal-image {
+  width: 50vw;
+}
+
+.modal.square .modal-image {
+  width: 40vw;
+}
+
+.modal.landscape .modal-buttons, .modal.square .modal-buttons {
   flex-direction: row;
   justify-content: center;
 }
