@@ -1,14 +1,14 @@
 import { getLocalStorage, setLocalStorage } from "../utils/localStorage.js";
 
+const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
 // WHAT IMAGE SIZE AM I LOADING? It should be .regular, I think it is .small
 export function setModalContent(element, item, id) {
   element.textContent = '';
 
-  // Main image
   const image = document.createElement('img');
-  image.src = item.src; // Consider using item.urls.regular for Unsplash
+  image.src = item.src; 
   image.id = id;
   image.className = 'modal-image';
   element.append(image);
@@ -17,19 +17,17 @@ export function setModalContent(element, item, id) {
   const btnsContainer = document.createElement('div');
   btnsContainer.className = 'modal-buttons';
 
-  // Add navigation + save/remove
+  // Add navigation + save/remove functionality
   modalNav(btnsContainer, id, innerModal);
   modalSaveRemove(btnsContainer, id, innerModal);
 
   element.append(btnsContainer);
 
-  // Detect aspect ratio for layout
+  // Detect aspect ratio for image layout
   image.onload = () => {
     const { naturalWidth: w, naturalHeight: h } = image;
     const ratio = w / h; 
     const tolerance = 0.15; 
-    
-    let orientation;
     
     element.classList.remove('portrait', 'landscape', 'square');
 
@@ -65,7 +63,7 @@ function modalNav(btnsContainer, id, innerModal) {
 
       const nextImageObj = images[nextIndex];
       const domImageContainer = document.getElementById(nextImageObj.id);
-      const domImage = domImageContainer.querySelector('img.result-image');
+      const domImage = domImageContainer.querySelector('.result-image');
 
       setModalContent(innerModal, domImage, nextImageObj.id);
     });
@@ -88,6 +86,7 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
       const imageItem = images.find(img => img.id === id);
       const imageItemIndex = images.findIndex(img => img.id === id);
       let advanceToIndex;
+      // I don't think this logic is correct - refactor
       if (imageItemIndex === 0) {
         advanceToIndex = 0;
       } else if (imageItemIndex > 0) {
@@ -116,7 +115,7 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
       if (updatedImages.length > 0) {
         const nextImageObj = updatedImages[advanceToIndex];
         const domImageContainer = document.getElementById(nextImageObj.id);
-        const domImage = domImageContainer.querySelector('img.result-image');
+        const domImage = domImageContainer.querySelector('.result-image');
 
         setModalContent(innerModal, domImage, nextImageObj.id);
       }
