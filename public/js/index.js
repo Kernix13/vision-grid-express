@@ -11,6 +11,7 @@ import { addRemoveClass } from "./utils/classUtils.js";
 import { menuButton } from "./ui/menu.js";
 // searchGrid listener
 import { removeImageCard } from "./ui/cards.js";
+import { setModalContent } from "./ui/modal.js";
 
 // Form
 const form = document.getElementById('search-form');
@@ -130,10 +131,23 @@ searchGrid.addEventListener('click', e => {
 });
 
 // 7. Search images grid: open image in modal on image click
-// Issue #5: Create functionality for modal
-// branch: core/image-modal | commit msg: "core: open image in modal on image click"
+searchGrid.addEventListener('click', (e) => {
+  const img = e.target.closest('img.result-image');
+  console.log(img)
+  if (!img) return;
+
+  const card = img.closest('.image-card');
+  const cardId = card.id;  
+
+  modalBg.classList.add('show-modal');
+  setModalContent(innerModal, img, cardId);
+});
 
 // 8. Modal listeners: Close modal on click of: 1. close button, 2. window
+close.addEventListener('click', () => modalBg.classList.remove('show-modal'));
+window.addEventListener('click', e =>
+  e.target == modalBg ? modalBg.classList.remove('show-modal') : false
+);
 
 // 9. Open/close hamburger menu
 hamburger.addEventListener("click", () => {

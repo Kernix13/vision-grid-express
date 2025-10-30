@@ -45,7 +45,7 @@
 }
 
 .modal.landscape .modal-image {
-  width: 65vw;
+  width: 55vw;
   height: auto;
   max-height: 80vh;
 }
@@ -63,7 +63,7 @@
 }
 
 .modal.portrait .modal-image {
-  height: 90vh;
+  height: 88vh;
   width: auto;
   max-width: 60vw;
 }
