@@ -3,6 +3,7 @@
 import { toggleDisplay } from "./utils/classUtils.js";
 import { getLocalStorage, setLocalStorage } from "./utils/localStorage.js";
 import { menuButton } from "./ui/menu.js";
+import { initBoardPage } from "./ui/initPage.js";
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
@@ -14,11 +15,14 @@ const thumbnailImages = thumbnails.querySelectorAll('.thumb-image');
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
+const savedImages = getLocalStorage('saved-images');
+
 /**
  * * EVENT LISTENERS
 */
 
 // 1. Load saved images on DOMContentLoaded
+document.addEventListener("DOMContentLoaded", initBoardPage);
 
 // 2. Show/Hide settings form
 settingsBtn.addEventListener('click', () => {
@@ -33,5 +37,14 @@ thumbnailsBtn.addEventListener('click', () => {
 // 4. Save editable text to local storage
 
 // 5. Open/close hamburger menu
+hamburger.addEventListener("click", () => {
+  menuButton(hamburger, navMenu);
+})
 
-// 6. ???
+// 6. Thumbnail click...
+thumbnails.addEventListener('click', (e) => {
+  const thumb = e.target.closest('img.thumb-image');
+  console.log(thumb)
+  if (!thumb) return;
+
+});

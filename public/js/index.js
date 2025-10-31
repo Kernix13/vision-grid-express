@@ -1,7 +1,7 @@
 "use strict";
 
 // For DOMContentLoaded listener
-import { onPageVisits } from "./ui/initPage.js";
+import { initHomePage } from "./ui/initPage.js";
 // Functions used in form event listener
 import { setLocalStorage, getLocalStorage, incrementSearchPage } from "./utils/localStorage.js";
 import { getSearchResults } from "./api/unsplash.js";
@@ -40,7 +40,7 @@ const savedSearches = getLocalStorage('search-phrases') || [];
 */
 
 // 1. Set initial state on visit to home page
-document.addEventListener("DOMContentLoaded", onPageVisits);
+document.addEventListener("DOMContentLoaded", initHomePage);
 
 // 2. Search form event listener
 form.addEventListener('submit', e => {
