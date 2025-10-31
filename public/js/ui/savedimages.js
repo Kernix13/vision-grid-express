@@ -32,7 +32,7 @@ export function addSavedImagesToDom() {
 
     // Show saved notes if they exist, otherwise show placeholder
     div.innerHTML =
-      img.notes && img.notes.trim() !== ''
+      img.notes
         ? img.notes.replace(/\n/g, '<br>')
         : 'You can add or edit notes here...';
 
