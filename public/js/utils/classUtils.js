@@ -9,3 +9,13 @@ export function addRemoveClass(element, add, remove) {
     element.setAttribute('aria-hidden', true);
   } 
 }
+
+export function toggleDisplay(el, btn, str) {
+  el.classList.toggle('onscreen');
+
+  if (el.classList.contains('onscreen')) {
+    btn.innerText = `Hide ${str}`;
+  } else {
+    btn.innerText = `Show ${str}`;
+  }
+}
