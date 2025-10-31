@@ -47,4 +47,5 @@ thumbnails.addEventListener('click', (e) => {
   console.log(thumb)
   if (!thumb) return;
 
+  // code here...
 });

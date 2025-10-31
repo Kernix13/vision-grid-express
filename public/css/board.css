@@ -71,7 +71,7 @@ body {
   padding: 0.25em 0.375em;
 }
 
-.thumbnails>* {
+.thumbnails > * {
   border: 1px solid black;
   transition: opacity 0.3s ease;
 }
