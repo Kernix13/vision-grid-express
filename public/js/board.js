@@ -14,6 +14,9 @@ const thumbnailImages = thumbnails.querySelectorAll('.thumb-image');
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
+const savedImages = getLocalStorage('saved-images');
+console.log(savedImages);
+
 /**
  * * EVENT LISTENERS
 */
