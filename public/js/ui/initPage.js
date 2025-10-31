@@ -9,7 +9,7 @@ const searchGrid = document.getElementById('search-grid');
 const loadMore = document.getElementById('load-more');
 
 // 1. For Home page DOMContentLoaded listener
-export function onPageVisits() {
+export function initHomePage() {
   if (!getLocalStorage('search-phrases') || !getLocalStorage('fetched-search-results') ) {
 
     setLocalStorage('search-phrases', []);
