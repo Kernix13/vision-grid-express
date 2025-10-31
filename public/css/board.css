@@ -24,6 +24,12 @@ body {
   top: 6.5rem;
   right: 0;
   max-width: 16rem;
+  transition: color 300ms ease, background-color 300ms ease;  
+}
+
+.thumbnails-btn:hover {
+  color: white;
+  background-color: black;
 }
 
 /* Board page styles */

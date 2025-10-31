@@ -1,6 +1,7 @@
 import { setLocalStorage, getLocalStorage } from "../utils/localStorage.js";
 import { addSearchTerm, addSearchText } from "./searchEls.js";
 import { createImgCard } from "./cards.js";
+import { addThumbnailsToDom } from "./thumbnails.js";
 
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
@@ -28,5 +29,20 @@ export function initHomePage() {
     addSearchText(resultsTitle, "Results for ", 'h2-search-term');
 
     createImgCard(images, searchGrid);
+  }
+}
+
+export function initBoardPage() {
+  const savedImages = getLocalStorage('saved-images');
+  if (savedImages.length > 0) {
+    addThumbnailsToDom();
+
+    const thumbImages = document.querySelectorAll('img.thumb-image')
+    thumbImages.forEach(img => {
+      img.addEventListener('click', () => {
+        console.log('listener from initBoardPage')
+      })
+    });
+
   }
 }
