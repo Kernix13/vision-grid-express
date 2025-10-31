@@ -4,6 +4,7 @@ const thumbnails = document.querySelector('.thumbnails');
 const savedImages = getLocalStorage('saved-images');
 
 export function addThumbnailsToDom() {
+  // Create up/down arrows and "X" functionality here somehow
 
   savedImages.forEach(img => {
     // Create thumbnails
@@ -15,5 +16,4 @@ export function addThumbnailsToDom() {
 
     thumbnails.append(thumbnail);
   });
-  console.dir(thumbnails);
 }

@@ -37,6 +37,9 @@ thumbnailsBtn.addEventListener('click', () => {
 // 4. Save editable text to local storage
 
 // 5. Open/close hamburger menu
+hamburger.addEventListener("click", () => {
+  menuButton(hamburger, navMenu);
+})
 
 // 6. Thumbnail click...
 thumbnails.addEventListener('click', (e) => {
