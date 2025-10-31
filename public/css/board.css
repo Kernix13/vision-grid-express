@@ -43,7 +43,7 @@ body {
   
   position: absolute;
   top: 0;
-  right: -3rem;
+  right: -3.5rem;
   width: 100px;
   max-height: 100vh;
   overflow-y: auto;
@@ -60,6 +60,7 @@ body {
   transform: translateX(100%);
   opacity: 0;
   pointer-events: none;
+  padding: 0.25em 0.375em;
 }
 
 /* visible */
