@@ -1,5 +1,6 @@
 "use strict";
 
+import { toggleDisplay } from "./utils/classUtils.js";
 import { getLocalStorage, setLocalStorage } from "./utils/localStorage.js";
 import { menuButton } from "./ui/menu.js";
 
@@ -20,8 +21,14 @@ const navMenu = document.getElementById("nav-menu");
 // 1. Load saved images on DOMContentLoaded
 
 // 2. Show/Hide settings form
+settingsBtn.addEventListener('click', () => {
+  toggleDisplay(settingsForm, settingsBtn, 'Settings');
+});
 
 // 3. Show/hide thumbnails
+thumbnailsBtn.addEventListener('click', () => {
+  toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
+});
 
 // 4. Save editable text to local storage
 
