@@ -20,9 +20,8 @@ export function addThumbnailsToDom() {
 
     thumbItem.append(thumbnail)
 
-    // Change "controls" to something else
-    const thumbControls = document.createElement('div');
-    thumbControls.className = 'thumb-controls';
+    const thumbBtns = document.createElement('div');
+    thumbBtns.className = 'thumb-btns';
 
     const upBtn = document.createElement('button');
     upBtn.textContent = '↑';
@@ -30,7 +29,7 @@ export function addThumbnailsToDom() {
     upBtn.setAttribute('title', 'Move image up');
     upBtn.setAttribute('aria-label', 'Move image up');
 
-    thumbControls.append(upBtn);
+    thumbBtns.append(upBtn);
 
     const downBtn = document.createElement('button');
     downBtn.textContent = '↓';
@@ -38,7 +37,7 @@ export function addThumbnailsToDom() {
     downBtn.setAttribute('title', 'Move image down');
     downBtn.setAttribute('aria-label', 'Move image down');
 
-    thumbControls.append(downBtn);
+    thumbBtns.append(downBtn);
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'x';
@@ -46,9 +45,9 @@ export function addThumbnailsToDom() {
     deleteBtn.setAttribute('title', 'Delete image');
     deleteBtn.setAttribute('aria-label', 'Delete image');
 
-    thumbControls.append(deleteBtn);
+    thumbBtns.append(deleteBtn);
 
-    thumbItem.append(thumbControls);
+    thumbItem.append(thumbBtns);
     thumbnails.append(thumbItem);
   });
 }

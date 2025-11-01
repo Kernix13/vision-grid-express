@@ -42,8 +42,8 @@ body {
   border: 1px solid silver;
   background-color: #efefef;
   position: absolute;
-  top: 6.5rem;
-  right: 11rem;
+  top: 9.25rem;
+  right: 0;
   width: 250px;
   max-height: 100vh;
   overflow-y: auto;
@@ -98,7 +98,7 @@ body {
   background-color: #fff;
 }
 
-.thumb-controls {
+.thumb-btns {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -106,12 +106,12 @@ body {
   pointer-events: none;
 }
 
-.thumb-item.selected .thumb-controls {
+.thumb-item.selected .thumb-btns {
   opacity: 1;
   pointer-events: auto;
 }
 
-.thumb-controls button {
+.thumb-btns button {
   font-size: 1.5rem;
   line-height: 1;
   padding: 0.25rem 0.5rem;
@@ -124,10 +124,10 @@ body {
   transition: background-color 300ms ease;
 }
 
-.thumb-controls button:hover {
+.thumb-btns button:hover {
   background-color: #dfdfdf;
 }
-.thumb-controls button:active {
+.thumb-btns button:active {
   background-color: orange;
 }
 
