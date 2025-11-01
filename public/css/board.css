@@ -39,8 +39,8 @@ body {
 }
 
 .thumbnails {
-  border: 1px solid black;
-  background-color: silver;
+  border: 1px solid silver;
+  background-color: #efefef;
   position: absolute;
   top: 6.5rem;
   right: 11rem;
@@ -117,7 +117,7 @@ body {
   padding: 0.25rem 0.5rem;
   min-width: 24px;
   min-height: 24px;
-  background: white;
+  background-color: white;
   border: 1px solid #bbb;
   border-radius: 4px;
   cursor: pointer;
@@ -126,6 +126,9 @@ body {
 
 .thumb-controls button:hover {
   background-color: #dfdfdf;
+}
+.thumb-controls button:active {
+  background-color: orange;
 }
 
 .move-down, .move-up {
