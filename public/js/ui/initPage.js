@@ -38,13 +38,5 @@ export function initBoardPage() {
   if (savedImages.length > 0) {
     addThumbnailsToDom();
     addSavedImagesToDom();
-
-    const thumbImages = document.querySelectorAll('img.thumb-image')
-    thumbImages.forEach(img => {
-      img.addEventListener('click', () => {
-        console.log('listener from initBoardPage')
-      })
-    });
-
   }
 }

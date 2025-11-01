@@ -9,6 +9,7 @@ const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
 const imgTextContainer = document.getElementById('img-text-container');
 const thumbnails = document.querySelector('.thumbnails');
+
 const thumbnailsBtn  = document.getElementById('thumbnails-btn');
 const thumbnailImages = thumbnails.querySelectorAll('.thumb-image');
 
@@ -41,11 +42,26 @@ hamburger.addEventListener("click", () => {
   menuButton(hamburger, navMenu);
 })
 
-// 6. Thumbnail click...
+// 6. Thumbnail item
 thumbnails.addEventListener('click', (e) => {
-  const thumb = e.target.closest('img.thumb-image');
-  console.log(thumb)
+  const thumb = e.target.closest('.thumb-item');
   if (!thumb) return;
 
-  // code here...
+  // Remove previous selection
+  const selected = document.querySelectorAll('.thumb-item.selected');
+
+  if (selected.length > 0) {
+    selected.forEach(item => item.classList.remove('selected'));
+  }
+  thumb.classList.toggle('selected');
+  
 });
+
+// 7. Thumbnail item -> Thumb control buttons
+thumbnails.addEventListener('click', (e) => {
+  const thumbControlBtn = e.target.closest('.thumb-controls button');
+  if (!thumbControlBtn) return;
+  console.log(thumbControlBtn.className);
+});
+
+
