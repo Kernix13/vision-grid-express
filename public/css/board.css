@@ -145,6 +145,7 @@ body {
   border: 1px solid #ccc;
   align-items: flex-start;
   padding: 1rem;
+  margin-bottom: 1rem;
   background-color: #efefef;
 }
 
