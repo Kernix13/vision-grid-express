@@ -20,6 +20,7 @@ export function addThumbnailsToDom() {
 
     thumbItem.append(thumbnail)
 
+    // Change "controls" to something else
     const thumbControls = document.createElement('div');
     thumbControls.className = 'thumb-controls';
 
