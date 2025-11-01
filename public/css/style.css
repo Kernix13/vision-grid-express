@@ -323,7 +323,7 @@ footer p {
 }
 
 @media (min-width: 962px) {
-  .container {
+  .container, .board-container {
     max-width: 1300px;
   }
 

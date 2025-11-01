@@ -81,8 +81,6 @@
   background-color: white;
   width: 100%;
   text-align: center;
-  border-top: 1px solid var(--primary-light);
-  border-bottom: 1px solid var(--primary-light);
   transition: top 500ms ease-in-out;
 }
 

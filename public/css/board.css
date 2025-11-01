@@ -7,10 +7,9 @@ body {
 }
 
 .board-container {
-  width: 95%;
-  text-align: left;
+  width: 90%;
   margin: 0 auto;
-  padding: 0 2rem;
+  text-align: left;
 }
 
 .layout-one {
