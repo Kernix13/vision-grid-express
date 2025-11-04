@@ -1,35 +1,35 @@
 import { getLocalStorage } from "../utils/localStorage.js";
 
-const thumbnails = document.querySelector('.thumbnails');
 const savedImages = getLocalStorage('saved-images');
 
 export function addThumbnailsToDom() {
-
-
+  
+  const thumbnails = document.querySelector('.thumbnails');
+  thumbnails.innerHTML = ''; 
 
   savedImages.forEach(img => {
+    // Thumbnail and buttons container
     const thumbItem = document.createElement('div');
     thumbItem.setAttribute('data-id', img.id);
     thumbItem.className = 'thumb-item';
 
-    // Create thumbnails
+    // Thumbnail
     const thumbnail = document.createElement('img')
     thumbnail.src = img.imageThumb;
-    thumbnail.alt = img.description;
+    thumbnail.alt = img.description || 'Thumbnail';
     thumbnail.className = 'thumb-image';
 
-    thumbItem.append(thumbnail)
-
+    // Buttons container
     const thumbBtns = document.createElement('div');
     thumbBtns.className = 'thumb-btns';
 
+    // Up, Down, and Delete buttons - consider using fontawesome:
+    // arrow-up, arrow-down, trash
     const upBtn = document.createElement('button');
     upBtn.textContent = '↑';
     upBtn.className = 'move-up';
     upBtn.setAttribute('title', 'Move image up');
     upBtn.setAttribute('aria-label', 'Move image up');
-
-    thumbBtns.append(upBtn);
 
     const downBtn = document.createElement('button');
     downBtn.textContent = '↓';
@@ -37,17 +37,14 @@ export function addThumbnailsToDom() {
     downBtn.setAttribute('title', 'Move image down');
     downBtn.setAttribute('aria-label', 'Move image down');
 
-    thumbBtns.append(downBtn);
-
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'x';
     deleteBtn.className = 'delete';
     deleteBtn.setAttribute('title', 'Delete image');
     deleteBtn.setAttribute('aria-label', 'Delete image');
 
-    thumbBtns.append(deleteBtn);
-
-    thumbItem.append(thumbBtns);
+    thumbBtns.append(upBtn, downBtn, deleteBtn);
+    thumbItem.append(thumbnail, thumbBtns);
     thumbnails.append(thumbItem);
   });
 }

@@ -57,11 +57,11 @@ thumbnails.addEventListener('click', (e) => {
   
 });
 
-// 7. Thumbnail item -> Thumb control buttons
+// 7. Thumbnail item -> Thumbnail buttons
 thumbnails.addEventListener('click', (e) => {
-  const thumbControlBtn = e.target.closest('.thumb-btns button');
-  if (!thumbControlBtn) return;
-  console.log(thumbControlBtn.className);
+  const thumbnailBtn = e.target.closest('.thumb-btns button');
+  if (!thumbnailBtn) return;
+  console.log(thumbnailBtn.className);
 });
 
 
