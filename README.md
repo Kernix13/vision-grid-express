@@ -27,3 +27,32 @@ Nothing here yet...
 ## Data sources and API integration details
 
 Nothing here yet...
+
+.............................................................................
+
+## CSS Styles - responsive changes
+
+```css
+/* === Local font import === */
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/inter-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/inter-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+}
+```

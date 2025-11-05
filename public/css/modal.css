@@ -38,7 +38,7 @@
 }
 
 /* Landscape & Square layout: image above buttons */
-.modal.landscape, .modal.square {
+.modal.landscape, .modal.square, .modal.portrait {
   flex-direction: column;
   align-items: center;
 }
@@ -61,15 +61,8 @@
   justify-content: center;
 }
 
-/* Portrait layout: image beside buttons */
-.modal.portrait {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
 .modal.portrait .modal-image {
-  height: 88vh;
+  height: 80vh;
   width: auto;
   max-width: 60vw;
 }

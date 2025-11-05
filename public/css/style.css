@@ -34,6 +34,8 @@
   --link-hover: hsl(39, 97%, 28%);
 }
 
+
+
 body {
   font-size: 1.125rem;
   color: var(--text);
@@ -50,12 +52,21 @@ h1,
 h2,
 h3 {
   font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  line-height: 1.1;
 }
 
 h1 {
   font-size: 2rem;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
 }
+
+.sub-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+
 
 :not(body)::selection {
   background-color: var(--primary-dark);
@@ -63,7 +74,7 @@ h1 {
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
 }
@@ -71,6 +82,9 @@ h1 {
 /* Search form */
 .search-form {
   margin-bottom: 2rem;
+
+  /* this padding should only be on small screens */
+  // padding: 0 1rem;
 }
 
 input[type="search"] {
@@ -79,8 +93,7 @@ input[type="search"] {
   outline: 2px solid #ccc;
   border: none;
   background-color: #eee;
-  padding: 0.5rem 0.25rem;
-  padding-left: 0.5rem;
+  padding: 0.5rem 0.25rem 0.5rem 0.5rem;
 }
 
 input[type="search"]::placeholder {
@@ -129,7 +142,6 @@ input[type="search"]:focus {
   border: 1px solid #ccc;
 }
 
-.image-card .results-buttons,
 .modal-buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -137,9 +149,13 @@ input[type="search"]:focus {
   gap: 1rem;
 }
 
-.image-card .results-buttons {
-  margin: 1rem 0 0.5rem;
+.results-buttons {
+  margin: 0.75rem 0;
   padding: 0 0.5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
+  gap: 0.5rem;
 }
 
 .result-image {
@@ -238,7 +254,7 @@ input[type="search"]:focus {
 .clear-searches {
   width: 100%;
   padding: 0.5em 1em;
-  margin-top: 2rem;
+  margin-top: 3rem;
 
   font-size: 1.125rem;
 }
@@ -280,8 +296,9 @@ footer {
   margin-top: 3rem;
 }
 
-footer p {
-  margin-bottom: 0;
+.footer-heading {
+  font-size: 1.75rem;
+  font-weight: 200;
 }
 
 .close-btn { 
@@ -300,6 +317,13 @@ footer p {
 .close-btn:hover {
   background-color: transparent;
   color: var(--white);
+}
+
+@media (min-width: 430px) {
+  .results-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0.75rem 0;
+  }
 }
 
 @media (min-width: 768px) {
@@ -325,6 +349,7 @@ footer p {
 @media (min-width: 962px) {
   .container, .board-container {
     max-width: 1300px;
+    width: 95%;
   }
 
   .logo {
