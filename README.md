@@ -34,6 +34,9 @@ Nothing here yet...
 
 - Home page + modal done
 - Board page next
+- REmoved hamburger menu but the spacing is bad - consider making the logo centered with menu items below it centered for mobile
+
+> Double-check the nav styles
 
 ```css
 /* === Local font import === */
@@ -57,5 +60,49 @@ Nothing here yet...
   h1 {
     font-size: 2.25rem;
   }
+}
+
+/* Nav menu */
+.nav-menu {
+  top: -100%;
+}
+
+.nav-menu > * {
+  margin: 0.5rem 0;
+}
+
+.nav-menu.active {
+  top: 0;
+}
+
+.hamburger {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+}
+
+.bar {
+  display: block;
+  background-color: #000;
+  width: 24px;
+  /* The following 2 properties are essential in creating the "X" */
+  height: 2px;
+  margin: 6px auto;
+
+  /* -webkit-transition: all 300ms ease;  */
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 ```
