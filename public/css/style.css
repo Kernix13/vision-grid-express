@@ -142,13 +142,6 @@ input[type="search"]:focus {
   border: 1px solid #ccc;
 }
 
-.modal-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: end;
-  gap: 1rem;
-}
-
 .results-buttons {
   margin: 0.75rem 0;
   padding: 0 0.5em;
@@ -195,14 +188,6 @@ input[type="search"]:focus {
   padding: 0.375em 0.125em;
 }
 
-.modal-buttons button {
-  cursor: pointer;
-  font-size: 0.875rem;
-  padding: 0.375em 0.75em;
-  border-radius: 0.5rem;
-  transition-duration: 300ms;
-}
-
 .results-buttons button,
 .search-terms button {
   border: 2px solid rgba(34, 34, 34, 0.25);
@@ -229,16 +214,9 @@ input[type="search"]:focus {
 .results-buttons button:hover,
 .search-terms button:hover,
 .load-more:hover,
-.clear-searches:hover,
-.modal-buttons button:hover {
+.clear-searches:hover {
   color: white;
   background-color: #222;
-}
-
-.modal-buttons button:active {
-  border: 1px solid orange;
-  background-color: orange;
-  color: black;
 }
 
 .results-buttons button:active,
@@ -339,10 +317,6 @@ footer {
 
   .search-terms {
     gap: 1.5rem;
-  }
-
-  .modal {
-    flex-direction: row;
   }
 }
 

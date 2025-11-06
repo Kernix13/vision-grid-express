@@ -32,8 +32,8 @@ Nothing here yet...
 
 ## CSS Styles - responsive changes
 
-- Home page looks pretty good on all screens, but the modal does not on small screens
-- Change the height/width for the modal on smaller sceens
+- Home page + modal done
+- Board page next
 
 ```css
 /* === Local font import === */
