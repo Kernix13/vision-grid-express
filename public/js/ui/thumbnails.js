@@ -1,4 +1,4 @@
-import { getLocalStorage } from "../utils/localStorage.js";
+import { getLocalStorage, setLocalStorage } from "../utils/localStorage.js";
 
 const savedImages = getLocalStorage('saved-images');
 
@@ -47,4 +47,17 @@ export function addThumbnailsToDom() {
     thumbItem.append(thumbnail, thumbBtns);
     thumbnails.append(thumbItem);
   });
+}
+
+export function deleteImage(event, id) {
+  // I will have to refactor this when I create a confirmation modal
+  const thumbItem = event.target.closest('.thumb-item');
+  const imageTextItem = document.getElementById(id)
+
+  const savedImages = getLocalStorage('saved-images');
+  const newSavedImages = savedImages.filter(img => img.id !== id);
+
+  setLocalStorage('saved-images', newSavedImages);
+  thumbItem.remove();
+  imageTextItem.remove();
 }
