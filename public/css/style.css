@@ -326,6 +326,25 @@ footer {
     width: 95%;
   }
 
+  .logo {
+    z-index: 0;
+  }
+
+  .nav-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    width: auto;
+  }
+
+  .hamburger {
+    display: none;
+    z-index: 0;
+  }
+
   .load-more,
   .clear-searches {
     width: 50%;
