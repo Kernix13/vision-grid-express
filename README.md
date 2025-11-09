@@ -9,10 +9,9 @@ Home page:
 Board page:
 
 1. add functionality for up/down arrows to change the image/text order, and an "X" to remove the saved image from localStorage, and therefore the thumbnails and on page
-   1. deleteImage function to remove thumbnail and DOM div
-   2. moveImage to move thumbnail to a different position, as well as corresponding DOM image
+   1. moveImage to move thumbnail to a different position, as well as corresponding DOM image
 2. I need a modal for saved images - something way different and better than the home page modal
-3. in savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text - allow user to set timing
+3. in savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text - allow user to set the timing
 
 ## Project overview and objectives
 
@@ -40,9 +39,6 @@ Nothing here yet...
 
 - Home page + modal done
 - Board page next
-- REmoved hamburger menu but the spacing is bad - consider making the logo centered with menu items below it centered for mobile
-
-> Double-check the nav styles
 
 ```css
 /* === Local font import === */
@@ -60,55 +56,5 @@ Nothing here yet...
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-}
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 2.25rem;
-  }
-}
-
-/* Nav menu */
-.nav-menu {
-  top: -100%;
-}
-
-.nav-menu > * {
-  margin: 0.5rem 0;
-}
-
-.nav-menu.active {
-  top: 0;
-}
-
-.hamburger {
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  z-index: 1;
-}
-
-.bar {
-  display: block;
-  background-color: #000;
-  width: 24px;
-  /* The following 2 properties are essential in creating the "X" */
-  height: 2px;
-  margin: 6px auto;
-
-  /* -webkit-transition: all 300ms ease;  */
-  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
-}
-
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
 }
 ```
