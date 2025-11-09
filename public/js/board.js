@@ -1,23 +1,20 @@
 "use strict";
 
 import { toggleDisplay } from "./utils/classUtils.js";
-import { getLocalStorage, setLocalStorage } from "./utils/localStorage.js";
+import { getLocalStorage } from "./utils/localStorage.js";
 import { menuButton } from "./ui/menu.js";
 import { initBoardPage } from "./ui/initPage.js";
 import { deleteImage } from "./ui/thumbnails.js";
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
-const imgTextContainer = document.getElementById('img-text-container');
 const thumbnails = document.querySelector('.thumbnails');
 
 const thumbnailsBtn  = document.getElementById('thumbnails-btn');
-const thumbnailImages = thumbnails.querySelectorAll('.thumb-image');
 
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 
-const savedImages = getLocalStorage('saved-images');
 
 /**
  * * EVENT LISTENERS
