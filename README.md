@@ -132,32 +132,7 @@ ChatGPT was used for the following:
 -->
 
 <!--
-
-## Possible headings
-
-Here are headings I found in other CodeYou Capstome README files
-
-- About / Overview
-- Features
-- Tech Stack
-- Getting Started / How to Download / Installation and Getting Started / Installation Instructions
-  - Step 1: Clone the Repository
-  - Step 2: Install Dependencies (Listed in package.json)
-  - Step 4: Configure Environment Variables
-  - Step 7: Run the Development Server
-- Project Organization (Table)
-- Capstone Requirements Fulfilled (Table) / Project Requirements
-- API
-- Dependencies
-- Development Dependencies
-- Development
-- Building
-- License
-- User Instructions
-- Use of AI
-- Future Improvements
-
-## To-Do (I'll remove this section later)
+## To-Do
 
 Home page:
 
@@ -169,19 +144,29 @@ Board page:
 2. I need a modal to confirm deleting a saved image
 3. I need a modal for saved images - something way different and better than the home page modal
 4. in savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text - allow user to set the timing
-
 -->
 
 <!--
-
 GitHub past capstone examples - READMEs
+
+## Possible headings
+
+Here are headings I found in other CodeYou Capstome README files
+
+- Features 👍
+- Project Organization (Table) ❓
+- Capstone Requirements Fulfilled (Table) / Project Requirements ❓
+- API ❓
+- Development 👎
+- License 👍
+- User Instructions
+- Use of AI 👍
 
 - https://github.com/rodriguezosvaldo/Solvio
 - https://github.com/aprilsears/chronically-well
 - https://github.com/acechler/f1-fanclub
 - https://github.com/Tafkae/numenera-utils
 - https://github.com/cramerjillian/hotel-grocery-search
-
  -->
 
-<!-- License: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository -->
+<!-- Adding a license: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository -->
