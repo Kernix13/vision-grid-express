@@ -4,7 +4,7 @@ import { toggleDisplay } from "./utils/classUtils.js";
 import { getLocalStorage } from "./utils/localStorage.js";
 import { menuButton } from "./ui/menu.js";
 import { initBoardPage } from "./ui/initPage.js";
-import { deleteImage } from "./ui/thumbnails.js";
+import { deleteImage, moveImage } from "./ui/thumbnails.js";
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
@@ -65,11 +65,9 @@ thumbnails.addEventListener('click', e => {
   const imageTextItem = document.getElementById(id)
 
   if (btn?.classList.contains('move-up')) {
-    // moveImage(id, 'up');
-    console.log(btn.className);
+    moveImage(id, 'up');
   } else if (btn?.classList.contains('move-down')) {
-    // moveImage(id, 'down');
-    console.log(btn.className);
+    moveImage(id, 'down');
   } else if (btn?.classList.contains('delete')) {
     deleteImage(e, id);
   } else if (e.target.classList.contains('thumb-image')) {

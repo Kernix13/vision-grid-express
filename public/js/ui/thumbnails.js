@@ -61,3 +61,17 @@ export function deleteImage(event, id) {
   thumbItem.remove();
   imageTextItem.remove();
 }
+
+export function moveImage(id, direction) {
+  const savedImages = getLocalStorage('saved-images');
+  const index = savedImages.findIndex(img => img.id === id);
+  if (index === -1) return;
+
+  console.log(`id: ${id}, direction: ${direction}`)
+  /* Below here:
+     1. if block for 'up'
+     2. if block for 'down'
+     3. save new 'saved-images' to localStorage
+     4. Do I have to call addThumbnailsToDom & addSavedImagesToDom? 
+  */
+}
