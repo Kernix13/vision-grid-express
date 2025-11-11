@@ -75,6 +75,55 @@ Nothing here yet...
 
 ## Project Structure
 
+```
+/
+  ├── README.md
+  ├── CODE_OF_CONDUCT.md
+  ├── CONTRIBUTING.md
+  ├── server.js             # Express server handling Unsplash API requests
+
+/public/
+  ├── index.html
+  ├── board.html
+  ├── css/
+  │   ├── board.css
+  │   ├── modal.css
+  │   ├── nav.css
+  │   ├── reset.css
+  │   └── style.css
+  ├── js/
+  │   ├── index.js           # initPage + main orchestration
+  │   ├── board.js           # board-specific logic
+  │   ├── api/               # API helper functions
+  │   ├── ui/                # UI functions for cards, modals, menus
+  │   └── utils/             # small helpers (storage, DOM)
+  ├── images/
+  │   └── favicon.png
+  └── fonts/                 # optional custom fonts
+```
+
+## Contributing
+
+Contributions are welcome! If you'd like to help improve this project, please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started, our workflow, and code style expectations.
+
+## Future Improvements
+
+Nothing here yet...
+
+<!-- I will provide this to the reviewers, but it does not make sense to leave it visible in my README
+
+## Use of AI
+
+ChatGPT was used for the following:
+
+1. I told the AI tool that I was interested in guitar, outdoor photography, camping, hiking, orienteering, and a few other hobbies. It suggested ideas for each hobby and the Unsplash idea was the most interesting to me.
+2. It generated "Project Structure" code block above.
+3. I had boilerplate for CONTRIBUTING.md from previous projects. It wrote the content I have for this project.
+4. I also have boilerplate for CODE_OF_CONDUCT.md from previous projects which I copied into this project. I may ask ChatGPT to rewrite that file for me.
+5. ...
+
+-->
+
 .............................................................................
 
 ## Possible headings
@@ -100,11 +149,6 @@ Here are headings I found in other CodeYou Capstome README files
 - User Instructions
 - Use of AI
 - Future Improvements
-
-Headings I would like to add:
-
-- Contributing: with CONTRIBUTING.md
-- Code of Conduct: with CODE_OF_CONDUCT.md
 
 ## To-Do (I'll remove this section later)
 
