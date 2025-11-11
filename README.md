@@ -7,6 +7,9 @@
 
 > Add a large screenshot here
 
+<img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" />
+
+
 ## Project overview and objectives ✅
 
 VisualGrid is an image based tools for planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
