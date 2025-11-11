@@ -16,13 +16,13 @@ VisualGrid is an image based tools for planning and goal-setting. It allows the 
 3. Inspiration board: This version would be good for athletes training for an event or for anyone with a big event in their near future. Their saved images could have motivational statements tied to each of their images.
 4. Or any other idea a user can have that involves images and text.
 
-After the user searches for images, then can save or remove any images from the grid shwoing the results. But the grid images are small. They can click on any of the small images to open a modal to view a larger version - they can Save/Remove an image while in the modal view.
+After the user searches for images, they can save or remove any images from the grid shwoing the results. The grid images are small. They can click on any of the small image on the image cards to open a modal to view a larger version. They can Save/Remove an image while in the modal view.
 
-The user can keep fetching more images based on their current/last search, start a new search-term fetch of images, or revisit previous search phrases. This app will always fetch the next page of image results.
+The user can keep fetching more images based on their current/last search, start a new search to fetch images, or revisit previous search phrases. This app will always fetch the next page of image results regardless of how they choose to get more images.
 
-Once a user saves images, they can visit their board page where their images are displayed on the page in a large format with an editable text field tied t o each image. The user can add notes of goal statements which are saved to localStorage with each image.
+Once a user saves images, they can visit their board page where their images are displayed on the page in a large format with an editable text field tied to each image. The user can add notes or goal statements which are saved to localStorage along with each image.
 
-Also on their board page is a thumbnails view for each saved images which allows the user to reorder the image-text elements, and remove a saved image from localStorage.
+Also on their board page is a thumbnails view for each saved image which allows the user to reorder the image-text elements, and/or remove a saved image from localStorage.
 
 Finally, the user can open a modal which will display each saved image along with their notes/statements for each image. The user will have the ability to set the timing on the image modal/lightbox modal.
 
@@ -56,7 +56,7 @@ npm run dev
 
 7. Open your browser to [http://localhost:8080](http://localhost:8080)
 
-You can now search for images, saved images to your board page, etc.
+You can now search for images, save images to your board page, etc.
 
 ### Getting your Unsplash API key
 
@@ -79,6 +79,8 @@ Nothing here yet...
 Nothing here yet...
 
 ## Project Structure
+
+<!-- Consider removing the indivisual CSS file names -->
 
 ```
 /
