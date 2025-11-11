@@ -1,5 +1,11 @@
 # VisionGrid
 
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge)
+![GitHub Issues](https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge)
+![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge)
+
+<!-- ![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge) -->
+
 > Add Shields badges here along with a large screenshot
 
 ## Project overview and objectives ✅
@@ -102,7 +108,7 @@ Nothing here yet...
   └── fonts/                 # optional custom fonts
 ```
 
-## Contributing
+## Contributing ✅
 
 Contributions are welcome! If you'd like to help improve this project, please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started, our workflow, and code style expectations.
 
@@ -124,7 +130,7 @@ ChatGPT was used for the following:
 
 -->
 
-.............................................................................
+<!--
 
 ## Possible headings
 
@@ -162,6 +168,8 @@ Board page:
 2. I need a modal to confirm deleting a saved image
 3. I need a modal for saved images - something way different and better than the home page modal
 4. in savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text - allow user to set the timing
+
+-->
 
 <!--
 
