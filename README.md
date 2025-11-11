@@ -183,3 +183,5 @@ GitHub past capstone examples - READMEs
 - https://github.com/cramerjillian/hotel-grocery-search
 
  -->
+
+<!-- License: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository -->
