@@ -63,3 +63,7 @@ If you find a problem or have a suggestion:
 1. Open an issue
 2. Use labels that apply (`bug`, `feature`, `help wanted`, etc.)
 3. Provide screenshots or steps if reporting a bug
+
+## Code of Conduct
+
+By participating in this project, you agree to follow our [Code of Conduct](./CODE_OF_CONDUCT.md).
