@@ -3,10 +3,9 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge)
 ![GitHub Issues](https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge)
 ![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge)
 
-<!-- ![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge) -->
-
-> Add Shields badges here along with a large screenshot
+> Add a large screenshot here
 
 ## Project overview and objectives ✅
 
