@@ -135,6 +135,10 @@ Nothing here yet...
 
 Nothing here yet...
 
+## User Instructions
+
+Add steps for what you can do on the home page and on the board page...
+
 ## Project Structure
 
 <!-- Consider removing the indivisual CSS file names -->
@@ -184,23 +188,21 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 Nothing here yet...
 
-## License ✅
-
-This project is licensed under the MIT License.
-
-<!-- I will provide this to the reviewers, but it does not make sense to leave it visible in my README
-
 ## Use of AI
 
 ChatGPT was used for the following:
 
-1. I told the AI tool that I was interested in guitar, outdoor photography, camping, hiking, orienteering, and a few other hobbies. It suggested ideas for each hobby and the Unsplash idea was the most interesting to me.
-2. It generated "Project Structure" code block above.
-3. I had boilerplate for CONTRIBUTING.md from previous projects. It wrote the content I have for this project.
-4. I also have boilerplate for CODE_OF_CONDUCT.md from previous projects which I copied into this project. I may ask ChatGPT to rewrite that file for me.
-5. ...
+1. I asked ChatGPT for help on project ideas. I told it that I was interested in guitar, outdoor photography, camping, hiking, orienteering, and a few other hobbies. It suggested ideas for each hobby and the Unsplash idea was the most interesting to me.
+2. It generated the "Project Structure" code block above.
+3. I had boilerplate for `CONTRIBUTING.md` from previous projects. It wrote the content I have for this project.
+4. I also have boilerplate for `CODE_OF_CONDUCT.md` from previous projects which I copied into this project. I may ask ChatGPT to rewrite that file for me.
+5. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
+6. I asked ChatGPT about a `.editorconfig` file - it generated the content for that file which I used.
+7. ...
 
--->
+## License ✅
+
+This project is licensed under the MIT License.
 
 <!--
 ## To-Do
