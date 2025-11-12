@@ -76,6 +76,57 @@ You can now search for images, save images to your board page, etc.
 6. Fill out the application information form and click the "Create Application" button.
 7. Scroll down to the section that displays application id, access key, and secret key. The access key is the API key that you will need for this project. -->
 
+## Capstone Requirements
+
+<table>
+  <thead>
+    <tr>
+      <th>Requirement</th>
+      <th>Implementation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Integrate an API into your project</td>
+      <td>Fetch images from the Unsplash API: <code>search/photos</code></td>
+    </tr>
+    <tr>
+      <td>Create a Node.js web server using Express.js</td>
+      <td>Express server with query params</td>
+    </tr>
+    <tr>
+      <td>Analyze data that is stored in various data structures</td>
+      <td>Retrieve API JSON, save as <code>localStorage</code> object</td>
+    </tr>
+    <tr>
+      <td>Display information about the data in your app</td>
+      <td>
+        <ul>
+          <li>Images displayed in 3 different sizes</li>
+          <li>Image descriptions added as <code>alt</code> attribute</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Have a function with 2 or more params with a <code>return</code> value</td>
+      <td><code>getSearchResults(searchTerm, page, element)</code></td>
+    </tr>
+    <tr>
+      <td>Persist & use data to the user to local storage</td>
+      <td>
+        <ol>
+          <li>Current search phrase</li>
+          <li>Current search phrase page number</li>
+          <li>Fetched image objects</li>
+          <li>Saved images objects</li>
+          <li>List of all user search phrases</li>
+          <li>All search phrases last page fetched</li>
+        </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## Usage guidelines and feature descriptions
 
 Nothing here yet...
@@ -185,8 +236,8 @@ Here are headings I found in other CodeYou Capstome README files
 - User Instructions
 - Use of AI 👍
 
-- https://github.com/rodriguezosvaldo/Solvio
-- https://github.com/aprilsears/chronically-well
+- https://github.com/rodriguezosvaldo/Solvio: Features, Project Structure
+- https://github.com/aprilsears/chronically-well: Capstone Requirements
 - https://github.com/acechler/f1-fanclub
 - https://github.com/Tafkae/numenera-utils
 - https://github.com/cramerjillian/hotel-grocery-search
