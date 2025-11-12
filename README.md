@@ -184,9 +184,9 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 Nothing here yet...
 
-## License
+## License ✅
 
-What goes here? A one-line sentence? ...
+This project is licensed under the MIT License.
 
 <!-- I will provide this to the reviewers, but it does not make sense to leave it visible in my README
 
@@ -238,9 +238,9 @@ Here are headings I found in other CodeYou Capstome README files
 
 - https://github.com/rodriguezosvaldo/Solvio: Features, Project Structure
 - https://github.com/aprilsears/chronically-well: Capstone Requirements
-- https://github.com/acechler/f1-fanclub
-- https://github.com/Tafkae/numenera-utils
-- https://github.com/cramerjillian/hotel-grocery-search
+- https://github.com/cramerjillian/hotel-grocery-search: Project Requirements, Use of AI, Future Improvements, User Instructions
+- https://github.com/acechler/f1-fanclub - License
+- https://github.com/Tafkae/numenera-utils - nothing
  -->
 
 <!-- Adding a license: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository -->
