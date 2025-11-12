@@ -154,30 +154,31 @@ Add steps for what you can do on the home page and on the board page...
   ├── index.html
   ├── board.html
   ├── css/
-  │   ├── board.css
-  │   ├── modal.css
-  │   ├── nav.css
-  │   ├── reset.css
-  │   └── style.css
+  │   ├── board.css            # Styles for board.html
+  │   ├── modal.css            # Styles for home page modal
+  │   ├── nav.css              # Styles for navigation
+  │   ├── reset.css            # Resets
+  │   ├── settings.css         # Styles for settings element on board.html
+  │   └── style.css            # Main stylesheet
   ├── js/
-  │   ├── index.js            # initPage + main orchestration
-  │   ├── board.js            # board-specific logic
-  │   ├── api/                 # API helper functions
-  │   └── unsplash.js
+  │   ├── index.js             # index.html main file
+  │   ├── board.js             # board.html main file
+  │   ├── api/
+  │   └── unsplash.js          # Fetch function to backend /api/photos
   │   ├── ui/                  # UI functions for cards, modals, menus
-  |   │   ├── cards.js
-  |   │   ├── initPage.js
-  |   │   ├── menu.js
-  |   │   ├── modal.js
-  |   │   ├── savedImages.js
-  |   │   ├── searchEls.js
-  |   │   └── thumbnails.js
-  │   └── utils/               # small helpers (storage, DOM)
-  |   │   ├── classUtils.js
-  |   │   └── localStorage.js
+  |   │   ├── cards.js         # 2 functions to create/remove inde.html image cards
+  |   │   ├── initPage.js      # Functions for DOMContentLoaded listeners
+  |   │   ├── menu.js          # 2 functions for the mobile menu
+  |   │   ├── modal.js         # 3 function for home page modal
+  |   │   ├── savedImages.js   # Function to add user saved images to board.html
+  |   │   ├── searchEls.js     # 5 functions for index.html search elements
+  |   │   └── thumbnails.js    # 3 functions for board.html thumbnails
+  │   └── utils/
+  |   │   ├── classUtils.js    # Add/remove classes
+  |   │   └── localStorage.js  # Set/get/remove items from localStorage
   ├── images/
   │   └── favicon.png
-  └── fonts/                  # optional custom fonts
+  └── fonts/                   # To-do: add Google woff2 font files
 ```
 
 ## Contributing ✅
