@@ -9,7 +9,6 @@
 
 <img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" />
 
-
 ## Project overview and objectives ✅
 
 VisualGrid is an image based tools for planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
@@ -37,10 +36,10 @@ Finally, the user can open a modal which will display each saved image along wit
 # Clone this repo
 git clone https://github.com/Kernix13/vision-grid-express.git
 
-# CD into folder
+# Change into project directory
 cd vision-grid-express
 
-# Install dependencies/create package.json file
+# Install dependencies
 npm install
 
 # Open the project in VS Code
@@ -57,7 +56,11 @@ code .
 npm run dev
 ```
 
-7. Open your browser to [http://localhost:8080](http://localhost:8080)
+7. Open your browser to [localhost port 8080](http://localhost:8080)
+
+```
+http://localhost:8080
+```
 
 You can now search for images, save images to your board page, etc.
 
@@ -90,7 +93,7 @@ Nothing here yet...
   ├── README.md
   ├── CODE_OF_CONDUCT.md
   ├── CONTRIBUTING.md
-  ├── server.js             # Express server handling Unsplash API requests
+  ├── server.js               # Express server handling Unsplash API requests
 
 /public/
   ├── index.html
@@ -102,14 +105,24 @@ Nothing here yet...
   │   ├── reset.css
   │   └── style.css
   ├── js/
-  │   ├── index.js           # initPage + main orchestration
-  │   ├── board.js           # board-specific logic
-  │   ├── api/               # API helper functions
-  │   ├── ui/                # UI functions for cards, modals, menus
-  │   └── utils/             # small helpers (storage, DOM)
+  │   ├── index.js            # initPage + main orchestration
+  │   ├── board.js            # board-specific logic
+  │   ├── api/                 # API helper functions
+  │   └── unsplash.js
+  │   ├── ui/                  # UI functions for cards, modals, menus
+  |   │   ├── cards.js
+  |   │   ├── initPage.js
+  |   │   ├── menu.js
+  |   │   ├── modal.js
+  |   │   ├── savedImages.js
+  |   │   ├── searchEls.js
+  |   │   └── thumbnails.js
+  │   └── utils/               # small helpers (storage, DOM)
+  |   │   ├── classUtils.js
+  |   │   └── localStorage.js
   ├── images/
   │   └── favicon.png
-  └── fonts/                 # optional custom fonts
+  └── fonts/                  # optional custom fonts
 ```
 
 ## Contributing ✅
@@ -119,6 +132,10 @@ Contributions are welcome! If you'd like to help improve this project, please re
 ## Future Improvements
 
 Nothing here yet...
+
+## License
+
+What goes here? A one-line sentence? ...
 
 <!-- I will provide this to the reviewers, but it does not make sense to leave it visible in my README
 
@@ -156,6 +173,8 @@ GitHub past capstone examples - READMEs
 
 Here are headings I found in other CodeYou Capstome README files
 
+- ✅ module 3 > week 4 > lesson 2: Examing a simple API: No-as-a-Service - take a look at the README
+- add Code snippets - not as a heading though
 - Features 👍
 - Project Organization (Table) ❓
 - Capstone Requirements Fulfilled (Table) / Project Requirements ❓
