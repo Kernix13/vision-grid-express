@@ -148,7 +148,7 @@ Add steps for what you can do on the home page and on the board page...
   ├── README.md
   ├── CODE_OF_CONDUCT.md
   ├── CONTRIBUTING.md
-  ├── server.js               # Express server handling Unsplash API requests
+  ├── server.js                # Express server handling Unsplash API requests
 
 /public/
   ├── index.html
@@ -165,7 +165,7 @@ Add steps for what you can do on the home page and on the board page...
   │   ├── board.js             # board.html main file
   │   ├── api/
   │   └── unsplash.js          # Fetch function to backend /api/photos
-  │   ├── ui/                  # UI functions for cards, modals, menus
+  │   ├── ui/
   |   │   ├── cards.js         # 2 functions to create/remove inde.html image cards
   |   │   ├── initPage.js      # Functions for DOMContentLoaded listeners
   |   │   ├── menu.js          # 2 functions for the mobile menu
