@@ -1,9 +1,9 @@
 # VisionGrid
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=flat)
-![GitHub Issues](https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=flat)
-![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=flat)
-![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=flat) <!--  for-the-badge, flat or flat-square -->
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge)
+![GitHub Issues](https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge)
+![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge) <!--  for-the-badge, flat or flat-square -->
 
 > Add a large screenshot here
 
