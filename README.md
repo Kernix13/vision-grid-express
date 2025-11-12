@@ -3,7 +3,11 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge)
 ![GitHub Issues](https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge)
 ![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge) <!--  for-the-badge, flat or flat-square -->
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+
+<!-- ![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge) -->
+
+<!--  for-the-badge, flat or flat-square -->
 
 <img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" />
 
@@ -202,9 +206,12 @@ You can now search for images, save images to your board page, etc.
 
 Contributions are welcome! If you'd like to help improve this project, please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started, our workflow, and code style expectations.
 
-## Future Improvements
+## Future Improvements ✅
 
-Nothing here yet...
+1. Add a quote generator that pairs an inspirational quote with each image
+2. Enable settings form to name board, have multiple boards, other features, ...
+3. Dark/Light mode option
+4. ???
 
 ## Use of AI
 
@@ -243,8 +250,9 @@ This project is licensed under the [MIT License](./LICENSE).
 1. 📌 Steps for Unsplash API key
 2. 📌 Features
 3. ❓ Data sources and API integration details
-4. 📌 Future Improvements
-5. 📌 Use of AI
+4. 📌 Finish Future Improvements
+5. 📌 Finish Use of AI
+6. 📌 Add important code snippets somewhere. Should I create a separate .md file or add to README?
 
 -->
 
