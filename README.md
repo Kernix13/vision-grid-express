@@ -203,7 +203,7 @@ ChatGPT was used for the following:
 
 ## License ✅
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](./LICENSE).
 
 <!--
 ## To-Do
@@ -228,22 +228,16 @@ GitHub past capstone examples - READMEs
 
 Here are headings I found in other CodeYou Capstome README files
 
-- ✅ module 3 > week 4 > lesson 2: Examing a simple API: No-as-a-Service - take a look at the README
 - add Code snippets - not as a heading though
 - Features 👍
-- Project Organization (Table) ❓
-- Capstone Requirements Fulfilled (Table) / Project Requirements ❓
 - API ❓
-- Development 👎
-- License 👍
-- User Instructions
-- Use of AI 👍
+- User Instructions 👍
 
 - https://github.com/rodriguezosvaldo/Solvio: Features, Project Structure
 - https://github.com/aprilsears/chronically-well: Capstone Requirements
 - https://github.com/cramerjillian/hotel-grocery-search: Project Requirements, Use of AI, Future Improvements, User Instructions
 - https://github.com/acechler/f1-fanclub - License
-- https://github.com/Tafkae/numenera-utils - nothing
+- https://github.com/Tafkae/numenera-utils - nothing useful here
  -->
 
 <!-- Adding a license: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository -->
