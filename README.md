@@ -1,9 +1,9 @@
 # VisionGrid
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge)
-![GitHub Issues](https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge)
-![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge)
-![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=flat)
+![GitHub Issues](https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=flat)
+![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=flat)
+![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=flat) <!--  for-the-badge, flat or flat-square -->
 
 > Add a large screenshot here
 
@@ -157,13 +157,14 @@ ChatGPT was used for the following:
 Home page:
 
 1. 99% done, modal images look questionable on small screens
+2. 📌 add removeEventListener for modal nav (<, >) buttons for index = 0, nd index = .length - 1
 
 Board page:
 
-1. add functionality for up/down arrows to change the thumbnail & image/text order
-2. I need a modal to confirm deleting a saved image
-3. I need a modal for saved images - something way different and better than the home page modal
-4. in savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text - allow user to set the timing
+1. 📌 add functionality for up/down arrows to change the thumbnail & image/text order
+2. 📌 I need a modal to confirm deleting a saved image
+3. 📌 I need a modal for saved images - something way different and better than the home page modal - or much simpler but as a slider/lightbox
+4. 📌 in savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text - allow user to set the timing
 -->
 
 <!--
