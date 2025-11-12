@@ -18,7 +18,7 @@ app.get('/api/photos', async (req, res) => {
   const BASE_URL = 'https://api.unsplash.com/search/photos';
   const searchTerm = req.query.query;
   const page = req.query.page || 1;
-  console.log(searchTerm, page); // 'dogs running 1'
+  console.log(searchTerm, page);
 
   const endpoint = `?query=${encodeURIComponent(
     searchTerm

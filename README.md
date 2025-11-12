@@ -5,8 +5,6 @@
 ![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge)
 ![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge) <!--  for-the-badge, flat or flat-square -->
 
-> Add a large screenshot here
-
 <img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" />
 
 ## Project overview and objectives ✅
@@ -76,7 +74,7 @@ You can now search for images, save images to your board page, etc.
 6. Fill out the application information form and click the "Create Application" button.
 7. Scroll down to the section that displays application id, access key, and secret key. The access key is the API key that you will need for this project. -->
 
-## Capstone Requirements
+## Capstone Requirements ❓
 
 <table>
   <thead>
@@ -127,19 +125,53 @@ You can now search for images, save images to your board page, etc.
   </tbody>
 </table>
 
-## Usage guidelines and feature descriptions
+## Features
 
-Nothing here yet...
+> What goes here? Features of the app or features of the tech?
 
 ## Data sources and API integration details
 
-Nothing here yet...
+> What goes here?
 
-## User Instructions
+## User Journey (How to Use) ✅
 
-Add steps for what you can do on the home page and on the board page...
+### Home/Search Page
 
-## Project Structure
+1. Search for Images
+   - Enter a search phrase (e.g., landscaping, interior design, travel) in the search bar.
+   - The app fetches images from the Unsplash API based on your query.
+2. Interact with Image Cards
+   - Each image result appears as a card.
+   - Save the image to your vision board.
+   - Remove the image.
+3. View Larger Image (Modal)
+   - Click on an image to open it in a modal.
+   - Inside the modal:
+     - View the image in its original aspect ratio.
+     - Navigate through other images currently displayed on the page.
+     - Save or Remove the image.
+4. Load More Images
+   - Click Load More to fetch the next page of results for the current search phrase.
+5. Past Searches
+   - Recently used search phrases appear below the search bar.
+   - Click a past search phrase to load the next page of images for that term.
+
+### Vision Board Page
+
+1. View Saved Images
+   - Displays all images you've saved from the Home page as thumbnails.
+2. Reorder Images
+   Move thumbnails up or down to rearrange the order of your images.
+3. Edit Notes
+   - Each saved image has an editable text area.
+   - Add notes, goals, or reflections related to each image.
+4. Delete Saved Images
+   - Remove any image from your board using the "X" button in the thumbnails section.
+5. (Coming Soon) Lightbox / Slider View
+   - Open a full-screen slider that cycles through all saved images and their notes for easy viewing.
+   - Change the timing of the slider for faster or slower transitions.
+
+## Project Structure ✅
 
 <!-- Consider removing the indivisual CSS file names -->
 
@@ -148,37 +180,22 @@ Add steps for what you can do on the home page and on the board page...
   ├── README.md
   ├── CODE_OF_CONDUCT.md
   ├── CONTRIBUTING.md
-  ├── server.js                # Express server handling Unsplash API requests
+  ├── LICENSE
+  ├── server.js            # Express server handling Unsplash API requests
 
 /public/
   ├── index.html
   ├── board.html
-  ├── css/
-  │   ├── board.css            # Styles for board.html
-  │   ├── modal.css            # Styles for home page modal
-  │   ├── nav.css              # Styles for navigation
-  │   ├── reset.css            # Resets
-  │   ├── settings.css         # Styles for settings element on board.html
-  │   └── style.css            # Main stylesheet
+  ├── css/                 # Stylesheets for modal, nav, reset, ...
   ├── js/
-  │   ├── index.js             # index.html main file
-  │   ├── board.js             # board.html main file
-  │   ├── api/
-  │   └── unsplash.js          # Fetch function to backend /api/photos
-  │   ├── ui/
-  |   │   ├── cards.js         # 2 functions to create/remove inde.html image cards
-  |   │   ├── initPage.js      # Functions for DOMContentLoaded listeners
-  |   │   ├── menu.js          # 2 functions for the mobile menu
-  |   │   ├── modal.js         # 3 function for home page modal
-  |   │   ├── savedImages.js   # Function to add user saved images to board.html
-  |   │   ├── searchEls.js     # 5 functions for index.html search elements
-  |   │   └── thumbnails.js    # 3 functions for board.html thumbnails
-  │   └── utils/
-  |   │   ├── classUtils.js    # Add/remove classes
-  |   │   └── localStorage.js  # Set/get/remove items from localStorage
+  │   ├── index.js         # Main file for index.html
+  │   ├── board.js         # Main file for board.html
+  │   ├── api/             # Fetch function to backend /api/photos
+  │   ├── ui/              # Functions for various UI elements
+  │   └── utils/           # Functions for UI classes and localStorage
   ├── images/
   │   └── favicon.png
-  └── fonts/                   # To-do: add Google woff2 font files
+  └── fonts/               # TODO: add Google woff2 font files
 ```
 
 ## Contributing ✅
@@ -191,7 +208,7 @@ Nothing here yet...
 
 ## Use of AI
 
-ChatGPT was used for the following:
+ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 1. I asked ChatGPT for help on project ideas. I told it that I was interested in guitar, outdoor photography, camping, hiking, orienteering, and a few other hobbies. It suggested ideas for each hobby and the Unsplash idea was the most interesting to me.
 2. It generated the "Project Structure" code block above.
@@ -199,7 +216,8 @@ ChatGPT was used for the following:
 4. I also have boilerplate for `CODE_OF_CONDUCT.md` from previous projects which I copied into this project. I may ask ChatGPT to rewrite that file for me.
 5. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
 6. I asked ChatGPT about a `.editorconfig` file - it generated the content for that file which I used.
-7. ...
+7. ChatGPT gave me an outline for the "User Journey" section
+8. ...
 
 ## License ✅
 
@@ -208,35 +226,36 @@ This project is licensed under the [MIT License](./LICENSE).
 <!--
 ## To-Do
 
-Home page:
+1️⃣ Home page:
 
 1. 99% done, modal images look questionable on small screens
 2. 📌 add removeEventListener for modal nav (<, >) buttons for index = 0, nd index = .length - 1
 
-Board page:
+2️⃣ Board page:
 
 1. 📌 add functionality for up/down arrows to change the thumbnail & image/text order
 2. 📌 I need a modal to confirm deleting a saved image
 3. 📌 I need a modal for saved images - something way different and better than the home page modal - or much simpler but as a slider/lightbox
-4. 📌 in savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text - allow user to set the timing
+4. 📌 in savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text 2) allow user to set the timing
+
+3️⃣ README.md:
+
+1. 📌 Steps for Unsplash API key
+2. 📌 Features
+3. ❓ Data sources and API integration details
+4. 📌 Future Improvements
+5. 📌 Use of AI
+
 -->
 
 <!--
-GitHub past capstone examples - READMEs
+  Code:You GitHub past capstone examples - READMEs:
 
-## Possible headings
+- https://github.com/rodriguezosvaldo/Solvio: Features
+- https://github.com/cramerjillian/hotel-grocery-search: Future Improvements, User Instructions, Use of AI
 
-Here are headings I found in other CodeYou Capstome README files
-
-- add Code snippets - not as a heading though
-- Features 👍
-- API ❓
-- User Instructions 👍
-
-- https://github.com/rodriguezosvaldo/Solvio: Features, Project Structure
-- https://github.com/aprilsears/chronically-well: Capstone Requirements
-- https://github.com/cramerjillian/hotel-grocery-search: Project Requirements, Use of AI, Future Improvements, User Instructions
-- https://github.com/acechler/f1-fanclub - License
+- https://github.com/acechler/f1-fanclub - nothing useful here
+- https://github.com/aprilsears/chronically-well - nothing useful here
 - https://github.com/Tafkae/numenera-utils - nothing useful here
  -->
 
