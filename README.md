@@ -238,6 +238,7 @@ This project is licensed under the [MIT License](./LICENSE).
 
 1. 99% done, modal images look questionable on small screens
 2. 📌 add removeEventListener for modal nav (<, >) buttons for index = 0, nd index = .length - 1
+3. Change my focus styles from primary to accent becausee I can't find too many uses for that color
 
 2️⃣ Board page:
 
