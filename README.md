@@ -374,6 +374,9 @@ Color table:
 }
 ```
 
+<img width="269" height="338" alt="image" src="https://github.com/user-attachments/assets/61f923cc-d5f5-43ad-b1c0-ebebc8a32a35" />
+
+
 <!--
   Code:You GitHub past capstone examples - READMEs:
 
