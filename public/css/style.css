@@ -28,10 +28,13 @@
   --black: #000000;
   --text: #333333;
   --middle-gray: #787878;
+  --dark-gray: #222222;
   --primary-light: hsl(231, 10%, 80%);
   --primary-dark: hsl(231, 28%, 25%);
   --accent: hsl(39, 63%, 53%);
-  --link-hover: hsl(39, 97%, 28%);
+  --link-hover: rgb(141, 92, 2);
+  --test-one: #2E8B57;
+  --test-two: #c3992c;
 }
 
 
@@ -46,19 +49,20 @@ body {
 
 header {
   padding: 1.5rem 0;
-  box-shadow: 0 1px rgb(0 0 0 / 0.25);
+  // box-shadow: 0 1px rgb(0 0 0 / 0.25);
+  box-shadow: 0 1px hsl(146 20 80)
 }
 
 h1,
 h2,
 h3 {
   font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 h1 {
   font-size: 2rem;
-  margin: 1rem 0;
+  margin: 2rem 0 1rem;
   padding: 0 1rem;
 }
 
@@ -91,18 +95,18 @@ h1 {
 input[type="search"] {
   width: 100%;
   border-radius: 0.5rem;
-  outline: 2px solid #ccc;
+  outline: 2px solid hsl(146 20 80);
   border: none;
-  background-color: #eee;
+  background-color: hsl(146 10 90);
   padding: 0.5rem 0.25rem 0.5rem 0.5rem;
 }
 
 input[type="search"]::placeholder {
-  color: #555555;
+  color: hsl(146 30 30);
 }
 
 input[type="search"]:focus {
-  outline: 2px solid rgb(255, 188, 134);
+  outline: 2px solid hsl(146 30 30);
 }
 
 .search-terms {
@@ -174,7 +178,7 @@ input[type="search"]:focus {
 .search-terms button {
   padding: 0.375em 0.75em;
   background-color: transparent;
-  border: 2px solid #999;
+  border: 2px solid hsl(146 20 80);
   border-radius: 0.5em;
   font-style: italic;
 }
@@ -191,7 +195,7 @@ input[type="search"]:focus {
 
 .results-buttons button,
 .search-terms button {
-  border: 2px solid rgba(34, 34, 34, 0.25);
+  border: 2px solid hsl(146 20 80);
 }
 
 .clear-searches {
@@ -200,7 +204,7 @@ input[type="search"]:focus {
 
 .load-more,
 .clear-searches {
-  border: 2px solid #ababab;
+  border: 2px solid hsl(146 20 80);
 }
 
 .results-buttons button,
@@ -217,15 +221,24 @@ input[type="search"]:focus {
 .load-more:hover,
 .clear-searches:hover {
   color: white;
-  background-color: #222;
+  background-color: #2E8B57;
 }
 
 .results-buttons button:active,
 .search-terms button:active,
 .load-more:active,
 .clear-searches:active {
-  border: 2px solid orange;
-  background-color: orange;
+  border: 2px solid #c3992c;
+  background-color: #c3992c;
+  color: black;
+}
+
+.results-buttons button:focus-visible,
+.search-terms button:focus-visible,
+.load-more:focus-visible,
+.clear-searches:focus-visible {
+  outline: 2px solid #c3992c;
+  background-color: #c3992c;
   color: black;
 }
 

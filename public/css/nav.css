@@ -1,6 +1,6 @@
 .skip-to-content {
   position: absolute;
-  background: var(--primary-dark);
+  background: hsl(146 20 20);
   color: var(--white);
   left: 50%;
   padding: 0.25em 0.5em;
@@ -27,6 +27,7 @@
 /* No logo, just text for the menu appearance */
 .logo {
   color: var(--primary-dark);
+  color: hsl(146 20 20);
   font-family: Segoe script, 'Brush Script MT', cursive;
   font-weight: 600;
   letter-spacing: 0.125em;
@@ -45,7 +46,8 @@
 .nav-link:visited,
 .home-link,
 .home-link:visited {
-  color: var(--dark);
+  font-weight: 700;
+  color: hsl(146 20 20);
   text-decoration: none;
   border: 1px solid transparent;
   transition: 400ms ease;

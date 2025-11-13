@@ -1,3 +1,7 @@
+// * {
+//   outline: 1px solid red;
+// }
+
 body {
   overflow-x: hidden;
 }
@@ -18,10 +22,9 @@ body {
 
 .thumbnails-btn {
   font: inherit;
-  font-size: 1.125rem;
   position: absolute;
-  top: 8rem;
-  right: 0;
+  top: 7.875rem;
+  right: 8px;
   max-width: 16rem;
   transition: color 300ms ease, background-color 300ms ease;  
 }
