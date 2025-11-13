@@ -130,7 +130,7 @@ body {
 }
 .thumb-btns button:active {
   /* This looks bad: */
-  background-color: hsl(43, 63%, 47%);
+  background-color: var(--accent);
 }
 
 .move-down, .move-up {

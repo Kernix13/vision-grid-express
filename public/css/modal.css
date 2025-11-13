@@ -88,13 +88,13 @@
 
 .modal-buttons button:hover {
   color: var(--white);
-  background-color: hsl(146, 50%, 36%);
+  background-color: var(--primary);
   border: 1px solid var(--white);
 }
 
 .modal-buttons button:active {
-  border: 1px solid hsl(43, 63%, 47%);
-  background-color: hsl(43, 63%, 47%);
+  border: 1px solid var(--accent);
+  background-color: var(--accent);
   color: var(--black);
 }
 
@@ -114,7 +114,7 @@
 
 .modal .prev,
 .modal .next {
-  background-color: hsl(146, 29%, 30%);
+  background-color: var(--primary-dark-1);
   border: 1px solid transparent;
   transition: background-color 300ms ease, border 300ms ease;
 }
@@ -122,7 +122,7 @@
 .modal .prev:hover,
 .modal .next:hover {
   border: 1px solid var(--white);
-  background-color: hsl(146, 50%, 36%);
+  background-color: var(--primary);
 }
 
 .modal .prev {
