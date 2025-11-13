@@ -1,6 +1,6 @@
 .skip-to-content {
   position: absolute;
-  background: hsl(146, 20%, 20%);
+  background: var(--primary-dark-2);
   color: var(--white);
   left: 50%;
   padding: 0.25em 0.5em;
@@ -26,7 +26,7 @@
 
 /* No logo, just text for the menu appearance */
 .logo {
-  color: hsl(146, 20%, 20%);
+  color: var(--primary-dark-2);
   font-family: Segoe script, 'Brush Script MT', cursive;
   font-weight: 600;
   letter-spacing: 0.125em;
@@ -46,7 +46,7 @@
 .home-link,
 .home-link:visited {
   font-weight: 700;
-  color: hsl(146, 20%, 20%);
+  color: var(--primary-dark-2);
   text-decoration: none;
   border: 1px solid transparent;
   transition: 400ms ease;
@@ -107,7 +107,7 @@
 
 .bar {
   display: block;
-  background-color: hsl(146, 20%, 20%);
+  background-color: var(--primary-dark-2);
   width: 24px;
   /* The following 2 properties are essential in creating the "X" */
   height: 2px;
