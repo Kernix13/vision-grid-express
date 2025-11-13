@@ -9,7 +9,7 @@
 
 <!--  for-the-badge, flat or flat-square -->
 
-<img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" />
+<img align="center" width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" />
 
 ## Project overview and objectives ✅
 
