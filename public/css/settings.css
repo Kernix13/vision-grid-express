@@ -2,7 +2,7 @@
 
 .settings-form {
   position: fixed;
-  top: 9.25rem;
+  top: 10.5rem;
   left: 0;
   z-index: 1000;
 
@@ -33,7 +33,7 @@
   font: inherit;
   font-size: 1.125rem;
   position: absolute;
-  top: 6.5rem;
+  top: 8rem;
   left: 0;
   min-width: 8.5rem;
   transition: color 300ms ease, background-color 300ms ease;
