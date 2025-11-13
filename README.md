@@ -133,6 +133,8 @@ You can now search for images, save images to your board page, etc.
 
 > What goes here? Features of the app or features of the tech?
 
+<!-- <img width="269" height="338" alt="image" src="https://github.com/user-attachments/assets/61f923cc-d5f5-43ad-b1c0-ebebc8a32a35" /> -->
+
 ## Data sources and API integration details
 
 > What goes here?
@@ -291,7 +293,7 @@ This project is licensed under the [MIT License](./LICENSE).
 | .modal .nav        | rgba(0, 0, 0, 0.5)        |       |       | ✅    |     |
 | .modal .prev       | hsl(146, 29%, 30%)        |       |       | ✅    |     | -->
 
-Color table:
+<!-- Color table:
 
 | Var name/use                        | color                     | file     |
 | :---------------------------------- | :------------------------ | :------- |
@@ -350,32 +352,7 @@ Color table:
 | .modal box-shadow                   | rgba(255, 255, 255, 0.25) | modal    |
 | .modal bg                           | rgba(0, 0, 0, 0.6)        | modal    |
 | .modal-container bg                 | rgba(0, 0, 0, 0.8)        | modal    |
-| .modal .nav bg                      | rgba(0, 0, 0, 0.5)        | modal    |
-
-```css
-:root {
-  --white: #ffffff;
-  --middle-gray: #787878;
-  --text: #333333;
-  --dark-gray: #222222;
-  --black: #000000;
-
-  --primary: hsl(146, 50%, 36%);
-  --primary-dark-1: hsl(146, 29%, 30%);
-  --primary-dark-2: hsl(146, 20%, 20%);
-  --primary-muted-1: hsl(146, 20%, 60%);
-  --primary-muted-2: hsl(146, 20%, 80%);
-  --primary-muted-3: hsl(146, 10%, 90%);
-  --primary-muted-4: hsl(146, 5%, 95%);
-
-  --accent: hsl(43, 63%, 47%);
-  --accent-2: hsl(39, 63%, 53%);
-  --link-hover: hsl(39, 97%, 28%);
-}
-```
-
-<img width="269" height="338" alt="image" src="https://github.com/user-attachments/assets/61f923cc-d5f5-43ad-b1c0-ebebc8a32a35" />
-
+| .modal .nav bg                      | rgba(0, 0, 0, 0.5)        | modal    | -->
 
 <!--
   Code:You GitHub past capstone examples - READMEs:
