@@ -300,50 +300,47 @@ Color table:
 | --dark-gray                         | #222222                   | style    |
 | --text                              | #333333                   | style    |
 | --middle-gray                       | #787878                   | style    |
-| --primary-one                       | hsl(146, 50%, 36%)        | style    |
-| --accent                            | hsl(39, 63%, 53%)         | style    |
-| --accent-two                        | hsl(43, 63%, 47%)         | style    |
+| --primary                           | hsl(146, 50%, 36%)        | style    |
+| --accent                            | hsl(43, 63%, 47%)         | style    |
+| --accent-two                        | hsl(39, 63%, 53%)         | style    |
 | --link-hover                        | rgb(141, 92, 2)           | style    |
 |                                     |                           |          |
-| --primary-light                     | hsl(231, 10%, 80%)        | style    |
-| --primary-dark                      | hsl(231, 28%, 25%)        | style    |
-|                                     |                           |          |
-| input bg color                      | hsl(146, 5%, 95%)         | style    |
+| input bg color                      | `hsl(146, 5%, 95%) `      | style    |
 | .thumb-btns bg                      | hsl(146, 5%, 95%)         | board    |
-| background-color                    | hsl(146, 10%, 90%)        | style    |
+| background-color                    | `hsl(146, 10%, 90%) `     | style    |
 | .thumbnails bg-color                | hsl(146, 10%, 90%)        | board    |
 | .image-text bg-color                | hsl(146, 10%, 90%)        | board    |
-| box-shadow                          | hsl(146, 20%, 80%)        | style    |
+| box-shadow                          | `hsl(146, 20%, 80%) `     | style    |
 | border                              | hsl(146, 20%, 80%)        | style    |
 | input outline                       | hsl(146, 20%, 80%)        | style    |
 | .close-btn background-color         | hsl(146, 20%, 80%)        | style    |
 | .thumbnails border                  | hsl(146, 20%, 80%)        | board    |
 | .thumb-btns button:hover bg         | hsl(146, 20%, 80%)        | board    |
-| .editable border                    | hsl(146, 20%, 60%)        | board    |
+| .editable border                    | `hsl(146, 20%, 60%)  `    | board    |
 | .thumb-btns button border           | hsl(146, 20%, 60%)        | board    |
-| `.thumbnails > *` border            | hsl(146, 30%, 50%)        | board    |
+| `.thumbnails > *` border            | `hsl(146, 30%, 50%)`      | board    |
 | button bg color                     | hsl(146, 50%, 36%)        | style    |
 | .editable:focus outline             | hsl(146, 50%, 36%)        | board    |
 | .modal-buttons button:hover bg      | hsl(146, 50%, 36%)        | modal    |
 | .editable caret-color               | hsl(146, 50%, 36%)        | board    |
 | .settings-btn:hover bg              | hsl(146, 50%, 36%)        | settings |
 | .modal .next:hover bg               | hsl(146, 50%, 36%)        | modal    |
-| ::placeholder                       | hsl(146, 29%, 30%)        | style    |
+| ::placeholder                       | `hsl(146, 29%, 30%) `     | style    |
 | input:focus outline                 | hsl(146, 29%, 30%)        | style    |
 | .modal .next bg                     | hsl(146, 29%, 30%)        | modal    |
-| ::selection                         | hsl(146, 20%, 20%)        | style    |
+| ::selection                         | `hsl(146, 20%, 20%)`      | style    |
 | footer background-color             | hsl(146, 20%, 20%)        | style    |
 | .close-btn:hover bg-color           | hsl(146, 20%, 20%)        | style    |
 | .thumbnails-btn:hover bg            | hsl(146, 20%, 20%)        | board    |
-| .thumbnails box-shadow              | hsla(146, 20%, 20%, 0.2)  | board    |
 | .skip-to-content bg                 | hsl(146, 20%, 20%)        | nav      |
 | .logo color                         | hsl(146, 20%, 20%)        | nav      |
 | .nav-link color                     | hsl(146, 20%, 20%)        | nav      |
 | .bar bg-color                       | hsl(146, 20%, 20%)        | nav      |
 | .settings-form border               | hsl(146, 20%, 20%)        | settings |
+| .thumbnails box-shadow              | hsla(146, 20%, 20%, 0.2)  | board    |
 | .nav-link:hover color               | var(--link-hover)         | nav      |
 | .nav-link:hover border              | var(--link-hover)         | nav      |
-| .thumb-btns button:active bg        | hsl(43, 63%, 47%)         | board    |
+| .thumb-btns button:active bg        | `hsl(43, 63%, 47%)   `    | board    |
 | button:active border                | hsl(43, 63%, 47%)         | style    |
 | button:active bg-color              | hsl(43, 63%, 47%)         | style    |
 | button:focus-visible outline        | hsl(43, 63%, 47%)         | style    |
@@ -354,6 +351,28 @@ Color table:
 | .modal bg                           | rgba(0, 0, 0, 0.6)        | modal    |
 | .modal-container bg                 | rgba(0, 0, 0, 0.8)        | modal    |
 | .modal .nav bg                      | rgba(0, 0, 0, 0.5)        | modal    |
+
+```css
+:root {
+  --white: #ffffff;
+  --middle-gray: #787878;
+  --text: #333333;
+  --dark-gray: #222222;
+  --black: #000000;
+
+  --primary: hsl(146, 50%, 36%);
+  --primary-dark-1: hsl(146, 29%, 30%);
+  --primary-dark-2: hsl(146, 20%, 20%);
+  --primary-muted-1: hsl(146, 20%, 60%);
+  --primary-muted-2: hsl(146, 20%, 80%);
+  --primary-muted-3: hsl(146, 10%, 90%);
+  --primary-muted-4: hsl(146, 5%, 95%);
+
+  --accent: hsl(43, 63%, 47%);
+  --accent-2: hsl(39, 63%, 53%);
+  --link-hover: hsl(39, 97%, 28%);
+}
+```
 
 <!--
   Code:You GitHub past capstone examples - READMEs:
