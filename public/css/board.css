@@ -9,7 +9,7 @@ body {
 .board-container {
   width: 90%;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 .layout-one {
@@ -32,11 +32,6 @@ body {
 }
 
 /* Board page styles */
-.thumbnail-wrapper {
-  position: relative;
-  margin: 4rem 0 2rem;
-}
-
 .thumbnails {
   border: 1px solid silver;
   background-color: #efefef;
@@ -100,7 +95,7 @@ body {
 .thumb-btns {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.75rem;
   opacity: 0;
   pointer-events: none;
 }
@@ -111,9 +106,11 @@ body {
 }
 
 .thumb-btns button {
+  align-self: center;
+  line-height: 0;
   font-size: 1.5rem;
   line-height: 1;
-  padding: 0.25rem 0.5rem;
+  padding: 0 0.5rem 0.25rem;
   min-width: 24px;
   min-height: 24px;
   background-color: white;
@@ -140,10 +137,11 @@ body {
 
 .image-text {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
   border: 1px solid #ccc;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   margin-bottom: 1rem;
   background-color: #efefef;
@@ -171,13 +169,6 @@ body {
   align-self: center;
 }
 
-.project-layout {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 1rem;
-}
-
 /* goal-heading, figure and goal are old styles - I may not keep these */
 .goal-heading {
   margin-top: 4rem;
@@ -197,4 +188,11 @@ figure {
 
 .goal h3 {
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .image-text {
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+  }
 }

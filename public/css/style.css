@@ -124,10 +124,10 @@ input[type="search"]:focus {
   display: block;
 }
 
-.search-grid,
-.review-grid {
+.search-grid {
+  --min-col-size: 300px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-col-size), 1fr));
   gap: 1.5rem;
   justify-items: center;
 }
