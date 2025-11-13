@@ -11,8 +11,8 @@
   justify-content: center;
   gap: 1rem;
 
-  background-color: #fefefe;
-  border: 1px solid black;
+  background-color: var(--white);
+  border: 1px solid hsl(146, 20%, 20%);
   padding: 0.75rem;
   width: 20rem;
 
@@ -37,10 +37,17 @@
   left: 8px;
   min-width: 8.5rem;
   transition: color 300ms ease, background-color 300ms ease;
+  
+  display: inline-block;
+  line-height: 1.1;
+  padding: 0.375rem 0.75rem;
+  background-color: hsl(146, 5%, 95%);
+  border: 1px solid var(--black);
 }
+
 .settings-btn:hover {
-  color: white;
-  background-color: black;
+  color: var(--white);
+  background-color: hsl(146, 50%, 36%);
 }
 
 /* settings-form-title */
@@ -73,7 +80,7 @@
 /* option */
 select {
   font-family: inherit;
-  border: 1px solid black;
+  border: 1px solid var(--black);
 }
 
 option {
@@ -82,23 +89,15 @@ option {
 
 /* I do not think this works, but the JS has not been created yet */
 option:hover {
-  color: white;
-  background-color: black;
+  color: var(--white);
+  background-color: var(--black);
 }
 
 label {
   font-size: 1.125rem;
 }
 
-/* button */
-button {
-  display: inline-block;
-  font-size: 1.125rem;
-  line-height: 1.1;
-  padding: 0.375rem 0.75rem;
-  background-color: #fefefe;
-  border: 1px solid black;
-}
+
 
 /* fieldset, legend: no css */
 /* key */

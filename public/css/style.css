@@ -26,18 +26,18 @@
 :root {
   --white: #ffffff;
   --black: #000000;
+  --dark-gray: #222222;
   --text: #333333;
   --middle-gray: #787878;
-  --dark-gray: #222222;
+  --primary-one: hsl(146, 50%, 36%);
+  --accent: hsl(39, 63%, 53%);
+  --accent-two: hsl(43, 63%, 47%);
+  --link-hover: rgb(141, 92, 2);
+
+  /* These 2 are blueish - change or remove: */
   --primary-light: hsl(231, 10%, 80%);
   --primary-dark: hsl(231, 28%, 25%);
-  --accent: hsl(39, 63%, 53%);
-  --link-hover: rgb(141, 92, 2);
-  --test-one: #2E8B57;
-  --test-two: #c3992c;
 }
-
-
 
 body {
   font-size: 1.125rem;
@@ -49,8 +49,7 @@ body {
 
 header {
   padding: 1.5rem 0;
-  // box-shadow: 0 1px rgb(0 0 0 / 0.25);
-  box-shadow: 0 1px hsl(146 20 80)
+  box-shadow: 0 1px hsl(146, 20%, 80%)
 }
 
 h1,
@@ -74,7 +73,7 @@ h1 {
 
 
 :not(body)::selection {
-  background-color: var(--primary-dark);
+  background-color: hsl(146, 20%, 20%);
   color: var(--white);
 }
 
@@ -95,18 +94,18 @@ h1 {
 input[type="search"] {
   width: 100%;
   border-radius: 0.5rem;
-  outline: 2px solid hsl(146 20 80);
+  outline: 2px solid hsl(146, 20%, 80%);
   border: none;
-  background-color: hsl(146 10 90);
+  background-color: hsl(146, 5%, 95%);
   padding: 0.5rem 0.25rem 0.5rem 0.5rem;
 }
 
 input[type="search"]::placeholder {
-  color: hsl(146 30 30);
+  color: hsl(146, 29%, 30%);
 }
 
 input[type="search"]:focus {
-  outline: 2px solid hsl(146 30 30);
+  outline: 2px solid hsl(146, 29%, 30%);
 }
 
 .search-terms {
@@ -141,10 +140,10 @@ input[type="search"]:focus {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #eee;
+  background-color: hsl(146, 10%, 90%);
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 1px solid hsl(146, 20%, 80%);
 }
 
 .results-buttons {
@@ -178,7 +177,7 @@ input[type="search"]:focus {
 .search-terms button {
   padding: 0.375em 0.75em;
   background-color: transparent;
-  border: 2px solid hsl(146 20 80);
+  border: 2px solid hsl(146, 20%, 80%);
   border-radius: 0.5em;
   font-style: italic;
 }
@@ -195,7 +194,7 @@ input[type="search"]:focus {
 
 .results-buttons button,
 .search-terms button {
-  border: 2px solid hsl(146 20 80);
+  border: 2px solid hsl(146, 20%, 80%);
 }
 
 .clear-searches {
@@ -204,7 +203,7 @@ input[type="search"]:focus {
 
 .load-more,
 .clear-searches {
-  border: 2px solid hsl(146 20 80);
+  border: 2px solid hsl(146, 20%, 80%);
 }
 
 .results-buttons button,
@@ -220,26 +219,26 @@ input[type="search"]:focus {
 .search-terms button:hover,
 .load-more:hover,
 .clear-searches:hover {
-  color: white;
-  background-color: #2E8B57;
+  color: var(--white);
+  background-color: hsl(146, 50%, 36%);
 }
 
 .results-buttons button:active,
 .search-terms button:active,
 .load-more:active,
 .clear-searches:active {
-  border: 2px solid #c3992c;
-  background-color: #c3992c;
-  color: black;
+  border: 2px solid hsl(43, 63%, 47%);
+  background-color: hsl(43, 63%, 47%);
+  color: var(--black);
 }
 
 .results-buttons button:focus-visible,
 .search-terms button:focus-visible,
 .load-more:focus-visible,
 .clear-searches:focus-visible {
-  outline: 2px solid #c3992c;
-  background-color: #c3992c;
-  color: black;
+  outline: 2px solid hsl(43, 63%, 47%);
+  background-color: hsl(43, 63%, 47%);
+  color: var(--black);
 }
 
 .load-more,
@@ -283,21 +282,22 @@ input[type="search"]:focus {
 
 /* Footer styles */
 footer {
-  border-top: 1px solid #333;
   padding: 2.5rem 0;
   margin-top: 3rem;
+  background-color: hsl(146, 20%, 20%);
 }
 
 .footer-heading {
   font-size: 1.75rem;
   font-weight: 200;
+  color: var(--white)
 }
 
 .close-btn { 
-  background-color: #ccc;
-  color: #333;
+  background-color: hsl(146, 20%, 80%);
+  color: var(--text);
   cursor: pointer;
-  border: 1px solid #fff;
+  border: 1px solid var(--white);
   padding: 0.375em;
   font-size: 1rem;
   position: absolute;
@@ -307,7 +307,7 @@ footer {
 }
 
 .close-btn:hover {
-  background-color: transparent;
+  background-color: hsl(146, 20%, 20%);
   color: var(--white);
 }
 

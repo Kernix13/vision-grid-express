@@ -230,8 +230,7 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 This project is licensed under the [MIT License](./LICENSE).
 
-<!--
-## To-Do
+## To-Do (Remove later)
 
 1️⃣ Home page:
 
@@ -254,7 +253,107 @@ This project is licensed under the [MIT License](./LICENSE).
 5. 📌 Finish Use of AI
 6. 📌 Add important code snippets somewhere. Should I create a separate .md file or add to README?
 
--->
+<!-- CSS Colors - skip settings.css for now
+
+| Var name           | Value                     | style | board | modal | nav |
+| :----------------- | :------------------------ | :---- | :---- | :---- | :-- |
+| --white            | #ffffff                   | ✅    |       |       |     |
+| --dark-gray        | #222222                   | ✅    |       |       |     |
+| --text             | #333333                   | ✅    |       |       |     |
+| --middle-gray      | #787878                   | ✅    |       |       |     |
+| --black            | #000000                   | ✅    |       |       |     |
+| --primary-one      | hsl(146, 50%, 36%)        | ✅    |       |       |     |
+| --accent           | hsl(39, 63%, 53%)         | ✅    |       |       |     |
+| --accent-two       | hsl(43, 63%, 47%)         | ✅    |       |       |     |
+| --link-hover       | rgb(141, 92, 2)           | ✅    |       |       |     |
+| --primary-light    | hsl(231, 10%, 80%)        | ✅    |       |       |     |
+| --primary-dark     | hsl(231, 28%, 25%)        | ✅    |       |       |     |
+|                    |                           |       |       |       |     |
+| header             | hsl(146, 20%, 80%)        | ✅    |       |       |     |
+| footer             | hsl(146, 20%, 20%)        | ✅    |       |       |     |
+| input              | hsl(146, 20%, 80%)        | ✅    |       |       |     |
+| input              | hsl(146, 5%, 95%)         | ✅    |       |       |     |
+| ::placeholder      | hsl(146, 29%, 30%)        | ✅    |       |       |     |
+| input:focus        | hsl(146, 29%, 30%)        | ✅    |       |       |     |
+| .image-card        | hsl(146, 5%, 95%)         | ✅    |       |       |     |
+| .image-card        | hsl(146, 20%, 80%)        | ✅    |       |       |     |
+| btn borders        | hsl(146, 20%, 80%)        | ✅    |       |       |     |
+| btns:active        | hsl(43, 63%, 47%)         | ✅    |       |       |     |
+| :focus-visible     | hsl(43, 63%, 47%)         | ✅    |       |       |     |
+| .thumbnails        | hsla(146, 20%, 20%, 0.2)  |       | ✅    |       |     |
+| .thumbnails > `*`  | hsl(146, 30%, 50%)        |       | ✅    |       |     |
+| .thumb-btns button | hsl(146, 20%, 60%)        |       | ✅    |       |     |
+| .delete            | hsl(146, 50%, 36%)        |       | ✅    |       |     |
+| .skip-to-content   | hsl(146, 20%, 20%)        |       |       |       | ✅  |
+| .modal-container   | rgba(0, 0, 0, 0.8)        |       |       | ✅    |     |
+| .modal             | rgba(0, 0, 0, 0.6)        |       |       | ✅    |     |
+| .modal             | rgba(255, 255, 255, 0.25) |       |       | ✅    |     |
+| .modal .nav        | rgba(0, 0, 0, 0.5)        |       |       | ✅    |     |
+| .modal .prev       | hsl(146, 29%, 30%)        |       |       | ✅    |     | -->
+
+Color table:
+
+| Var name/use                        | color                     | file     |
+| :---------------------------------- | :------------------------ | :------- |
+| --white                             | #ffffff                   | style    |
+| --black                             | #000000                   | style    |
+| --dark-gray                         | #222222                   | style    |
+| --text                              | #333333                   | style    |
+| --middle-gray                       | #787878                   | style    |
+| --primary-one                       | hsl(146, 50%, 36%)        | style    |
+| --accent                            | hsl(39, 63%, 53%)         | style    |
+| --accent-two                        | hsl(43, 63%, 47%)         | style    |
+| --link-hover                        | rgb(141, 92, 2)           | style    |
+|                                     |                           |          |
+| --primary-light                     | hsl(231, 10%, 80%)        | style    |
+| --primary-dark                      | hsl(231, 28%, 25%)        | style    |
+|                                     |                           |          |
+| input bg color                      | hsl(146, 5%, 95%)         | style    |
+| .thumb-btns bg                      | hsl(146, 5%, 95%)         | board    |
+| background-color                    | hsl(146, 10%, 90%)        | style    |
+| .thumbnails bg-color                | hsl(146, 10%, 90%)        | board    |
+| .image-text bg-color                | hsl(146, 10%, 90%)        | board    |
+| box-shadow                          | hsl(146, 20%, 80%)        | style    |
+| border                              | hsl(146, 20%, 80%)        | style    |
+| input outline                       | hsl(146, 20%, 80%)        | style    |
+| .close-btn background-color         | hsl(146, 20%, 80%)        | style    |
+| .thumbnails border                  | hsl(146, 20%, 80%)        | board    |
+| .thumb-btns button:hover bg         | hsl(146, 20%, 80%)        | board    |
+| .editable border                    | hsl(146, 20%, 60%)        | board    |
+| .thumb-btns button border           | hsl(146, 20%, 60%)        | board    |
+| `.thumbnails > *` border            | hsl(146, 30%, 50%)        | board    |
+| button bg color                     | hsl(146, 50%, 36%)        | style    |
+| .editable:focus outline             | hsl(146, 50%, 36%)        | board    |
+| .modal-buttons button:hover bg      | hsl(146, 50%, 36%)        | modal    |
+| .editable caret-color               | hsl(146, 50%, 36%)        | board    |
+| .settings-btn:hover bg              | hsl(146, 50%, 36%)        | settings |
+| .modal .next:hover bg               | hsl(146, 50%, 36%)        | modal    |
+| ::placeholder                       | hsl(146, 29%, 30%)        | style    |
+| input:focus outline                 | hsl(146, 29%, 30%)        | style    |
+| .modal .next bg                     | hsl(146, 29%, 30%)        | modal    |
+| ::selection                         | hsl(146, 20%, 20%)        | style    |
+| footer background-color             | hsl(146, 20%, 20%)        | style    |
+| .close-btn:hover bg-color           | hsl(146, 20%, 20%)        | style    |
+| .thumbnails-btn:hover bg            | hsl(146, 20%, 20%)        | board    |
+| .thumbnails box-shadow              | hsla(146, 20%, 20%, 0.2)  | board    |
+| .skip-to-content bg                 | hsl(146, 20%, 20%)        | nav      |
+| .logo color                         | hsl(146, 20%, 20%)        | nav      |
+| .nav-link color                     | hsl(146, 20%, 20%)        | nav      |
+| .bar bg-color                       | hsl(146, 20%, 20%)        | nav      |
+| .settings-form border               | hsl(146, 20%, 20%)        | settings |
+| .nav-link:hover color               | var(--link-hover)         | nav      |
+| .nav-link:hover border              | var(--link-hover)         | nav      |
+| .thumb-btns button:active bg        | hsl(43, 63%, 47%)         | board    |
+| button:active border                | hsl(43, 63%, 47%)         | style    |
+| button:active bg-color              | hsl(43, 63%, 47%)         | style    |
+| button:focus-visible outline        | hsl(43, 63%, 47%)         | style    |
+| button:focus-visible bg             | hsl(43, 63%, 47%)         | style    |
+| .modal-buttons button:active border | hsl(43, 63%, 47%)         | modal    |
+| .modal-buttons button:active bg     | hsl(43, 63%, 47%)         | modal    |
+| .modal box-shadow                   | rgba(255, 255, 255, 0.25) | modal    |
+| .modal bg                           | rgba(0, 0, 0, 0.6)        | modal    |
+| .modal-container bg                 | rgba(0, 0, 0, 0.8)        | modal    |
+| .modal .nav bg                      | rgba(0, 0, 0, 0.5)        | modal    |
 
 <!--
   Code:You GitHub past capstone examples - READMEs:
