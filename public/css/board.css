@@ -165,7 +165,7 @@ body {
   padding: 1rem;
   background-color: var(--white);
   color: var(--dark-gray);
-  caret-color: var(--primary);
+  caret-color: var(--accent);
   text-align: left;
   border: 1px solid var(--primary-muted-1);
   box-sizing: border-box;

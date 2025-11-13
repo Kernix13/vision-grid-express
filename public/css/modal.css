@@ -82,6 +82,7 @@
   font-size: 0.875rem;
   padding: 0.375em 0.75em;
   border-radius: 0.5rem;
+  border: 1px solid transparent;
   transition-duration: 300ms;
 }
 
