@@ -239,6 +239,7 @@ This project is licensed under the [MIT License](./LICENSE).
 1. 99% done, modal images look questionable on small screens
 2. Button colors???
 3. Is it okay to have different bg colors for the card icons? Should I duplicate that for the modal buttons?
+4. Mobile menu - I need to get rid of .container for small screens and try to add a bg color for the menu
 
 2️⃣ Board page:
 
