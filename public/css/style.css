@@ -7,10 +7,9 @@
 
 :root {
   --white: #ffffff;
-  --middle-gray: #787878;
-  --text: #333333;
-  --dark-gray: #222222;
   --black: #000000;
+  --dark-gray: #222222;
+  --text: #333333;
 
   --primary: hsl(146, 48%, 31%);
   --primary-dark-1: hsl(146, 29%, 30%);
@@ -23,7 +22,10 @@
   --accent: hsl(43, 63%, 47%);
   --accent-2: hsl(43, 80%, 40%);
   --accent-3: hsl(43, 90%, 45%);
+  --accent-4: hsl(43, 100%, 45%);
+  --accent-5: hsl(43, 100%, 55%);
   --link-hover: hsl(39, 97%, 28%);
+  --link-hover-2: hsl(39, 63%, 53%);
 }
 
 body {
@@ -36,6 +38,9 @@ body {
 header {
   padding: 1rem 0;
   box-shadow: 0 1px var(--primary-muted-2);
+  box-shadow: 0 1px var(--primary-muted-3);
+  // background: linear-gradient(var(--white), var(--primary-muted-2));
+  background: linear-gradient(var(--primary-muted-2), var(--white));
 }
 
 h1,
@@ -98,7 +103,7 @@ input[type="search"]::placeholder {
 }
 
 input[type="search"]:focus {
-  outline: 2px solid var(--accent-3);
+  outline: 2px solid var(--accent-4);
 }
 
 .search-terms {

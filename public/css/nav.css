@@ -17,7 +17,7 @@
 
 /* Nav styles that do not involve the mobile icon/menu */
 .nav-bar {
-  min-height: 4.375em;
+  min-height: 4.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,8 +45,7 @@
 .nav-link:visited,
 .home-link,
 .home-link:visited {
-  font-weight: 700;
-  color: var(--primary-dark-2);
+  color: var(--dark-gray);
   text-decoration: none;
   border: 1px solid transparent;
   transition: 400ms ease;
@@ -69,9 +68,9 @@
 .nav-link:focus,
 .home-link:hover,
 .home-link:focus {
-  color: var(--accent-2);
+  color: var(--link-hover);
   outline: none;
-  border: 1px solid var(--accent-2);
+  border: 1px solid var(--link-hover);
 }
 
 /* Mobile nav starts here */
@@ -79,7 +78,7 @@
   position: fixed;
   padding: 0.5rem 0;
   flex-direction: column;
-  background-color: var(--white);
+  // background-color: transparent;
   width: 100%;
   text-align: center;
   transition: top 500ms ease-in-out;

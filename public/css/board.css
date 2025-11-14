@@ -2,8 +2,9 @@ body {
   overflow-x: hidden;
 }
 
-.board-page {
+.board-page-title {
   margin-top: 3rem;
+  padding-top: 2rem;
 }
 
 .board-container {
@@ -46,7 +47,7 @@ body {
 
 /* Board page styles */
 .thumbnails {
-  border: 1px solid var(--primary-muted-2);
+  border: 1px solid var(--primary);
   background-color: var(--primary-muted-3);
   position: absolute;
   top: 11rem;
@@ -130,15 +131,16 @@ body {
   border: 1px solid var(--primary-muted-1);
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 300ms ease;
+  transition: background-color 300ms ease, color 300ms ease;
+  padding: 0.125em;
 }
 
 .thumb-btns button:hover {
-  background-color: var(--primary-muted-2);
+  background-color: var(--primary);
+  color: var(--white);
 }
 .thumb-btns button:active {
-  /* This looks bad: */
-  background-color: var(--accent);
+  background-color: var(--accent-4);
 }
 
 .move-down, .move-up {
@@ -147,6 +149,7 @@ body {
 .delete {
   color: rgb(221, 0, 0);
 }
+
 /* END new thumbnails elements */
 .image-text {
   display: grid;
@@ -172,18 +175,20 @@ body {
   padding: 1rem;
   background-color: var(--white);
   color: var(--dark-gray);
-  caret-color: var(--accent);
+  caret-color: var(--primary);
   text-align: left;
-  border: 1px solid var(--primary-muted-1);
+  outline: 1px solid var(--primary-muted-1);
   box-sizing: border-box;
 
   height: 30rem;
   overflow-y: auto;
   align-self: center;
+  transition: box-shadow 300ms ease;
 }
 
 .editable:focus {
-  outline: 1px solid var(--primary);
+  outline: 1px solid transparent;
+  box-shadow: 4px -4px 8px var(--primary-muted-1);
 }
 
 /* goal-heading, figure and goal are old styles - I may not keep these */
@@ -199,6 +204,7 @@ figure {
 
 @media (min-width: 768px) {
   .image-text {
+    // grid-template-columns: 3fr 2fr;
     grid-template-columns: 1fr 1fr;
     align-items: flex-start;
   }
