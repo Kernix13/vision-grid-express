@@ -45,7 +45,7 @@
 .nav-link:visited,
 .home-link,
 .home-link:visited {
-  color: var(--dark-gray);
+  
   text-decoration: none;
   border: 1px solid transparent;
   transition: 400ms ease;
@@ -53,6 +53,7 @@
 
 .nav-link,
 .nav-link:visited {
+  color: var(--dark-gray);
   padding: 0.25em 0.5em;
   text-transform: uppercase;
   font-weight: 500;
@@ -61,7 +62,8 @@
 
 .home-link,
 .home-link:visited {
-  font-weight: 800;
+  color: var(--primary-dark-2);
+  font-weight: 700;
 }
 
 .nav-link:hover,

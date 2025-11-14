@@ -12,6 +12,7 @@
   --text: #333333;
 
   --primary: hsl(146, 48%, 31%);
+  --primary: #29754a;
   --primary-dark-1: hsl(146, 29%, 30%);
   --primary-dark-2: hsl(146, 20%, 20%);
   --primary-muted-1: hsl(146, 20%, 60%);
@@ -24,6 +25,7 @@
   --accent-3: hsl(43, 90%, 45%);
   --accent-4: hsl(43, 100%, 45%);
   --accent-5: hsl(43, 100%, 55%);
+  --accent-6: hsl(43, 100%, 35%);
   --link-hover: hsl(39, 97%, 28%);
   --link-hover-2: hsl(39, 63%, 53%);
 }
@@ -59,6 +61,13 @@ h1 {
   letter-spacing: 2px;
   margin: 2rem 0 1rem;
   padding: 0 1rem;
+}
+
+.highlight {
+  font-style: italic;
+  color: var(--primary);
+  // background-color: var(--accent-4);
+  // padding: 0 0.25em;
 }
 
 h2 {
@@ -225,21 +234,20 @@ input[type="search"]:focus {
   color: var(--dark-gray);
 } 
 
-
 .search-terms button,
 .load-more,
 .clear-searches {
+  color: var(--dark-gray);
   background-color: transparent;
   border-radius: 0.25rem;
   transition-duration: 300ms;
 }
 
-.results-buttons button:hover,
 .search-terms button:hover,
 .load-more:hover,
 .clear-searches:hover {
-  color: var(--white);
-  background-color: var(--primary);
+  color: var(--black);
+  background-color: var(--accent-3);
 }
 
 .results-buttons button:active,

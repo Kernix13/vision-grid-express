@@ -243,10 +243,11 @@ This project is licensed under the [MIT License](./LICENSE).
 
 2️⃣ Board page:
 
-1. 📌 add functionality for up/down arrows to change the thumbnail & image/text order
-2. 📌 I need a modal to confirm deleting a saved image
-3. 📌 I need a modal for saved images - something way different and better than the home page modal - or much simpler but as a slider/lightbox
-4. 📌 in savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text 2) allow user to set the timing
+1. Add functionality for up/down arrows to change the thumbnail & image/text order
+2. I need a modal to confirm deleting a saved image
+3. I need a modal for saved images - something way different and better than the home page modal - or much simpler but as a slider/lightbox
+4. In savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text 2) allow user to set the timing
+5. When a thumbnail is clicked, use `scrollIntoView` to bring that image next to the thumbnail strip
 
 3️⃣ README.md:
 
