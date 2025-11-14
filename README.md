@@ -237,8 +237,8 @@ This project is licensed under the [MIT License](./LICENSE).
 1️⃣ Home page:
 
 1. 99% done, modal images look questionable on small screens
-2. 📌 add removeEventListener for modal nav (<, >) buttons for index = 0, nd index = .length - 1
-3. Change my focus styles from primary to accent becausee I can't find too many uses for that color
+2. Button colors???
+3. Is it okay to have different bg colors for the card icons? Should I duplicate that for the modal buttons?
 
 2️⃣ Board page:
 
@@ -251,10 +251,10 @@ This project is licensed under the [MIT License](./LICENSE).
 
 1. 📌 Steps for Unsplash API key
 2. 📌 Features
-3. ❓ Data sources and API integration details
-4. 📌 Finish Future Improvements
-5. 📌 Finish Use of AI
-6. 📌 Add important code snippets somewhere. Should I create a separate .md file or add to README?
+3. 📌 Finish Future Improvements
+4. 📌 Finish Use of AI
+5. ❓ Data sources and API integration details
+6. ❓ Add important code snippets somewhere?
 
 <!-- CSS Colors - skip settings.css for now
 
