@@ -73,32 +73,31 @@
 
       <!-- Landscape/Portrait radio buttons -->
       <fieldset>
-        <legend>Landscape image text field:</legend>
+        <legend>Modal text field:</legend>
         <div id="landscape-position" class="landscape-position">
           <div>
-            <input type="radio" name="landscape-above-below" id="above" value="above" />
-            <label for="above">Above</label>
+            <input type="radio" name="notes-goal" id="notes" value="notes" />
+            <label for="notes">Notes</label>
           </div>
 
           <div>
-            <input type="radio" name="landscape-above-below" id="below" value="below" checked="" />
-            <label for="below">Below</label>
+            <input type="radio" name="notes-goal" id="goal" value="goal" checked="" />
+            <label for="goal">Goal Statement</label>
           </div>
         </div>
       </fieldset>
 
       <fieldset>
-        <legend>Portrait image text field:</legend>
+        <legend>Lightbox timing:</legend>
         <div id="potrait-position" class="potrait-position">
           <div>
-            <input type="radio" name="portrait-above-below" id="left" value="left" />
-            <label for="left">Left</label>
+            <label for="slide-speed">Seconds: </label>
+            <input type="range" id="slide-speed" name="slideSpeed" min="3" max="10" step="1" value="5"
+              oninput="out.value = this.value" />
+            <output id="out">5</output>
           </div>
 
-          <div>
-            <input type="radio" name="portrait-above-below" id="right" value="right" checked="" />
-            <label for="right">Right</label>
-          </div>
+
         </div>
       </fieldset>
     </div>
