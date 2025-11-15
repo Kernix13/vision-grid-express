@@ -226,7 +226,8 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 5. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
 6. I asked ChatGPT about a `.editorconfig` file - it generated the content for that file which I used.
 7. ChatGPT gave me an outline for the "User Journey" section
-8. ...
+8. I asked ChatGPT about including robots.txt and sitemap.xml. It suggested to add them and wrote the contents for me.
+9. ...
 
 ## License ✅
 
@@ -264,6 +265,7 @@ This project is licensed under the [MIT License](./LICENSE).
 1. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
 2. Add `sitemap.xml` and `robots.txt`
 3. Gradient header - yes or no???
+4. Change the hrefs in robots.txt and sitemap.xml
 
 <!--
   Code:You GitHub past capstone examples - READMEs:
