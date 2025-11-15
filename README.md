@@ -248,6 +248,7 @@ This project is licensed under the [MIT License](./LICENSE).
 3. I need a modal for saved images - something way different and better than the home page modal - or much simpler but as a slider/lightbox
 4. In savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text 2) allow user to set the timing
 5. When a thumbnail is clicked, use `scrollIntoView` to bring that image next to the thumbnail strip
+6. Both pages: Should all buttons should have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
 
 3️⃣ README.md:
 
