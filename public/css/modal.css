@@ -83,26 +83,21 @@
   padding: 0.375em 0.75em;
   border-radius: 0.25rem;
   border: 1px solid transparent;
-  transition-duration: 300ms;
+  transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
 }
-
 
 .modal-buttons button:hover {
   color: var(--white);
   background-color: var(--primary);
   border: 1px solid var(--white);
 }
-.modal-buttons button:focus {
-  color: var(--white);
-  background-color: var(--accent-3);
-  border: 1px solid var(--white);
-  outline: transparent;
-}
 
+.modal-buttons button:focus,
 .modal-buttons button:active {
-  border: 1px solid var(--accent);
-  background-color: var(--accent);
-  color: var(--black);
+  color: var(--dark-gray);
+  border: 1px solid var(--white);
+  background-color: var(--accent-3);
+  outline: transparent;
 }
 
 .modal .nav {
@@ -114,8 +109,6 @@
   padding: 0.125rem .5rem 0.5rem;
   font-size: 2rem;
   line-height: 1;
-  cursor: pointer;
-  border-radius: 0.25rem;
   z-index: 10;
 }
 
@@ -123,11 +116,12 @@
 .modal .next {
   background-color: var(--primary-dark-1);
   border: 1px solid transparent;
-  transition: background-color 300ms ease, border 300ms ease;
+  transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
 }
 
 .modal .prev:hover,
 .modal .next:hover {
+  color: var(--dark-gray);
   border: 1px solid var(--white);
   background-color: var(--accent-3);
 }
