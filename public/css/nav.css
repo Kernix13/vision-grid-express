@@ -45,7 +45,6 @@
 .nav-link:visited,
 .home-link,
 .home-link:visited {
-  
   text-decoration: none;
   border: 1px solid transparent;
   transition: 400ms ease;
@@ -53,7 +52,7 @@
 
 .nav-link,
 .nav-link:visited {
-  color: var(--dark-gray);
+  color: var(--primary-dark-2);
   padding: 0.25em 0.5em;
   text-transform: uppercase;
   font-weight: 500;
