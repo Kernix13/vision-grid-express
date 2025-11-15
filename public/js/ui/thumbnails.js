@@ -75,3 +75,10 @@ export function moveImage(id, direction) {
      4. Do I have to call addThumbnailsToDom & addSavedImagesToDom? 
   */
 }
+
+export function selectImage(id) {
+  const imageText = document.getElementById(id)
+  if (!imageText) return;
+
+  imageText.scrollIntoView({ behavior: 'smooth' });
+}

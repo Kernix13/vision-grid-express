@@ -4,7 +4,7 @@ import { toggleDisplay } from "./utils/classUtils.js";
 import { getLocalStorage } from "./utils/localStorage.js";
 import { menuButton } from "./ui/menu.js";
 import { initBoardPage } from "./ui/initPage.js";
-import { deleteImage, moveImage } from "./ui/thumbnails.js";
+import { deleteImage, moveImage, selectImage } from "./ui/thumbnails.js";
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
@@ -71,8 +71,8 @@ thumbnails.addEventListener('click', e => {
   } else if (btn?.classList.contains('delete')) {
     deleteImage(e, id);
   } else if (e.target.classList.contains('thumb-image')) {
-    // I'm not sure if selecting the image makes sense unless it is to scroll to that area of the page
-    // selectImage(id);
+    // Does it make sense for selectImage to scrollIntoView? Is that it?
+    selectImage(id);
     console.log(imageTextItem.id);
   }
 });
