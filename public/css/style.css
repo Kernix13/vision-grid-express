@@ -182,81 +182,50 @@ input[type="search"]:focus {
 }
 
 /* Buttons */
-.search-terms button {
-  padding: 0.375em 0.75em;
+.search-terms button,
+.results-buttons button,
+.results-buttons .remove,
+.load-more,
+.clear-searches {
+  cursor: pointer;
+  color: var(--dark-gray);
   background-color: transparent;
   border: 2px solid var(--primary-muted-2);
-  border-radius: 0.25em;
+  border-radius: 0.25rem;
+  transition: background-color 300ms ease, border 300ms ease;
+}
+
+.search-terms button {
+  padding: 0.375em 0.75em;
   font-style: italic;
 }
 
-.search-terms button:hover {
-  cursor: pointer;
-}
-
 .results-buttons button {
-  cursor: pointer;
   font-size: 1rem;
   padding: 0.375em 0.125em;
-  border-radius: 0.25rem;
-}
-
-.results-buttons button,
-.search-terms button {
-  border: 2px solid var(--primary-muted-2);
 }
 
 .clear-searches {
   margin-bottom: 2rem;
 }
 
-.load-more,
-.clear-searches {
-  border: 2px solid var(--primary-muted-2);
-}
-
 .results-buttons .save {
   background-color: var(--primary);
   color: var(--white);
-  transition-duration: 300ms;
+  transition: background-color 300ms ease, border 300ms ease;
 } 
 .results-buttons .save:hover {
-  background-color: var(--accent-3);
   color: var(--dark-gray);
 } 
-
-.results-buttons .remove {
-  background-color: transparent;
-  transition-duration: 300ms;
-} 
-.results-buttons .remove:hover {
-  background-color: var(--accent-3);
-  color: var(--dark-gray);
-} 
-
-.search-terms button,
-.load-more,
-.clear-searches {
-  color: var(--dark-gray);
-  background-color: transparent;
-  border-radius: 0.25rem;
-  transition-duration: 300ms;
-}
 
 .search-terms button:hover,
 .load-more:hover,
-.clear-searches:hover {
-  color: var(--black);
+.clear-searches:hover,
+.results-buttons .save:hover,
+.results-buttons .remove:hover {
+  color: var(--dark-gray);
   background-color: var(--accent-3);
-}
-
-.results-buttons button:active,
-.search-terms button:active,
-.load-more:active,
-.clear-searches:active {
-  border: 2px solid var(--accent-3);
-  background-color: var(--accent-3);
-  color: var(--black);
+  border: 2px solid transparent;
 }
 
 .results-buttons button:focus-visible,
@@ -265,7 +234,6 @@ input[type="search"]:focus {
 .clear-searches:focus-visible {
   outline: 2px solid var(--accent-3);
   background-color: var(--accent-3);
-  color: var(--black);
 }
 
 .load-more,
@@ -273,7 +241,6 @@ input[type="search"]:focus {
   width: 100%;
   padding: 0.5em 1em;
   margin-top: 3rem;
-
   font-size: 1.125rem;
 }
 
@@ -292,6 +259,7 @@ input[type="search"]:focus {
 .load-more.inline {
   display: inline;
 }
+/* END DOM BUTTONS */
 
 .load-more-search,
 .h2-search-term {
