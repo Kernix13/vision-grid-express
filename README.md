@@ -66,19 +66,17 @@ http://localhost:8080
 
 You can now search for images, save images to your board page, etc.
 
-### Getting your Unsplash API key
+### Getting your Unsplash API key ✅
 
-> I need to do this process for myself to double-check the steps - use incognito mode and use a different email address.
-
-<!-- 1. Navigate to [Unsplash](https://unsplash.com/) and click the hamburger menu in the top-right corner and choose Developers/API.
-2. At the top-right corner, click the "Register as a Developer" button.
+1. Navigate to [Unsplash](https://unsplash.com/) and click the hamburger menu in the top-right corner and choose Developers/API.
+2. Click the button "Register as a Developer".
 3. Fill out the form and click join to register your account.
 4. Click the "Your apps" button on the page.
 5. Click the empty area with the text, "New Application."
 6. Fill out the application information form and click the "Create Application" button.
-7. Scroll down to the section that displays application id, access key, and secret key. The access key is the API key that you will need for this project. -->
+7. Scroll down to the section that displays application id, access key, and secret key. The access key is the API key that you will need for this project.
 
-## Capstone Requirements ❓
+## Capstone Requirements ✅
 
 <table>
   <thead>
@@ -94,11 +92,11 @@ You can now search for images, save images to your board page, etc.
     </tr>
     <tr>
       <td>Create a Node.js web server using Express.js</td>
-      <td>Express server with query params</td>
+      <td>Express server with 2 query params</td>
     </tr>
     <tr>
       <td>Analyze data that is stored in various data structures</td>
-      <td>Retrieve API JSON, save as <code>localStorage</code> object</td>
+      <td>Retrieve API JSON, save as <code>localStorage</code> objects and strings</td>
     </tr>
     <tr>
       <td>Display information about the data in your app</td>
@@ -106,7 +104,9 @@ You can now search for images, save images to your board page, etc.
         <ul>
           <li>Images displayed in 3 different sizes</li>
           <li>Image descriptions added as <code>alt</code> attribute</li>
+          <li>Add image id to elements <code>id</code> and <code>data-id</code> attributes</li>
         </ul>
+        <blockquote>❓ Do the points above qualify for this requirement?</blockquote>
       </td>
     </tr>
     <tr>
@@ -237,42 +237,49 @@ This project is licensed under the [MIT License](./LICENSE).
 
 1️⃣ Home page:
 
-1. 99% done, modal images look questionable on small screens
-2. Button colors???
-3. Is it okay to have different bg colors for the card icons? Should I duplicate that for the modal buttons?
-4. Mobile menu - I need to get rid of .container for small screens and try to add a bg color for the menu
+1. 99% done, modal images look questionable on small screens.
+2. Is it okay to have different bg colors for the card icons? Should I duplicate that for the modal buttons?
+3. The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
 
 2️⃣ Board page:
 
 1. Add functionality for up/down arrows to change the thumbnail & image/text order
 2. I need a modal to confirm deleting a saved image
 3. I need a modal for saved images - something way different and better than the home page modal - or much simpler but as a slider/lightbox
-4. In savedImages.js, I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text 2) allow user to set the timing
-5. When a thumbnail is clicked, use `scrollIntoView` to bring that image next to the thumbnail strip
-6. Settings menu - refactor!
+4. I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text 2) allow user to set the timing
+5. Settings menu - refactor!
+6. If I keep t he selectImage functionality, then I may need a back-to-top button
 
-3️⃣ README.md:
-
-1. 📌 Steps for Unsplash API key
-2. 📌 Features
-3. 📌 Finish Future Improvements
-4. 📌 Finish Use of AI
-5. ❓ Data sources and API integration details
-6. ❓ Add important code snippets somewhere?
-
-3️⃣ Home and Board pages:
+3️⃣ Both pages:
 
 1. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
 2. Add `sitemap.xml` and `robots.txt`
 3. Gradient header - yes or no???
-4. Change the hrefs in robots.txt and sitemap.xml
+4. Change the hrefs in robots.txt and sitemap.xml when/if I go live
 
-<!--
+4️⃣ README.md:
+
+1. 📌 Features
+2. 📌 Finish Future Improvements
+3. 📌 Finish Use of AI
+4. ❓ Data sources and API integration details
+5. ❓ Add important code snippets somewhere?
+
+<!-- CodeYou, Code:You, CodeLouisville, CodeKentucky, Code:Kentucky all + capstone
   Code:You GitHub past capstone examples - READMEs:
 
 - https://github.com/rodriguezosvaldo/Solvio: Features
 - https://github.com/cramerjillian/hotel-grocery-search:
   - Future Improvements, User Instructions, Use of AI
+  NEW ONES:
+- https://github.com/pointer-jen/CodeYou_DA_Jan_2025_Capstone: Technologies Used
+- https://github.com/amgant/LouisvilleKY-GoodReads-Books: lots of detail!
+- https://github.com/judd-jacobs/code-you-capstone: lots of detail!
+- https://github.com/WayneBlunden/CapstoneProject: lots of detail!
+- https://github.com/Darcicat/ACNH-Aesthetic-Rarity-Guide: lots of detail!
+- https://github.com/Laxman2024/Health-and-sleep-statistics: lots of detail!
+- https://github.com/Redsoxin7/beer_recipes: lots of detail!
+- https://github.com/ChigozieCO/altschool-capstone-project: lots of detail!
 
 - https://github.com/acechler/f1-fanclub - nothing useful here
 - https://github.com/aprilsears/chronically-well - nothing useful here
