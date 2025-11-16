@@ -18,7 +18,8 @@ export async function getSearchResults(searchTerm, page, element) {
         imageRaw: result.urls.raw,
         imageSmall: result.urls.small,
         imageThumb: result.urls.thumb,
-        notes: ''
+        notes: '',
+        affirmation: ''
       }
     })
 

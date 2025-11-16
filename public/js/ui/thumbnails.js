@@ -48,6 +48,7 @@ export function addThumbnailsToDom() {
   });
 }
 
+// I do not think this function should be in here
 export function addSavedImagesToDom() {
   const savedImages = getLocalStorage('saved-images');
   const imgTextContainer = document.getElementById('img-text-container');
