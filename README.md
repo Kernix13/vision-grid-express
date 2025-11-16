@@ -246,12 +246,15 @@ This project is licensed under the [MIT License](./LICENSE).
 
 2️⃣ Board page:
 
-1. I need a modal to confirm deleting a saved image
-2. I need a modal for saved images - something way different and better than the home page modal - or much simpler but as a slider/lightbox
-3. I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text 2) allow user to set the timing, and/or 3) have another text field as a heading and a max-character count where the user can enter a single sentence/statement for each image
-4. Settings menu - refactor!
-5. If I keep the selectImage functionality, then I may need a back-to-top button in case the user has many saved images and/or images with a large heightto-width ratio.
-6. I need to figure out how to add the selected class to thumb-item after each move up/down
+1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
+2. Settings menu - refactor!
+3. If I keep the selectImage functionality, then I may need a back-to-top button in case the user has many saved images and/or images with a large heightto-width ratio, otherwise it's a long scroll back up!
+4. I need to figure out how to add the selected class to thumb-item after each move up/down
+5. STRETCH GOAL: I'll need to implement the settings form to:
+   1. rename the board(s),
+   2. start a slideshow of just the images, and/or the images + text
+   3. allow user to set the timing, and/or
+   4. have another editable text field as a heading/figcaption/blockquote with a max-character count where the user can enter a single sentence/statement for each image - will need to add that to localStorage
 
 3️⃣ Both pages:
 

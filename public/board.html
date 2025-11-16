@@ -77,12 +77,12 @@
         <legend>Modal text field:</legend>
         <div id="landscape-position" class="landscape-position">
           <div>
-            <input type="radio" name="notes-goal" id="notes" value="notes" />
+            <input type="radio" name="notes-goal" id="notes" value="notes" checked />
             <label for="notes">Notes</label>
           </div>
 
           <div>
-            <input type="radio" name="notes-goal" id="goal" value="goal" checked="" />
+            <input type="radio" name="notes-goal" id="goal" value="goal" />
             <label for="goal">Goal Statement</label>
           </div>
         </div>
@@ -104,7 +104,7 @@
     </div>
   </form>
 
-  <button id="settings-btn" class="settings-btn">Hide Settings</button>
+  <button id="settings-btn" class="settings-btn">Show Settings</button>
 
   <main id="main">
     <div class="board-container">
@@ -147,6 +147,22 @@
     </button>
     <div class="thumb-modal"></div>
   </div> -->
+
+  <div class="thumb-modal-container" id="thumb-modal">
+    <div class="thumb-modal">
+      <button class="close-btn" id="close" aria-label="Close">
+        <i class="fa fa-times"></i>
+      </button>
+      <div class="modal-header">
+        <h3>Remove Image</h3>
+        <p>Are you sure you want to remove this image?</p>
+      </div>
+      <div class="modal-content">
+        <button id="confirm-delete-btn" class="thumb-modal-btn">Delete</button>
+        <button id="cancel-delete-btn" class="thumb-modal-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
 
   <!-- <div class="board-modal-container" id="board-modal-bg">
     <button class="board-close-btn" id="board-close" aria-label="Close">

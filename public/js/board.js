@@ -1,7 +1,7 @@
 "use strict";
 
 import { toggleDisplay } from "./utils/classUtils.js";
-import { getLocalStorage } from "./utils/localStorage.js";
+import { getLocalStorage, setLocalStorage } from "./utils/localStorage.js";
 import { menuButton } from "./ui/menu.js";
 import { initBoardPage } from "./ui/initPage.js";
 import { deleteImage, moveImage, selectImage } from "./ui/thumbnails.js";
@@ -72,8 +72,6 @@ thumbnails.addEventListener('click', e => {
   } else if (btn?.classList.contains('move-down')) {
     moveImage(e, id, 'down');
     thumbItem.classList.add('selected');
-  } else if (btn?.classList.contains('delete')) {
-    deleteImage(e, id);
   } else if (e.target.classList.contains('thumb-image')) {
     // Does it make sense for selectImage to scrollIntoView? Is that it?
     selectImage(id);
@@ -81,4 +79,39 @@ thumbnails.addEventListener('click', e => {
   }
 });
 
+// Thumbnail delete button listener
+thumbnails.addEventListener('click', e => {
+  const thumbModal = document.getElementById('thumb-modal');
+  const btn = e.target.closest('button');
+  const thumbItem = e.target.closest('.thumb-item');
+  if (!thumbItem) return;
 
+  const id = thumbItem.dataset.id;
+
+  if (btn?.classList.contains('delete')) {
+    thumbModal.classList.add('show-modal');
+    setLocalStorage('delete-item-id', id);
+  }
+});
+
+/* 
+  This function and the following 3 listeners are all for thumbnail delete btn
+*/
+function closeThumbDeleteModal() {
+  const thumbModal = document.getElementById('thumb-modal');
+  thumbModal.classList.remove('show-modal');
+}
+
+// Delete saved image confirmation button listener
+const confirmBtn = document.getElementById('confirm-delete-btn');
+confirmBtn.addEventListener('click', () => {
+  deleteImage(getLocalStorage('delete-item-id'));
+  closeThumbDeleteModal();
+})
+
+// Cancel and close button listener for thumbnail delete
+const cancelBtn = document.getElementById('cancel-delete-btn');
+cancelBtn.addEventListener('click', closeThumbDeleteModal);
+
+const closeDeleteModal = document.getElementById('close');
+closeDeleteModal.addEventListener('click', closeThumbDeleteModal);

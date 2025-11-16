@@ -90,19 +90,6 @@ export function addSavedImagesToDom() {
   });
 }
 
-export function deleteImage(event, id) {
-  // I will have to refactor this when I create a confirmation modal
-  const thumbItem = event.target.closest('.thumb-item');
-  const imageTextItem = document.getElementById(id)
-
-  const savedImages = getLocalStorage('saved-images');
-  const newSavedImages = savedImages.filter(img => img.id !== id);
-
-  setLocalStorage('saved-images', newSavedImages);
-  thumbItem.remove();
-  imageTextItem.remove();
-}
-
 export function moveImage(event, id, direction) {
   const savedImages = getLocalStorage('saved-images');
   const idx = savedImages.findIndex(img => img.id === id);
@@ -124,7 +111,6 @@ export function moveImage(event, id, direction) {
   
   addThumbnailsToDom();
   addSavedImagesToDom();
-  
 }
 
 export function selectImage(id) {
@@ -132,4 +118,16 @@ export function selectImage(id) {
   if (!imageText) return;
 
   imageText.scrollIntoView({ behavior: 'smooth' });
+}
+
+export function deleteImage(id) {
+  const thumbItem = document.querySelector(`[data-id="${id}"]`);
+  const imageTextItem = document.getElementById(id)
+
+  const savedImages = getLocalStorage('saved-images');
+  const newSavedImages = savedImages.filter(img => img.id !== id);
+
+  setLocalStorage('saved-images', newSavedImages);
+  thumbItem.remove();
+  imageTextItem.remove();
 }
