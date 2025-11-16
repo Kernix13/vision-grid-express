@@ -5,28 +5,26 @@
 ![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
-<!-- ![GitHub](https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge) -->
-
 <!--  for-the-badge, flat or flat-square -->
 
 <img align="center" width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" />
 
 ## Project overview and objectives ✅
 
-VisualGrid is an image based tools for planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
+VisualGrid is an image based tool for personal project planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
 
-1. Goal setting: A user can search for images based on their personal goals like fitness, self-improvement, new job search, etc. Then creating goal and affirmation statements for their saved images can be viewed via a modal on their board page.
-2. Project based: This would be good for people plannin home improvements involving landscaping, interior design, building a deck, etc. TThe user can add detailed notes for all saved images for the vision they have in mind.
+1. Goal setting: A user can search for images based on their personal goals like fitness, self-improvement, new job search, etc. They can then add goal and affirmation statements for each saved images which can be viewed on the page or in a modal on the board page.
+2. Project based: This would be good for people planning home improvements involving landscaping, interior design, home additions like a deck, etc. The user can add detailed notes for their saved images that help them with the visualization of their project.
 3. Inspiration board: This version would be good for athletes training for an event or for anyone with a big event in their near future. Their saved images could have motivational statements tied to each of their images.
 4. Or any other idea a user can have that involves images and text.
 
-After the user searches for images, they can save or remove any images from the grid shwoing the results. The grid images are small. They can click on any of the small image on the image cards to open a modal to view a larger version. They can Save/Remove an image while in the modal view.
+After the user searches for images, they can save or remove any images from the "results" grid on the home page. The grid images are small. To view a larger version, they can click on any of the card images to open a modal to view a larger version. They can Save/Remove an image while in the modal view.
 
 The user can keep fetching more images based on their current/last search, start a new search to fetch images, or revisit previous search phrases. This app will always fetch the next page of image results regardless of how they choose to get more images.
 
 Once a user saves images, they can visit their board page where their images are displayed on the page in a large format with an editable text field tied to each image. The user can add notes or goal statements which are saved to localStorage along with each image.
 
-Also on their board page is a thumbnails view for each saved image which allows the user to reorder the image-text elements, and/or remove a saved image from localStorage.
+Also on their board page is a thumbnails view for each saved image which allows the user to reorder the image-text elements, and/or remove a saved image along with its text notes.
 
 Finally, the user can open a modal which will display each saved image along with their notes/statements for each image. The user will have the ability to set the timing on the image modal/lightbox modal.
 
@@ -111,7 +109,12 @@ You can now search for images, save images to your board page, etc.
     </tr>
     <tr>
       <td>Have a function with 2 or more params with a <code>return</code> value</td>
-      <td><code>getSearchResults(searchTerm, page, element)</code></td>
+      <td>
+      <ul>
+      <li><code>getSearchResults(searchTerm, page, element)</code></li>
+      <li><code>moveImage(event, id, direction)</code></li>
+      </ul>
+      </td>
     </tr>
     <tr>
       <td>Persist & use data to the user to local storage</td>
@@ -167,7 +170,7 @@ You can now search for images, save images to your board page, etc.
 1. View Saved Images
    - Displays all images you've saved from the Home page as thumbnails.
 2. Reorder Images
-   Move thumbnails up or down to rearrange the order of your images.
+   - Move thumbnails up or down to rearrange the order of your images.
 3. Edit Notes
    - Each saved image has an editable text area.
    - Add notes, goals, or reflections related to each image.
@@ -233,29 +236,28 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 This project is licensed under the [MIT License](./LICENSE).
 
-## To-Do (Remove later)
+## ~~To-Do~~ (Remove later this section later...)
 
 1️⃣ Home page:
 
 1. 99% done, modal images look questionable on small screens.
-2. Is it okay to have different bg colors for the card icons? Should I duplicate that for the modal buttons?
+2. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons?
 3. The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
 
 2️⃣ Board page:
 
-1. Add functionality for up/down arrows to change the thumbnail & image/text order
-2. I need a modal to confirm deleting a saved image
-3. I need a modal for saved images - something way different and better than the home page modal - or much simpler but as a slider/lightbox
-4. I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text 2) allow user to set the timing
-5. Settings menu - refactor!
-6. If I keep t he selectImage functionality, then I may need a back-to-top button
+1. I need a modal to confirm deleting a saved image
+2. I need a modal for saved images - something way different and better than the home page modal - or much simpler but as a slider/lightbox
+3. I'll need to implement the settings option (if and when I get to that) and maybe a button somewhere to start a slideshow of 1) just the images, and/or the images + text 2) allow user to set the timing, and/or 3) have another text field as a heading and a max-character count where the user can enter a single sentence/statement for each image
+4. Settings menu - refactor!
+5. If I keep the selectImage functionality, then I may need a back-to-top button in case the user has many saved images and/or images with a large heightto-width ratio.
+6. I need to figure out how to add the selected class to thumb-item after each move up/down
 
 3️⃣ Both pages:
 
 1. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
-2. Add `sitemap.xml` and `robots.txt`
-3. Gradient header - yes or no???
-4. Change the hrefs in robots.txt and sitemap.xml when/if I go live
+2. Gradient header - yes or no???
+3. Change the hrefs in robots.txt and sitemap.xml when/if I go live
 
 4️⃣ README.md:
 
