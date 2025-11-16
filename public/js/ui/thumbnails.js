@@ -1,8 +1,7 @@
 import { getLocalStorage, setLocalStorage } from "../utils/localStorage.js";
 
-const savedImages = getLocalStorage('saved-images');
-
 export function addThumbnailsToDom() {
+  const savedImages = getLocalStorage('saved-images');
   
   const thumbnails = document.querySelector('.thumbnails');
   thumbnails.innerHTML = ''; 
@@ -49,6 +48,48 @@ export function addThumbnailsToDom() {
   });
 }
 
+export function addSavedImagesToDom() {
+  const savedImages = getLocalStorage('saved-images');
+  const imgTextContainer = document.getElementById('img-text-container');
+  imgTextContainer.innerHTML = '';
+
+  if (!savedImages || savedImages.length === 0) {
+    imgTextContainer.append(document.createTextNode('No saved images to display...'));
+    return;
+  }
+
+  savedImages.forEach(img => {
+
+    // Create container for regular sized image and text
+    const imageText = document.createElement('div');
+    imageText.id = img.id;
+    imageText.className = 'image-text';
+
+    // Create image element
+    const image = document.createElement('img');
+    image.className = 'regular';
+    image.id = `image-${img.id}`;
+    image.alt = img.description;
+    image.src = img.imageRegular;
+    imageText.append(image);
+
+    // Create editable div
+    const div = document.createElement('div');
+    div.className = 'editable';
+    div.id = `text-${img.id}`;
+    div.setAttribute('contenteditable', true);
+
+    // Show saved notes if they exist, otherwise show placeholder
+    div.innerHTML =
+      img.notes
+        ? img.notes.replace(/\n/g, '<br>')
+        : 'You can add or edit notes here...';
+
+    imageText.append(div);
+    imgTextContainer.append(imageText);
+  });
+}
+
 export function deleteImage(event, id) {
   // I will have to refactor this when I create a confirmation modal
   const thumbItem = event.target.closest('.thumb-item');
@@ -62,18 +103,28 @@ export function deleteImage(event, id) {
   imageTextItem.remove();
 }
 
-export function moveImage(id, direction) {
+export function moveImage(event, id, direction) {
   const savedImages = getLocalStorage('saved-images');
-  const index = savedImages.findIndex(img => img.id === id);
-  if (index === -1) return;
+  const idx = savedImages.findIndex(img => img.id === id);
+  if (idx === -1) return;
 
-  console.log(`id: ${id}, direction: ${direction}`)
-  /* Below here:
-     1. if block for 'up'
-     2. if block for 'down'
-     3. save new 'saved-images' to localStorage
-     4. Do I have to call addThumbnailsToDom & addSavedImagesToDom? 
-  */
+  console.log(`id: ${id}, direction: ${direction}`);
+
+  const newOrder = [...savedImages];
+  
+  if (direction === 'up' && idx > 0) {
+    [newOrder[idx], newOrder[idx - 1]] = [newOrder[idx - 1], newOrder[idx]];
+    setLocalStorage('saved-images', newOrder);
+  }
+
+  if (direction === 'down' && idx < savedImages.length - 1) {
+    [newOrder[idx], newOrder[idx + 1]] = [newOrder[idx + 1], newOrder[idx]];
+    setLocalStorage('saved-images', newOrder);
+  }
+  
+  addThumbnailsToDom();
+  addSavedImagesToDom();
+  
 }
 
 export function selectImage(id) {

@@ -42,16 +42,17 @@ hamburger.addEventListener("click", () => {
 
 // 6. Thumbnail item
 thumbnails.addEventListener('click', (e) => {
-  const thumb = e.target.closest('.thumb-item');
-  if (!thumb) return;
+  const thumbItem = e.target.closest('.thumb-item');
+  if (!thumbItem) return;
 
   // Remove previous selection
   const selected = document.querySelectorAll('.thumb-item.selected');
 
-  if (selected.length > 0) {
-    selected.forEach(item => item.classList.remove('selected'));
-  }
-  thumb.classList.toggle('selected');
+  // if (selected.length > 0) {
+  //   selected.forEach(item => item.classList.toggle('selected'));
+  // }
+
+  thumbItem.classList.toggle('selected');
   
 });
 
@@ -65,9 +66,12 @@ thumbnails.addEventListener('click', e => {
   const imageTextItem = document.getElementById(id)
 
   if (btn?.classList.contains('move-up')) {
-    moveImage(id, 'up');
+    moveImage(e, id, 'up');
+    // I can't get the selected class to stick?
+    thumbItem.classList.add('selected');
   } else if (btn?.classList.contains('move-down')) {
-    moveImage(id, 'down');
+    moveImage(e, id, 'down');
+    thumbItem.classList.add('selected');
   } else if (btn?.classList.contains('delete')) {
     deleteImage(e, id);
   } else if (e.target.classList.contains('thumb-image')) {
