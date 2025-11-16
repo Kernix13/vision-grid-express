@@ -39,9 +39,8 @@ body {
 header {
   padding: 1rem 0;
   box-shadow: 0 1px var(--primary-muted-2);
-  box-shadow: 0 1px var(--primary-muted-3);
-  // background: linear-gradient(var(--white), var(--primary-muted-2));
-  background: linear-gradient(var(--primary-muted-2), var(--white));
+  // box-shadow: 0 1px var(--primary-muted-3);
+  // background: linear-gradient(var(--primary-muted-2), var(--white));
 }
 
 h1,
