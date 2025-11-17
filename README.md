@@ -288,22 +288,20 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 15 To-Do items left to do.
+> 10-11 To-Do items left to do.
 
 1️⃣ Home page:
 
-1. Modal images look questionable on small screens.
-2. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons?
-3. Change `object-fit` value for `result-image` for single col on small screens
-4. The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
+1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons?
+2. The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
+3. Home page h1 span different color/italic - good, bad?
 
 2️⃣ Board page:
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
 2. I need to figure out how to add the selected class to `thumb-item` after each move up/down
-3. Consider removing favicon.png if the .ico file is enough
-4. consider using `srcset` for DOM images on different devices, possibly same for modals
-5. STRETCH GOAL(S): I'll need to implement the settings form to:
+3. consider using `srcset` for DOM images on different devices, possibly same for modals
+4. STRETCH GOAL(S): I'll need to implement the settings form to:
    1. rename the board(s),
    2. start a slideshow of just the images, and/or the images + text
    3. allow user to set the timing, and/or
@@ -318,24 +316,24 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 1. 📌 Finish Future Improvements
 2. 📌 Finish Use of AI
-3. ❓ Features
-4. ❓ Add important code snippets somewhere?
+
+<!-- 3. ❓ Features -->
+<!-- 4. ❓ Add important code snippets somewhere? -->
 
 <!--
-  Code:You GitHub past capstone examples - READMEs:
-  CodeYou, Code:You, CodeLouisville, CodeKentucky, Code:Kentucky all + capstone
+  GitHub past capstone examples READMEs: Search CodeYou, Code:You, CodeLouisville, CodeKentucky, Code:Kentucky - all + capstone
 
-- https://github.com/rodriguezosvaldo/Solvio: Features
-- https://github.com/cramerjillian/hotel-grocery-search:
+1. https://github.com/rodriguezosvaldo/Solvio: Features
+2. https://github.com/cramerjillian/hotel-grocery-search:
   - Future Improvements, User Instructions, Use of AI
-- https://github.com/pointer-jen/CodeYou_DA_Jan_2025_Capstone: Technologies Used
-- https://github.com/amgant/LouisvilleKY-GoodReads-Books: lots of detail!
-- https://github.com/judd-jacobs/code-you-capstone: lots of detail!
-- https://github.com/WayneBlunden/CapstoneProject: lots of detail!
-- https://github.com/Darcicat/ACNH-Aesthetic-Rarity-Guide: lots of detail!
-- https://github.com/Laxman2024/Health-and-sleep-statistics: lots of detail!
-- https://github.com/ChigozieCO/altschool-capstone-project: lots of detail!
-- https://github.com/aprilsears/chronically-well: example from Capstone Preparedness
+3. https://github.com/pointer-jen/CodeYou_DA_Jan_2025_Capstone: Technologies Used
+4. https://github.com/judd-jacobs/code-you-capstone: lots of detail!
+5. https://github.com/WayneBlunden/CapstoneProject: lots of detail!
+6. https://github.com/Darcicat/ACNH-Aesthetic-Rarity-Guide: lots of detail!
+7. https://github.com/ChigozieCO/altschool-capstone-project: lots of detail!
+8. https://github.com/aprilsears/chronically-well: example from Capstone Preparedness
+- https://github.com/Laxman2024/Health-and-sleep-statistics
+- https://github.com/amgant/LouisvilleKY-GoodReads-Books
  -->
 
 <!-- Bootrap Icons, SVGs: https://icons.getbootstrap.com/ -->

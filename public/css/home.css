@@ -70,6 +70,7 @@ input[type="search"]:focus {
   border-radius: 0.25rem;
   overflow: hidden;
   border: 1px solid var(--primary-muted-2);
+  width: 100%;
 }
 
 .result-image {
@@ -78,8 +79,8 @@ input[type="search"]:focus {
   height: 100%;
   /* Make sure all images/cards are the same size: */
   aspect-ratio: 1 / 1;
-  /* object-fit maintains proportions, consider contain & none also: */
-  object-fit: cover;
+  /* object-fit maintains proportions, consider cover, contain & none also: */
+  object-fit: contain;
   opacity: 0.8;
   transition: transform 300ms ease, opacity 300ms ease;
 }
@@ -199,6 +200,16 @@ input[type="search"]:focus {
   .results-buttons {
     grid-template-columns: repeat(2, 1fr);
     margin: 0.75rem 0;
+  }
+}
+
+@media (min-width: 693px) {
+  .image-card {
+    width: auto;
+  }
+
+  .result-image {
+    object-fit: cover;
   }
 }
 
