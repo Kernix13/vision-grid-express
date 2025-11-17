@@ -10,6 +10,7 @@ export function addRemoveClass(element, add, remove) {
   } 
 }
 
+// This is a function only used on the board page - move?
 export function toggleDisplay(el, btn, str) {
   el.classList.toggle('onscreen');
 

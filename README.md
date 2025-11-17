@@ -113,6 +113,17 @@ You can now search for images, save images to your board page, etc.
       <ul>
       <li><code>getSearchResults(searchTerm, page, element)</code></li>
       <li><code>moveImage(event, id, direction)</code></li>
+      <li><code>setLocalStorage(str, obj)</code></li>
+      <li><code>addRemoveClass(element, add, remove)</code></li>
+      <li><code>toggleDisplay(el, btn, str)</code></li>
+      <li><code>moveImage(id, direction)</code></li>
+      <li><code>saveSearchTerm(str, el, arr)</code></li>
+      <li><code>addSearchText(el, text, spanClass)</code></li>
+      <li><code>addSearchTerm(parent, arr)</code></li>
+      <li><code>setModalContent(element, item, id)</code></li>
+      <li><code>modalNav(btnsContainer, id, innerModal)</code></li>
+      <li><code>modalSaveRemove(btnsContainer, id, innerModal)</code></li>
+      <li><code>createImgCard(arr, element)</code></li>
       </ul>
       </td>
     </tr>
@@ -240,17 +251,21 @@ This project is licensed under the [MIT License](./LICENSE).
 
 1️⃣ Home page:
 
-1. 99% done, modal images look questionable on small screens.
+1. Modal images look questionable on small screens.
 2. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons?
-3. The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
+3. Strip out all home page specific CSS and add to home.css - this is in preparation for merging all styles into 1 stylesheet
+4. Change `object-fit` value for `result-image` for single col on small screens
+5. The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
 
 2️⃣ Board page:
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
 2. Settings menu - refactor!
-3. If I keep the selectImage functionality, then I may need a back-to-top button in case the user has many saved images and/or images with a large heightto-width ratio, otherwise it's a long scroll back up!
-4. I need to figure out how to add the selected class to thumb-item after each move up/down
-5. STRETCH GOAL: I'll need to implement the settings form to:
+3. `moveImage` function takes 3 params but I'm not using `event` - verify that I do not need it, and then remove it
+4. Add a back-to-top button Fx in case the user has many saved images and/or images with a large heightto-width ratio, otherwise it's a long scroll back up!
+5. I need to figure out how to add the selected class to `thumb-item` after each move up/down
+6. consider using `srcset` for DOM images on different devices, possibly same for modals
+7. STRETCH GOAL(S): I'll need to implement the settings form to:
    1. rename the board(s),
    2. start a slideshow of just the images, and/or the images + text
    3. allow user to set the timing, and/or
@@ -259,8 +274,8 @@ This project is licensed under the [MIT License](./LICENSE).
 3️⃣ Both pages:
 
 1. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
-2. Gradient header - yes or no???
-3. Change the hrefs in robots.txt and sitemap.xml when/if I go live
+2. Change the hrefs in robots.txt and sitemap.xml when/if I go live
+3. Find SVGs to replace Font Awesome icons
 
 4️⃣ README.md:
 
