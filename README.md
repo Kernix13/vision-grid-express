@@ -11,6 +11,20 @@
 
 <div id="back-to-top"></div>
 
+## Table Of Contents
+
+- [Project overview and objectives](#project-overview-and-objectives)
+- [Setup and installation](#setup-and-installation)
+  <!-- - Features -->
+  <!-- - Data sources and API integration details -->
+- [User Journey: How to Use](#user-journey:-how-to-use)
+- [Project Structure](#project-structure)
+- [Capstone Requirements](#capstone-requirements)
+- [Contributing](#contributing)
+- [Future Improvements](#future-improvements)
+- [Use of AI](#use-of-ai)
+- [License](#license)
+
 ## Project overview and objectives ✅
 
 VisualGrid is an image based tool for personal project planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
@@ -77,77 +91,6 @@ You can now search for images, save images to your board page, etc.
 5. Click the empty area with the text, "New Application."
 6. Fill out the application information form and click the "Create Application" button.
 7. Scroll down to the section that displays application id, access key, and secret key. The access key is the API key that you will need for this project.
-
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
-
-## Capstone Requirements ✅
-
-<table>
-  <thead>
-    <tr>
-      <th>Requirement</th>
-      <th>Implementation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Integrate an API into your project</td>
-      <td>Fetch images from the Unsplash API: <code>search/photos</code></td>
-    </tr>
-    <tr>
-      <td>Create a Node.js web server using Express.js</td>
-      <td>Express server with 2 query params</td>
-    </tr>
-    <tr>
-      <td>Analyze data that is stored in various data structures</td>
-      <td>Retrieve API JSON, save as <code>localStorage</code> objects and strings</td>
-    </tr>
-    <tr>
-      <td>Display information about the data in your app</td>
-      <td>
-        <ul>
-          <li>Images displayed in 3 different sizes</li>
-          <li>Image descriptions added as <code>alt</code> attribute</li>
-          <li>Add image id to elements <code>id</code> and <code>data-id</code> attributes</li>
-        </ul>
-        <blockquote>❓ Do the points above qualify for this requirement?</blockquote>
-      </td>
-    </tr>
-    <tr>
-      <td>Have a function with 2 or more params with a <code>return</code> value</td>
-      <td>
-      <ul>
-      <li><code>getSearchResults(searchTerm, page, element)</code></li>
-      <li><code>moveImage(event, id, direction)</code></li>
-      <li><code>setLocalStorage(str, obj)</code></li>
-      <li><code>addRemoveClass(element, add, remove)</code></li>
-      <li><code>toggleDisplay(el, btn, str)</code></li>
-      <li><code>moveImage(id, direction)</code></li>
-      <li><code>saveSearchTerm(str, el, arr)</code></li>
-      <li><code>addSearchText(el, text, spanClass)</code></li>
-      <li><code>addSearchTerm(parent, arr)</code></li>
-      <li><code>setModalContent(element, item, id)</code></li>
-      <li><code>modalNav(btnsContainer, id, innerModal)</code></li>
-      <li><code>modalSaveRemove(btnsContainer, id, innerModal)</code></li>
-      <li><code>createImgCard(arr, element)</code></li>
-      </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Persist & use data to the user to local storage</td>
-      <td>
-        <ol>
-          <li>Current search phrase</li>
-          <li>Current search phrase page number</li>
-          <li>Fetched image objects</li>
-          <li>Saved images objects</li>
-          <li>List of all user search phrases</li>
-          <li>All search phrases last page fetched</li>
-        </ol>
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -230,6 +173,77 @@ You can now search for images, save images to your board page, etc.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
+## Capstone Requirements ✅
+
+<table>
+  <thead>
+    <tr>
+      <th>Requirement</th>
+      <th>Implementation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Integrate an API into your project</td>
+      <td>Fetch images from the Unsplash API: <code>search/photos</code></td>
+    </tr>
+    <tr>
+      <td>Create a Node.js web server using Express.js</td>
+      <td>Express server with 2 query params</td>
+    </tr>
+    <tr>
+      <td>Analyze data that is stored in various data structures</td>
+      <td>Retrieve API JSON, save as <code>localStorage</code> objects and strings</td>
+    </tr>
+    <tr>
+      <td>Display information about the data in your app</td>
+      <td>
+        <ul>
+          <li>Images displayed in 3 different sizes</li>
+          <li>Image descriptions added as <code>alt</code> attribute</li>
+          <li>Add image id to elements <code>id</code> and <code>data-id</code> attributes</li>
+        </ul>
+        <blockquote>❓ Do the points above qualify for this requirement?</blockquote>
+      </td>
+    </tr>
+    <tr>
+      <td>Have a function with 2 or more params with a <code>return</code> value</td>
+      <td>
+      <ul>
+      <li><code>getSearchResults(searchTerm, page, element)</code></li>
+      <li><code>moveImage(event, id, direction)</code></li>
+      <li><code>setLocalStorage(str, obj)</code></li>
+      <li><code>addRemoveClass(element, add, remove)</code></li>
+      <li><code>toggleDisplay(el, btn, str)</code></li>
+      <li><code>moveImage(id, direction)</code></li>
+      <li><code>saveSearchTerm(str, el, arr)</code></li>
+      <li><code>addSearchText(el, text, spanClass)</code></li>
+      <li><code>addSearchTerm(parent, arr)</code></li>
+      <li><code>setModalContent(element, item, id)</code></li>
+      <li><code>modalNav(btnsContainer, id, innerModal)</code></li>
+      <li><code>modalSaveRemove(btnsContainer, id, innerModal)</code></li>
+      <li><code>createImgCard(arr, element)</code></li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Persist & use data to the user to local storage</td>
+      <td>
+        <ol>
+          <li>Current search phrase</li>
+          <li>Current search phrase page number</li>
+          <li>Fetched image objects</li>
+          <li>Saved images objects</li>
+          <li>List of all user search phrases</li>
+          <li>All search phrases last page fetched</li>
+        </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+
 ## Contributing ✅
 
 Contributions are welcome! If you'd like to help improve this project, please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started, our workflow, and code style expectations.
@@ -270,7 +284,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 16To-Do items left to do.
+> 15 To-Do items left to do.
 
 1️⃣ Home page:
 
@@ -294,7 +308,6 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 1. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
 2. Change the hrefs in robots.txt and sitemap.xml when/if I go live
-3. Find SVGs to replace Font Awesome icons
 
 4️⃣ README.md:
 
@@ -304,23 +317,21 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 4. ❓ Data sources and API integration details
 5. ❓ Add important code snippets somewhere?
 
-<!-- CodeYou, Code:You, CodeLouisville, CodeKentucky, Code:Kentucky all + capstone
+<!--
   Code:You GitHub past capstone examples - READMEs:
+  CodeYou, Code:You, CodeLouisville, CodeKentucky, Code:Kentucky all + capstone
 
 - https://github.com/rodriguezosvaldo/Solvio: Features
 - https://github.com/cramerjillian/hotel-grocery-search:
   - Future Improvements, User Instructions, Use of AI
-  NEW ONES:
 - https://github.com/pointer-jen/CodeYou_DA_Jan_2025_Capstone: Technologies Used
 - https://github.com/amgant/LouisvilleKY-GoodReads-Books: lots of detail!
 - https://github.com/judd-jacobs/code-you-capstone: lots of detail!
 - https://github.com/WayneBlunden/CapstoneProject: lots of detail!
 - https://github.com/Darcicat/ACNH-Aesthetic-Rarity-Guide: lots of detail!
 - https://github.com/Laxman2024/Health-and-sleep-statistics: lots of detail!
-- https://github.com/Redsoxin7/beer_recipes: lots of detail!
 - https://github.com/ChigozieCO/altschool-capstone-project: lots of detail!
-
-- https://github.com/acechler/f1-fanclub - nothing useful here
-- https://github.com/aprilsears/chronically-well - nothing useful here
-- https://github.com/Tafkae/numenera-utils - nothing useful here
+- https://github.com/aprilsears/chronically-well: example from Capstone Preparedness
  -->
+
+<!-- Bootrap Icons, SVGs: https://icons.getbootstrap.com/ -->
