@@ -66,11 +66,11 @@ thumbnails.addEventListener('click', e => {
   const imageTextItem = document.getElementById(id)
 
   if (btn?.classList.contains('move-up')) {
-    moveImage(e, id, 'up');
+    moveImage(id, 'up');
     // I can't get the selected class to stick?
     thumbItem.classList.add('selected');
   } else if (btn?.classList.contains('move-down')) {
-    moveImage(e, id, 'down');
+    moveImage(id, 'down');
     thumbItem.classList.add('selected');
   } else if (e.target.classList.contains('thumb-image')) {
     // Does it make sense for selectImage to scrollIntoView? Is that it?

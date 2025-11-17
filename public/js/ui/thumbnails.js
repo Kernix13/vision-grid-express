@@ -91,7 +91,7 @@ export function addSavedImagesToDom() {
   });
 }
 
-export function moveImage(event, id, direction) {
+export function moveImage(id, direction) {
   const savedImages = getLocalStorage('saved-images');
   const idx = savedImages.findIndex(img => img.id === id);
   if (idx === -1) return;
