@@ -17,7 +17,7 @@
 - [Setup and installation](#setup-and-installation)
   <!-- - Features -->
   <!-- - Data sources and API integration details -->
-- [User Journey: How to Use](#user-journey:-how-to-use)
+- [User Journey (How to Use)](#user-journey-how-to-use)
 - [Project Structure](#project-structure)
 - [Capstone Requirements](#capstone-requirements)
 - [Contributing](#contributing)
@@ -25,7 +25,7 @@
 - [Use of AI](#use-of-ai)
 - [License](#license)
 
-## Project overview and objectives ✅
+## Project overview and objectives
 
 VisualGrid is an image based tool for personal project planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
 
@@ -46,7 +46,7 @@ Finally, the user can open a modal which will display each saved image along wit
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
-## Setup and installation instructions ✅
+## Setup and installation
 
 1. Clone this repo and install dependencies
 
@@ -82,7 +82,7 @@ http://localhost:8080
 
 You can now search for images, save images to your board page, etc.
 
-### Getting your Unsplash API key ✅
+### Getting your Unsplash API key
 
 1. Navigate to [Unsplash](https://unsplash.com/) and click the hamburger menu in the top-right corner and choose Developers/API.
 2. Click the button "Register as a Developer".
@@ -104,7 +104,7 @@ You can now search for images, save images to your board page, etc.
 
 > What goes here?
 
-## User Journey (How to Use) ✅
+## User Journey (How to Use)
 
 ### Home/Search Page
 
@@ -144,7 +144,7 @@ You can now search for images, save images to your board page, etc.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
-## Project Structure ✅
+## Project Structure
 
 <!-- Consider removing the indivisual CSS file names -->
 
@@ -173,7 +173,7 @@ You can now search for images, save images to your board page, etc.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
-## Capstone Requirements ✅
+## Capstone Requirements
 
 <table>
   <thead>
@@ -244,11 +244,11 @@ You can now search for images, save images to your board page, etc.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
-## Contributing ✅
+## Contributing
 
 Contributions are welcome! If you'd like to help improve this project, please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started, our workflow, and code style expectations.
 
-## Future Improvements ✅
+## Future Improvements
 
 1. Add a quote generator that pairs an inspirational quote with each image
 2. Enable settings form to name board, have multiple boards, other features, ...
@@ -269,7 +269,7 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 8. I asked ChatGPT about including robots.txt and sitemap.xml. It suggested to add them and wrote the contents for me.
 9. ...
 
-## License ✅
+## License
 
 This project is licensed under the [MIT License](./LICENSE).
 
