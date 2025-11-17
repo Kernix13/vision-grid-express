@@ -9,6 +9,8 @@
 
 <div align="center"><img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" /></div>
 
+<div id="back-to-top"></div>
+
 ## Project overview and objectives ✅
 
 VisualGrid is an image based tool for personal project planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
@@ -27,6 +29,8 @@ Once a user saves images, they can visit their board page where their images are
 Also on their board page is a thumbnails view for each saved image which allows the user to reorder the image-text elements, and/or remove a saved image along with its text notes.
 
 Finally, the user can open a modal which will display each saved image along with their notes/statements for each image. The user will have the ability to set the timing on the image modal/lightbox modal.
+
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Setup and installation instructions ✅
 
@@ -73,6 +77,8 @@ You can now search for images, save images to your board page, etc.
 5. Click the empty area with the text, "New Application."
 6. Fill out the application information form and click the "Create Application" button.
 7. Scroll down to the section that displays application id, access key, and secret key. The access key is the API key that you will need for this project.
+
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Capstone Requirements ✅
 
@@ -143,9 +149,11 @@ You can now search for images, save images to your board page, etc.
   </tbody>
 </table>
 
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+
 ## Features
 
-> What goes here? Features of the app or features of the tech?
+> What goes here? Features of the app or features of the tech? If it is for the app,then _User Journey_ shows all of that, as well as the _Project overview and objectives_ section
 
 <!-- <img width="269" height="338" alt="image" src="https://github.com/user-attachments/assets/61f923cc-d5f5-43ad-b1c0-ebebc8a32a35" /> -->
 
@@ -191,6 +199,8 @@ You can now search for images, save images to your board page, etc.
    - Open a full-screen slider that cycles through all saved images and their notes for easy viewing.
    - Change the timing of the slider for faster or slower transitions.
 
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+
 ## Project Structure ✅
 
 <!-- Consider removing the indivisual CSS file names -->
@@ -217,6 +227,8 @@ You can now search for images, save images to your board page, etc.
   │   └── favicon.png
   └── fonts/               # TODO: add Google woff2 font files
 ```
+
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Contributing ✅
 
@@ -247,10 +259,18 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 This project is licensed under the [MIT License](./LICENSE).
 
+<!--
+  ❗How to add a license:
+https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository
+  ❗
+-->
+
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 17 To-Do items left to do.
+> 16To-Do items left to do.
 
 1️⃣ Home page:
 
@@ -262,10 +282,9 @@ This project is licensed under the [MIT License](./LICENSE).
 2️⃣ Board page:
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
-2. Add a back-to-top button Fx in case the user has many saved images and/or images with a large heightto-width ratio, otherwise it's a long scroll back up!
-3. I need to figure out how to add the selected class to `thumb-item` after each move up/down
-4. consider using `srcset` for DOM images on different devices, possibly same for modals
-5. STRETCH GOAL(S): I'll need to implement the settings form to:
+2. I need to figure out how to add the selected class to `thumb-item` after each move up/down
+3. consider using `srcset` for DOM images on different devices, possibly same for modals
+4. STRETCH GOAL(S): I'll need to implement the settings form to:
    1. rename the board(s),
    2. start a slideshow of just the images, and/or the images + text
    3. allow user to set the timing, and/or
@@ -305,5 +324,3 @@ This project is licensed under the [MIT License](./LICENSE).
 - https://github.com/aprilsears/chronically-well - nothing useful here
 - https://github.com/Tafkae/numenera-utils - nothing useful here
  -->
-
-<!-- Adding a license: https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository -->

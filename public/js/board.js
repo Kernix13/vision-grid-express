@@ -5,15 +5,15 @@ import { getLocalStorage, setLocalStorage } from "./utils/localStorage.js";
 import { menuButton } from "./ui/menu.js";
 import { initBoardPage } from "./ui/initPage.js";
 import { deleteImage, moveImage, selectImage } from "./ui/thumbnails.js";
+import { scrollFunction, smoothScrollBackToTop } from "./ui/backToTop.js";
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
 const thumbnails = document.querySelector('.thumbnails');
-
 const thumbnailsBtn  = document.getElementById('thumbnails-btn');
-
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
+const backToTopButton = document.querySelector('#back-to-top-btn');
 
 
 /**
@@ -115,3 +115,7 @@ cancelBtn.addEventListener('click', closeThumbDeleteModal);
 
 const closeDeleteModal = document.getElementById('close');
 closeDeleteModal.addEventListener('click', closeThumbDeleteModal);
+
+// Back To Top
+window.addEventListener('scroll', scrollFunction);
+backToTopButton.addEventListener('click', smoothScrollBackToTop);

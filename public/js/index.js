@@ -1,35 +1,30 @@
 "use strict";
 
-// For DOMContentLoaded listener
 import { initHomePage } from "./ui/initPage.js";
-// Functions used in form event listener
 import { setLocalStorage, getLocalStorage, incrementSearchPage } from "./utils/localStorage.js";
 import { getSearchResults } from "./api/unsplash.js";
 import { saveSearchTerm, renderSearchEls, clearSearchElements } from "./ui/searchEls.js";
 import { addRemoveClass } from "./utils/classUtils.js";
-// Hamburger menu listener
 import { menuButton } from "./ui/menu.js";
-// searchGrid listener
 import { removeImageCard } from "./ui/cards.js";
 import { setModalContent } from "./ui/modal.js";
+import { scrollFunction, smoothScrollBackToTop } from "./ui/backToTop.js";
 
-// Form
 const form = document.getElementById('search-form');
 const input = document.getElementById('search');
-// Search terms and buttons
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
 const loadMore = document.getElementById('load-more');
-// Search grid
 const searchGrid = document.getElementById('search-grid');
 const resultsTitle = document.getElementById('results-title');
-// Mobile menu elements
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
-// Modal 1 - HOME PAGE
+
 const close = document.getElementById('close');
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+const backToTopButton = document.querySelector('#back-to-top-btn');
 
 // Why do I have these in the global scope? Do I need them here?
 let searchPage = 0;
@@ -153,3 +148,7 @@ window.addEventListener('click', e =>
 hamburger.addEventListener("click", () => {
   menuButton(hamburger, navMenu);
 })
+
+// 10. Back To Top
+window.addEventListener('scroll', scrollFunction);
+backToTopButton.addEventListener('click', smoothScrollBackToTop);

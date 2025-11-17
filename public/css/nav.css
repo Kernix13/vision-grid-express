@@ -128,3 +128,69 @@
 .hamburger.active .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
+
+/* Back To Top button */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  bottom: 1rem;
+  right: 1rem;
+  font-weight: bolder;
+  border: 2px solid var(--primary-muted-1);
+  outline: none;
+  background-color: var(--primary-dark-1);
+  color: var(--white);
+  cursor: pointer;
+  padding: 0.125em 0.25em;
+  border-radius: 0.25em;
+  transition: background-color 300ms ease, color 300ms ease;
+  z-index: 999;
+}
+
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+  background-color: var(--accent);
+  color: var(--dark-gray);
+  border: 2px solid var(--accent);
+}
+
+/* Animations */
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+/* fadeInUp */
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: btnExit;
+}
+
+/* fadeOutDown */
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
