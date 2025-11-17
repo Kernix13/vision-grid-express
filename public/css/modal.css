@@ -249,6 +249,24 @@
   width: 25%;
 }
 
+.close-btn {
+  background-color: var(--primary-muted-2);
+  color: var(--text);
+  cursor: pointer;
+  border: 1px solid var(--white);
+  padding: 0.375em;
+  font-size: 1rem;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+.close-btn:hover {
+  background-color: var(--primary-dark-2);
+  color: var(--white);
+}
+
 @keyframes modal2open {
   from {
     opacity: 0;

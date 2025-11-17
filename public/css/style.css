@@ -1,9 +1,26 @@
 @import url("./reset.css");
-@import url("./nav.css");
-@import url("./settings.css");
+@import url("./fonts.css");
+@import url("./home.css");
 @import url("./modal.css");
 @import url("./board.css");
-@import url("./fonts.css");
+@import url("./nav.css");
+@import url("./settings.css");
+
+/*
+  -- 🔎 TOC - use term/phrase to search for sections 🔍 --
+  1. Resets: at the very top so n/a + :root vars + @font-face
+  2. Global styles
+  3. Home page styles
+  4. Home page modal styles
+  5. Board page styles
+  6. Board page modal styles
+  7. Menu/Navigation styles
+  8. Mobile first media queries
+  - Settings styles - should be moved into board page
+  - About page: if I have an about page (put below Board page)
+*/
+
+/* 1. Resets, :root, and @font-face  */
 
 :root {
   --white: #ffffff;
@@ -29,6 +46,7 @@
   --link-hover-2: hsl(39, 63%, 53%);
 }
 
+/* 2. Global styles */
 body {
   font-size: 1.125rem;
   color: var(--text);
@@ -36,45 +54,13 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-header {
-  padding: 1rem 0;
-  box-shadow: 0 1px var(--primary-muted-2);
-  // box-shadow: 0 1px var(--primary-muted-3);
-  // background: linear-gradient(var(--primary-muted-2), var(--white));
-}
-
 h1,
 h2,
 h3 {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  
   line-height: 1.2;
   color: var(--text);
-}
-
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin: 2rem 0 1rem;
-  padding: 0 1rem;
-}
-
-.highlight {
-  font-style: italic;
-  color: var(--primary);
-  // background-color: var(--accent-4);
-  // padding: 0 0.25em;
-}
-
-h2 {
-  font-weight: 500;
-}
-
-.sub-title {
-  margin-bottom: 1.5rem;
-  font-size: 1.5rem;
 }
 
 :not(body)::selection {
@@ -82,195 +68,29 @@ h2 {
   color: var(--white);
 }
 
+/* Header, headings, container */
+header {
+  padding: 1rem 0;
+  box-shadow: 0 1px var(--primary-muted-2);
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  
+  margin: 2rem 0 1rem;
+  padding: 0 1rem;
+}
+
+h2 {
+  font-weight: 500;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
   text-align: center;
-}
-
-/* Search form */
-.search-form {
-  margin-bottom: 2rem;
-
-  /* this padding should only be on small screens */
-  // padding: 0 1rem;
-}
-
-input[type="search"] {
-  width: 100%;
-  border-radius: 0.25rem;
-  outline: 2px solid var(--primary-muted-2);
-  border: none;
-  background-color: var(--primary-muted-4);
-  padding: 0.5rem 0.25rem 0.5rem 0.5rem;
-}
-
-input[type="search"]::placeholder {
-  color: var(--primary-dark-1);
-}
-
-input[type="search"]:focus {
-  outline: 2px solid var(--accent-4);
-}
-
-.search-terms {
-  margin: 2rem 0 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-/* Image results grid */
-.results-title {
-  margin-bottom: 2rem;
-}
-
-.results-title.none {
-  display: none;
-}
-
-.results-title.block {
-  display: block;
-}
-
-.search-grid {
-  --min-col-size: 300px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--min-col-size), 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-}
-
-.image-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  // background-color: var(--primary-muted-3);
-  box-shadow: 0px 2px 8px 1px var(--primary-muted-2);
-  border-radius: 0.25rem;
-  overflow: hidden;
-  border: 1px solid var(--primary-muted-2);
-}
-
-.results-buttons {
-  margin: 0.75rem 0;
-  padding: 0 0.5em;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: end;
-  gap: 0.5rem;
-}
-
-.result-image {
-  /* width seems to have no affect, consider removing */
-  width: 100%;
-  height: 100%;
-  /* Make sure all images/cards are the same size: */
-  aspect-ratio: 1 / 1;
-  /* object-fit maintains proportions, consider contain & none also: */
-  object-fit: cover;
-  opacity: 0.8;
-  transition: transform 300ms ease, opacity 300ms ease;
-}
-
-.result-image:hover {
-  opacity: 1;
-  cursor: pointer;
-  transform: scale(1.03);
-}
-
-/* Buttons */
-.search-terms button,
-.results-buttons button,
-.results-buttons .remove,
-.load-more,
-.clear-searches {
-  cursor: pointer;
-  color: var(--dark-gray);
-  background-color: transparent;
-  border: 2px solid var(--primary-muted-2);
-  border-radius: 0.25rem;
-  transition: background-color 300ms ease, border 300ms ease;
-}
-
-.search-terms button {
-  padding: 0.375em 0.75em;
-  font-style: italic;
-}
-
-.results-buttons button {
-  font-size: 1rem;
-  padding: 0.375em 0.125em;
-}
-
-.clear-searches {
-  margin-bottom: 2rem;
-}
-
-.results-buttons .save {
-  background-color: var(--primary);
-  color: var(--white);
-  transition: background-color 300ms ease, border 300ms ease;
-} 
-.results-buttons .save:hover {
-  color: var(--dark-gray);
-} 
-
-.search-terms button:hover,
-.load-more:hover,
-.clear-searches:hover,
-.results-buttons .save:hover,
-.results-buttons .remove:hover {
-  color: var(--dark-gray);
-  background-color: var(--accent-3);
-  border: 2px solid transparent;
-}
-
-.results-buttons button:focus-visible,
-.search-terms button:focus-visible,
-.load-more:focus-visible,
-.clear-searches:focus-visible {
-  outline: 2px solid var(--accent-3);
-  background-color: var(--accent-3);
-}
-
-.load-more,
-.clear-searches {
-  width: 100%;
-  padding: 0.5em 1em;
-  margin-top: 3rem;
-  font-size: 1.125rem;
-}
-
-.clear-searches.none {
-  display: none;
-}
-
-.clear-searches.inline {
-  display: inline;
-}
-
-.load-more.none {
-  display: none;
-}
-
-.load-more.inline {
-  display: inline;
-}
-/* END DOM BUTTONS */
-
-.load-more-search,
-.h2-search-term {
-  font-weight: 400;
-  font-style: italic;
-}
-
-.load-more-search {
-  font-size: 1.375rem;
-}
-
-.h2-search-term {
-  font-size: 1.75rem;
 }
 
 /* Footer styles */
@@ -310,44 +130,20 @@ footer {
   color: var(--primary-muted-2);
 }
 
-.close-btn { 
-  background-color: var(--primary-muted-2);
-  color: var(--text);
-  cursor: pointer;
-  border: 1px solid var(--white);
-  padding: 0.375em;
-  font-size: 1rem;
-  position: absolute;
-  top: 2%;
-  right: 2%;
-  transition: color 300ms ease, background-color 300ms ease;
-}
+/* 3. Home page styles */
 
-.close-btn:hover {
-  background-color: var(--primary-dark-2);
-  color: var(--white);
-}
+/* 4. Home page modal styles */
 
-@media (min-width: 430px) {
-  .results-buttons {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0.75rem 0;
-  }
-}
+/* 5. Board page styles */
 
+/* 6. Board page modal styles */
+
+/* 7. Menu/Navigation styles */
+
+/* 8. Mobile first media queries */
 @media (min-width: 768px) {
   h1 {
     font-size: 2.25rem;
-  }
-
-  .load-more,
-  .clear-searches {
-    width: 75%;
-    font-size: 1.25rem;
-  }
-
-  .search-terms {
-    gap: 1.5rem;
   }
 }
 
@@ -374,11 +170,6 @@ footer {
   .hamburger {
     display: none;
     z-index: 0;
-  }
-
-  .load-more,
-  .clear-searches {
-    width: 50%;
   }
 }
 
