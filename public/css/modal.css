@@ -199,17 +199,6 @@
   animation-duration: 1000ms;
 }
 
-.close-btn {
-  background: transparent;
-  cursor: pointer;
-  border: 1px solid var(--white);
-  color: #fff;
-  font-size: 25px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 .thumb-modal-btn {
   display: inline;
   background-color: transparent;
@@ -254,11 +243,11 @@
   color: var(--text);
   cursor: pointer;
   border: 1px solid var(--white);
-  padding: 0.375em;
+  line-height: 1;
   font-size: 1rem;
   position: absolute;
-  top: 2%;
-  right: 2%;
+  top: 3%;
+  right: 1.5%;
   transition: color 300ms ease, background-color 300ms ease;
 }
 
