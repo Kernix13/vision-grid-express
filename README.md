@@ -99,13 +99,7 @@ You can now search for images, save images to your board page, etc.
 
 ## Features
 
-> What goes here? Features of the app or features of the tech? If it is for the app,then _User Journey_ shows all of that, as well as the _Project overview and objectives_ section
-
-<!-- <img width="269" height="338" alt="image" src="https://github.com/user-attachments/assets/61f923cc-d5f5-43ad-b1c0-ebebc8a32a35" /> -->
-
-## Data sources and API integration details
-
-> What goes here?
+> What goes here? Features of the app or features of the tech? If it is for the app, then _User Journey_ shows all of that, as well as the _Project overview and objectives_ section.
 
 ## User Journey (Features)
 
@@ -311,6 +305,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 1. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
 2. Change the hrefs in robots.txt and sitemap.xml when/if I go live
+3. When done, combine ALL CSS into one file
 
 4️⃣ README.md:
 

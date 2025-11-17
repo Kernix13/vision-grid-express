@@ -1,14 +1,8 @@
-export function setLocalStorage(str, obj) {
-  localStorage.setItem(str, JSON.stringify(obj));
-}
+export const setLocalStorage = (str, obj) => localStorage.setItem(str, JSON.stringify(obj));
 
-export function getLocalStorage(str) {
-  return JSON.parse(localStorage.getItem(str));
-}
+export const getLocalStorage = str => JSON.parse(localStorage.getItem(str));
 
-export function removeLocalStorage(str) {
-  return localStorage.removeItem(str);
-}
+export const removeLocalStorage = str => localStorage.removeItem(str);
 
 export function incrementSearchPage(searchTerm) {
   const searchPhrasesPage = getLocalStorage('search-phrases-page');

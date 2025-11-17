@@ -19,6 +19,7 @@ export function saveSearchTerm(str, el, arr) {
   }
 }
 
+// Does this function make sense?
 export function renderSearchEls(str) {
   setLocalStorage('last-search', str);
   addSearchText(loadMore, "Load 12 more images for ", 'load-more-search');
