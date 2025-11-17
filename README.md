@@ -15,9 +15,12 @@
 
 - [Project overview and objectives](#project-overview-and-objectives)
 - [Setup and installation](#setup-and-installation)
-  <!-- - Features -->
-  <!-- - Data sources and API integration details -->
-- [User Journey (How to Use)](#user-journey-how-to-use)
+  <!--
+  See README Notes in visionGridModules/notes.md which have
+  headings for github.com/aprilsears/chronically-well README
+  -->
+  <!-- - [Features](#features) -->
+- [User Journey (Features)](#user-journey-features)
 - [Project Structure](#project-structure)
 - [Capstone Requirements](#capstone-requirements)
 - [Contributing](#contributing)
@@ -104,13 +107,13 @@ You can now search for images, save images to your board page, etc.
 
 > What goes here?
 
-## User Journey (How to Use)
+## User Journey (Features)
 
 ### Home/Search Page
 
 1. Search for Images
-   - Enter a search phrase (e.g., landscaping, interior design, travel) in the search bar.
-   - The app fetches images from the Unsplash API based on your query.
+   - Enter a search phrase (e.g., landscaping, interior design, travel) in the search bar and hit <kbd>ENTER</kbd>.
+   - The app fetches 12 images from the Unsplash API based on your query.
 2. Interact with Image Cards
    - Each image result appears as a card.
    - Save the image to your vision board.
@@ -130,7 +133,7 @@ You can now search for images, save images to your board page, etc.
 ### Vision Board Page
 
 1. View Saved Images
-   - Displays all images you've saved from the Home page as thumbnails.
+   - Your Board page displays all images you've saved from the Home page in a thumbnails section and on the page.
 2. Reorder Images
    - Move thumbnails up or down to rearrange the order of your images.
 3. Edit Notes
@@ -159,7 +162,7 @@ You can now search for images, save images to your board page, etc.
 /public/
   ├── index.html
   ├── board.html
-  ├── css/                 # Stylesheets for modal, nav, reset, ...
+  ├── css/
   ├── js/
   │   ├── index.js         # Main file for index.html
   │   ├── board.js         # Main file for board.html
@@ -167,8 +170,9 @@ You can now search for images, save images to your board page, etc.
   │   ├── ui/              # Functions for various UI elements
   │   └── utils/           # Functions for UI classes and localStorage
   ├── images/
+  │   ├── favicon.ico
   │   └── favicon.png
-  └── fonts/               # TODO: add Google woff2 font files
+  └── fonts/               # DM Sans and Inter woff2 files
 ```
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
@@ -297,8 +301,9 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
 2. I need to figure out how to add the selected class to `thumb-item` after each move up/down
-3. consider using `srcset` for DOM images on different devices, possibly same for modals
-4. STRETCH GOAL(S): I'll need to implement the settings form to:
+3. Consider removing favicon.png if the .ico file is enough
+4. consider using `srcset` for DOM images on different devices, possibly same for modals
+5. STRETCH GOAL(S): I'll need to implement the settings form to:
    1. rename the board(s),
    2. start a slideshow of just the images, and/or the images + text
    3. allow user to set the timing, and/or
@@ -311,11 +316,10 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 4️⃣ README.md:
 
-1. 📌 Features
-2. 📌 Finish Future Improvements
-3. 📌 Finish Use of AI
-4. ❓ Data sources and API integration details
-5. ❓ Add important code snippets somewhere?
+1. 📌 Finish Future Improvements
+2. 📌 Finish Use of AI
+3. ❓ Features
+4. ❓ Add important code snippets somewhere?
 
 <!--
   Code:You GitHub past capstone examples - READMEs:
