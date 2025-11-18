@@ -30,14 +30,19 @@
 
 ## Project overview
 
-<div align="center">
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width="48" height="48" alt="html icon" title="HTML5"/></span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40" height="40" alt="css icon" title="CSS3" /></span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40"  alt="javascript icon" title="JavaScript" /></span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="nodejs icon" title="Node.js" /></span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" width="40" height="40" alt="nodejs icon" title="npm" /></span>
-  <span><img src="./public/images/express.svg" width="40" height="40" alt="Express icon" title="Express.js" /></span>
+<div>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width="48" height="48" alt="html icon" title="HTML5"/>  </span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40" height="40" alt="css icon" title="CSS3" />  </span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40"  alt="javascript icon" title="JavaScript" />  </span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="nodejs icon" title="Node.js" />  </span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" width="40" height="40" alt="npm icon" title="npm" />  </span>
+  <span><img src="./public/images/express.svg" width="40" height="40" alt="Express icon" title="Express.js" />  </span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" width="40" height="40" alt="Bootstrap icon" title="Bootstrap" />  </span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" height="40" alt="Git icon" title="Git" />  </span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="40" height="40" alt="VS Code icon" title="VS Code" />  </span>
 </div>
+
+<br>
 
 VisualGrid is an image based tool for personal project planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
 
@@ -50,7 +55,7 @@ After the user searches for images, they can save or remove any images from the 
 
 The user can keep fetching more images based on their current/last search, start a new search to fetch images, or revisit previous search phrases. This app will always fetch the next page of image results regardless of how they choose to get more images.
 
-Once a user saves images, they can visit their board page where their images are displayed on the page in a large format with an editable text field tied to each image. The user can add notes or goal statements which are saved to localStorage along with each image.
+Once a user saves images, they can visit their board page where their images are displayed on the page in a large format with an editable text field tied to each image. The user can add notes or goal statements which are saved to `localStorage` along with each image.
 
 Also on their board page is a thumbnails view for each saved image which allows the user to reorder the image-text elements, and/or remove a saved image along with its text notes.
 
@@ -205,7 +210,7 @@ You can now search for images, save images to your board page, etc.
       <td>
         <ul>
           <li>Images displayed in 3 different sizes</li>
-          <li>Image descriptions added as <code>alt</code> attribute</li>
+          <li>Image descriptions added as <code>img</code> <code>alt</code> attribute</li>
           <li>Add image id to elements <code>id</code> and <code>data-id</code> attributes</li>
         </ul>
         <blockquote>❓ Do the points above qualify for this requirement?</blockquote>
@@ -216,18 +221,17 @@ You can now search for images, save images to your board page, etc.
       <td>
       <ul>
       <li><code>getSearchResults(searchTerm, page, element)</code></li>
-      <li><code>moveImage(event, id, direction)</code></li>
-      <li><code>setLocalStorage(str, obj)</code></li>
-      <li><code>addRemoveClass(element, add, remove)</code></li>
-      <li><code>toggleDisplay(el, btn, str)</code></li>
-      <li><code>moveImage(id, direction)</code></li>
       <li><code>saveSearchTerm(str, el, arr)</code></li>
+      <li><code>moveImage(event, id, direction)</code></li>
+      <li><code>setModalContent(element, item, id)</code></li>
+      <li>+ 8 more functions</li>
+      <!-- <li><code>addRemoveClass(element, add, remove)</code></li>
+      <li><code>toggleDisplay(el, btn, str)</code></li>
       <li><code>addSearchText(el, text, spanClass)</code></li>
       <li><code>addSearchTerm(parent, arr)</code></li>
-      <li><code>setModalContent(element, item, id)</code></li>
       <li><code>modalNav(btnsContainer, id, innerModal)</code></li>
       <li><code>modalSaveRemove(btnsContainer, id, innerModal)</code></li>
-      <li><code>createImgCard(arr, element)</code></li>
+      <li><code>createImgCard(arr, element)</code></li> -->
       </ul>
       </td>
     </tr>
@@ -240,6 +244,7 @@ You can now search for images, save images to your board page, etc.
           <li>Fetched image objects</li>
           <li>Saved images objects</li>
           <li>List of all user search phrases</li>
+          <li>User images text/notes</li>
           <li>All search phrases last page fetched</li>
         </ol>
       </td>
@@ -255,10 +260,15 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ## Future Improvements
 
-1. Add a quote generator that pairs an inspirational quote with each image
-2. Enable settings form to name board, have multiple boards, other features, ...
-3. Dark/Light mode option
-4. ???
+- Start a slideshow of just the images, and/or the images + text
+- Allow user to set the timing for the slideshow
+- Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image
+- Multiple boards option
+- Ability to name/rename boards
+- Enable the settings form to name board, have multiple boards, other features, ...
+- Dark/Light mode option
+- Add a quote generator API that pairs an inspirational quote with each image
+- Add a music API for motivational music during lightbox slideshow
 
 ## Use of AI
 
@@ -303,12 +313,6 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
 2. consider using `srcset` for DOM images on different devices, possibly same for modals
 3. I need the thunails button to be sticky so that when I go to an image I can close the thumbnails strip
-4. STRETCH GOAL(S): I'll need to implement the settings form to:
-   1. Rename the board(s),
-   2. Start a slideshow of just the images, and/or the images + text
-   3. Allow user to set the timing, and/or
-   4. Have another editable text field (H2/blockquote) with a max-character count where the user can enter a single sentence/statement for each image
-   5. Have multiple boards
 
 3️⃣ Both pages:
 
