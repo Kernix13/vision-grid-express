@@ -13,14 +13,12 @@
 
 ## Table Of Contents
 
-- [Project overview](#project-overview)
-- [Setup and installation](#setup-and-installation)
-  <!--
-  See README Notes in visionGridModules/notes.md which have
-  headings for github.com/aprilsears/chronically-well README
-  -->
-  <!-- - [Features](#features) -->
-- [User Journey (Features)](#user-journey-features)
+- [Project Overview](#project-overview)
+- [Getting Started](#getting-started)
+  - [Getting an Unsplash API key](#getting-an-unsplash-api-key)
+- [Features](#features)
+  - [Home/Search Page](#homesearch-page)
+  - [Vision Board Page](#vision-board-page)
 - [Project Structure](#project-structure)
 - [Capstone Requirements](#capstone-requirements)
 - [Contributing](#contributing)
@@ -28,7 +26,7 @@
 - [Use of AI](#use-of-ai)
 - [License](#license)
 
-## Project overview
+## Project Overview
 
 <div>
   <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width="48" height="48" alt="html icon" title="HTML5"/>  </span>
@@ -39,7 +37,7 @@
   <span><img src="./public/images/express.svg" width="40" height="40" alt="Express icon" title="Express.js" />  </span>
   <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" width="40" height="40" alt="Bootstrap icon" title="Bootstrap" />  </span>
   <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" height="40" alt="Git icon" title="Git" />  </span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="40" height="40" alt="VS Code icon" title="VS Code" />  </span>
+  <!-- <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="40" height="40" alt="VS Code icon" title="VS Code" />  </span> -->
 </div>
 
 <br>
@@ -63,7 +61,7 @@ Finally, the user can open a modal which will display each saved image along wit
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
-## Setup and installation
+## Getting Started
 
 1. Clone this repo and install dependencies
 
@@ -99,7 +97,7 @@ http://localhost:8080
 
 You can now search for images, save images to your board page, etc.
 
-### Getting your Unsplash API key
+### Getting an Unsplash API key
 
 1. Navigate to [Unsplash](https://unsplash.com/) and click the hamburger menu in the top-right corner and choose Developers/API.
 2. Click the button "Register as a Developer".
@@ -112,10 +110,6 @@ You can now search for images, save images to your board page, etc.
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Features
-
-> What goes here? Features of the app or features of the tech? If it is for the app, then I believe the _User Journey_ and _Project overview and objectives_ sections show that.
-
-## User Journey (Features)
 
 ### Home/Search Page
 
@@ -299,7 +293,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 15-16 To-Do items left to do.
+> 20 To-Do items left to do.
 
 1️⃣ Home page:
 
@@ -321,6 +315,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 3. More padding-top above footer `H2`
 4. Add an `about.html` file?
 5. When done, combine ALL CSS into one file
+6. No icons for `localStorage` and Google Fonts - where do I put them? Ditch the icons and create a list?
 
 4️⃣ README.md:
 
