@@ -20,6 +20,7 @@
   - [Home/Search Page](#homesearch-page)
   - [Vision Board Page](#vision-board-page)
 - [Project Structure](#project-structure)
+- [Additional Notes](#additional-notes)
 - [Capstone Requirements](#capstone-requirements)
 - [Contributing](#contributing)
 - [Future Improvements](#future-improvements)
@@ -176,6 +177,11 @@ You can now search for images, save images to your board page, etc.
 ```
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+
+## Additional Notes
+
+- The project uses localStorage to persist saved images and notes.
+- The project uses self-hosted Google Fonts (Inter, DM Sans).
 
 ## Capstone Requirements
 
