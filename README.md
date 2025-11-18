@@ -99,7 +99,7 @@ You can now search for images, save images to your board page, etc.
 
 ## Features
 
-> What goes here? Features of the app or features of the tech? If it is for the app, then _User Journey_ shows all of that, as well as the _Project overview and objectives_ section.
+> What goes here? Features of the app or features of the tech? If it is for the app, then I believe the _User Journey_ and _Project overview and objectives_ sections show that.
 
 ## User Journey (Features)
 
@@ -142,8 +142,6 @@ You can now search for images, save images to your board page, etc.
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Project Structure
-
-<!-- Consider removing the indivisual CSS file names -->
 
 ```
 /
@@ -282,35 +280,44 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 10-11 To-Do items left to do.
+> 15-16 To-Do items left to do.
 
 1️⃣ Home page:
 
 1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons?
 2. The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
-3. Home page h1 span different color/italic - good, bad?
+3. Home page H1 span different color/italic - good, bad?
+4. Test Unsplash again for empty string and special chars - then put them into an array and output a message if any of the searches use those chars
 
 2️⃣ Board page:
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
-2. I need to figure out how to add the selected class to `thumb-item` after each move up/down
-3. consider using `srcset` for DOM images on different devices, possibly same for modals
-4. STRETCH GOAL(S): I'll need to implement the settings form to:
-   1. rename the board(s),
-   2. start a slideshow of just the images, and/or the images + text
-   3. allow user to set the timing, and/or
-   4. have another editable text field as a heading/figcaption/blockquote with a max-character count where the user can enter a single sentence/statement for each image - will need to add that to localStorage
+2. consider using `srcset` for DOM images on different devices, possibly same for modals
+3. STRETCH GOAL(S): I'll need to implement the settings form to:
+   1. Rename the board(s),
+   2. Start a slideshow of just the images, and/or the images + text
+   3. Allow user to set the timing, and/or
+   4. Have another editable text field (H2/blockquote) with a max-character count where the user can enter a single sentence/statement for each image
+   5. Have multiple boards
 
 3️⃣ Both pages:
 
 1. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
 2. Change the hrefs in robots.txt and sitemap.xml when/if I go live
-3. When done, combine ALL CSS into one file
+3. More padding-top above footer `H2`
+4. Add an `about.html` file?
+5. When done, combine ALL CSS into one file
 
 4️⃣ README.md:
 
 1. 📌 Finish Future Improvements
 2. 📌 Finish Use of AI
+
+5️⃣ Bugs
+
+1. I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
+2. Flash of Hidden Content (FOHC) on home page
+3. Use of innerHTML for board page editable text is an issue!!!
 
 <!-- 3. ❓ Features -->
 <!-- 4. ❓ Add important code snippets somewhere? -->
