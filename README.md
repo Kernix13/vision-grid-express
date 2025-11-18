@@ -13,7 +13,7 @@
 
 ## Table Of Contents
 
-- [Project overview and objectives](#project-overview-and-objectives)
+- [Project overview](#project-overview)
 - [Setup and installation](#setup-and-installation)
   <!--
   See README Notes in visionGridModules/notes.md which have
@@ -28,7 +28,16 @@
 - [Use of AI](#use-of-ai)
 - [License](#license)
 
-## Project overview and objectives
+## Project overview
+
+<div align="center">
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width="48" height="48" alt="html icon" title="HTML5"/></span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40" height="40" alt="css icon" title="CSS3" /></span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40"  alt="javascript icon" title="JavaScript" /></span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="nodejs icon" title="Node.js" /></span>
+  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" width="40" height="40" alt="nodejs icon" title="npm" /></span>
+  <span><img src="./public/images/express.svg" width="40" height="40" alt="Express icon" title="Express.js" /></span>
+</div>
 
 VisualGrid is an image based tool for personal project planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
 
@@ -293,7 +302,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
 2. consider using `srcset` for DOM images on different devices, possibly same for modals
-3. STRETCH GOAL(S): I'll need to implement the settings form to:
+3. I need the thunails button to be sticky so that when I go to an image I can close the thumbnails strip
+4. STRETCH GOAL(S): I'll need to implement the settings form to:
    1. Rename the board(s),
    2. Start a slideshow of just the images, and/or the images + text
    3. Allow user to set the timing, and/or
@@ -321,21 +331,5 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 <!-- 3. ❓ Features -->
 <!-- 4. ❓ Add important code snippets somewhere? -->
-
-<!--
-  GitHub past capstone examples READMEs: Search CodeYou, Code:You, CodeLouisville, CodeKentucky, Code:Kentucky - all + capstone
-
-1. https://github.com/rodriguezosvaldo/Solvio: Features
-2. https://github.com/cramerjillian/hotel-grocery-search:
-  - Future Improvements, User Instructions, Use of AI
-3. https://github.com/pointer-jen/CodeYou_DA_Jan_2025_Capstone: Technologies Used
-4. https://github.com/judd-jacobs/code-you-capstone: lots of detail!
-5. https://github.com/WayneBlunden/CapstoneProject: lots of detail!
-6. https://github.com/Darcicat/ACNH-Aesthetic-Rarity-Guide: lots of detail!
-7. https://github.com/ChigozieCO/altschool-capstone-project: lots of detail!
-8. https://github.com/aprilsears/chronically-well: example from Capstone Preparedness
-- https://github.com/Laxman2024/Health-and-sleep-statistics
-- https://github.com/amgant/LouisvilleKY-GoodReads-Books
- -->
 
 <!-- Bootrap Icons, SVGs: https://icons.getbootstrap.com/ -->
