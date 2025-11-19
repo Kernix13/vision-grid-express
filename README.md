@@ -17,8 +17,6 @@
 - [Getting Started](#getting-started)
   - [Getting an Unsplash API key](#getting-an-unsplash-api-key)
 - [Features](#features)
-  - [Home/Search Page](#homesearch-page)
-  - [Vision Board Page](#vision-board-page)
 - [Project Structure](#project-structure)
 - [Additional Notes](#additional-notes)
 - [Capstone Requirements](#capstone-requirements)
@@ -180,8 +178,10 @@ You can now search for images, save images to your board page, etc.
 
 ## Additional Notes
 
-- The project uses localStorage to persist saved images and notes.
+- The project uses `localStorage` to persist saved images data and notes.
 - The project uses self-hosted Google Fonts (Inter, DM Sans).
+
+<br>
 
 ## Capstone Requirements
 
@@ -195,7 +195,7 @@ You can now search for images, save images to your board page, etc.
   <tbody>
     <tr>
       <td>Integrate an API into your project</td>
-      <td>Fetch images from the Unsplash API: <code>search/photos</code></td>
+      <td>Fetch images from the Unsplash API: <code>/api/photos</code></td>
     </tr>
     <tr>
       <td>Create a Node.js web server using Express.js</td>
@@ -299,7 +299,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 20 To-Do items left to do.
+> 16 To-Do items left to do.
 
 1️⃣ Home page:
 
@@ -321,12 +321,11 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 3. More padding-top above footer `H2`
 4. Add an `about.html` file?
 5. When done, combine ALL CSS into one file
-6. No icons for `localStorage` and Google Fonts - where do I put them? Ditch the icons and create a list?
 
 4️⃣ README.md:
 
-1. 📌 Finish Future Improvements
-2. 📌 Finish Use of AI
+1. 📌 Finish Use of AI
+2. Project Overview and Features have similar content - rewrite both, shorten Project Overview
 
 5️⃣ Bugs
 
