@@ -14,6 +14,7 @@ const thumbnailsBtn  = document.getElementById('thumbnails-btn');
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 const backToTopButton = document.querySelector('#back-to-top-btn');
+const imgTextContainer = document.querySelector('#img-text-container');
 
 
 /**
@@ -32,6 +33,13 @@ settingsBtn.addEventListener('click', () => {
 thumbnailsBtn.addEventListener('click', () => {
   toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
 });
+// Close thumbnails on window click
+imgTextContainer.addEventListener('click', (e) => {
+  if (thumbnails.classList.contains('onscreen')) {
+    thumbnails.classList.remove('onscreen')
+  }
+});
+
 
 // 4. Save editable text to local storage
 

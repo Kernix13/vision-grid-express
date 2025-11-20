@@ -3,10 +3,18 @@ import { createImgCard } from "../ui/cards.js";
 
 export async function getSearchResults(searchTerm, page, element) {
   const DOMAIN = 'http://localhost:8080';
+  const badCharacters = ['', ' ', '_', '-', '>', '.', '|', ';', '[', ']', '{', '}', '(', ')', '*', '`', '~', '"', ':'];
+
+
   const endpoint = `/api/photos?query=${encodeURIComponent(searchTerm)}&page=${page}`;
   try {
+    if (badCharacters.includes(searchTerm)) {
+      // Alert? Popup/modal? Add another hidden element to display error? Below input element? Then add return;
+    }
     const response = await fetch(DOMAIN + endpoint);
+
     if (!response.ok) throw new Error(`Response status: ${response.status}`);
+
     const data = await response.json();
     const results = await data.results;
     const resultsObject = await results.map(result => {

@@ -34,8 +34,8 @@
   <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="nodejs icon" title="Node.js" />  </span>
   <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" width="40" height="40" alt="npm icon" title="npm" />  </span>
   <span><img src="./public/images/express.svg" width="40" height="40" alt="Express icon" title="Express.js" />  </span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" width="40" height="40" alt="Bootstrap icon" title="Bootstrap" />  </span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" height="40" alt="Git icon" title="Git" />  </span>
+  <!-- <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" height="40" alt="Git icon" title="Git" />  </span> -->
+  <!-- <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" width="40" height="40" alt="Bootstrap icon" title="Bootstrap" />  </span> -->
   <!-- <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="40" height="40" alt="VS Code icon" title="VS Code" />  </span> -->
 </div>
 
@@ -299,31 +299,30 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 18 To-Do items left to do.
+> 17 To-Do items left to do.
 
 1️⃣ Home page:
 
-1. Test Unsplash again for empty string and special chars - then put them into an array and output a message if any of the searches use those chars
+1. Implement error messsage/popup for searches of "bad characters"
 2. Footer needs to be fixed when there are no elements on the page because there is a big white margin below the footer
 
 2️⃣ Board page:
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
 2. Consider using `srcset` for DOM images on different devices, possibly same for modals
-3. I need the thumbnails button to be sticky so that when I go to an image I can close the thumbnails strip - or - close the strip on window click
-4. I have not implemented saving the editable text to localStorage
+3. I have not implemented saving the editable text to localStorage
 
 3️⃣ Both pages/site wide:
 
 1. Change the hrefs in robots.txt and sitemap.xml when/if I go live
-2. More padding-top above footer `H2`
-3. Add an `about.html` file?
-4. When done, combine ALL CSS into one or 2 files per page
+2. Add an `about.html` file?
+3. When done, combine ALL CSS into one or 2 files per page
 
 4️⃣ README.md:
 
 1. 📌 Finish Use of AI
 2. Project Overview and Features have similar content - rewrite both, shorten Project Overview
+3. NOTE: I'm using devicons for a "visual" Tech Stach rather than a section - is taht good or bad?
 
 5️⃣ Bugs
 
@@ -336,8 +335,6 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons? The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
 2. Home page H1 span different color/italic - good, bad?
 3. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
-
-<!-- import CSS vs another method ❓ -->
 
 ```
 This is from clicking a past search phrase btn:
