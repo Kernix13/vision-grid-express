@@ -79,7 +79,7 @@
   position: fixed;
   padding: 0.5rem 0;
   flex-direction: column;
-  // background-color: transparent;
+  background-color: transparent;
   width: 100%;
   text-align: center;
   transition: top 500ms ease-in-out;

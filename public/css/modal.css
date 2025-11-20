@@ -134,6 +134,24 @@
   right: 0.5rem;
 }
 
+.close-btn {
+  background-color: var(--primary-muted-2);
+  color: var(--text);
+  cursor: pointer;
+  border: 1px solid var(--white);
+  line-height: 1;
+  font-size: 1rem;
+  position: absolute;
+  top: 3%;
+  right: 1.5%;
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+.close-btn:hover {
+  background-color: var(--primary-dark-2);
+  color: var(--white);
+}
+
 @keyframes modalopen {
   from {
     opacity: 0;
