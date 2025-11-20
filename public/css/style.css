@@ -167,8 +167,8 @@ h2, h3 {
 
 /* Footer styles */
 footer {
-  padding: 2.5rem 0 0;
-  margin-top: 3rem;
+  padding: 3rem 0 0;
+  margin-top: 5rem;
   color: var(--white);
   background-color: var(--primary-dark-2);
 }

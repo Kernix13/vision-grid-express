@@ -299,28 +299,26 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 16 To-Do items left to do.
+> 18 To-Do items left to do.
 
 1️⃣ Home page:
 
-1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons?
-2. The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
-3. Home page H1 span different color/italic - good, bad?
-4. Test Unsplash again for empty string and special chars - then put them into an array and output a message if any of the searches use those chars
+1. Test Unsplash again for empty string and special chars - then put them into an array and output a message if any of the searches use those chars
+2. Footer needs to be fixed when there are no elements on the page because there is a big white margin below the footer
 
 2️⃣ Board page:
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
-2. consider using `srcset` for DOM images on different devices, possibly same for modals
-3. I need the thunails button to be sticky so that when I go to an image I can close the thumbnails strip
+2. Consider using `srcset` for DOM images on different devices, possibly same for modals
+3. I need the thumbnails button to be sticky so that when I go to an image I can close the thumbnails strip - or - close the strip on window click
+4. I have not implemented saving the editable text to localStorage
 
-3️⃣ Both pages:
+3️⃣ Both pages/site wide:
 
-1. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
-2. Change the hrefs in robots.txt and sitemap.xml when/if I go live
-3. More padding-top above footer `H2`
-4. Add an `about.html` file?
-5. When done, combine ALL CSS into one file
+1. Change the hrefs in robots.txt and sitemap.xml when/if I go live
+2. More padding-top above footer `H2`
+3. Add an `about.html` file?
+4. When done, combine ALL CSS into one or 2 files per page
 
 4️⃣ README.md:
 
@@ -330,8 +328,24 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 5️⃣ Bugs
 
 1. I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
-2. Flash of Hidden Content (FOHC) on home page
-3. Use of innerHTML for board page editable text is an issue!!!
+2. Use of innerHTML for board page editable text is an issue!!!
+3. Flash of Hidden Content (FOHC) on home page
+
+6️⃣ Style / UI/UX Questions
+
+1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons? The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
+2. Home page H1 span different color/italic - good, bad?
+3. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
+
+<!-- import CSS vs another method ❓ -->
+
+```
+This is from clicking a past search phrase btn:
+
+localStorage.js:10 Uncaught TypeError: Cannot read properties of undefined (reading 'page')
+    at incrementSearchPage (localStorage.js:10:3)
+    at HTMLDivElement.<anonymous> (index.js:106:16)
+```
 
 <!-- 3. ❓ Features -->
 <!-- 4. ❓ Add important code snippets somewhere? -->

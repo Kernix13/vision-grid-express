@@ -13,6 +13,48 @@
   margin-bottom: 3rem;
 }
 
+/* Image & Editable Text elements */
+.image-text {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border: 1px solid var(--primary-muted-2);
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background-color: var(--primary-muted-3);
+}
+
+.regular {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  justify-self: center;
+}
+
+.editable {
+  padding: 1rem;
+  background-color: var(--white);
+  color: var(--dark-gray);
+  caret-color: var(--primary);
+  text-align: left;
+  outline: 1px solid var(--primary-muted-1);
+  box-sizing: border-box;
+
+  height: 30rem;
+  overflow-y: auto;
+  align-self: center;
+  transition: box-shadow 300ms ease;
+}
+
+.editable:focus {
+  outline: 1px solid transparent;
+  box-shadow: 4px -4px 8px var(--primary-muted-1);
+}
+
+/* Thumbnail styles */
 .thumbnails-btn {
   cursor: pointer;
   font: inherit;
@@ -145,63 +187,113 @@
 .delete {
   color: rgb(221, 0, 0);
 }
-
 /* END new thumbnails elements */
-.image-text {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  border: 1px solid var(--primary-muted-2);
+
+
+
+/* Thumbnails Delete confirmation modal */
+.thumb-modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.thumb-modal-container.show-modal {
+  display: block;
+}
+
+.thumb-modal {
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 25em;
+  border-radius: 0.5rem;
+  animation-name: modal2open;
+  animation-duration: 1000ms;
+}
+
+.thumb-modal-btn {
+  display: inline;
+  background-color: transparent;
+  border: 0;
+  border-radius: 5px;
+  color: var(--black);
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  border: 0.25em solid rgba(0, 128, 0, 0.75);
+  width: 75%;
+  margin: 2em auto 1em;
+  transition: background-color 500ms ease;
+}
+
+.thumb-modal-btn:hover {
+  background-color: rgb(200, 235, 213);
+}
+
+.modal-header {
+  background-color: var(--primary-dark-1);
+  padding: 1rem;
+}
+
+.modal-header h3,
+.modal-header p {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.modal-content {
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  background-color: var(--primary-muted-3);
 }
 
-.regular {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  justify-self: center;
+.modal-content button {
+  width: 25%;
 }
 
-.editable {
-  padding: 1rem;
-  background-color: var(--white);
-  color: var(--dark-gray);
-  caret-color: var(--primary);
-  text-align: left;
-  outline: 1px solid var(--primary-muted-1);
-  box-sizing: border-box;
-
-  height: 30rem;
-  overflow-y: auto;
-  align-self: center;
-  transition: box-shadow 300ms ease;
+.close-btn {
+  background-color: var(--primary-muted-2);
+  color: var(--text);
+  cursor: pointer;
+  border: 1px solid var(--white);
+  line-height: 1;
+  font-size: 1rem;
+  position: absolute;
+  top: 3%;
+  right: 1.5%;
+  transition: color 300ms ease, background-color 300ms ease;
 }
 
-.editable:focus {
-  outline: 1px solid transparent;
-  box-shadow: 4px -4px 8px var(--primary-muted-1);
+.close-btn:hover {
+  background-color: var(--primary-dark-2);
+  color: var(--white);
 }
 
-/* goal-heading, figure and goal are old styles - I may not keep these */
-.goal-heading {
-  margin-top: 4rem;
-}
+@keyframes modal2open {
+  from {
+    opacity: 0;
+  }
 
-figure {
-  width: 60%;
-  height: auto;
-  margin: 0 auto;
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 768px) {
   .image-text {
-    // grid-template-columns: 3fr 2fr;
     grid-template-columns: 1fr 1fr;
     align-items: flex-start;
+    // grid-template-columns: 3fr 2fr;
   }
 }
