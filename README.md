@@ -28,28 +28,11 @@
 
 ## Project Overview
 
-> Rewrite this section (**TOO LONG**), move devicons into _new_ Tech Stack section with the icons in first column, brief description in the 2nd column
+VisualGrid is a responsive web application for visual project planning, goal-setting, and creative inspiration. It allows users to search the Unsplash API for images, curate their favorites into a personalized “vision board,” and attach notes, ideas, or goal statements to each image.
 
-<!--
+Whether the user is planning a home renovation, building an inspiration board, organizing a personal goal-setting workflow, or brainstorming a creative project, VisualGrid provides a simple way to collect images, annotate them, and revisit them in a structured space.
 
-VisualGrid is an image based tool for personal project planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
-
-1. Goal setting: A user can search for images based on their personal goals like fitness, self-improvement, new job search, etc. They can then add goal and affirmation statements for each saved images which can be viewed on the page or in a modal on the board page.
-2. Project based: This would be good for people planning home improvements involving landscaping, interior design, home additions like a deck, etc. The user can add detailed notes for their saved images that help them with the visualization of their project.
-3. Inspiration board: This version would be good for athletes training for an event or for anyone with a big event in their near future. Their saved images could have motivational statements tied to each of their images.
-4. Or any other idea a user can have that involves images and text.
-
-After the user searches for images, they can save or remove any images from the "results" grid on the home page. The grid images are small. To view a larger version, they can click on any of the card images to open a modal to view a larger version. They can Save/Remove an image while in the modal view.
-
-The user can keep fetching more images based on their current/last search, start a new search to fetch images, or revisit previous search phrases. This app will always fetch the next page of image results regardless of how they choose to get more images.
-
-Once a user saves images, they can visit their board page where their images are displayed on the page in a large format with an editable text field tied to each image. The user can add notes or goal statements which are saved to `localStorage` along with each image.
-
-Also on their board page is a thumbnails view for each saved image which allows the user to reorder the image-text elements, and/or remove a saved image along with its text notes.
-
-Finally, the user can open a modal which will display each saved image along with their notes/statements for each image. The user will have the ability to set the timing on the image modal/lightbox modal.
-
--->
+Users can search for images, browse them in grid or modal views, save their favorites, and revisit past searches at any time. Saved images, and their associated notes, are stored locally and displayed on a dedicated board page, where users can reorder, edit, or remove items. From the board page, users can open any saved image in a modal to add a dedicated affirmation or goal heading, and navigate between all saved images to streamline editing. VisualGrid also includes a full-screen lightbox/slider that cycles through saved images, displaying either the user’s page notes or their affirmation/goal statements.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -246,47 +229,40 @@ You can now search for images, save images to your board page, add notes for eac
 
 ## Features
 
-> Rewrite - this section is too long. And is it Features of the tech, or features of the app?
+### Home / Search Page
 
-<!--
-
-### Home/Search Page
-
-1. Search for Images
-   - Enter a search phrase (e.g., landscaping, interior design, travel) in the search bar and hit <kbd>ENTER</kbd>.
-   - The app fetches 12 images from the Unsplash API based on your query.
-2. Interact with Image Cards
-   - Each image result appears as a card.
-   - Save the image to your vision board.
-   - Remove the image.
-3. View Larger Image (Modal)
-   - Click on an image to open it in a modal.
-   - Inside the modal:
-     - View the image in its original aspect ratio.
-     - Navigate through other images currently displayed on the page.
-     - Save or Remove the image.
-4. Load More Images
-   - Click Load More to fetch the next page of results for the current search phrase.
-5. Past Searches
-   - Recently used search phrases appear below the search bar.
-   - Click a past search phrase to load the next page of images for that term.
+- Image Search
+  - Enter a search phrase to fetch 12 images from the Unsplash API.
+  - Past search terms are saved and can be revisited, each automatically loading the next page of results.
+- Image Cards
+  - Browse results as compact cards.
+  - Save or remove images directly from the grid.
+  - Click any image to view a larger, aspect-correct version in a modal.
+- Modal Viewer
+  - Navigate through all images currently loaded on the page.
+  - Save or remove images from within the modal.
+- Load More
+  "Load More" fetches the next page of images for the current search term, maintaining pagination across sessions via localStorage.
 
 ### Vision Board Page
 
-1. View Saved Images
-   - Your Board page displays all images you've saved from the Home page in a thumbnails section and on the page.
-2. Reorder Images
-   - Move thumbnails up or down to rearrange the order of your images.
-3. Edit Notes
-   - Each saved image has an editable text area.
-   - Add notes, goals, or reflections related to each image.
-4. Delete Saved Images
-   - Remove any image from your board using the "X" button in the thumbnails section.
-5. (Coming Soon) Lightbox / Slider View
-   - Open a full-screen slider that cycles through all saved images and their notes for easy viewing.
-   - Change the timing of the slider for faster or slower transitions.
-
--->
+- Saved Images Display
+  - View all saved images in a large, clean layout.
+  - Each image includes an editable text area for notes, goals, or affirmations—persisted via localStorage.
+- Thumbnail Strip
+  - See all saved items in a compact strip for quick navigation.
+  - Clicking on any thumbnail takes you to that image on the page.
+  - Reorder saved images.
+  - Delete images and their notes from your board.
+- Lightbox Slider
+  - A full-screen modal that cycles through saved images.
+  - Adjustable timing between slides.
+  - Displays either the image’s page notes or its affirmation/goal statement created in the board-page modal.
+- Affirmation / Goal Statement
+  - Click any saved image on the page to open a modal with a larger view.
+  - Add or edit a dedicated affirmation or goal heading for that image.
+  - Navigate to other saved images within the modal to quickly update multiple affirmations.
+  - These affirmations can be shown in the full-screen slider instead of the standard page notes.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -355,7 +331,6 @@ You can now search for images, save images to your board page, add notes for eac
           <li>Image descriptions added as <code>img</code> <code>alt</code> attribute</li>
           <li>Add image id to elements <code>id</code> and <code>data-id</code> attributes</li>
         </ul>
-        <blockquote>❓ Do the points above qualify for this requirement?</blockquote>
       </td>
     </tr>
     <tr>
@@ -402,12 +377,13 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ## Future Improvements
 
+<!-- I hope to implement the first 5 points -->
+
 - Start a slideshow of just the images, and/or the images + text
 - Allow user to set the timing for the slideshow
 - Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image
 - Multiple boards option
 - Ability to name/rename boards
-- Enable the settings form to name board, have multiple boards, other features, ...
 - Dark/Light mode option
 - Add a quote generator API that pairs an inspirational quote with each image
 - Add a music API for motivational music during lightbox slideshow
@@ -442,7 +418,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 17 To-Do items left to do.
+> 13-17 To-Do items left to do.
 
 1️⃣ Home page:
 
@@ -457,14 +433,14 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 3️⃣ Both pages/site wide:
 
 1. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
-2. Add an `about.html` file?
+2. Add an `about.html` file? YES!
 3. When done, combine ALL CSS into one or 2 files per page
 4. textContent is better than createTextNode so find & replace all occurrences
 
 4️⃣ README.md:
 
 1. Finish Use of AI
-2. Project Overview and Features have similar content - rewrite both, shorten Project Overview
+<!-- 2. Should I add a Lighthouse Report section with screenshots? And add notes on what I did to fix it like load Google fonts, add aria attributes, properly load CSS files, fix incorrect heading structure, ... Not until I get Performance over 90 -->
 
 5️⃣ Bugs
 
