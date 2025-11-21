@@ -5,7 +5,6 @@ export async function getSearchResults(searchTerm, page, element) {
   const DOMAIN = 'http://localhost:8080';
   const badCharacters = ['', ' ', '_', '-', '>', '.', '|', ';', '[', ']', '{', '}', '(', ')', '*', '`', '~', '"', ':'];
 
-
   const endpoint = `/api/photos?query=${encodeURIComponent(searchTerm)}&page=${page}`;
   try {
     if (badCharacters.includes(searchTerm)) {

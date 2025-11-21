@@ -14,6 +14,7 @@
 ## Table Of Contents
 
 - [Project Overview](#project-overview)
+- [Tech Stack](#tech-stack)
 - [Getting Started](#getting-started)
   - [Getting an Unsplash API key](#getting-an-unsplash-api-key)
 - [Features](#features)
@@ -27,19 +28,9 @@
 
 ## Project Overview
 
-<div>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" width="48" height="48" alt="html icon" title="HTML5"/>  </span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40" height="40" alt="css icon" title="CSS3" />  </span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40"  alt="javascript icon" title="JavaScript" />  </span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" width="40" height="40" alt="nodejs icon" title="Node.js" />  </span>
-  <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg" width="40" height="40" alt="npm icon" title="npm" />  </span>
-  <span><img src="./public/images/express.svg" width="40" height="40" alt="Express icon" title="Express.js" />  </span>
-  <!-- <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40" height="40" alt="Git icon" title="Git" />  </span> -->
-  <!-- <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg" width="40" height="40" alt="Bootstrap icon" title="Bootstrap" />  </span> -->
-  <!-- <span><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="40" height="40" alt="VS Code icon" title="VS Code" />  </span> -->
-</div>
+> Rewrite this section (**TOO LONG**), move devicons into _new_ Tech Stack section with the icons in first column, brief description in the 2nd column
 
-<br>
+<!--
 
 VisualGrid is an image based tool for personal project planning and goal-setting. It allows the user to fetch images from the Unsplash API based on search terms they enter. Possible uses for this app include:
 
@@ -58,13 +49,152 @@ Also on their board page is a thumbnails view for each saved image which allows 
 
 Finally, the user can open a modal which will display each saved image along with their notes/statements for each image. The user will have the ability to set the timing on the image modal/lightbox modal.
 
+-->
+
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+
+## Tech Stack
+
+This is the current state of my project as of November 21st, 2025:
+
+<table>
+  <thead>
+    <tr>
+      <th>Tech</th>
+      <th>Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- HTML -->
+    <tr>
+      <td><img
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+          width="48" height="48" alt="html icon" title="HTML5" /></td>
+      <td>
+        <ul>
+          <li>Meta + SEO tags: title, description, Open Graph, and Twitter card tags</li>
+          <li>Favicon</li>
+          <li>Semantic HTML with <code>aria-*</code> and <code>data-*</code> attributes</li>
+          <li>Supporting files: <code>sitemap.xml</code>, <code>robots.txt</code></li>
+        </ul>
+      </td>
+    </tr>
+    <!-- CSS -->
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+          width="40" height="40" alt="css icon" title="CSS3" /></td>
+      <td>
+        <ul>
+          <li>Mobile-first design with media queries (7 breakpoints)</li>
+          <li>Layout techniques: Flexbox, Grid, absolute positioning</li>
+          <li>Animations using CSS transitions and <code>@keyframes</code></li>
+          <li>Self-hosted Google Fonts for performance</li>
+        </ul>
+      </td>
+    </tr>
+    <!-- JavaScript -->
+    <tr>
+      <td><img
+          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+          width="40" height="40" alt="javascript icon" title="JavaScript" /></td>
+      <td>
+        <ul>
+          <li>ES Modules, Fetch API, and <code>localStorage</code></li>
+          <li>UI interactions: mobile menu, back-to-top button, and modals</li>
+          <li>DOM manipulation with event delegation; array destructuring and the spread operator</li>
+          <li>High-Order Array methods: <code>find</code>, <code>filter</code>, <code>forEach</code>,
+            <code>findIndex</code>
+          </li>
+          <li>Event listeners: <code>click</code>, <code>submit</code>, and <code>DOMContentLoaded</code></li>
+        </ul>
+      </td>
+    </tr>
+    <!-- Node.js -->
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+          width="40" height="40" alt="nodejs icon" title="Node.js" /></td>
+      <td>
+        <ul>
+          <li>Local development server environment</li>
+          <li>Custom npm scripts</li>
+          <li>Use of environment variables via <code>process.env</code> for API key and configuration</li>
+          <li>Integration with Express to handle API routing and static file serving</li>
+        </ul>
+      </td>
+    </tr>
+    <!-- npm -->
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg"
+          width="40" height="40" alt="npm icon" title="npm" /></td>
+      <td>
+        <ul>
+          <li>Managing dependencies with <code>package.json</code></li>
+          <li>Configuring and running npm scripts for development workflow</li>
+          <li>Installed and used key packages: Express, CORS, dotenv, nodemon</li>
+        </ul>
+      </td>
+    </tr>
+    <!-- Express.js -->
+    <tr>
+      <td><img src="./public/images/express.svg" width="40" height="40" alt="Express icon" title="Express.js" />
+      </td>
+      <td>
+        <ul>
+          <li>Built a simple Express server to handle Unsplash API requests without exposing the API key</li>
+          <li>Served static files using express.static middleware</li>
+          <li>Set up basic routing for Unsplash API requests</li>
+          <li>Used middleware for JSON parsing and simple CORS handling</li>
+        </ul>
+      </td>
+    </tr>
+    <!-- Git -->
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40"
+          height="40" alt="Git icon" title="Git" /></td>
+      <td>
+        <ul>
+          <li>Version control using add → commit → push workflow</li>
+          <li>Local feature-branch development and merging</li>
+          <li>Clean commit history with descriptive commit messages</li>
+          <li>Managed sensitive files using <code>.gitignore</code></li>
+        </ul>
+      </td>
+    </tr>
+    <!-- GitHub -->
+    <tr>
+      <td><img src="./public/images/github-original.svg" width="40" height="40" alt="GitHub icon" title="GitHub" />
+      </td>
+      <td>
+        <ul>
+          <li>Repository hosting with organized issues + labels</li>
+          <li>Pull request workflow with merge commits</li>
+          <li>Included MIT license, Contributing Guide, and Code of Conduct</li>
+          <li>README written using open-source best practices</li>
+        </ul>
+      </td>
+    </tr>
+    <!-- VS Code -->
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
+          width="40" height="40" alt="VS Code icon" title="VS Code" /></td>
+      <td>
+        <ul>
+          <li>VS Code as the primary editor with extensions for formatting</li>
+          <li>Integrated terminal for Git commands and running Node.js/NPM scripts</li>
+          <li>Used <code>.editorconfig</code> for consistent formatting across editors</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Getting Started
 
-1. Clone this repo and install dependencies
+1. Clone this repo and install dependencies:
 
-```sh
+```bash
 # Clone this repo
 git clone https://github.com/Kernix13/vision-grid-express.git
 
@@ -80,21 +210,26 @@ code .
 
 2. Create a `.env` file in the project root
 3. Copy the line in `.env.example` and paste it into your newly created `.env` file.
+
+```env
+CLIENT_ID=your-unsplash-client-id-here
+```
+
 4. Replace the string `your-unsplash-client-id-here` with your Unsplash API Client ID.
 5. Delete the file `.env.example`
-6. Start the development server
+6. Start the development server:
 
 ```sh
 npm run dev
 ```
 
-7. Open your browser to [localhost port 8080](http://localhost:8080)
+7. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
 
-```
-http://localhost:8080
+```sh
+Server is running http://localhost:8080
 ```
 
-You can now search for images, save images to your board page, etc.
+You can now search for images, save images to your board page, add notes for each saved image, etc.
 
 ### Getting an Unsplash API key
 
@@ -109,6 +244,10 @@ You can now search for images, save images to your board page, etc.
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Features
+
+> Rewrite - this section is too long. And is it Features of the tech, or features of the app?
+
+<!--
 
 ### Home/Search Page
 
@@ -145,6 +284,8 @@ You can now search for images, save images to your board page, etc.
 5. (Coming Soon) Lightbox / Slider View
    - Open a full-screen slider that cycles through all saved images and their notes for easy viewing.
    - Change the timing of the slider for faster or slower transitions.
+
+-->
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -224,7 +365,7 @@ You can now search for images, save images to your board page, etc.
       <li><code>saveSearchTerm(str, el, arr)</code></li>
       <li><code>moveImage(event, id, direction)</code></li>
       <li><code>setModalContent(element, item, id)</code></li>
-      <li>+ 8 more functions</li>
+      <li>+ 8 more functions (not all have <code>return</code> KW)</li>
       <!-- <li><code>addRemoveClass(element, add, remove)</code></li>
       <li><code>toggleDisplay(el, btn, str)</code></li>
       <li><code>addSearchText(el, text, spanClass)</code></li>
@@ -282,7 +423,8 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 6. I asked ChatGPT about a `.editorconfig` file - it generated the content for that file which I used.
 7. ChatGPT gave me an outline for the "User Journey" section
 8. I asked ChatGPT about including robots.txt and sitemap.xml. It suggested to add them and wrote the contents for me.
-9. ...
+9. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, Express)
+10. ...
 
 ## License
 
@@ -309,20 +451,19 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 2️⃣ Board page:
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
-2. Consider using `srcset` for DOM images on different devices, possibly same for modals
-3. I have not implemented saving the editable text to localStorage
+2. I have not implemented saving the editable text to localStorage
 
 3️⃣ Both pages/site wide:
 
-1. Change the hrefs in robots.txt and sitemap.xml when/if I go live
+1. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 2. Add an `about.html` file?
 3. When done, combine ALL CSS into one or 2 files per page
+4. textContent is better than createTextNode so find & replace all occurrences
 
 4️⃣ README.md:
 
-1. 📌 Finish Use of AI
+1. Finish Use of AI
 2. Project Overview and Features have similar content - rewrite both, shorten Project Overview
-3. NOTE: I'm using devicons for a "visual" Tech Stach rather than a section - is taht good or bad?
 
 5️⃣ Bugs
 
@@ -335,14 +476,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons? The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
 2. Home page H1 span different color/italic - good, bad?
 3. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
-
-```
-This is from clicking a past search phrase btn:
-
-localStorage.js:10 Uncaught TypeError: Cannot read properties of undefined (reading 'page')
-    at incrementSearchPage (localStorage.js:10:3)
-    at HTMLDivElement.<anonymous> (index.js:106:16)
-```
+4. Consider using `srcset` for DOM images on different devices
 
 <!-- 3. ❓ Features -->
 <!-- 4. ❓ Add important code snippets somewhere? -->
