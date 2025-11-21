@@ -141,7 +141,7 @@ This is the current state of my project as of November 21st, 2025:
       <td>
         <ul>
           <li>Built a simple Express server to handle Unsplash API requests without exposing the API key</li>
-          <li>Served static files using express.static middleware</li>
+          <li>Served static files using <code>express.static</code> middleware</li>
           <li>Set up basic routing for Unsplash API requests</li>
           <li>Used middleware for JSON parsing and simple CORS handling</li>
         </ul>
@@ -209,13 +209,14 @@ code .
 ```
 
 2. Create a `.env` file in the project root
-3. Copy the line in `.env.example` and paste it into your newly created `.env` file.
+3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
 
 ```env
 CLIENT_ID=your-unsplash-client-id-here
+PORT=port_number
 ```
 
-4. Replace the string `your-unsplash-client-id-here` with your Unsplash API Client ID.
+4. Replace the string `your-unsplash-client-id-here` with your Unsplash API Client ID, and `port_number` with the port you want to use.
 5. Delete the file `.env.example`
 6. Start the development server:
 
