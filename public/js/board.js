@@ -16,7 +16,6 @@ const navMenu = document.getElementById("nav-menu");
 const backToTopButton = document.querySelector('#back-to-top-btn');
 const imgTextContainer = document.querySelector('#img-text-container');
 
-
 /**
  * * EVENT LISTENERS
 */
@@ -40,13 +39,25 @@ imgTextContainer.addEventListener('click', (e) => {
   }
 });
 
-
 // 4. Save editable text to local storage
+imgTextContainer.addEventListener('focusout', (e) => {
+  const savedImages = getLocalStorage('saved-images');
+  const editable = e.target.closest('.editable');
+  if (!editable) return;
+
+  const parent = editable.closest('.image-text');
+  const id = parent.id;
+  const imgObj = savedImages.find(img => img.id === id);
+
+  imgObj.notes = editable.innerHTML.trim();
+
+  setLocalStorage('saved-images', savedImages)
+});
 
 // 5. Open/close hamburger menu
 hamburger.addEventListener("click", () => {
   menuButton(hamburger, navMenu);
-})
+});
 
 // 6. Thumbnail item
 thumbnails.addEventListener('click', (e) => {
@@ -115,7 +126,7 @@ const confirmBtn = document.getElementById('confirm-delete-btn');
 confirmBtn.addEventListener('click', () => {
   deleteImage(getLocalStorage('delete-item-id'));
   closeThumbDeleteModal();
-})
+});
 
 // Cancel and close button listener for thumbnail delete
 const cancelBtn = document.getElementById('cancel-delete-btn');

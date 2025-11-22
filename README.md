@@ -28,7 +28,7 @@
 
 ## Project Overview
 
-VisualGrid is a responsive web application for visual project planning, goal-setting, and creative inspiration. It allows users to search the Unsplash API for images, curate their favorites into a personalized “vision board,” and attach notes, ideas, or goal statements to each image.
+VisualGrid is a responsive web application for visual project planning, goal-setting, and creative inspiration. It allows users to search the Unsplash API for images, curate their favorites into a personalized "vision board," and attach notes, ideas, or goal statements to each image.
 
 Whether the user is planning a home renovation, building an inspiration board, organizing a personal goal-setting workflow, or brainstorming a creative project, VisualGrid provides a simple way to collect images, annotate them, and revisit them in a structured space.
 
@@ -57,7 +57,7 @@ This is the current state of my project as of November 21st, 2025:
         <ul>
           <li>Meta + SEO tags: title, description, Open Graph, and Twitter card tags</li>
           <li>Favicon</li>
-          <li>Semantic HTML with <code>aria-*</code> and <code>data-*</code> attributes</li>
+          <li>Semantic HTML, <code>aria-*</code> and <code>data-*</code> attributes</li>
           <li>Supporting files: <code>sitemap.xml</code>, <code>robots.txt</code></li>
         </ul>
       </td>
@@ -242,13 +242,13 @@ You can now search for images, save images to your board page, add notes for eac
   - Navigate through all images currently loaded on the page.
   - Save or remove images from within the modal.
 - Load More
-  "Load More" fetches the next page of images for the current search term, maintaining pagination across sessions via localStorage.
+  - "Load More" fetches the next page of images for the current search term, maintaining pagination across sessions via localStorage.
 
 ### Vision Board Page
 
 - Saved Images Display
   - View all saved images in a large, clean layout.
-  - Each image includes an editable text area for notes, goals, or affirmations—persisted via localStorage.
+  - Each image includes an editable text area for notes, goals, or affirmations, persisted via localStorage.
 - Thumbnail Strip
   - See all saved items in a compact strip for quick navigation.
   - Clicking on any thumbnail takes you to that image on the page.
@@ -300,6 +300,8 @@ You can now search for images, save images to your board page, add notes for eac
 - The project uses self-hosted Google Fonts (Inter, DM Sans).
 
 <br>
+
+---
 
 ## Capstone Requirements
 
@@ -418,7 +420,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 13-17 To-Do items left to do.
+> 12-16 To-Do items left to do.
 
 1️⃣ Home page:
 
@@ -428,7 +430,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 2️⃣ Board page:
 
 1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
-2. I have not implemented saving the editable text to localStorage
+2. I need an editable text field for goal/affirmation for each saved image that can be edited in the modal
 
 3️⃣ Both pages/site wide:
 
