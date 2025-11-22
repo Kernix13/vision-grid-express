@@ -92,6 +92,20 @@ textarea {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/DMSans-Regular.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/DMSans-Regular.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* Normal */
 @font-face {
@@ -117,6 +131,7 @@ body {
   color: var(--text);
   line-height: 1.5;
   font-family: "Inter", sans-serif;
+  font-weight: 400;
 }
 
 h1,
@@ -169,7 +184,7 @@ footer {
 
 .footer-heading {
   font-size: 1.75rem;
-  font-weight: 200;
+  font-weight: 400;
   color: var(--white);
 }
 

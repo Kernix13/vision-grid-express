@@ -59,7 +59,7 @@ export function addSavedImagesToDom() {
     return;
   }
 
-  savedImages.forEach(img => {
+  savedImages.forEach((img, i) => {
 
     // Create container for regular sized image and text
     const imageText = document.createElement('div');
@@ -72,6 +72,7 @@ export function addSavedImagesToDom() {
     image.id = `image-${img.id}`;
     image.alt = img.description;
     image.src = img.imageRegular;
+    if (i === 0) image.fetchPriority = "high";
     imageText.append(image);
 
     // Create editable div

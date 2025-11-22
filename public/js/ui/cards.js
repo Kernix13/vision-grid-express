@@ -1,7 +1,7 @@
 import { getLocalStorage, setLocalStorage } from "../utils/localStorage.js";
 
 export function createImgCard(arr, element) {
-  arr.forEach(obj => {
+  arr.forEach((obj, i) => {
     const imgCard = document.createElement('div');
     imgCard.className = 'image-card';
     imgCard.id = obj.id;
@@ -13,6 +13,7 @@ export function createImgCard(arr, element) {
     image.className = 'result-image';
     image.src = obj.imageSmall;
     image.alt = obj.description;
+    if (i === 0) image.fetchPriority = "high";
   
     imgContainer.append(image)
   
