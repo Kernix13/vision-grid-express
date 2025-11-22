@@ -1,13 +1,13 @@
 /*
   -- 🔎 TOC - use term/phrase to search for sections 🔍 --
-  1. Resets, :root, and @font-face
-  2. Global styles
-  3. Home page styles
-  4. Home page modal styles
+  1. Resets, :root, and @font-face ✅
+  2. Global styles ✅
+  3. Home page styles ✅
+  4. Home page modal styles ✅
   5. Board page styles
   6. Board page modal styles
-  7. Menu/Navigation styles
-  8. Mobile first media queries
+  7. Menu/Navigation styles ✅
+  8. Mobile first media queries ✅
   - Settings styles - should be moved into board page section
   - About page: if I have an about page (put below Board page)
 */
@@ -197,19 +197,628 @@ footer {
 }
 
 /* 3. Home page styles */
+/* Headings */
+.highlight {
+  font-style: italic;
+  color: var(--primary);
+  // background-color: var(--accent-4);
+  // padding: 0 0.25em;
+}
+
+.sub-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.results-title {
+  margin-bottom: 2rem;
+}
+
+.results-title.none {
+  display: none;
+}
+
+.results-title.block {
+  display: block;
+}
+
+/* Search form & search terms btns */
+.search-form {
+  margin-bottom: 2rem;
+}
+
+input[type="search"] {
+  width: 100%;
+  border-radius: 0.25rem;
+  outline: 2px solid var(--primary-muted-2);
+  border: none;
+  background-color: var(--primary-muted-4);
+  padding: 0.5rem 0.25rem 0.5rem 0.5rem;
+}
+
+input[type="search"]::placeholder {
+  color: var(--primary-dark-1);
+}
+
+input[type="search"]:focus {
+  outline: 2px solid var(--accent-4);
+}
+
+.search-terms {
+  margin: 2rem 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Search results grid + image cards */
+.search-grid {
+  --min-col-size: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--min-col-size), 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // background-color: var(--primary-muted-3);
+  box-shadow: 0px 2px 8px 1px var(--primary-muted-2);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  border: 1px solid var(--primary-muted-2);
+  width: 100%;
+}
+
+.result-image {
+  /* width seems to have no affect, consider removing */
+  width: 100%;
+  height: 100%;
+  /* Make sure all images/cards are the same size: */
+  aspect-ratio: 1 / 1;
+  /* object-fit maintains proportions, consider cover, contain & none also: */
+  object-fit: contain;
+  opacity: 0.8;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.result-image:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+/* All Page Buttons */
+.results-buttons {
+  margin: 0.75rem 0;
+  padding: 0 0.5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+.search-terms button,
+.results-buttons button,
+.results-buttons .remove,
+.load-more,
+.clear-searches {
+  cursor: pointer;
+  color: var(--dark-gray);
+  background-color: transparent;
+  border: 2px solid var(--primary-muted-2);
+  border-radius: 0.25rem;
+  transition: background-color 300ms ease, border 300ms ease;
+}
+
+.search-terms button {
+  padding: 0.375em 0.75em;
+  font-style: italic;
+}
+
+.results-buttons button {
+  font-size: 1rem;
+  padding: 0.375em 0.125em;
+}
+
+.clear-searches {
+  margin-bottom: 2rem;
+}
+
+.results-buttons .save {
+  background-color: var(--primary);
+  color: var(--white);
+  transition: background-color 300ms ease, border 300ms ease;
+}
+
+.results-buttons .save:hover {
+  color: var(--dark-gray);
+}
+
+.search-terms button:hover,
+.load-more:hover,
+.clear-searches:hover,
+.results-buttons .save:hover,
+.results-buttons .remove:hover {
+  color: var(--dark-gray);
+  background-color: var(--accent-3);
+  border: 2px solid transparent;
+}
+
+.results-buttons button:focus-visible,
+.search-terms button:focus-visible,
+.load-more:focus-visible,
+.clear-searches:focus-visible {
+  outline: 2px solid var(--accent-3);
+  background-color: var(--accent-3);
+}
+
+.load-more,
+.clear-searches {
+  width: 100%;
+  padding: 0.5em 1em;
+  margin-top: 3rem;
+  font-size: 1.125rem;
+}
+
+.clear-searches.none {
+  display: none;
+}
+
+.clear-searches.inline {
+  display: inline;
+}
+
+.load-more.none {
+  display: none;
+}
+
+.load-more.inline {
+  display: inline;
+}
+
+/* Search term highlighting */
+.load-more-search,
+.h2-search-term {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.load-more-search {
+  font-size: 1.375rem;
+}
+
+.h2-search-term {
+  font-size: 1.75rem;
+}
+
+
 
 /* 4. Home page modal styles */
+.modal-container {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  display: flex;
+  gap: 1rem;
+
+  color: var(--white);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 0;
+  max-width: 100%;
+  width: 90%;
+  height: auto;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  animation-name: modalopen;
+  animation-duration: 1000ms;
+}
+
+.modal .modal-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+/* image above buttons */
+.modal.landscape,
+.modal.square,
+.modal.portrait {
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal.landscape .modal-image,
+.modal.square .modal-image {
+  height: auto;
+  max-height: 80vh;
+}
+
+.modal.square .modal-image {
+  width: 70vw;
+}
+
+.modal.landscape .modal-image {
+  width: 70vw;
+}
+
+.modal.portrait .modal-image {
+  height: 80vh;
+  width: auto;
+  max-width: 60vw;
+}
+
+.modal-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  gap: 1rem;
+}
+
+.modal-buttons button {
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0.375em 0.75em;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+}
+
+.modal-buttons button:hover {
+  color: var(--white);
+  background-color: var(--primary);
+  border: 1px solid var(--white);
+}
+
+.modal-buttons button:focus,
+.modal-buttons button:active {
+  color: var(--dark-gray);
+  border: 1px solid var(--white);
+  background-color: var(--accent-3);
+  outline: transparent;
+}
+
+.modal .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  padding: 0.125rem .5rem 0.5rem;
+  font-size: 2rem;
+  line-height: 1;
+  z-index: 10;
+}
+
+.modal .prev,
+.modal .next {
+  background-color: var(--primary-dark-1);
+  border: 1px solid transparent;
+  transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+}
+
+.modal .prev:hover,
+.modal .next:hover {
+  color: var(--dark-gray);
+  border: 1px solid var(--white);
+  background-color: var(--accent-3);
+}
+
+.modal .prev {
+  left: 0.5rem;
+}
+
+.modal .next {
+  right: 0.5rem;
+}
+
+.close-btn {
+  background-color: var(--primary-muted-2);
+  color: var(--text);
+  cursor: pointer;
+  border: 1px solid var(--white);
+  line-height: 1;
+  font-size: 1rem;
+  position: absolute;
+  top: 3%;
+  right: 1.5%;
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+.close-btn:hover {
+  background-color: var(--primary-dark-2);
+  color: var(--white);
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 /* 5. Board page styles */
 
 /* 6. Board page modal styles */
 
 /* 7. Menu/Navigation styles */
+.skip-to-content {
+  position: absolute;
+  background: var(--primary-dark-2);
+  color: var(--white);
+  left: 50%;
+  padding: 0.25em 0.5em;
+  height: 2.125em;
+  transform: translateY(-100%);
+  transition: transform 300ms;
+}
+
+.skip-to-content:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+/* Nav styles that do not involve the mobile icon/menu */
+.nav-bar {
+  min-height: 4.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+/* No logo, just text for the menu appearance */
+.logo {
+  color: var(--primary-dark-2);
+  font-family: Segoe script, 'Brush Script MT', cursive;
+  font-weight: 600;
+  letter-spacing: 0.125em;
+  font-size: 2rem;
+  transition: color 500ms ease;
+  border: 1px solid transparent;
+  z-index: 1;
+}
+
+/* Nav items */
+.nav-item {
+  margin: 1em 0;
+}
+
+.nav-link,
+.nav-link:visited,
+.home-link,
+.home-link:visited {
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: 400ms ease;
+}
+
+.nav-link,
+.nav-link:visited {
+  color: var(--primary-dark-2);
+  padding: 0.25em 0.5em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.home-link,
+.home-link:visited {
+  color: var(--primary-dark-2);
+  font-weight: 700;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.home-link:hover,
+.home-link:focus {
+  color: var(--link-hover);
+  outline: none;
+  border: 1px solid var(--link-hover);
+}
+
+/* Mobile nav starts here */
+.nav-menu {
+  position: fixed;
+  padding: 0.5rem 0;
+  flex-direction: column;
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  transition: top 500ms ease-in-out;
+}
+
+/* Enter from top */
+.nav-menu {
+  top: -100%;
+}
+
+.nav-menu>* {
+  margin: 0.5rem 0;
+}
+
+.nav-menu.active {
+  top: 0;
+}
+
+.hamburger {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
+}
+
+.bar {
+  display: block;
+  background-color: var(--primary-dark-2);
+  width: 24px;
+  /* The following 2 properties are essential in creating the "X" */
+  height: 2px;
+  margin: 6px auto;
+
+  /* -webkit-transition: all 300ms ease;  */
+  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Back To Top button */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  bottom: 1rem;
+  right: 1rem;
+  font-weight: bolder;
+  border: 2px solid var(--primary-muted-1);
+  outline: none;
+  background-color: var(--primary-dark-1);
+  color: var(--white);
+  cursor: pointer;
+  padding: 0.125em 0.25em;
+  border-radius: 0.25em;
+  transition: background-color 300ms ease, color 300ms ease;
+  z-index: 999;
+}
+
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+  background-color: var(--accent);
+  color: var(--dark-gray);
+  border: 2px solid var(--accent);
+}
+
+/* Animations */
+.btnEntrance {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-name: btnEntrance;
+}
+
+/* fadeInUp */
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  animation-name: btnExit;
+}
+
+/* fadeOutDown */
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
 
 /* 8. Mobile first media queries */
+@media (min-width: 430px) {
+  .results-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0.75rem 0;
+  }
+}
+
+@media (min-width: 525px) {
+  .modal.portrait .modal-image {
+    max-width: 70vw;
+  }
+}
+
+@media (min-width: 670px) {
+  .modal.square .modal-image {
+    max-width: 60vw;
+  }
+}
+
+@media (min-width: 693px) {
+  .image-card {
+    width: auto;
+  }
+
+  .result-image {
+    object-fit: cover;
+  }
+}
+
 @media (min-width: 768px) {
   h1 {
     font-size: 2.25rem;
+  }
+
+  .load-more,
+  .clear-searches {
+    width: 75%;
+    font-size: 1.25rem;
+  }
+
+  .search-terms {
+    gap: 1.5rem;
+  }
+
+  .modal {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 950px) {
+  .modal.square .modal-image {
+    max-width: 90vw;
   }
 }
 
@@ -237,5 +846,15 @@ footer {
     display: none;
     z-index: 0;
   }
+
+  .load-more,
+  .clear-searches {
+    width: 50%;
+  }
 }
+
+
+
+
+
 

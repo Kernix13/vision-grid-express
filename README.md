@@ -11,21 +11,6 @@
 
 <div id="back-to-top"></div>
 
-## Table Of Contents
-
-- [Project Overview](#project-overview)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-  - [Getting an Unsplash API key](#getting-an-unsplash-api-key)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Additional Notes](#additional-notes)
-- [Capstone Requirements](#capstone-requirements)
-- [Contributing](#contributing)
-- [Future Improvements](#future-improvements)
-- [Use of AI](#use-of-ai)
-- [License](#license)
-
 ## Project Overview
 
 VisualGrid is a responsive web application for visual project planning, goal-setting, and creative inspiration. It allows users to search the Unsplash API for images, curate their favorites into a personalized "vision board," and attach notes, ideas, or goal statements to each image.
@@ -88,7 +73,7 @@ This is the current state of my project as of November 21st, 2025:
           <li>High-Order Array methods: <code>find</code>, <code>filter</code>, <code>forEach</code>,
             <code>findIndex</code>
           </li>
-          <li>Event listeners: <code>click</code>, <code>submit</code>, and <code>DOMContentLoaded</code></li>
+          <li>Event listeners: <code>click</code>, <code>submit</code>, <code>focusout</code>, and <code>DOMContentLoaded</code></li>
         </ul>
       </td>
     </tr>
@@ -379,13 +364,7 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ## Future Improvements
 
-<!-- I hope to implement the first 5 points -->
-
-- Start a slideshow of just the images, and/or the images + text
-- Allow user to set the timing for the slideshow
-- Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image
 - Multiple boards option
-- Ability to name/rename boards
 - Dark/Light mode option
 - Add a quote generator API that pairs an inspirational quote with each image
 - Add a music API for motivational music during lightbox slideshow
@@ -420,7 +399,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 12-16 To-Do items left to do.
+> 16-20 To-Do items left to do.
 
 1️⃣ Home page:
 
@@ -429,8 +408,12 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 2️⃣ Board page:
 
-1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox
+1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox - open from Settings or clicking on an image in the DOM
 2. I need an editable text field for goal/affirmation for each saved image that can be edited in the modal
+3. Start a slideshow of just the images, and/or the images + text
+4. Allow user to set the timing for the slideshow
+5. Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image
+6. Ability to name/rename boards
 
 3️⃣ Both pages/site wide:
 
