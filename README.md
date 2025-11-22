@@ -162,6 +162,8 @@ This is the current state of my project as of November 21st, 2025:
 
 <!-- The steps look too small - see how H3 looks after next push -->
 
+<br>
+
 1. Clone this repo and install dependencies:
 
 ```bash
@@ -178,6 +180,8 @@ npm install
 code .
 ```
 
+<br>
+
 2. Create a `.env` file in the project root
 3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
 
@@ -186,6 +190,8 @@ CLIENT_ID=your-unsplash-client-id-here
 PORT=port_number
 ```
 
+<br>
+
 4. Replace the string `your-unsplash-client-id-here` with your Unsplash API Client ID, and `port_number` with the port you want to use.
 5. Delete the file `.env.example`
 6. Start the development server:
@@ -193,6 +199,8 @@ PORT=port_number
 ```sh
 npm run dev
 ```
+
+<br>
 
 7. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
 
