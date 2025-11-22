@@ -132,6 +132,13 @@ body {
   line-height: 1.5;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 h1,
@@ -177,7 +184,7 @@ h2, h3 {
 /* Footer styles */
 footer {
   padding: 3rem 0 0;
-  margin-top: 5rem;
+  margin: 5rem 0 0;
   color: var(--white);
   background-color: var(--primary-dark-2);
 }
@@ -194,7 +201,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem 0 1rem;
+  padding: 1.5rem 0;
 }
 
 .footer-flex a {

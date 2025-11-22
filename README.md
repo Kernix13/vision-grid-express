@@ -160,7 +160,9 @@ This is the current state of my project as of November 21st, 2025:
 
 ## Getting Started
 
-1. Clone this repo and install dependencies:
+<!-- The steps look too small - see how H3 looks after next push -->
+
+### 1. Clone this repo and install dependencies:
 
 ```bash
 # Clone this repo
