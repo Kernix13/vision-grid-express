@@ -162,7 +162,7 @@ This is the current state of my project as of November 21st, 2025:
 
 <!-- The steps look too small - see how H3 looks after next push -->
 
-### 1. Clone this repo and install dependencies:
+1. Clone this repo and install dependencies:
 
 ```bash
 # Clone this repo
@@ -178,26 +178,23 @@ npm install
 code .
 ```
 
-### 2. Create a `.env` file in the project root
-
-### 3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
+2. Create a `.env` file in the project root
+3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
 
 ```env
 CLIENT_ID=your-unsplash-client-id-here
 PORT=port_number
 ```
 
-### 4. Replace the string `your-unsplash-client-id-here` with your Unsplash API Client ID, and `port_number` with the port you want to use.
-
-### 5. Delete the file `.env.example`
-
-### 6. Start the development server:
+4. Replace the string `your-unsplash-client-id-here` with your Unsplash API Client ID, and `port_number` with the port you want to use.
+5. Delete the file `.env.example`
+6. Start the development server:
 
 ```sh
 npm run dev
 ```
 
-### 7. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
+7. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
 
 ```sh
 Server is running http://localhost:8080
@@ -205,7 +202,7 @@ Server is running http://localhost:8080
 
 You can now search for images, save images to your board page, add notes for each saved image, etc.
 
-### 8. Linting (Optional): To check your code for potential issues with ESLint:
+8. Linting (Optional): To check your code for potential issues with ESLint:
 
 ```sh
 npm run lint
