@@ -200,6 +200,17 @@ Server is running http://localhost:8080
 
 You can now search for images, save images to your board page, add notes for each saved image, etc.
 
+8. Linting (Optional): To check your code for potential issues with ESLint:
+
+```sh
+npm run lint
+
+# To automatically fix simple issues
+npx eslint . --fix
+```
+
+> ESLint is configured for Node backend and frontend browser JS. Running these commands is optional.
+
 ### Getting an Unsplash API key
 
 1. Navigate to [Unsplash](https://unsplash.com/) and click the hamburger menu in the top-right corner and choose Developers/API.
@@ -259,7 +270,10 @@ You can now search for images, save images to your board page, add notes for eac
   ├── CODE_OF_CONDUCT.md
   ├── CONTRIBUTING.md
   ├── LICENSE
+  ├── package.json
   ├── server.js            # Express server handling Unsplash API requests
+  ├── eslint.config.mjs
+  └── .eslintignore
 
 /public/
   ├── index.html
