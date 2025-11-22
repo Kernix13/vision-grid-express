@@ -33,7 +33,7 @@ thumbnailsBtn.addEventListener('click', () => {
   toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
 });
 // Close thumbnails on window click
-imgTextContainer.addEventListener('click', (e) => {
+imgTextContainer.addEventListener('click', () => {
   if (thumbnails.classList.contains('onscreen')) {
     thumbnails.classList.remove('onscreen')
   }
@@ -65,7 +65,7 @@ thumbnails.addEventListener('click', (e) => {
   if (!thumbItem) return;
 
   // Remove previous selection
-  const selected = document.querySelectorAll('.thumb-item.selected');
+  // const selected = document.querySelectorAll('.thumb-item.selected');
 
   // if (selected.length > 0) {
   //   selected.forEach(item => item.classList.toggle('selected'));

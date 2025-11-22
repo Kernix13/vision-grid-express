@@ -140,7 +140,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0;
-  // overflow-x: visible;
+  /* overflow-x: visible; */
   background-color: var(--white);
 }
 
@@ -294,6 +294,6 @@
   .image-text {
     grid-template-columns: 1fr 1fr;
     align-items: flex-start;
-    // grid-template-columns: 3fr 2fr;
+    /* grid-template-columns: 3fr 2fr; */
   }
 }
