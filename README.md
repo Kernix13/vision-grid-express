@@ -104,7 +104,7 @@ This is the current state of my project as of November 21st, 2025:
     </tr>
     <!-- Express.js -->
     <tr>
-      <td><img src="./public/images/express.svg" width="40" height="40" alt="Express icon" title="Express.js" />
+      <td><img src="./assets/express.svg" width="40" height="40" alt="Express icon" title="Express.js" />
       </td>
       <td>
         <ul>
@@ -130,7 +130,7 @@ This is the current state of my project as of November 21st, 2025:
     </tr>
     <!-- GitHub -->
     <tr>
-      <td><img src="./public/images/github-original.svg" width="40" height="40" alt="GitHub icon" title="GitHub" />
+      <td><img src="./assets/github-original.svg" width="40" height="40" alt="GitHub icon" title="GitHub" />
       </td>
       <td>
         <ul>
@@ -182,7 +182,7 @@ code .
 
 <br>
 
-2. Create a `.env` file in the project root
+2. Create a `.env` file in the project root.
 3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
 
 ```env
@@ -193,7 +193,7 @@ PORT=port_number
 <br>
 
 4. Replace the string `your-unsplash-client-id-here` with your Unsplash API Client ID, and `port_number` with the port you want to use.
-5. Delete the file `.env.example`
+5. Delete the file `.env.example`.
 6. Start the development server:
 
 ```sh
@@ -210,6 +210,8 @@ Server is running http://localhost:8080
 
 You can now search for images, save images to your board page, add notes for each saved image, etc.
 
+<br>
+
 8. Linting (Optional): To check your code for potential issues with ESLint:
 
 ```sh
@@ -220,6 +222,8 @@ npx eslint . --fix
 ```
 
 > ESLint is configured for Node backend and frontend browser JS. Running these commands is optional.
+
+<br>
 
 ### Getting an Unsplash API key
 
@@ -260,6 +264,7 @@ npx eslint . --fix
   - Clicking on any thumbnail takes you to that image on the page.
   - Reorder saved images.
   - Delete images and their notes from your board.
+  - Click any image or editable text box to close the thumbnail strip.
 - Lightbox Slider
   - A full-screen modal that cycles through saved images.
   - Adjustable timing between slides.
@@ -275,30 +280,35 @@ npx eslint . --fix
 ## Project Structure
 
 ```
-/
-  ├── README.md
-  ├── CODE_OF_CONDUCT.md
-  ├── CONTRIBUTING.md
-  ├── LICENSE
-  ├── package.json
-  ├── server.js            # Express server handling Unsplash API requests
-  ├── eslint.config.mjs
-  └── .eslintignore
+/ (root)
+├── README.md
+├── assets/              # Images used in README only
+├── LICENSE
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── package.json         # Dependencies and scripts
+├── server.js            # Express server handling API requests
+├── eslint.config.mjs    # ESLint configuration for code linting rules
+├── .editorconfig        # Defines editor settings across IDEs/editors
+├── .eslintignore
+├── .gitignore
+└── .env.example         # Template for environment variables
 
-/public/
-  ├── index.html
-  ├── board.html
-  ├── css/
-  ├── js/
-  │   ├── index.js         # Main file for index.html
-  │   ├── board.js         # Main file for board.html
-  │   ├── api/             # Fetch function to backend /api/photos
-  │   ├── ui/              # Functions for various UI elements
-  │   └── utils/           # Functions for UI classes and localStorage
-  ├── images/
-  │   ├── favicon.ico
-  │   └── favicon.png
-  └── fonts/               # DM Sans and Inter woff2 files
+/public
+├── index.html
+├── board.html
+├── robots.txt
+├── sitemap.xml
+├── css/
+├── js/
+│   ├── index.js         # Main file for index.html
+│   ├── board.js         # Main file for board.html
+│   ├── api/             # Fetch function to backend /api/photos
+│   ├── ui/              # Functions for various UI elements
+│   └── utils/           # Functions for UI classes and localStorage
+├── images/
+│   └── favicon.ico
+└── fonts/               # DM Sans and Inter .woff2 files
 ```
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
