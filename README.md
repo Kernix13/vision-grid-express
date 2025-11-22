@@ -415,12 +415,13 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ## ~~To-Do~~ (Remove this section later...)
 
 > [!NOTE]
-> 16-20 To-Do items left to do.
+> 18-22 To-Do items left to do.
 
 1️⃣ Home page:
 
 1. Implement error messsage/popup for searches of "bad characters"
 2. Footer needs to be fixed when there are no elements on the page because there is a big white margin below the footer
+3. I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a data-id attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM - **SAVE FOR LAST**
 
 2️⃣ Board page:
 
@@ -441,7 +442,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 4️⃣ README.md:
 
 1. Finish Use of AI
-<!-- 2. Should I add a Lighthouse Report section with screenshots? And add notes on what I did to fix it like load Google fonts, add aria attributes, properly load CSS files, fix incorrect heading structure, ... Not until I get Performance over 90 -->
+2. try changing the getting started stes to h3 becuase they look too small
 
 5️⃣ Bugs
 
