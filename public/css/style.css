@@ -146,7 +146,6 @@ h2,
 h3 {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
-  font-stretch: 100%;
   line-height: 1.1;
   color: var(--text);
 }

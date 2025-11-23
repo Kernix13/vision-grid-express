@@ -429,50 +429,41 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> [!NOTE]
-> 18-22 To-Do items left to do.
+<!-- ❓ Add important code snippets somewhere? -->
 
-1️⃣ Home page:
+> [!NOTE]
+> 17 To-Do items left to do.
+
+### High-priority
+
+1. **BOARD**: Add board page images to modal on click. Edit/reuse home page modal: keep prev/nav, lose save/remove, add editable field
+2. **BOARD**: Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image
+3. **BOARD**: Start a slideshow of just the images, and/or the images + text
+4. **README**: Finish Use of AI
+
+### Non-critical
 
 1. Implement error messsage/popup for searches of "bad characters"
-2. Footer needs to be fixed when there are no elements on the page because there is a big white margin below the footer
-3. I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a data-id attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM - **SAVE FOR LAST**
-
-2️⃣ Board page:
-
-1. I need a modal for saved images - something similar but different than the home page modal -> a slider/lightbox - open from Settings or clicking on an image in the DOM
-2. I need an editable text field for goal/affirmation for each saved image that can be edited in the modal
-3. Start a slideshow of just the images, and/or the images + text
-4. Allow user to set the timing for the slideshow
-5. Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image
-6. Ability to name/rename boards
-
-3️⃣ Both pages/site wide:
-
-1. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 2. Add an `about.html` file? YES!
-3. When done, combine ALL CSS into one or 2 files per page
-4. textContent is better than createTextNode so find & replace all occurrences
+3. `textContent` is better than `createTextNode` so find & replace all occurrences
+4. When done, combine ALL CSS into one or 2 files per page
+5. I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a data-id attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
 
-4️⃣ README.md:
+### Stretch or nice-to-haves
 
-1. Finish Use of AI
-2. try changing the getting started stes to h3 becuase they look too small
+1. **BOARD**: Allow user to set the timing for the slideshow
+2. **BOARD**: Ability to name/rename boards
+3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
-5️⃣ Bugs
+### Style Questions (Non-critical)
+
+1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons & board page buttons? This is a UI design question where I need opinions/input
+2. Home page H1 span different color/italic - good, bad?
+
+### Bugs/Issues
 
 1. I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
 2. Use of innerHTML for board page editable text is an issue!!!
-3. Flash of Hidden Content (FOHC) on home page
-
-6️⃣ Style / UI/UX Questions
-
-1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons? The modal nav buttons have primary bg color, Save/Remove buttons have white - is that inconsistent? This is a UI design question where I need opinions/input
-2. Home page H1 span different color/italic - good, bad?
-3. Should all buttons have an accent hover color like the home page? The board page and home page modal have primary color hover bg...
-4. Consider using `srcset` for DOM images on different devices
-
-<!-- 3. ❓ Features -->
-<!-- 4. ❓ Add important code snippets somewhere? -->
+3. Consider using `srcset` for DOM images on different devices on board page for performance reasons
 
 <!-- Bootrap Icons, SVGs: https://icons.getbootstrap.com/ -->

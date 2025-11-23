@@ -5,6 +5,7 @@ const innerModal = document.querySelector('.modal');
 
 // WHAT IMAGE SIZE AM I LOADING? It should be .regular, I think it is .small
 export function setModalContent(element, item, id) {
+  const location = window.location.pathname;
   element.textContent = '';
 
   const image = document.createElement('img');
@@ -18,8 +19,11 @@ export function setModalContent(element, item, id) {
   btnsContainer.className = 'modal-buttons';
 
   // Add navigation + save/remove functionality
+  // if location === 'board.html' -> load editable h3/blockquote on right
   modalNav(btnsContainer, id, innerModal);
-  modalSaveRemove(btnsContainer, id, innerModal);
+  if (location === '/' || location === '/index.html') {
+    modalSaveRemove(btnsContainer, id, innerModal);
+  }
 
   element.append(btnsContainer);
 
