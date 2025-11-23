@@ -28,6 +28,9 @@ export function initHomePage() {
     addSearchText(loadMore, "Load 12 more images for ", 'load-more-search');
     addSearchText(resultsTitle, "Results for ", 'h2-search-term');
 
+    const loadMoreText = 'Start new search & clear search results';
+    addSearchText(clearSearches, loadMoreText, 'clear-searches');
+
     createImgCard(images, searchGrid);
   }
 }

@@ -24,18 +24,23 @@ export function renderSearchEls(str) {
   setLocalStorage('last-search', str);
   addSearchText(loadMore, "Load 12 more images for ", 'load-more-search');
   addSearchText(resultsTitle, "Results for ", 'h2-search-term');
+  
+  const loadMoreText = 'Start new search & clear search results';
+  addSearchText(clearSearches, loadMoreText, 'clear-searches');
 }
 
 export function addSearchText(el, text, spanClass) {
   el.textContent = '';
   el.append(document.createTextNode(text));
 
-  const span = document.createElement('span');
-  span.className = spanClass;
-  const spanText = getLocalStorage('last-search');
-  span.append(document.createTextNode(spanText));
-
-  el.append(span);
+  if (el !== clearSearches) {
+    const span = document.createElement('span');
+    span.className = spanClass;
+    const spanText = getLocalStorage('last-search');
+    span.append(document.createTextNode(spanText));
+  
+    el.append(span);
+  }
 }
 
 export function addSearchTerm(parent, arr) {

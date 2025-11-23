@@ -2,6 +2,7 @@ import { setLocalStorage, getLocalStorage } from "../utils/localStorage.js";
 import { createImgCard } from "../ui/cards.js";
 
 export async function getSearchResults(searchTerm, page, element) {
+  const searchGrid = document.getElementById('search-grid')
   const DOMAIN = 'http://localhost:8080';
   const badCharacters = ['', ' ', '_', '-', '>', '.', '|', ';', '[', ']', '{', '}', '(', ')', '*', '`', '~', '"', ':'];
 
@@ -31,6 +32,7 @@ export async function getSearchResults(searchTerm, page, element) {
     })
 
     setLocalStorage('fetched-search-results', resultsObject);
+    searchGrid.textContent = ''
     createImgCard(getLocalStorage('fetched-search-results'), element)
     console.log(data);
     return data;

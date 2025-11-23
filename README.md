@@ -290,25 +290,22 @@ npx eslint . --fix
 ├── server.js            # Express server handling API requests
 ├── eslint.config.mjs    # ESLint configuration for code linting rules
 ├── .editorconfig        # Defines editor settings across IDEs/editors
-├── .eslintignore
-├── .gitignore
 └── .env.example         # Template for environment variables
-
-/public
-├── index.html
-├── board.html
-├── robots.txt
-├── sitemap.xml
-├── css/
-├── js/
-│   ├── index.js         # Main file for index.html
-│   ├── board.js         # Main file for board.html
-│   ├── api/             # Fetch function to backend /api/photos
-│   ├── ui/              # Functions for various UI elements
-│   └── utils/           # Functions for UI classes and localStorage
-├── images/
-│   └── favicon.ico
-└── fonts/               # DM Sans and Inter .woff2 files
+└── public/
+    ├── index.html
+    ├── board.html
+    ├── robots.txt
+    ├── sitemap.xml
+    ├── css/
+    ├── js/
+    │   ├── index.js         # Main file for index.html
+    │   ├── board.js         # Main file for board.html
+    │   ├── api/             # Fetch function to backend /api/photos
+    │   ├── ui/              # Functions for various UI elements
+    │   └── utils/           # Functions for UI classes and localStorage
+    ├── images/
+    │   └── placeholder.jpg  # Used in the app to improve page performance
+    └── fonts/               # DM Sans and Inter .woff2 files
 ```
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
