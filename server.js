@@ -11,10 +11,9 @@ const port = process.env.PORT || 8080;
 const corsOptions = {
   origin: `http://localhost:${port}`,
 };
+
 app.use(cors(corsOptions));
-
 app.use(compression());
-
 app.use(express.static('./public'));
 
 app.get('/api/photos', async (req, res) => {

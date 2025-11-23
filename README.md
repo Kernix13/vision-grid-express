@@ -5,7 +5,7 @@
 ![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
-<!--  for-the-badge, flat or flat-square -->
+<!-- Go to https://shields.io/badges, try for-the-badge, flat or flat-square -->
 
 <div align="center"><img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" /></div>
 
@@ -22,6 +22,8 @@ Users can search for images, browse them in grid or modal views, save their favo
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Tech Stack
+
+<!-- See all devicons here: https://github.com/devicons/devicon -->
 
 This is the current state of my project as of November 21st, 2025:
 
@@ -41,8 +43,8 @@ This is the current state of my project as of November 21st, 2025:
       <td>
         <ul>
           <li>Meta + SEO tags: title, description, Open Graph, and Twitter card tags</li>
-          <li>Favicon</li>
-          <li>Semantic HTML, <code>aria-*</code> and <code>data-*</code> attributes</li>
+          <li>Site identity assets: favicon</li>
+          <li>Semantic HTML + <code>aria-*</code> and <code>data-*</code> attributes</li>
           <li>Supporting files: <code>sitemap.xml</code>, <code>robots.txt</code></li>
         </ul>
       </td>
@@ -56,6 +58,7 @@ This is the current state of my project as of November 21st, 2025:
           <li>Mobile-first design with media queries (7 breakpoints)</li>
           <li>Layout techniques: Flexbox, Grid, absolute positioning</li>
           <li>Animations using CSS transitions and <code>@keyframes</code></li>
+          <li>CSS custom properties (variables) for consistent colors</li>
           <li>Self-hosted Google Fonts for performance</li>
         </ul>
       </td>
@@ -67,13 +70,13 @@ This is the current state of my project as of November 21st, 2025:
           width="40" height="40" alt="javascript icon" title="JavaScript" /></td>
       <td>
         <ul>
-          <li>ES Modules, Fetch API, and <code>localStorage</code></li>
+          <li>Modern JavaScript features: array destructuring, spread operator, and template literals</li>
+          <li>ES Modules, async code using the Fetch API, <code>localStorage</code> for client-side persistence</li>
           <li>UI interactions: mobile menu, back-to-top button, and modals</li>
-          <li>DOM manipulation with event delegation; array destructuring and the spread operator</li>
           <li>High-Order Array methods: <code>find</code>, <code>filter</code>, <code>forEach</code>,
             <code>findIndex</code>
           </li>
-          <li>Event listeners: <code>click</code>, <code>submit</code>, <code>focusout</code>, and <code>DOMContentLoaded</code></li>
+          <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, and <code>DOMContentLoaded</code> listeners, event delegation</li>
         </ul>
       </td>
     </tr>
@@ -85,8 +88,8 @@ This is the current state of my project as of November 21st, 2025:
         <ul>
           <li>Local development server environment</li>
           <li>Custom npm scripts</li>
-          <li>Use of environment variables via <code>process.env</code> for API key and configuration</li>
-          <li>Integration with Express to handle API routing and static file serving</li>
+          <li>Environment variables (<code>process.env</code>) for secure API keys and configuration</li>
+          <li>Express integration for API routing and serving static files</li>
         </ul>
       </td>
     </tr>
@@ -98,7 +101,7 @@ This is the current state of my project as of November 21st, 2025:
         <ul>
           <li>Managing dependencies with <code>package.json</code></li>
           <li>Configuring and running npm scripts for development workflow</li>
-          <li>Installed and used key packages: Express, CORS, dotenv, nodemon</li>
+          <li>Key packages used: Express, CORS, dotenv, nodemon</li>
         </ul>
       </td>
     </tr>
@@ -108,7 +111,7 @@ This is the current state of my project as of November 21st, 2025:
       </td>
       <td>
         <ul>
-          <li>Built a simple Express server to handle Unsplash API requests without exposing the API key</li>
+          <li>Express server for handling Unsplash API requests securely</li>
           <li>Served static files using <code>express.static</code> middleware</li>
           <li>Set up basic routing for Unsplash API requests</li>
           <li>Used middleware for JSON parsing and simple CORS handling</li>
@@ -134,10 +137,10 @@ This is the current state of my project as of November 21st, 2025:
       </td>
       <td>
         <ul>
-          <li>Repository hosting with organized issues + labels</li>
-          <li>Pull request workflow with merge commits</li>
-          <li>Included MIT license, Contributing Guide, and Code of Conduct</li>
-          <li>README written using open-source best practices</li>
+          <li>Repository hosting with issue tracking and descriptive labels</li>
+          <li>Feature branch pull request workflow with merge commits</li>
+          <li>Licensing and contribution guidelines: MIT License, CONTRIBUTING.md, and CODE_OF_CONDUCT.md</li>
+          <li>Comprehensive README using open-source best practices</li>
         </ul>
       </td>
     </tr>
@@ -147,8 +150,8 @@ This is the current state of my project as of November 21st, 2025:
           width="40" height="40" alt="VS Code icon" title="VS Code" /></td>
       <td>
         <ul>
-          <li>VS Code as the primary editor with extensions for formatting</li>
-          <li>Integrated terminal for Git commands and running Node.js/NPM scripts</li>
+          <li>Primary editor: VS Code with extensions for code formatting and workflow efficiency</li>
+          <li>Integrated terminal for Git, package management, and running Node.js/NPM scripts</li>
           <li>Used <code>.editorconfig</code> for consistent formatting across editors</li>
         </ul>
       </td>
@@ -212,7 +215,7 @@ You can now search for images, save images to your board page, add notes for eac
 
 <br>
 
-8. Linting (Optional): To check your code for potential issues with ESLint:
+8. Linting (**_Optional_**): To check your code for potential issues with ESLint:
 
 ```sh
 npm run lint
@@ -264,7 +267,7 @@ npx eslint . --fix
   - Clicking on any thumbnail takes you to that image on the page.
   - Reorder saved images.
   - Delete images and their notes from your board.
-  - Click any image or editable text box to close the thumbnail strip.
+  - Click the page image or editable text box to close the thumbnail strip.
 - Lightbox Slider
   - A full-screen modal that cycles through saved images.
   - Adjustable timing between slides.
@@ -452,7 +455,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Stretch or nice-to-haves
 
 1. **BOARD**: Allow user to set the timing for the slideshow
-2. **BOARD**: Ability to name/rename boards
+2. **BOARD**: Ability to name/rename board(s)
 3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
 ### Style Questions (Non-critical)
@@ -465,5 +468,23 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
 2. Use of innerHTML for board page editable text is an issue!!!
 3. Consider using `srcset` for DOM images on different devices on board page for performance reasons
+
+<!--
+  CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section
+  1. Shields.io badges ✅
+  2. Project Overview ✅
+  3. Tech Stack ✅
+  4. Getting Started ✅
+  5. Features ✅
+  6. Project Structure ✅
+  7. Additional Notes ❓
+  8. Capstone Requirements ✅
+  9. Contributing ✅
+  10. Future Improvements ✅
+  11. Use of AI 📌
+  12. License ✅
+  - CODE_OF_CONDUCT.md file: Edit/Rewrite 📌
+
+ -->
 
 <!-- Bootrap Icons, SVGs: https://icons.getbootstrap.com/ -->

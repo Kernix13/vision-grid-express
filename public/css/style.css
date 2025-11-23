@@ -95,7 +95,7 @@ textarea {
 @font-face {
   font-family: 'DM Sans';
   src: url('../fonts/DMSans-Regular.woff2') format('woff2');
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -163,9 +163,8 @@ header {
 
 h1 {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
-  
   margin: 2rem 0 1rem;
   padding: 0 1rem;
 }
@@ -415,8 +414,6 @@ input[type="search"]:focus {
   font-size: 1.75rem;
 }
 
-
-
 /* 4. Home page modal styles */
 .modal-container {
   position: fixed;
@@ -620,7 +617,7 @@ input[type="search"]:focus {
 .logo {
   color: var(--primary-dark-2);
   font-family: Segoe script, 'Brush Script MT', cursive;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.125em;
   font-size: 2rem;
   transition: color 500ms ease;
@@ -639,7 +636,7 @@ input[type="search"]:focus {
 .home-link:visited {
   text-decoration: none;
   border: 1px solid transparent;
-  transition: 400ms ease;
+  transition: 300ms ease;
 }
 
 .nav-link,
