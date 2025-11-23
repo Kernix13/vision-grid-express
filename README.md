@@ -43,7 +43,7 @@ This is the current state of my project as of November 21st, 2025:
       <td>
         <ul>
           <li>Meta + SEO tags: title, description, Open Graph, and Twitter card tags</li>
-          <li>Site identity assets: favicon</li>
+          <li>Site identity: full favicon set (.png, .ico, and sizes for cross-browser support)</li>
           <li>Semantic HTML + <code>aria-*</code> and <code>data-*</code> attributes</li>
           <li>Supporting files: <code>sitemap.xml</code>, <code>robots.txt</code></li>
         </ul>
@@ -55,7 +55,7 @@ This is the current state of my project as of November 21st, 2025:
           width="40" height="40" alt="css icon" title="CSS3" /></td>
       <td>
         <ul>
-          <li>Mobile-first design with media queries (7 breakpoints)</li>
+          <li>Mobile-first design with media queries & various breakpoints</li>
           <li>Layout techniques: Flexbox, Grid, absolute positioning</li>
           <li>Animations using CSS transitions and <code>@keyframes</code></li>
           <li>CSS custom properties (variables) for consistent colors</li>
@@ -189,13 +189,13 @@ code .
 3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
 
 ```env
-CLIENT_ID=your-unsplash-client-id-here
+CLIENT_ID=your_unsplash_client_id
 PORT=port_number
 ```
 
 <br>
 
-4. Replace the string `your-unsplash-client-id-here` with your Unsplash API Client ID, and `port_number` with the port you want to use.
+4. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` with the port you want to use.
 5. Delete the file `.env.example`.
 6. Start the development server:
 
@@ -310,6 +310,15 @@ npx eslint . --fix
     │   └── placeholder.jpg  # Used in the app to improve page performance
     └── fonts/               # DM Sans and Inter .woff2 files
 ```
+
+<!--
+  Project Tree Structure generators:
+  1. ChatGPT
+  2. https://tree.nathanfriend.com/
+  3. https://ascii-tree-generator.com/
+  4. VSCode File Tree Generator: https://marketplace.visualstudio.com/items?itemName=MutableUniverse.vscode-file-tree-generator
+  5. npm tree-cli: https://www.npmjs.com/package/tree-cli
+-->
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -439,23 +448,23 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### High-priority
 
-1. **BOARD**: Add board page images to modal on click. Edit/reuse home page modal: keep prev/nav, lose save/remove, add editable field
-2. **BOARD**: Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image
-3. **BOARD**: Start a slideshow of just the images, and/or the images + text
+1. **BOARD**: Add board page images to modal on click. Edit/reuse home page modal: keep prev/nav, lose save/remove, add editable field - issue [#42](https://github.com/Kernix13/vision-grid-express/issues/42) and issue [#21](https://github.com/Kernix13/vision-grid-express/issues/21)
+2. **BOARD**: Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image - issue [#43](https://github.com/Kernix13/vision-grid-express/issues/43)
+3. **BOARD**: Start a slideshow of just the images, and/or the images + text - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
 4. **README**: Finish Use of AI
 
 ### Non-critical
 
-1. Implement error messsage/popup for searches of "bad characters"
+1. Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
 2. Add an `about.html` file? YES!
-3. `textContent` is better than `createTextNode` so find & replace all occurrences
-4. When done, combine ALL CSS into one or 2 files per page
+3. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
+4. When done, combine ALL CSS into one or 2 files per page - issue [#40](https://github.com/Kernix13/vision-grid-express/issues/40)
 5. I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a data-id attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
 
 ### Stretch or nice-to-haves
 
-1. **BOARD**: Allow user to set the timing for the slideshow
-2. **BOARD**: Ability to name/rename board(s)
+1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
+2. **BOARD**: Ability to name/rename board(s) - issue [#45](https://github.com/Kernix13/vision-grid-express/issues/45)
 3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
 ### Style Questions (Non-critical)
