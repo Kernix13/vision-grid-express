@@ -6,8 +6,8 @@ const innerModal = document.querySelector('.modal');
 // WHAT IMAGE SIZE AM I LOADING? It should be .regular, I think it is .small
 export function setModalContent(element, item, id) {
   const images = getLocalStorage('fetched-search-results');
-  
 
+  // I need the pathname to use the same modal on index and board
   const location = window.location.pathname;
   element.textContent = '';
 
@@ -28,6 +28,9 @@ export function setModalContent(element, item, id) {
   modalNav(btnsContainer, id, innerModal);
   if (location === '/' || location === '/index.html') {
     modalSaveRemove(btnsContainer, id, innerModal);
+  }
+  if (location === '/board.html') {
+    console.log('On the board page')
   }
 
   element.append(btnsContainer);

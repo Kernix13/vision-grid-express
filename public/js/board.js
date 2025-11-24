@@ -6,6 +6,7 @@ import { menuButton } from "./ui/menu.js";
 import { initBoardPage } from "./ui/initPage.js";
 import { deleteImage, moveImage, selectImage } from "./ui/thumbnails.js";
 import { scrollFunction, smoothScrollBackToTop } from "./ui/backToTop.js";
+import { setModalContent } from "./ui/modal.js";
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
@@ -15,6 +16,9 @@ const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
 const backToTopButton = document.querySelector('#back-to-top-btn');
 const imgTextContainer = document.querySelector('#img-text-container');
+const close = document.getElementById('close-btn');
+const modalBg = document.getElementById('modal-bg');
+const innerModal = document.querySelector('.modal');
 
 /**
  * * EVENT LISTENERS
@@ -62,7 +66,19 @@ imgTextContainer.addEventListener('click', e => {
 
   console.log(regularImg.id) // image-eNXZvDGqGbM, eNXZvDGqGbM -> id
   // I need to do the same thing as for thumbnails - add the id as data-id to the container, then the id to the image, then use that image id to add the image to the modal
+
+  const imageText = regularImg.closest('.image-text');
+  const imageTextId = imageText.id;  
+
+  modalBg.classList.add('show-modal');
+  setModalContent(innerModal, regularImg, imageTextId)
 })
+
+// 8. Modal listeners: Close modal on click of: 1. close button, 2. window
+close.addEventListener('click', () => modalBg.classList.remove('show-modal'));
+window.addEventListener('click', e =>
+  e.target == modalBg ? modalBg.classList.remove('show-modal') : false
+);
 
 // 8. Thumbnail item
 thumbnails.addEventListener('click', (e) => {

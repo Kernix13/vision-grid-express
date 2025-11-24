@@ -200,7 +200,7 @@ code .
 2. Create a `.env` file in the project root.
 3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
 
-```env
+```sh
 CLIENT_ID=your_unsplash_client_id
 PORT=port_number
 ```
@@ -481,7 +481,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 2. Add an `about.html` file? YES!
 3. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
 4. When done, combine ALL CSS into one or 2 files per page - issue [#40](https://github.com/Kernix13/vision-grid-express/issues/40)
-5. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
+5. **BOARD**: addSavedImagesToDom is in thumbnails.js - that does not make sense. Either change the file name, or move it to a new file.
+6. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
 
 ### Stretch or nice-to-haves
 
