@@ -69,7 +69,6 @@ export function addSavedImagesToDom() {
     // Create image element
     const image = document.createElement('img');
     image.className = 'regular';
-    image.id = `image-${img.id}`;
     image.alt = img.description;
     image.src = img.imageRegular;
     if (i === 0) image.fetchPriority = "high";
@@ -78,7 +77,6 @@ export function addSavedImagesToDom() {
     // Create editable div
     const div = document.createElement('div');
     div.className = 'editable';
-    div.id = `text-${img.id}`;
     div.setAttribute('contenteditable', true);
 
     // Show saved notes if they exist, otherwise show placeholder

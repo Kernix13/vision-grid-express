@@ -280,6 +280,26 @@
   color: var(--white);
 }
 
+/* the div housing the img and blockquote */
+.img-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  max-width: 90%;
+  margin: 0 auto;
+  
+}
+
+/* the blockquote */
+.editable-quote {
+  text-align: center;
+  font-style: italic;
+  font-weight: 500;
+}
+
 @keyframes modal2open {
   from {
     opacity: 0;

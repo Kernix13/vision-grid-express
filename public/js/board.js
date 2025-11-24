@@ -64,11 +64,12 @@ imgTextContainer.addEventListener('click', e => {
   const regularImg = e.target.closest('.regular');
   if (!regularImg) return;
 
-  console.log(regularImg.id) // image-eNXZvDGqGbM, eNXZvDGqGbM -> id
+  // console.log(regularImg) // image-eNXZvDGqGbM, eNXZvDGqGbM -> id
   // I need to do the same thing as for thumbnails - add the id as data-id to the container, then the id to the image, then use that image id to add the image to the modal
 
   const imageText = regularImg.closest('.image-text');
-  const imageTextId = imageText.id;  
+  const imageTextId = imageText.id; 
+  console.log(imageTextId) 
 
   modalBg.classList.add('show-modal');
   setModalContent(innerModal, regularImg, imageTextId)

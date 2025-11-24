@@ -470,10 +470,9 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### High-priority
 
-1. **BOARD**: Add board page images to modal on click. Edit/reuse home page modal: keep prev/nav, lose save/remove, add editable field - issue [#42](https://github.com/Kernix13/vision-grid-express/issues/42) and issue [#21](https://github.com/Kernix13/vision-grid-express/issues/21)
-2. **BOARD**: Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image - issue [#43](https://github.com/Kernix13/vision-grid-express/issues/43)
-3. **BOARD**: Start a slideshow of just the images, and/or the images + text - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
-4. **README**: Finish Use of AI
+1. **BOARD**: Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image - issue [#43](https://github.com/Kernix13/vision-grid-express/issues/43)
+2. **BOARD**: Start a slideshow of just the images, and/or the images + text - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
+3. **README**: Finish Use of AI
 
 ### Non-critical
 
