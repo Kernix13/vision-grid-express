@@ -64,11 +64,6 @@ imgTextContainer.addEventListener('click', e => {
   // I need to do the same thing as for thumbnails - add the id as data-id to the container, then the id to the image, then use that image id to add the image to the modal
 })
 
-// 7. Open/close hamburger menu
-hamburger.addEventListener("click", () => {
-  menuButton(hamburger, navMenu);
-});
-
 // 8. Thumbnail item
 thumbnails.addEventListener('click', (e) => {
   const thumbItem = e.target.closest('.thumb-item');
@@ -144,6 +139,11 @@ cancelBtn.addEventListener('click', closeThumbDeleteModal);
 
 const closeDeleteModal = document.getElementById('close');
 closeDeleteModal.addEventListener('click', closeThumbDeleteModal);
+
+// 7. Open/close hamburger menu
+hamburger.addEventListener("click", () => {
+  menuButton(hamburger, navMenu);
+});
 
 // 13. Back To Top
 window.addEventListener('scroll', scrollFunction);

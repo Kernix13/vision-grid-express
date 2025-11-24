@@ -1,13 +1,25 @@
 # VisionGrid
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge)
-![GitHub Issues](https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge)
-![GitHub Repo Stars](https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge)
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+<div align="center"><img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" /></div>
+
+<br>
+
+<p align="center">
+<a href="https://github.com/Kernix13/vision-grid-express/commits/main/">
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge" />
+</a>
+<a href="https://github.com/Kernix13/vision-grid-express/issues">
+  <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" />
+</a>
+<a href="https://github.com/Kernix13/vision-grid-express">
+  <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" />
+</a>
+<a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" />
+</a>
+</p>
 
 <!-- Go to https://shields.io/badges, try for-the-badge, flat or flat-square -->
-
-<div align="center"><img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" /></div>
 
 <div id="back-to-top"></div>
 
@@ -55,7 +67,7 @@ This is the current state of my project as of November 21st, 2025:
           width="40" height="40" alt="css icon" title="CSS3" /></td>
       <td>
         <ul>
-          <li>Mobile-first design with media queries & various breakpoints</li>
+          <li>Mobile-first design with media queries using various breakpoints</li>
           <li>Layout techniques: Flexbox, Grid, absolute positioning</li>
           <li>Animations using CSS transitions and <code>@keyframes</code></li>
           <li>CSS custom properties (variables) for consistent colors</li>
@@ -73,8 +85,7 @@ This is the current state of my project as of November 21st, 2025:
           <li>Modern JavaScript features: array destructuring, spread operator, and template literals</li>
           <li>ES Modules, async code using the Fetch API, <code>localStorage</code> for client-side persistence</li>
           <li>UI interactions: mobile menu, back-to-top button, and modals</li>
-          <li>High-Order Array methods: <code>find</code>, <code>filter</code>, <code>forEach</code>,
-            <code>findIndex</code>
+          <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>
           </li>
           <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, and <code>DOMContentLoaded</code> listeners, event delegation</li>
         </ul>
@@ -111,10 +122,9 @@ This is the current state of my project as of November 21st, 2025:
       </td>
       <td>
         <ul>
-          <li>Express server for handling Unsplash API requests securely</li>
+          <li>Express server for basic routing and for handling Unsplash API requests securely</li>
           <li>Served static files using <code>express.static</code> middleware</li>
-          <li>Set up basic routing for Unsplash API requests</li>
-          <li>Used middleware for JSON parsing and simple CORS handling</li>
+          <li>Used middleware for handling simple CORS</li>
         </ul>
       </td>
     </tr>
@@ -124,7 +134,7 @@ This is the current state of my project as of November 21st, 2025:
           height="40" alt="Git icon" title="Git" /></td>
       <td>
         <ul>
-          <li>Version control using add → commit → push workflow</li>
+          <li>Version control using add > commit > push workflow</li>
           <li>Local feature-branch development and merging</li>
           <li>Clean commit history with descriptive commit messages</li>
           <li>Managed sensitive files using <code>.gitignore</code></li>
@@ -137,9 +147,9 @@ This is the current state of my project as of November 21st, 2025:
       </td>
       <td>
         <ul>
-          <li>Repository hosting with issue tracking and descriptive labels</li>
+          <li>Issue tracking with descriptive labels</li>
           <li>Feature branch pull request workflow with merge commits</li>
-          <li>Licensing and contribution guidelines: MIT License, CONTRIBUTING.md, and CODE_OF_CONDUCT.md</li>
+          <li>Contributing: MIT License, CONTRIBUTING.md, and CODE_OF_CONDUCT.md</li>
           <li>Comprehensive README using open-source best practices</li>
         </ul>
       </td>
@@ -150,8 +160,8 @@ This is the current state of my project as of November 21st, 2025:
           width="40" height="40" alt="VS Code icon" title="VS Code" /></td>
       <td>
         <ul>
-          <li>Primary editor: VS Code with extensions for code formatting and workflow efficiency</li>
-          <li>Integrated terminal for Git, package management, and running Node.js/NPM scripts</li>
+          <!-- <li>Primary editor: VS Code with extensions for code formatting and workflow efficiency</li> -->
+          <li>Integrated terminal for Git, installing NPM packages, and running Node.js/NPM scripts</li>
           <li>Used <code>.editorconfig</code> for consistent formatting across editors</li>
         </ul>
       </td>
@@ -405,12 +415,16 @@ npx eslint . --fix
 
 Contributions are welcome! If you'd like to help improve this project, please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started, our workflow, and code style expectations.
 
+<br>
+
 ## Future Improvements
 
 - Multiple boards option
 - Dark/Light mode option
 - Add a quote generator API that pairs an inspirational quote with each image
 - Add a music API for motivational music during lightbox slideshow
+
+<br>
 
 ## Use of AI
 
@@ -427,6 +441,8 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 9. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, Express)
 10. ...
 
+<br>
+
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
@@ -438,6 +454,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 -->
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+
+---
 
 ## ~~To-Do~~ (Remove this section later...)
 
