@@ -5,10 +5,15 @@ const innerModal = document.querySelector('.modal');
 
 // WHAT IMAGE SIZE AM I LOADING? It should be .regular, I think it is .small
 export function setModalContent(element, item, id) {
+  const images = getLocalStorage('fetched-search-results');
+  
+
   const location = window.location.pathname;
   element.textContent = '';
 
+  const modalImg = images.find(img => img.id === id);
   const image = document.createElement('img');
+
   image.src = item.src; 
   image.id = id;
   image.className = 'modal-image';
@@ -27,23 +32,8 @@ export function setModalContent(element, item, id) {
 
   element.append(btnsContainer);
 
-  // Detect aspect ratio for image layout
-  image.onload = () => {
-    const { naturalWidth: w, naturalHeight: h } = image;
-    const ratio = w / h; 
-    const tolerance = 0.15; 
-    
-    element.classList.remove('portrait', 'landscape', 'square');
-
-    if (Math.abs(1 - ratio) <= tolerance) {
-      element.classList.add('square');
-    } else if (w > h) {
-      element.classList.add('landscape');
-    } else {
-      element.classList.add('portrait');
-    }
-
-  };
+  // Detect aspect ratio of image
+  detectAspectRatio(modalImg, element);
 }
 
 /* HELPER FUNCTION 1: prev and next buttons */
@@ -77,6 +67,7 @@ function modalNav(btnsContainer, id, innerModal) {
 }
 
 /* HELPER FUNCTION 2: Save and Remove buttons */
+// This is a huge function because of btn.addEventListener. Refactor?
 function modalSaveRemove(btnsContainer, id, innerModal) {
   const arr = ['Save', 'Remove'];
 
@@ -90,7 +81,7 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
       const imageItem = images.find(img => img.id === id);
       const imageItemIndex = images.findIndex(img => img.id === id);
       let advanceToIndex;
-      // I don't think this logic is correct - refactor
+      // Is this logic is correct?
       if (imageItemIndex === 0) {
         advanceToIndex = 0;
       } else if (imageItemIndex > 0) {
@@ -131,4 +122,22 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
 
     btnsContainer.append(btn);
   });
+}
+
+/* HELPER FUNCTION 3: Detect aspect ratio of image */
+function detectAspectRatio(img, el) {
+  const w = Number(img.width);  
+  const h = Number(img.height);
+  const ratio = Number((w / h).toFixed(2));
+  const tolerance = 0.15;
+
+  el.classList.remove('portrait', 'landscape', 'square');
+
+  if (Math.abs(1 - ratio) <= tolerance) {
+    el.classList.add('square');
+  } else if (w > h) {
+    el.classList.add('landscape');
+  } else {
+    el.classList.add('portrait');
+  }
 }

@@ -5,19 +5,21 @@
 <br>
 
 <p align="center">
-<a href="https://github.com/Kernix13/vision-grid-express/commits/main/">
-  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge" />
-</a>
-<a href="https://github.com/Kernix13/vision-grid-express/issues">
-  <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" />
-</a>
-<a href="https://github.com/Kernix13/vision-grid-express">
-  <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" />
-</a>
-<a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
-  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" />
-</a>
+  <a href="https://github.com/Kernix13/vision-grid-express/commits/main/">
+    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Kernix13/vision-grid-express/issues">
+    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Kernix13/vision-grid-express">
+    <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" />
+  </a>
 </p>
+
+<br>
 
 <!-- Go to https://shields.io/badges, try for-the-badge, flat or flat-square -->
 
@@ -82,10 +84,10 @@ This is the current state of my project as of November 21st, 2025:
           width="40" height="40" alt="javascript icon" title="JavaScript" /></td>
       <td>
         <ul>
-          <li>Modern JavaScript features: array destructuring, spread operator, and template literals</li>
           <li>ES Modules, async code using the Fetch API, <code>localStorage</code> for client-side persistence</li>
-          <li>UI interactions: mobile menu, back-to-top button, and modals</li>
+          <li>Modern JavaScript features: array destructuring, spread operator, and template literals</li>
           <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>
+          <li>UI interactions: mobile menu, back-to-top button, and modals</li>
           </li>
           <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, and <code>DOMContentLoaded</code> listeners, event delegation</li>
         </ul>
@@ -112,7 +114,7 @@ This is the current state of my project as of November 21st, 2025:
         <ul>
           <li>Managing dependencies with <code>package.json</code></li>
           <li>Configuring and running npm scripts for development workflow</li>
-          <li>Key packages used: Express, CORS, dotenv, nodemon</li>
+          <li>Key packages used: Express, CORS, dotenv</li>
         </ul>
       </td>
     </tr>
@@ -237,6 +239,8 @@ npx eslint . --fix
 > ESLint is configured for Node backend and frontend browser JS. Running these commands is optional.
 
 <br>
+
+<!-- Consider an h3 here for the app.get function in server.js where 3 other params would be good options: per_page, color, and orientation -->
 
 ### Getting an Unsplash API key
 
@@ -473,11 +477,11 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### Non-critical
 
-1. Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
+1. **INDEX**: Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
 2. Add an `about.html` file? YES!
 3. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
 4. When done, combine ALL CSS into one or 2 files per page - issue [#40](https://github.com/Kernix13/vision-grid-express/issues/40)
-5. I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a data-id attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
+5. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
 
 ### Stretch or nice-to-haves
 
@@ -488,13 +492,13 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Style Questions (Non-critical)
 
 1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons & board page buttons? This is a UI design question where I need opinions/input
-2. Home page H1 span different color/italic - good, bad?
+2. **INDEX**: Home page H1 span different color/italic - good, bad?
 
 ### Bugs/Issues
 
-1. I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
-2. Use of innerHTML for board page editable text is an issue!!!
-3. Consider using `srcset` for DOM images on different devices on board page for performance reasons
+1. **BOARD**: I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
+2. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
+3. **BOARD**: Consider using `srcset` for DOM images on different devices on board page for performance reasons
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section

@@ -17,6 +17,7 @@ export async function getSearchResults(searchTerm, page, element) {
 
     const data = await response.json();
     const results = await data.results;
+    console.log(results)
     const resultsObject = await results.map(result => {
       return {
         id: result.id,
@@ -26,6 +27,8 @@ export async function getSearchResults(searchTerm, page, element) {
         imageRaw: result.urls.raw,
         imageSmall: result.urls.small,
         imageThumb: result.urls.thumb,
+        height: result.height,
+        width: result.width,
         notes: '',
         affirmation: ''
       }
