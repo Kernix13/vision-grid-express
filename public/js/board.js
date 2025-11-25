@@ -6,7 +6,7 @@ import { menuButton } from "./ui/menu.js";
 import { initBoardPage } from "./ui/initPage.js";
 import { deleteImage, moveImage, selectImage } from "./ui/thumbnails.js";
 import { scrollFunction, smoothScrollBackToTop } from "./ui/backToTop.js";
-import { setModalContent } from "./ui/modal.js";
+import { setModalContent } from "./ui/boardModal.js";
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
