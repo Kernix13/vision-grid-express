@@ -466,22 +466,22 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 17 To-Do items left to do.
+> 16 To-Do items left - 4 High-priority + 2 important Non-critical
 
 ### High-priority
 
-1. **BOARD**: Have another editable text field (H2/blockquote) in the lightbox/slider view with a max-character count where the user can enter a single sentence/statement for each image - issue [#43](https://github.com/Kernix13/vision-grid-express/issues/43)
-2. **BOARD**: Start a slideshow of just the images, and/or the images + text - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
-3. **README**: Finish Use of AI
+1. **BOARD**: Start a slideshow of just the images, and/or the images + text - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
+2. **README**: Finish Use of AI
+3. **INDEX**: Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
+4. **BOARD**: I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
 
 ### Non-critical
 
-1. **INDEX**: Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
-2. Add an `about.html` file? YES!
-3. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
-4. When done, combine ALL CSS into one or 2 files per page - issue [#40](https://github.com/Kernix13/vision-grid-express/issues/40)
-5. **BOARD**: addSavedImagesToDom is in thumbnails.js - that does not make sense. Either change the file name, or move it to a new file.
-6. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
+1. Add an `about.html` file? YES!
+2. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
+3. When done, combine ALL CSS into one or 2 files per page - issue [#40](https://github.com/Kernix13/vision-grid-express/issues/40)
+4. **BOARD**: addSavedImagesToDom is in thumbnails.js - that does not make sense. Either change the file name, or move it to a new file.
+5. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
 
 ### Stretch or nice-to-haves
 
@@ -496,9 +496,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### Bugs/Issues
 
-1. **BOARD**: I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
-2. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
-3. **BOARD**: Consider using `srcset` for DOM images on different devices on board page for performance reasons
+1. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
+2. **BOARD**: Consider using `srcset` for DOM images on different devices on board page for performance reasons
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section
