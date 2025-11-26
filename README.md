@@ -89,19 +89,6 @@ You can now search for images, save images to your board page, add notes for eac
 
 <br>
 
-8. Linting (**_Optional_**): To check your code for potential issues with ESLint:
-
-```sh
-npm run lint
-
-# To automatically fix simple issues
-npx eslint . --fix
-```
-
-> ESLint is configured for Node backend and frontend browser JS. Running these commands is optional.
-
-<br>
-
 <!-- Consider an h3 here for the app.get function in server.js where 3 other params would be good options: per_page, color, and orientation -->
 
 ### Getting an Unsplash API key
@@ -463,7 +450,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 18 To-Do items left - 4 High-priority + 2 important Non-critical
+> 16 To-Do items left - 4 High-priority + 2 important Non-critical
 
 ### High-priority
 
@@ -475,18 +462,17 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Non-critical
 
 1. Add an `about.html` file? YES!
-2. When done, combine ALL CSS into one or 2 files per page - issue [#40](https://github.com/Kernix13/vision-grid-express/issues/40)
-3. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
-4. **BOARD**: addSavedImagesToDom is in thumbnails.js - that does not make sense. Either change the file name, or move it to a new file.
-5. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
-6. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
-7. Once I have a font for the _logo_, create a PNG or SVG in Inkscape then generate a full set of favicons and add to project.
-8. Add Prettier package
+2. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
+3. **BOARD**: addSavedImagesToDom is in thumbnails.js - that does not make sense. Either change the file name, or move it to a new file.
+4. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
+5. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
+6. Once I have a font for the _logo_, create a PNG or SVG in Inkscape then generate a full set of favicons and add to project.
 
 ### Stretch or nice-to-haves
 
 1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 2. **BOARD**: Ability to name/rename board(s) - issue [#45](https://github.com/Kernix13/vision-grid-express/issues/45)
+3. Add JSDoc comments?
 
 ### Style Questions (Non-critical)
 

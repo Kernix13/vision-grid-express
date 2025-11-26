@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon server.js",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:css:fix": "stylelint \"**/*.css\" --fix"
   },
   "author": "James Kernicky",
   "license": "MIT",
@@ -20,8 +22,11 @@
     "@eslint/css": "^0.14.1",
     "@eslint/js": "^9.39.1",
     "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
     "globals": "^16.5.0",
     "nodemon": "^3.1.10",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "stylelint": "^16.26.0",
+    "stylelint-config-standard": "^39.0.1"
   }
 }

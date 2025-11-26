@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import globals from 'globals';
 import css from '@eslint/css';
 import { defineConfig } from 'eslint/config';
+import prettier from 'eslint-config-prettier';
 
 export default defineConfig([
   {
@@ -16,4 +17,5 @@ export default defineConfig([
     language: 'css/css',
     extends: ['css/recommended'],
   },
+  prettier,
 ]);
