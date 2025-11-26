@@ -35,13 +35,13 @@ export function renderSearchEls(str) {
 
 export function addSearchText(el, text, spanClass) {
   el.textContent = '';
-  el.append(document.createTextNode(text));
+  el.textContent = text;
 
   if (el !== clearSearches) {
     const span = document.createElement('span');
     span.className = spanClass;
     const spanText = getLocalStorage('last-search');
-    span.append(document.createTextNode(spanText));
+    span.textContent = spanText;
 
     el.append(span);
   }
@@ -50,7 +50,7 @@ export function addSearchText(el, text, spanClass) {
 export function addSearchTerm(parent, arr) {
   arr.forEach((item) => {
     const button = document.createElement('button');
-    button.append(document.createTextNode(item));
+    button.textContent = item;
     parent.append(button);
   });
 }

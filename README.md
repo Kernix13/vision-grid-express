@@ -6,17 +6,13 @@
 
 <p align="center">
   <a href="https://github.com/Kernix13/vision-grid-express/commits/main/">
-    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge" />
-  </a>
+    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge" /></a>
   <a href="https://github.com/Kernix13/vision-grid-express/issues">
-    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" />
-  </a>
+    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" /></a>
   <a href="https://github.com/Kernix13/vision-grid-express">
-    <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" />
-  </a>
+    <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a>
   <a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" />
-  </a>
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" /></a>
 </p>
 
 <br>
@@ -466,6 +462,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 3. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
 4. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 5. Once I have a font for the _logo_, create a PNG or SVG in Inkscape then generate a full set of favicons and add to project.
+6. Add some kind of transition/animation for when the home page cards, or image-text elements on the board page are removed.
 
 ### Stretch or nice-to-haves
 

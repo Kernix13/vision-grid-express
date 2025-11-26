@@ -55,9 +55,7 @@ export function addSavedImagesToDom() {
   imgTextContainer.innerHTML = '';
 
   if (!savedImages || savedImages.length === 0) {
-    imgTextContainer.append(
-      document.createTextNode('No saved images to display...')
-    );
+    imgTextContainer.textContent = 'No saved images to display...';
     return;
   }
 

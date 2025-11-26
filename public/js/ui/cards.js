@@ -22,11 +22,11 @@ export function createImgCard(arr, element) {
 
     const saveBtn = document.createElement('button');
     saveBtn.className = 'save';
-    saveBtn.append(document.createTextNode('Save'));
+    saveBtn.textContent = 'Save';
 
     const removeBtn = document.createElement('button');
     removeBtn.className = 'remove';
-    removeBtn.append(document.createTextNode('Remove'));
+    removeBtn.textContent = 'Remove';
 
     btnsContainer.append(saveBtn);
     btnsContainer.append(removeBtn);
