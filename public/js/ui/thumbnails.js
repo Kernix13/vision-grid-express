@@ -72,6 +72,8 @@ export function addSavedImagesToDom() {
     image.src = img.imageRegular;
     if (i === 0) image.fetchPriority = 'high';
     imageText.append(image);
+    // image.style.aspectRatio = img.height / img.width;
+    // console.log(img.height / img.width)
 
     // Create editable div
     const div = document.createElement('div');
