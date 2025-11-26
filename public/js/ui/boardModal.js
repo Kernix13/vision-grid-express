@@ -7,7 +7,7 @@ export function setModalContent(element, item, id) {
   element.textContent = '';
 
   const savedImages = getLocalStorage('saved-images');
-  const boardModalImg = savedImages.find(img => img.id === id);
+  const boardModalImg = savedImages.find((img) => img.id === id);
 
   const image = document.createElement('img');
   image.src = item.src;
@@ -38,7 +38,7 @@ function modalNav(btnsContainer, id, innerModal) {
     { name: 'next', symbol: '>', direction: 1 },
   ];
 
-  navItems.forEach(item => {
+  navItems.forEach((item) => {
     const btn = document.createElement('button');
     btn.className = `nav ${item.name}`;
     btn.textContent = item.symbol;
@@ -46,7 +46,7 @@ function modalNav(btnsContainer, id, innerModal) {
     btn.addEventListener('click', () => {
       // saved-images for board page, fetched-search-results for index
       const images = getLocalStorage('saved-images');
-      const currentIndex = images.findIndex(img => img.id === id);
+      const currentIndex = images.findIndex((img) => img.id === id);
       const nextIndex = currentIndex + item.direction;
 
       if (nextIndex < 0 || nextIndex >= images.length) return;
@@ -95,7 +95,7 @@ function editableQuote(el, image) {
 
   quote.addEventListener('focusout', () => {
     const savedImages = getLocalStorage('saved-images');
-    const image = savedImages.find(img => img.id === quote.dataset.id);
+    const image = savedImages.find((img) => img.id === quote.dataset.id);
     if (!image) return;
 
     image.affirmation = quote.textContent.trim();

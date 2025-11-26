@@ -130,7 +130,7 @@ body {
   font-size: 1.125rem;
   color: var(--text);
   line-height: 1.5;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-weight: 400;
   height: 100%;
   display: flex;
@@ -144,7 +144,7 @@ main {
 h1,
 h2,
 h3 {
-  font-family: "DM Sans", sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-optical-sizing: auto;
   line-height: 1.1;
   color: var(--text);
@@ -169,7 +169,8 @@ h1 {
   padding: 0 1rem;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-weight: 500;
 }
 
@@ -247,7 +248,7 @@ footer {
   margin-bottom: 2rem;
 }
 
-input[type="search"] {
+input[type='search'] {
   width: 100%;
   border-radius: 0.25rem;
   outline: 2px solid var(--primary-muted-2);
@@ -256,11 +257,11 @@ input[type="search"] {
   padding: 0.5rem 0.25rem 0.5rem 0.5rem;
 }
 
-input[type="search"]::placeholder {
+input[type='search']::placeholder {
   color: var(--primary-dark-1);
 }
 
-input[type="search"]:focus {
+input[type='search']:focus {
   outline: 2px solid var(--accent-4);
 }
 
@@ -301,7 +302,9 @@ input[type="search"]:focus {
   /* object-fit maintains proportions, consider cover, contain & none also: */
   object-fit: contain;
   opacity: 0.8;
-  transition: transform 300ms ease, opacity 300ms ease;
+  transition:
+    transform 300ms ease,
+    opacity 300ms ease;
 }
 
 .result-image:hover {
@@ -330,7 +333,9 @@ input[type="search"]:focus {
   background-color: transparent;
   border: 2px solid var(--primary-muted-2);
   border-radius: 0.25rem;
-  transition: background-color 300ms ease, border 300ms ease;
+  transition:
+    background-color 300ms ease,
+    border 300ms ease;
 }
 
 .search-terms button {
@@ -350,7 +355,9 @@ input[type="search"]:focus {
 .results-buttons .save {
   background-color: var(--primary);
   color: var(--white);
-  transition: background-color 300ms ease, border 300ms ease;
+  transition:
+    background-color 300ms ease,
+    border 300ms ease;
 }
 
 .results-buttons .save:hover {
@@ -503,7 +510,10 @@ input[type="search"]:focus {
   padding: 0.375em 0.75em;
   border-radius: 0.25rem;
   border: 1px solid transparent;
-  transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+  transition:
+    background-color 300ms ease,
+    border 300ms ease,
+    color 300ms ease;
 }
 
 .modal-buttons button:hover {
@@ -526,7 +536,7 @@ input[type="search"]:focus {
   transform: translateY(-50%);
   background: rgba(0, 0, 0, 0.5);
   color: var(--white);
-  padding: 0.125rem .5rem 0.5rem;
+  padding: 0.125rem 0.5rem 0.5rem;
   font-size: 2rem;
   line-height: 1;
   z-index: 10;
@@ -536,7 +546,10 @@ input[type="search"]:focus {
 .modal .next {
   background-color: var(--primary-dark-1);
   border: 1px solid transparent;
-  transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+  transition:
+    background-color 300ms ease,
+    border 300ms ease,
+    color 300ms ease;
 }
 
 .modal .prev:hover,
@@ -564,7 +577,9 @@ input[type="search"]:focus {
   position: absolute;
   top: 3%;
   right: 1.5%;
-  transition: color 300ms ease, background-color 300ms ease;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease;
 }
 
 .close-btn:hover {
@@ -616,7 +631,10 @@ input[type="search"]:focus {
 /* No logo, just text for the menu appearance */
 .logo {
   color: var(--primary-dark-2);
-  font-family: Segoe script, 'Brush Script MT', cursive;
+  font-family:
+    Segoe script,
+    'Brush Script MT',
+    cursive;
   font-weight: 700;
   letter-spacing: 0.125em;
   font-size: 2rem;
@@ -679,7 +697,7 @@ input[type="search"]:focus {
   top: -100%;
 }
 
-.nav-menu>* {
+.nav-menu > * {
   margin: 0.5rem 0;
 }
 
@@ -703,7 +721,9 @@ input[type="search"]:focus {
   margin: 6px auto;
 
   /* -webkit-transition: all 300ms ease;  */
-  transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
+  transition:
+    transform 300ms ease-in-out,
+    opacity 300ms ease-in-out;
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -735,7 +755,9 @@ input[type="search"]:focus {
   cursor: pointer;
   padding: 0.125em 0.25em;
   border-radius: 0.25em;
-  transition: background-color 300ms ease, color 300ms ease;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
   z-index: 999;
 }
 
@@ -841,7 +863,8 @@ input[type="search"]:focus {
 }
 
 @media (min-width: 962px) {
-  .container, .board-container {
+  .container,
+  .board-container {
     max-width: 1300px;
     width: 95%;
   }
@@ -870,9 +893,3 @@ input[type="search"]:focus {
     width: 50%;
   }
 }
-
-
-
-
-
-

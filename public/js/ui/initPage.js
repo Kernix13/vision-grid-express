@@ -1,7 +1,7 @@
-import { setLocalStorage, getLocalStorage } from "../utils/localStorage.js";
-import { addSearchTerm, addSearchText } from "./searchEls.js";
-import { createImgCard } from "./cards.js";
-import { addThumbnailsToDom, addSavedImagesToDom } from "./thumbnails.js";
+import { setLocalStorage, getLocalStorage } from '../utils/localStorage.js';
+import { addSearchTerm, addSearchText } from './searchEls.js';
+import { createImgCard } from './cards.js';
+import { addThumbnailsToDom, addSavedImagesToDom } from './thumbnails.js';
 
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
@@ -11,8 +11,10 @@ const loadMore = document.getElementById('load-more');
 
 // 1. For Home page DOMContentLoaded listener
 export function initHomePage() {
-  if (!getLocalStorage('search-phrases') || !getLocalStorage('fetched-search-results') ) {
-
+  if (
+    !getLocalStorage('search-phrases') ||
+    !getLocalStorage('fetched-search-results')
+  ) {
     setLocalStorage('search-phrases', []);
 
     clearSearches.classList.add('none');
@@ -21,12 +23,12 @@ export function initHomePage() {
   } else {
     const savedSearches = getLocalStorage('search-phrases');
     const images = getLocalStorage('fetched-search-results');
-    
+
     searchTerms.textContent = '';
 
     addSearchTerm(searchTerms, savedSearches);
-    addSearchText(loadMore, "Load 12 more images for ", 'load-more-search');
-    addSearchText(resultsTitle, "Results for ", 'h2-search-term');
+    addSearchText(loadMore, 'Load 12 more images for ', 'load-more-search');
+    addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
 
     const loadMoreText = 'Start new search & clear search results';
     addSearchText(clearSearches, loadMoreText, 'clear-searches');

@@ -35,6 +35,131 @@ Users can search for images, browse them in grid or modal views, save their favo
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
+## Getting Started
+
+<!-- The steps look too small - see how H3 looks after next push -->
+
+<br>
+
+1. Clone this repo and install dependencies:
+
+```bash
+# Clone this repo
+git clone https://github.com/Kernix13/vision-grid-express.git
+
+# Change into project directory
+cd vision-grid-express
+
+# Install dependencies
+npm install
+
+# Open the project in VS Code
+code .
+```
+
+<br>
+
+2. Create a `.env` file in the project root.
+3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
+
+```env
+CLIENT_ID=your_unsplash_client_id
+PORT=port_number
+```
+
+<br>
+
+4. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` with the port you want to use.
+5. Delete the file `.env.example`.
+6. Start the development server:
+
+```sh
+npm run dev
+```
+
+<br>
+
+7. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
+
+```sh
+Server is running http://localhost:8080
+```
+
+You can now search for images, save images to your board page, add notes for each saved image, etc.
+
+<br>
+
+8. Linting (**_Optional_**): To check your code for potential issues with ESLint:
+
+```sh
+npm run lint
+
+# To automatically fix simple issues
+npx eslint . --fix
+```
+
+> ESLint is configured for Node backend and frontend browser JS. Running these commands is optional.
+
+<br>
+
+<!-- Consider an h3 here for the app.get function in server.js where 3 other params would be good options: per_page, color, and orientation -->
+
+### Getting an Unsplash API key
+
+1. Navigate to [Unsplash](https://unsplash.com/) and click the hamburger menu in the top-right corner and choose Developers/API.
+2. Click the button "Register as a Developer".
+3. Fill out the form and click join to register your account.
+4. Click the "Your apps" button on the page.
+5. Click the empty area with the text, "New Application."
+6. Fill out the application information form and click the "Create Application" button.
+7. Scroll down to the section that displays application id, access key, and secret key. The access key is the API key that you will need for this project.
+
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+
+## Features
+
+### Home / Search Page
+
+> _Image of home page modal here_
+
+- Image Search
+  - Enter a search phrase to fetch 12 images from the Unsplash API.
+  - Past search terms are saved and can be revisited, each automatically loading the next page of results.
+- Image Cards
+  - Browse results as compact cards.
+  - Save or remove images directly from the grid.
+  - Click any image to view a larger, aspect-correct version in a modal.
+- Modal Viewer
+  - Navigate through all images currently loaded on the page.
+  - Save or remove images from within the modal.
+- Load More
+  - "Load More" fetches the next page of images for the current search term, maintaining pagination across sessions via localStorage.
+
+### Vision Board Page
+
+> _Image of thumbnail strip and an image-text element and maybe the settings screen open lower down_
+
+- Saved Images Display
+  - View all saved images in a large, clean layout.
+  - Each image includes an editable text area for notes persisted via localStorage.
+- Thumbnail Strip
+  - See all saved items in a compact strip for quick navigation.
+  - Clicking on any thumbnail takes you to that image on the page.
+  - Reorder saved images.
+  - Delete images and their notes from your board.
+  - Click the page image or editable text box to close the thumbnail strip.
+- Lightbox Slider
+  - A full-screen modal that cycles through saved images.
+  - Adjustable timing between slides.
+  - Displays the image's affirmation/goal statement created in the modal.
+- Affirmation / Goal Statement
+  - Click any saved image on the page to open a modal with a larger view.
+  - Add or edit a dedicated affirmation or goal heading for that image (115 character limit).
+  - Navigate to other saved images within the modal to quickly update multiple affirmations.
+  - These affirmations are shown in the full-screen slider instead of the standard page notes.
+
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+
 ## Tech Stack
 
 <!-- See all devicons here: https://github.com/devicons/devicon -->
@@ -171,127 +296,6 @@ This is the current state of my project as of November 21st, 2025:
     </tr>
   </tbody>
 </table>
-
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
-
-## Getting Started
-
-<!-- The steps look too small - see how H3 looks after next push -->
-
-<br>
-
-1. Clone this repo and install dependencies:
-
-```bash
-# Clone this repo
-git clone https://github.com/Kernix13/vision-grid-express.git
-
-# Change into project directory
-cd vision-grid-express
-
-# Install dependencies
-npm install
-
-# Open the project in VS Code
-code .
-```
-
-<br>
-
-2. Create a `.env` file in the project root.
-3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
-
-```env
-CLIENT_ID=your_unsplash_client_id
-PORT=port_number
-```
-
-<br>
-
-4. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` with the port you want to use.
-5. Delete the file `.env.example`.
-6. Start the development server:
-
-```sh
-npm run dev
-```
-
-<br>
-
-7. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
-
-```sh
-Server is running http://localhost:8080
-```
-
-You can now search for images, save images to your board page, add notes for each saved image, etc.
-
-<br>
-
-8. Linting (**_Optional_**): To check your code for potential issues with ESLint:
-
-```sh
-npm run lint
-
-# To automatically fix simple issues
-npx eslint . --fix
-```
-
-> ESLint is configured for Node backend and frontend browser JS. Running these commands is optional.
-
-<br>
-
-<!-- Consider an h3 here for the app.get function in server.js where 3 other params would be good options: per_page, color, and orientation -->
-
-### Getting an Unsplash API key
-
-1. Navigate to [Unsplash](https://unsplash.com/) and click the hamburger menu in the top-right corner and choose Developers/API.
-2. Click the button "Register as a Developer".
-3. Fill out the form and click join to register your account.
-4. Click the "Your apps" button on the page.
-5. Click the empty area with the text, "New Application."
-6. Fill out the application information form and click the "Create Application" button.
-7. Scroll down to the section that displays application id, access key, and secret key. The access key is the API key that you will need for this project.
-
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
-
-## Features
-
-### Home / Search Page
-
-- Image Search
-  - Enter a search phrase to fetch 12 images from the Unsplash API.
-  - Past search terms are saved and can be revisited, each automatically loading the next page of results.
-- Image Cards
-  - Browse results as compact cards.
-  - Save or remove images directly from the grid.
-  - Click any image to view a larger, aspect-correct version in a modal.
-- Modal Viewer
-  - Navigate through all images currently loaded on the page.
-  - Save or remove images from within the modal.
-- Load More
-  - "Load More" fetches the next page of images for the current search term, maintaining pagination across sessions via localStorage.
-
-### Vision Board Page
-
-- Saved Images Display
-  - View all saved images in a large, clean layout.
-  - Each image includes an editable text area for notes persisted via localStorage.
-- Thumbnail Strip
-  - See all saved items in a compact strip for quick navigation.
-  - Clicking on any thumbnail takes you to that image on the page.
-  - Reorder saved images.
-  - Delete images and their notes from your board.
-  - Click the page image or editable text box to close the thumbnail strip.
-- Lightbox Slider
-  - A full-screen modal that cycles through saved images.
-  - Adjustable timing between slides.
-  - Displays the image's affirmation/goal statement created in the modal.
-- Affirmation / Goal Statement
-  - Click any saved image on the page to open a modal with a larger view.
-  - Add or edit a dedicated affirmation or goal heading for that image (115 character limit).
-  - Navigate to other saved images within the modal to quickly update multiple affirmations.
-  - These affirmations are shown in the full-screen slider instead of the standard page notes.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -459,7 +463,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 16 To-Do items left - 4 High-priority + 2 important Non-critical
+> 18 To-Do items left - 4 High-priority + 2 important Non-critical
 
 ### High-priority
 
@@ -475,12 +479,14 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 3. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
 4. **BOARD**: addSavedImagesToDom is in thumbnails.js - that does not make sense. Either change the file name, or move it to a new file.
 5. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
+6. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
+7. Once I have a font for the _logo_, create a PNG or SVG in Inkscape then generate a full set of favicons and add to project.
+8. Add Prettier package
 
 ### Stretch or nice-to-haves
 
 1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 2. **BOARD**: Ability to name/rename board(s) - issue [#45](https://github.com/Kernix13/vision-grid-express/issues/45)
-3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
 ### Style Questions (Non-critical)
 

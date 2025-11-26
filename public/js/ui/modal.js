@@ -1,4 +1,4 @@
-import { getLocalStorage, setLocalStorage } from "../utils/localStorage.js";
+import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
@@ -8,10 +8,10 @@ export function setModalContent(element, item, id) {
   element.textContent = '';
 
   const images = getLocalStorage('fetched-search-results');
-  const modalImg = images.find(img => img.id === id);
+  const modalImg = images.find((img) => img.id === id);
 
   const image = document.createElement('img');
-  image.src = item.src; 
+  image.src = item.src;
   image.className = 'modal-image';
 
   // Button container
@@ -24,7 +24,7 @@ export function setModalContent(element, item, id) {
   element.append(image);
   modalSaveRemove(btnsContainer, id, innerModal);
   detectAspectRatio(modalImg, element);
-  
+
   element.append(btnsContainer);
 }
 
@@ -35,7 +35,7 @@ function modalNav(btnsContainer, id, innerModal) {
     { name: 'next', symbol: '>', direction: 1 },
   ];
 
-  navItems.forEach(item => {
+  navItems.forEach((item) => {
     const btn = document.createElement('button');
     btn.className = `nav ${item.name}`;
     btn.textContent = item.symbol;
@@ -43,7 +43,7 @@ function modalNav(btnsContainer, id, innerModal) {
     btn.addEventListener('click', () => {
       // saved-images for board page, fetched-search-results for index
       const images = getLocalStorage('fetched-search-results');
-      const currentIndex = images.findIndex(img => img.id === id);
+      const currentIndex = images.findIndex((img) => img.id === id);
       const nextIndex = currentIndex + item.direction;
 
       if (nextIndex < 0 || nextIndex >= images.length) return;
@@ -61,7 +61,7 @@ function modalNav(btnsContainer, id, innerModal) {
 
 /* HELPER FUNCTION 2: Detect aspect ratio of image */
 function detectAspectRatio(img, el) {
-  const w = Number(img.width);  
+  const w = Number(img.width);
   const h = Number(img.height);
   const ratio = Number((w / h).toFixed(2));
   const tolerance = 0.15;
@@ -79,10 +79,10 @@ function detectAspectRatio(img, el) {
 
 /* HELPER FUNCTION 3: Save and Remove buttons + nav to next item */
 // This is a huge function because of btn.addEventListener. Refactor?
-function modalSaveRemove(btnsContainer, id, innerModal) { 
+function modalSaveRemove(btnsContainer, id, innerModal) {
   const arr = ['Save', 'Remove'];
 
-  arr.forEach(item => {
+  arr.forEach((item) => {
     const btn = document.createElement('button');
     btn.className = `modal-${item.toLowerCase()}`;
     btn.textContent = item;
@@ -90,8 +90,8 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
     // This is the prev
     btn.addEventListener('click', () => {
       const images = getLocalStorage('fetched-search-results');
-      const imageItem = images.find(img => img.id === id);
-      const imageItemIndex = images.findIndex(img => img.id === id);
+      const imageItem = images.find((img) => img.id === id);
+      const imageItemIndex = images.findIndex((img) => img.id === id);
       let advanceToIndex;
       // Is this logic is correct?
       if (imageItemIndex === 0) {
@@ -111,7 +111,7 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
       }
 
       // Remove from fetched results and DOM
-      const updatedFetched = images.filter(img => img.id !== id);
+      const updatedFetched = images.filter((img) => img.id !== id);
       setLocalStorage('fetched-search-results', updatedFetched);
 
       const card = document.getElementById(id);

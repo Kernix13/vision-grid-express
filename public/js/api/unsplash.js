@@ -1,10 +1,30 @@
-import { setLocalStorage, getLocalStorage } from "../utils/localStorage.js";
-import { createImgCard } from "../ui/cards.js";
+import { setLocalStorage, getLocalStorage } from '../utils/localStorage.js';
+import { createImgCard } from '../ui/cards.js';
 
 export async function getSearchResults(searchTerm, page, element) {
-  const searchGrid = document.getElementById('search-grid')
+  const searchGrid = document.getElementById('search-grid');
   const DOMAIN = 'http://localhost:8080';
-  const badCharacters = ['', ' ', '_', '-', '>', '.', '|', ';', '[', ']', '{', '}', '(', ')', '*', '`', '~', '"', ':'];
+  const badCharacters = [
+    '',
+    ' ',
+    '_',
+    '-',
+    '>',
+    '.',
+    '|',
+    ';',
+    '[',
+    ']',
+    '{',
+    '}',
+    '(',
+    ')',
+    '*',
+    '`',
+    '~',
+    '"',
+    ':',
+  ];
 
   const endpoint = `/api/photos?query=${encodeURIComponent(searchTerm)}&page=${page}`;
   try {
@@ -17,8 +37,8 @@ export async function getSearchResults(searchTerm, page, element) {
 
     const data = await response.json();
     const results = await data.results;
-    console.log(results)
-    const resultsObject = await results.map(result => {
+    console.log(results);
+    const resultsObject = await results.map((result) => {
       return {
         id: result.id,
         description: result.alt_description,
@@ -30,13 +50,13 @@ export async function getSearchResults(searchTerm, page, element) {
         height: result.height,
         width: result.width,
         notes: '',
-        affirmation: ''
-      }
-    })
+        affirmation: '',
+      };
+    });
 
     setLocalStorage('fetched-search-results', resultsObject);
-    searchGrid.textContent = ''
-    createImgCard(getLocalStorage('fetched-search-results'), element)
+    searchGrid.textContent = '';
+    createImgCard(getLocalStorage('fetched-search-results'), element);
     console.log(data);
     return data;
   } catch (err) {

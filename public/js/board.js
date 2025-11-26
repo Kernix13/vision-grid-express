@@ -1,19 +1,19 @@
-"use strict";
+'use strict';
 
-import { toggleDisplay } from "./utils/classUtils.js";
-import { getLocalStorage, setLocalStorage } from "./utils/localStorage.js";
-import { menuButton } from "./ui/menu.js";
-import { initBoardPage } from "./ui/initPage.js";
-import { deleteImage, moveImage, selectImage } from "./ui/thumbnails.js";
-import { scrollFunction, smoothScrollBackToTop } from "./ui/backToTop.js";
-import { setModalContent } from "./ui/boardModal.js";
+import { toggleDisplay } from './utils/classUtils.js';
+import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
+import { menuButton } from './ui/menu.js';
+import { initBoardPage } from './ui/initPage.js';
+import { deleteImage, moveImage, selectImage } from './ui/thumbnails.js';
+import { scrollFunction, smoothScrollBackToTop } from './ui/backToTop.js';
+import { setModalContent } from './ui/boardModal.js';
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
 const thumbnails = document.querySelector('.thumbnails');
-const thumbnailsBtn  = document.getElementById('thumbnails-btn');
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+const thumbnailsBtn = document.getElementById('thumbnails-btn');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
 const backToTopButton = document.querySelector('#back-to-top-btn');
 const imgTextContainer = document.querySelector('#img-text-container');
 const close = document.getElementById('close-btn');
@@ -22,10 +22,10 @@ const innerModal = document.querySelector('.modal');
 
 /**
  * * EVENT LISTENERS
-*/
+ */
 
 // 1. Load saved images on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", initBoardPage);
+document.addEventListener('DOMContentLoaded', initBoardPage);
 
 // 2. Show/Hide settings form
 settingsBtn.addEventListener('click', () => {
@@ -39,7 +39,7 @@ thumbnailsBtn.addEventListener('click', () => {
 // 4. Close thumbnails on window click
 imgTextContainer.addEventListener('click', () => {
   if (thumbnails.classList.contains('onscreen')) {
-    thumbnails.classList.remove('onscreen')
+    thumbnails.classList.remove('onscreen');
   }
 });
 
@@ -51,15 +51,15 @@ imgTextContainer.addEventListener('focusout', (e) => {
 
   const parent = editable.closest('.image-text');
   const id = parent.id;
-  const imgObj = savedImages.find(img => img.id === id);
+  const imgObj = savedImages.find((img) => img.id === id);
 
   imgObj.notes = editable.innerHTML.trim();
 
-  setLocalStorage('saved-images', savedImages)
+  setLocalStorage('saved-images', savedImages);
 });
 
 // 6. open image in modal on click
-imgTextContainer.addEventListener('click', e => {
+imgTextContainer.addEventListener('click', (e) => {
   // const savedImages = getLocalStorage('saved-images');
   const regularImg = e.target.closest('.regular');
   if (!regularImg) return;
@@ -68,16 +68,16 @@ imgTextContainer.addEventListener('click', e => {
   // I need to do the same thing as for thumbnails - add the id as data-id to the container, then the id to the image, then use that image id to add the image to the modal
 
   const imageText = regularImg.closest('.image-text');
-  const imageTextId = imageText.id; 
-  console.log(imageTextId) 
+  const imageTextId = imageText.id;
+  console.log(imageTextId);
 
   modalBg.classList.add('show-modal');
-  setModalContent(innerModal, regularImg, imageTextId)
-})
+  setModalContent(innerModal, regularImg, imageTextId);
+});
 
 // 8. Modal listeners: Close modal on click of: 1. close button, 2. window
 close.addEventListener('click', () => modalBg.classList.remove('show-modal'));
-window.addEventListener('click', e =>
+window.addEventListener('click', (e) =>
   e.target == modalBg ? modalBg.classList.remove('show-modal') : false
 );
 
@@ -94,17 +94,16 @@ thumbnails.addEventListener('click', (e) => {
   // }
 
   thumbItem.classList.toggle('selected');
-  
 });
 
 // 9. Thumbnail item -> Thumbnail buttons
-thumbnails.addEventListener('click', e => {
+thumbnails.addEventListener('click', (e) => {
   const btn = e.target.closest('button');
   const thumbItem = e.target.closest('.thumb-item');
   if (!thumbItem) return;
 
   const id = thumbItem.dataset.id;
-  const imageTextItem = document.getElementById(id)
+  const imageTextItem = document.getElementById(id);
 
   if (btn?.classList.contains('move-up')) {
     moveImage(id, 'up');
@@ -121,7 +120,7 @@ thumbnails.addEventListener('click', e => {
 });
 
 // 10. Thumbnail delete button listener
-thumbnails.addEventListener('click', e => {
+thumbnails.addEventListener('click', (e) => {
   const thumbModal = document.getElementById('thumb-modal');
   const btn = e.target.closest('button');
   const thumbItem = e.target.closest('.thumb-item');
@@ -158,7 +157,7 @@ const closeDeleteModal = document.getElementById('close');
 closeDeleteModal.addEventListener('click', closeThumbDeleteModal);
 
 // 7. Open/close hamburger menu
-hamburger.addEventListener("click", () => {
+hamburger.addEventListener('click', () => {
   menuButton(hamburger, navMenu);
 });
 

@@ -62,7 +62,9 @@
   top: 8.5rem;
   left: 10rem;
   max-width: 16rem;
-  transition: color 300ms ease, background-color 300ms ease;  
+  transition:
+    color 300ms ease,
+    background-color 300ms ease;
 
   display: inline-block;
   line-height: 1.1;
@@ -98,7 +100,9 @@
   flex-direction: column;
   gap: 0.5rem;
   box-shadow: 4px 0 10px hsla(146, 20%, 20%, 0.2);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .thumbnails.offscreen {
@@ -169,7 +173,9 @@
   border: 1px solid var(--primary-muted-1);
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 300ms ease, color 300ms ease;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
   padding: 0.125em;
 }
 
@@ -181,15 +187,14 @@
   background-color: var(--accent-4);
 }
 
-.move-down, .move-up {
+.move-down,
+.move-up {
   color: var(--primary-dark-1);
 }
 .delete {
   color: rgb(221, 0, 0);
 }
 /* END new thumbnails elements */
-
-
 
 /* Thumbnails Delete confirmation modal */
 .thumb-modal-container {
@@ -272,7 +277,9 @@
   position: absolute;
   top: 3%;
   right: 1.5%;
-  transition: color 300ms ease, background-color 300ms ease;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease;
 }
 
 .close-btn:hover {
@@ -290,7 +297,6 @@
 
   max-width: 90%;
   margin: 0 auto;
-  
 }
 
 /* the blockquote */

@@ -1,5 +1,9 @@
-import { setLocalStorage, getLocalStorage, removeLocalStorage } from "../utils/localStorage.js";
-import { addRemoveClass } from "../utils/classUtils.js";
+import {
+  setLocalStorage,
+  getLocalStorage,
+  removeLocalStorage,
+} from '../utils/localStorage.js';
+import { addRemoveClass } from '../utils/classUtils.js';
 
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
@@ -11,7 +15,7 @@ export function saveSearchTerm(str, el, arr) {
   if (str !== arr[arr.length - 1]) {
     el.textContent = '';
     if (arr.includes(str)) {
-      arr.splice(arr.indexOf(str), 1)
+      arr.splice(arr.indexOf(str), 1);
     }
     arr.push(str);
     setLocalStorage('search-phrases', arr);
@@ -22,9 +26,9 @@ export function saveSearchTerm(str, el, arr) {
 // Does this function make sense?
 export function renderSearchEls(str) {
   setLocalStorage('last-search', str);
-  addSearchText(loadMore, "Load 12 more images for ", 'load-more-search');
-  addSearchText(resultsTitle, "Results for ", 'h2-search-term');
-  
+  addSearchText(loadMore, 'Load 12 more images for ', 'load-more-search');
+  addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
+
   const loadMoreText = 'Start new search & clear search results';
   addSearchText(clearSearches, loadMoreText, 'clear-searches');
 }
@@ -38,26 +42,26 @@ export function addSearchText(el, text, spanClass) {
     span.className = spanClass;
     const spanText = getLocalStorage('last-search');
     span.append(document.createTextNode(spanText));
-  
+
     el.append(span);
   }
 }
 
 export function addSearchTerm(parent, arr) {
-  arr.forEach(item => {
+  arr.forEach((item) => {
     const button = document.createElement('button');
     button.append(document.createTextNode(item));
     parent.append(button);
-  })
+  });
 }
 
 export function clearSearchElements() {
   setLocalStorage('search-phrases', []);
   setLocalStorage('search-phrases-page', []);
 
-  removeLocalStorage('fetched-search-results')
-  removeLocalStorage('last-search')
-  removeLocalStorage('current-search')
+  removeLocalStorage('fetched-search-results');
+  removeLocalStorage('last-search');
+  removeLocalStorage('current-search');
 
   searchTerms.textContent = '';
   searchGrid.textContent = '';

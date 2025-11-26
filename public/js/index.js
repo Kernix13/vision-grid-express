@@ -1,14 +1,22 @@
-"use strict";
+'use strict';
 
-import { initHomePage } from "./ui/initPage.js";
-import { setLocalStorage, getLocalStorage, incrementSearchPage } from "./utils/localStorage.js";
-import { getSearchResults } from "./api/unsplash.js";
-import { saveSearchTerm, renderSearchEls, clearSearchElements } from "./ui/searchEls.js";
-import { addRemoveClass } from "./utils/classUtils.js";
-import { menuButton } from "./ui/menu.js";
-import { removeImageCard } from "./ui/cards.js";
-import { setModalContent } from "./ui/modal.js";
-import { scrollFunction, smoothScrollBackToTop } from "./ui/backToTop.js";
+import { initHomePage } from './ui/initPage.js';
+import {
+  setLocalStorage,
+  getLocalStorage,
+  incrementSearchPage,
+} from './utils/localStorage.js';
+import { getSearchResults } from './api/unsplash.js';
+import {
+  saveSearchTerm,
+  renderSearchEls,
+  clearSearchElements,
+} from './ui/searchEls.js';
+import { addRemoveClass } from './utils/classUtils.js';
+import { menuButton } from './ui/menu.js';
+import { removeImageCard } from './ui/cards.js';
+import { setModalContent } from './ui/modal.js';
+import { scrollFunction, smoothScrollBackToTop } from './ui/backToTop.js';
 
 const form = document.getElementById('search-form');
 const input = document.getElementById('search');
@@ -22,8 +30,8 @@ const close = document.getElementById('close');
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
 const backToTopButton = document.querySelector('#back-to-top-btn');
 
 // Why do I have these in the global scope? Do I need them here?
@@ -32,25 +40,25 @@ const savedSearches = getLocalStorage('search-phrases') || [];
 
 /**
  * * EVENT LISTENERS
-*/
+ */
 
 // 1. Set initial state on visit to home page
-document.addEventListener("DOMContentLoaded", initHomePage);
+document.addEventListener('DOMContentLoaded', initHomePage);
 
 // 2. Search form event listener
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   if (input.value) {
     searchPage = 1;
     // Log page # to check against other page # calculations - remove later
-    console.log(`Initial search for '${input.value}', page # ${searchPage}`)
+    console.log(`Initial search for '${input.value}', page # ${searchPage}`);
     searchGrid.textContent = '';
 
     getSearchResults(input.value, searchPage, searchGrid);
-    console.log(input.value)
+    console.log(input.value);
 
-    saveSearchTerm(input.value, searchTerms, savedSearches)
+    saveSearchTerm(input.value, searchTerms, savedSearches);
     renderSearchEls(input.value);
 
     setLocalStorage('current-search', {
@@ -67,7 +75,7 @@ form.addEventListener('submit', e => {
   addRemoveClass(clearSearches, 'inline', 'none');
   addRemoveClass(loadMore, 'inline', 'none');
   addRemoveClass(resultsTitle, 'block', 'none');
-  
+
   resultsTitle.scrollIntoView({ behavior: 'smooth' });
 
   input.value = '';
@@ -93,33 +101,32 @@ loadMore.addEventListener('click', () => {
 
   saveSearchTerm(lastSearch, searchTerms, savedSearches);
   renderSearchEls(lastSearch);
-
-})
+});
 
 // 5. Search terms fetch
 searchTerms.addEventListener('click', (e) => {
   const btn = e.target.closest('button');
-  if (!btn) return; 
+  if (!btn) return;
 
   const searchTerm = btn.textContent;
-  
+
   const page = incrementSearchPage(searchTerm);
-  console.log(`Clicked search term for '${searchTerm}', page # ${page}`)
+  console.log(`Clicked search term for '${searchTerm}', page # ${page}`);
 
   searchGrid.textContent = '';
-  
+
   getSearchResults(searchTerm, page, searchGrid);
-  
+
   setLocalStorage('last-search', searchTerm);
-  saveSearchTerm(searchTerm, searchTerms, savedSearches)
+  saveSearchTerm(searchTerm, searchTerms, savedSearches);
   renderSearchEls(searchTerm);
 });
 
 // 6. Search images grid: Save and Remove buttons
-searchGrid.addEventListener('click', e => {
-  removeImageCard(e)
+searchGrid.addEventListener('click', (e) => {
+  removeImageCard(e);
 
-  const renderedImages = searchGrid.querySelectorAll('img')
+  const renderedImages = searchGrid.querySelectorAll('img');
   if (renderedImages.length === 0) {
     addRemoveClass(resultsTitle, 'none', 'block');
   }
@@ -128,11 +135,11 @@ searchGrid.addEventListener('click', e => {
 // 7. Search images grid: open image in modal on image click
 searchGrid.addEventListener('click', (e) => {
   const img = e.target.closest('img.result-image');
-  console.log(img)
+  console.log(img);
   if (!img) return;
 
   const card = img.closest('.image-card');
-  const cardId = card.id;  
+  const cardId = card.id;
 
   modalBg.classList.add('show-modal');
   setModalContent(innerModal, img, cardId);
@@ -140,14 +147,14 @@ searchGrid.addEventListener('click', (e) => {
 
 // 8. Modal listeners: Close modal on click of: 1. close button, 2. window
 close.addEventListener('click', () => modalBg.classList.remove('show-modal'));
-window.addEventListener('click', e =>
+window.addEventListener('click', (e) =>
   e.target == modalBg ? modalBg.classList.remove('show-modal') : false
 );
 
 // 9. Open/close hamburger menu
-hamburger.addEventListener("click", () => {
+hamburger.addEventListener('click', () => {
   menuButton(hamburger, navMenu);
-})
+});
 
 // 10. Back To Top
 window.addEventListener('scroll', scrollFunction);

@@ -1,203 +1,296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Tags -->
+    <title>VisualGrid | My Vision Board</title>
+    <link rel="canonical" href="https://yourdomain.com/board" />
+    <meta name="title" content="VisualGrid | My Vision Board" />
+    <meta
+      name="description"
+      content="Organize your saved images, add notes, and visualize your goals and projects on your personal VisualGrid board."
+    />
 
-  <!-- SEO Tags -->
-  <title>VisualGrid | My Vision Board</title>
-  <link rel="canonical" href="https://yourdomain.com/board">
-  <meta name="title" content="VisualGrid | My Vision Board">
-  <meta name="description"
-    content="Organize your saved images, add notes, and visualize your goals and projects on your personal VisualGrid board.">
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="VisualGrid" />
+    <meta property="og:title" content="VisualGrid | My Vision Board" />
+    <meta
+      property="og:description"
+      content="Organize your saved images, add notes, and visualize your goals and projects on your personal VisualGrid board."
+    />
+    <meta property="og:url" content="https://yourdomain.com/board" />
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:image" content="https://yourdomain.com/og-image-board.jpg"> -->
 
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="VisualGrid">
-  <meta property="og:title" content="VisualGrid | My Vision Board">
-  <meta property="og:description"
-    content="Organize your saved images, add notes, and visualize your goals and projects on your personal VisualGrid board.">
-  <meta property="og:url" content="https://yourdomain.com/board">
-  <meta property="og:type" content="website">
-  <!-- <meta property="og:image" content="https://yourdomain.com/og-image-board.jpg"> -->
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="VisualGrid | My Vision Board" />
+    <meta
+      name="twitter:description"
+      content="Organize your saved images, add notes, and visualize your goals and projects on your personal VisualGrid board."
+    />
+    <!-- <meta name="twitter:image" content="https://yourdomain.com/twitter-image-board.jpg"> -->
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="VisualGrid | My Vision Board">
-  <meta name="twitter:description"
-    content="Organize your saved images, add notes, and visualize your goals and projects on your personal VisualGrid board.">
-  <!-- <meta name="twitter:image" content="https://yourdomain.com/twitter-image-board.jpg"> -->
+    <!-- Favicon and Styles -->
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link
+      rel="preload"
+      href="/fonts/DMSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Inter-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/Inter-Italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./css/board.css" />
+    <link rel="stylesheet" href="./css/settings.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-  <!-- Favicon and Styles -->
-  <link rel="icon" type="image/png" href="./images/favicon.png">
-  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-  <link rel="preload" href="/fonts/DMSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/Inter-Italic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="./css/board.css" />
-  <link rel="stylesheet" href="./css/settings.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-</head>
+  <body>
+    <a href="#main" class="skip-to-content">Skip to main content</a>
 
-<body>
-  <a href="#main" class="skip-to-content">Skip to main content</a>
+    <header aria-label="top navigation bar">
+      <div class="board-container">
+        <nav class="nav-bar" aria-label="Main navigation">
+          <span class="logo"
+            ><a class="home-link" href="index.html">vG</a></span
+          >
+          <button
+            id="hamburger"
+            class="hamburger"
+            aria-label="open navigation"
+            aria-expanded="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="./board.html" class="nav-link">Your Board</a>
+            </li>
+            <li class="nav-item">
+              <a href="./about.html" class="nav-link">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <header aria-label="top navigation bar">
-    <div class="board-container">
-      <nav class="nav-bar" aria-label="Main navigation">
-        <span class="logo"><a class="home-link" href="index.html">vG</a></span>
-        <button id="hamburger" class="hamburger" aria-label="open navigation" aria-expanded="false">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+    <form
+      id="settings-form"
+      class="settings-form offscreen"
+      aria-label="Do I need this"
+    >
+      <h3 class="settings-form-title">Project boards settings</h3>
+      <!-- Instruments -->
+      <div id="board-list" class="board-list">
+        <div class="select-radio">
+          <label for="boards">Select board name:</label>
+          <select
+            name="boards"
+            id="boards"
+            class="select boards"
+            aria-label="Default select example"
+          >
+            <option value="1" data-length="6">Board 1</option>
+            <option value="2" data-length="5">Board 2</option>
+            <option value="3" data-length="4">Board 3</option>
+          </select>
+        </div>
+
+        <!-- Landscape/Portrait radio buttons -->
+        <fieldset>
+          <legend>Modal text field:</legend>
+          <div id="landscape-position" class="landscape-position">
+            <div>
+              <input
+                type="radio"
+                name="notes-goal"
+                id="notes"
+                value="notes"
+                checked
+              />
+              <label for="notes">Notes</label>
+            </div>
+
+            <div>
+              <input type="radio" name="notes-goal" id="goal" value="goal" />
+              <label for="goal">Goal Statement</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Lightbox timing:</legend>
+          <div id="potrait-position" class="potrait-position">
+            <div>
+              <label for="slide-speed">Seconds: </label>
+              <input
+                type="range"
+                id="slide-speed"
+                name="slideSpeed"
+                min="3"
+                max="10"
+                step="1"
+                value="5"
+                oninput="out.value = this.value"
+              />
+              <output id="out">5</output>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+
+    <button id="settings-btn" class="settings-btn">Show Settings</button>
+
+    <main id="main">
+      <div class="board-container">
+        <h1 class="board-page-title">Your Project Board</h1>
+
+        <h2 class="layout-one">
+          Layout One - Project based: large editable text block.
+        </h2>
+
+        <button id="thumbnails-btn" class="thumbnails-btn">
+          Show thumbnails
         </button>
-        <ul class="nav-menu" id="nav-menu">
-          <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="./board.html" class="nav-link">Your Board</a></li>
-          <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
-        </ul>
-      </nav>
+        <div class="thumbnails offscreen"></div>
 
-    </div>
-  </header>
+        <!-- image on left, editable div on right -->
+        <div id="img-text-container" class="img-text-container"></div>
 
-  <form id="settings-form" class="settings-form offscreen" aria-label="Do I need this">
-    <h3 class="settings-form-title">Project boards settings</h3>
-    <!-- Instruments -->
-    <div id="board-list" class="board-list">
-      <div class="select-radio">
-        <label for="boards">Select board name:</label>
-        <select name="boards" id="boards" class="select boards" aria-label="Default select example">
-          <option value="1" data-length="6">Board 1</option>
-          <option value="2" data-length="5">Board 2</option>
-          <option value="3" data-length="4">Board 3</option>
-        </select>
+        <!-- <h2 class="goal-heading layout-two">Layout Two - Goal & Affirmation based: editable figcaption below image.</h2> -->
+        <!-- <p><em>This will be an option in the settings menu.</em></p> -->
+
+        <!-- image on top, editable div or figcaption below on right -->
+        <!-- This and the settings screen will be my stretch goals -->
+        <div id="img-fig-container" class="img-fig-container"></div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- <button id="open" class="clear-btn">Open modal</button> -->
+      <div class="container">
+        <h3 class="footer-heading">
+          Every goal starts with a vision. Create yours today.
+        </h3>
+        <div class="footer-flex">
+          <p class="copyright">&copy; 2025 James Kernicky</p>
+          <a
+            title="Github repo"
+            target="_blank"
+            href="https://github.com/Kernix13/vision-grid-express"
+          >
+            <!-- <i class="fa-brands fa-github"></i> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-github"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <!-- Landscape/Portrait radio buttons -->
-      <fieldset>
-        <legend>Modal text field:</legend>
-        <div id="landscape-position" class="landscape-position">
-          <div>
-            <input type="radio" name="notes-goal" id="notes" value="notes" checked />
-            <label for="notes">Notes</label>
-          </div>
+      <button id="back-to-top-btn" aria-label="Back to top">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          class="bi bi-chevron-up"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"
+          />
+        </svg>
+      </button>
+    </footer>
 
-          <div>
-            <input type="radio" name="notes-goal" id="goal" value="goal" />
-            <label for="goal">Goal Statement</label>
-          </div>
-        </div>
-      </fieldset>
-
-      <fieldset>
-        <legend>Lightbox timing:</legend>
-        <div id="potrait-position" class="potrait-position">
-          <div>
-            <label for="slide-speed">Seconds: </label>
-            <input type="range" id="slide-speed" name="slideSpeed" min="3" max="10" step="1" value="5"
-              oninput="out.value = this.value" />
-            <output id="out">5</output>
-          </div>
-
-
-        </div>
-      </fieldset>
-    </div>
-  </form>
-
-  <button id="settings-btn" class="settings-btn">Show Settings</button>
-
-  <main id="main">
-    <div class="board-container">
-      <h1 class="board-page-title">Your Project Board</h1>
-
-      <h2 class="layout-one">Layout One - Project based: large editable text block.</h2>
-
-      <button id="thumbnails-btn" class="thumbnails-btn">Show thumbnails</button>
-      <div class="thumbnails offscreen"></div>
-
-      <!-- image on left, editable div on right -->
-      <div id="img-text-container" class="img-text-container"></div>
-
-      <!-- <h2 class="goal-heading layout-two">Layout Two - Goal & Affirmation based: editable figcaption below image.</h2> -->
-      <!-- <p><em>This will be an option in the settings menu.</em></p> -->
-
-      <!-- image on top, editable div or figcaption below on right -->
-      <!-- This and the settings screen will be my stretch goals -->
-      <div id="img-fig-container" class="img-fig-container"></div>
-
-    </div>
-  </main>
-
-  <footer>
-    <!-- <button id="open" class="clear-btn">Open modal</button> -->
-    <div class="container">
-      <h3 class="footer-heading">Every goal starts with a vision. Create yours today.</h3>
-      <div class="footer-flex">
-        <p class="copyright">&copy; 2025 James Kernicky</p>
-        <a title="Github repo" target="_blank" href="https://github.com/Kernix13/vision-grid-express">
-          <!-- <i class="fa-brands fa-github"></i> -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
-            viewBox="0 0 16 16">
-            <path
-              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-          </svg>
-        </a>
-
-      </div>
-    </div>
-
-    <button id="back-to-top-btn" aria-label="Back to top">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-up" viewBox="0 0 16 16"
-        fill="currentColor">
-        <path fill-rule="evenodd"
-          d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z" />
-      </svg>
-    </button>
-  </footer>
-
-  <!-- <div class="thumb-modal-container" id="thumb-modal-bg">
+    <!-- <div class="thumb-modal-container" id="thumb-modal-bg">
     <button class="thumb-close-btn" id="thumb-close" aria-label="Close">
       <i class="fa fa-times"></i>
     </button>
     <div class="thumb-modal"></div>
   </div> -->
 
-  <div class="thumb-modal-container" id="thumb-modal">
-    <div class="thumb-modal">
-      <button class="close-btn" id="close" aria-label="Close">
-        <!-- <i class="fa fa-times"></i> -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x"
-          viewBox="0 0 16 16">
-          <path
-            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-        </svg>
-      </button>
-      <div class="modal-header">
-        <h3>Remove Image</h3>
-        <p>Are you sure you want to remove this image?</p>
-      </div>
-      <div class="modal-content">
-        <button id="confirm-delete-btn" class="thumb-modal-btn">Delete</button>
-        <button id="cancel-delete-btn" class="thumb-modal-btn">Cancel</button>
+    <div class="thumb-modal-container" id="thumb-modal">
+      <div class="thumb-modal">
+        <button class="close-btn" id="close" aria-label="Close">
+          <!-- <i class="fa fa-times"></i> -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+            />
+          </svg>
+        </button>
+        <div class="modal-header">
+          <h3>Remove Image</h3>
+          <p>Are you sure you want to remove this image?</p>
+        </div>
+        <div class="modal-content">
+          <button id="confirm-delete-btn" class="thumb-modal-btn">
+            Delete
+          </button>
+          <button id="cancel-delete-btn" class="thumb-modal-btn">Cancel</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="modal-container" id="modal-bg">
-    <button class="close-btn" id="close-btn" aria-label="Close">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x"
-        viewBox="0 0 16 16">
-        <path
-          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-      </svg>
-    </button>
-    <div class="modal"></div>
-  </div>
+    <div class="modal-container" id="modal-bg">
+      <button class="close-btn" id="close-btn" aria-label="Close">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="bi bi-x"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+          />
+        </svg>
+      </button>
+      <div class="modal"></div>
+    </div>
 
-
-  <script src="./js/board.js" type="module"></script>
-</body>
-
+    <script src="./js/board.js" type="module"></script>
+  </body>
 </html>
