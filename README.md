@@ -163,8 +163,9 @@ This is the current state of my project as of November 21st, 2025:
       <td>
         <ul>
           <!-- <li>Primary editor: VS Code with extensions for code formatting and workflow efficiency</li> -->
-          <li>Integrated terminal for Git, installing NPM packages, and running Node.js/NPM scripts</li>
+          <li>Integrated terminal for Git commands, installing packages, and running Node.js/NPM scripts</li>
           <li>Used <code>.editorconfig</code> for consistent formatting across editors</li>
+          <li>Resolved merge conflicts using VS Code’s built-in diff/merge tools during local branch merges</li>
         </ul>
       </td>
     </tr>
@@ -200,7 +201,7 @@ code .
 2. Create a `.env` file in the project root.
 3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
 
-```sh
+```env
 CLIENT_ID=your_unsplash_client_id
 PORT=port_number
 ```
@@ -275,7 +276,7 @@ npx eslint . --fix
 
 - Saved Images Display
   - View all saved images in a large, clean layout.
-  - Each image includes an editable text area for notes, goals, or affirmations, persisted via localStorage.
+  - Each image includes an editable text area for notes persisted via localStorage.
 - Thumbnail Strip
   - See all saved items in a compact strip for quick navigation.
   - Clicking on any thumbnail takes you to that image on the page.
@@ -285,12 +286,12 @@ npx eslint . --fix
 - Lightbox Slider
   - A full-screen modal that cycles through saved images.
   - Adjustable timing between slides.
-  - Displays either the image’s page notes or its affirmation/goal statement created in the board-page modal.
+  - Displays the image's affirmation/goal statement created in the modal.
 - Affirmation / Goal Statement
   - Click any saved image on the page to open a modal with a larger view.
-  - Add or edit a dedicated affirmation or goal heading for that image.
+  - Add or edit a dedicated affirmation or goal heading for that image (115 character limit).
   - Navigate to other saved images within the modal to quickly update multiple affirmations.
-  - These affirmations can be shown in the full-screen slider instead of the standard page notes.
+  - These affirmations are shown in the full-screen slider instead of the standard page notes.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -372,7 +373,7 @@ npx eslint . --fix
       <td>
         <ul>
           <li>Images displayed in 3 different sizes</li>
-          <li>Image descriptions added as <code>img</code> <code>alt</code> attribute</li>
+          <li>Image <code>alt_descriptions</code> added as <code>img</code> <code>alt</code> attribute</li>
           <li>Add image id to elements <code>id</code> and <code>data-id</code> attributes</li>
         </ul>
       </td>
@@ -384,30 +385,22 @@ npx eslint . --fix
       <li><code>getSearchResults(searchTerm, page, element)</code></li>
       <li><code>saveSearchTerm(str, el, arr)</code></li>
       <li><code>moveImage(event, id, direction)</code></li>
-      <li><code>setModalContent(element, item, id)</code></li>
+      <li><code>setLocalStorage(str, val)</code></li>
       <li>+ 8 more functions (not all have <code>return</code> KW)</li>
-      <!-- <li><code>addRemoveClass(element, add, remove)</code></li>
-      <li><code>toggleDisplay(el, btn, str)</code></li>
-      <li><code>addSearchText(el, text, spanClass)</code></li>
-      <li><code>addSearchTerm(parent, arr)</code></li>
-      <li><code>modalNav(btnsContainer, id, innerModal)</code></li>
-      <li><code>modalSaveRemove(btnsContainer, id, innerModal)</code></li>
-      <li><code>createImgCard(arr, element)</code></li> -->
       </ul>
       </td>
     </tr>
     <tr>
       <td>Persist & use data to the user to local storage</td>
       <td>
-        <ol>
+        <ul>
           <li>Current search phrase</li>
           <li>Current search phrase page number</li>
           <li>Fetched image objects</li>
           <li>Saved images objects</li>
           <li>List of all user search phrases</li>
           <li>User images text/notes</li>
-          <li>All search phrases last page fetched</li>
-        </ol>
+        </ul>
       </td>
     </tr>
   </tbody>

@@ -2,16 +2,14 @@ import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 
 const innerModal = document.querySelector('.modal');
 
-// WHAT IMAGE SIZE AM I LOADING? It should be .regular, I think it is .small
+// I am using .regular, unlike the issue with index modal function
 export function setModalContent(element, item, id) {
-  const savedImages = getLocalStorage('saved-images');
-
   element.textContent = '';
 
+  const savedImages = getLocalStorage('saved-images');
   const boardModalImg = savedImages.find(img => img.id === id);
 
   const image = document.createElement('img');
-
   image.src = item.src;
   image.className = 'modal-image';
 
@@ -57,7 +55,6 @@ function modalNav(btnsContainer, id, innerModal) {
       const domImageContainer = document.getElementById(nextImageObj.id);
       const domImage = domImageContainer.querySelector('.regular');
 
-      // Change 1. domImage,
       setModalContent(innerModal, domImage, nextImageObj.id);
     });
 
@@ -65,7 +62,7 @@ function modalNav(btnsContainer, id, innerModal) {
   });
 }
 
-/* HELPER FUNCTION 3: Detect aspect ratio of image */
+/* HELPER FUNCTION 2: Detect aspect ratio of image */
 function detectAspectRatio(img, el) {
   const w = Number(img.width);
   const h = Number(img.height);
@@ -83,7 +80,7 @@ function detectAspectRatio(img, el) {
   }
 }
 
-/* HELPER FUNCTION 4: Create editable blockquote */
+/* HELPER FUNCTION 5: Create editable blockquote */
 function editableQuote(el, image) {
   const quote = document.createElement('blockquote');
   quote.className = 'editable-quote';

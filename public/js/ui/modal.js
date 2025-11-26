@@ -5,18 +5,12 @@ const innerModal = document.querySelector('.modal');
 
 // WHAT IMAGE SIZE AM I LOADING? It should be .regular, I think it is .small
 export function setModalContent(element, item, id) {
-  const images = getLocalStorage('fetched-search-results');
-  const savedImages = getLocalStorage('saved-images');
-
-  // I need the pathname to use the same modal on index and board
-  const location = window.location.pathname;
   element.textContent = '';
 
+  const images = getLocalStorage('fetched-search-results');
   const modalImg = images.find(img => img.id === id);
-  const boardModalImg = savedImages.find(img => img.id === id);
 
   const image = document.createElement('img');
-
   image.src = item.src; 
   image.className = 'modal-image';
 
@@ -27,21 +21,9 @@ export function setModalContent(element, item, id) {
   // Add navigation + save/remove functionality
   modalNav(btnsContainer, id, innerModal);
 
-  if (location === '/' || location === '/index.html') {
-    element.append(image);
-    modalSaveRemove(btnsContainer, id, innerModal);
-    detectAspectRatio(modalImg, element);
-  }
-
-  if (location === '/board.html') {
-    const quoteContainer = document.createElement('div');
-    quoteContainer.className = 'img-quote';
-    quoteContainer.append(image);
-
-    editableQuote(quoteContainer, boardModalImg)
-    element.append(quoteContainer);
-    detectAspectRatio(boardModalImg, element);
-  }
+  element.append(image);
+  modalSaveRemove(btnsContainer, id, innerModal);
+  detectAspectRatio(modalImg, element);
   
   element.append(btnsContainer);
 }
@@ -53,15 +35,13 @@ function modalNav(btnsContainer, id, innerModal) {
     { name: 'next', symbol: '>', direction: 1 },
   ];
 
-  // Nav only works for the home page because of the code below
-  // I'm going to have to package it all into a function then pass forEach a callback
-  // Then I need a second function/callback if board.html - have 2 if statements where I add navItems.forEach - this is a mess!!! ❌❗
   navItems.forEach(item => {
     const btn = document.createElement('button');
     btn.className = `nav ${item.name}`;
     btn.textContent = item.symbol;
 
     btn.addEventListener('click', () => {
+      // saved-images for board page, fetched-search-results for index
       const images = getLocalStorage('fetched-search-results');
       const currentIndex = images.findIndex(img => img.id === id);
       const nextIndex = currentIndex + item.direction;
@@ -79,9 +59,27 @@ function modalNav(btnsContainer, id, innerModal) {
   });
 }
 
-/* HELPER FUNCTION 2: Save and Remove buttons + nav to next item */
+/* HELPER FUNCTION 2: Detect aspect ratio of image */
+function detectAspectRatio(img, el) {
+  const w = Number(img.width);  
+  const h = Number(img.height);
+  const ratio = Number((w / h).toFixed(2));
+  const tolerance = 0.15;
+
+  el.classList.remove('portrait', 'landscape', 'square');
+
+  if (Math.abs(1 - ratio) <= tolerance) {
+    el.classList.add('square');
+  } else if (w > h) {
+    el.classList.add('landscape');
+  } else {
+    el.classList.add('portrait');
+  }
+}
+
+/* HELPER FUNCTION 3: Save and Remove buttons + nav to next item */
 // This is a huge function because of btn.addEventListener. Refactor?
-function modalSaveRemove(btnsContainer, id, innerModal) {
+function modalSaveRemove(btnsContainer, id, innerModal) { 
   const arr = ['Save', 'Remove'];
 
   arr.forEach(item => {
@@ -137,44 +135,3 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
     btnsContainer.append(btn);
   });
 }
-
-/* HELPER FUNCTION 3: Detect aspect ratio of image */
-function detectAspectRatio(img, el) {
-  const w = Number(img.width);  
-  const h = Number(img.height);
-  const ratio = Number((w / h).toFixed(2));
-  const tolerance = 0.15;
-
-  el.classList.remove('portrait', 'landscape', 'square');
-
-  if (Math.abs(1 - ratio) <= tolerance) {
-    el.classList.add('square');
-  } else if (w > h) {
-    el.classList.add('landscape');
-  } else {
-    el.classList.add('portrait');
-  }
-}
-
-/* HELPER FUNCTION 4: Create editable blockquote */
-function editableQuote(el, image) {
-  const quote = document.createElement('blockquote');
-  quote.className = 'editable-quote';
-  quote.dataset.id = image.id;
-  quote.setAttribute('contenteditable', true);
-
-  const placeholder = "Write your affirmation or goal statement here. Note: the max character length is 115 and this sentence here is 115.";
-
-  quote.textContent = image.affirmation || placeholder;
-  el.append(quote);
-
-  quote.addEventListener('focusout', () => {
-    const savedImages = getLocalStorage('saved-images');
-    const image = savedImages.find(img => img.id === quote.dataset.id);
-    if (!image) return;
-
-    image.affirmation = quote.textContent.trim();
-    setLocalStorage('saved-images', savedImages);
-  });
-}
-
