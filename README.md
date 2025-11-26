@@ -425,18 +425,18 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ## Use of AI
 
+### README Copy
+
 ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
-1. I asked ChatGPT for help on project ideas. I told it that I was interested in guitar, outdoor photography, camping, hiking, orienteering, and a few other hobbies. It suggested ideas for each hobby and the Unsplash idea was the most interesting to me.
+1. I asked ChatGPT for help on project ideas. I gave it a list of my hobbies and it suggested ideas and the Unsplash idea was the most interesting to me.
 2. It generated the "Project Structure" code block above.
-3. I had boilerplate for `CONTRIBUTING.md` from previous projects. It wrote the content I have for this project.
-4. I also have boilerplate for `CODE_OF_CONDUCT.md` from previous projects which I copied into this project. I may ask ChatGPT to rewrite that file for me.
-5. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
-6. I asked ChatGPT about a `.editorconfig` file - it generated the content for that file which I used.
-7. ChatGPT gave me an outline for the "User Journey" section
-8. I asked ChatGPT about including robots.txt and sitemap.xml. It suggested to add them and wrote the contents for me.
-9. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, Express)
-10. ...
+3. I had boilerplate for `CONTRIBUTING.md` from previous projects. It wrote the content I have for this project and the paragraph of text for that section.
+4. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
+5. I asked ChatGPT about a `.editorconfig` file - it generated the content for that file which I used.
+6. ChatGPT gave me an outline for the "Features" section
+7. I asked ChatGPT about including robots.txt and sitemap.xml. It suggested to add them and wrote the contents for sitemap.xml.
+8. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, and Express)
 
 <br>
 
@@ -471,8 +471,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Non-critical
 
 1. Add an `about.html` file? YES!
-2. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
-3. When done, combine ALL CSS into one or 2 files per page - issue [#40](https://github.com/Kernix13/vision-grid-express/issues/40)
+2. When done, combine ALL CSS into one or 2 files per page - issue [#40](https://github.com/Kernix13/vision-grid-express/issues/40)
+3. `textContent` is better than `createTextNode` so find & replace all occurrences - issue [#47](https://github.com/Kernix13/vision-grid-express/issues/47)
 4. **BOARD**: addSavedImagesToDom is in thumbnails.js - that does not make sense. Either change the file name, or move it to a new file.
 5. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
 
@@ -507,7 +507,10 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
   11. Use of AI 📌
   12. License ✅
   - CODE_OF_CONDUCT.md file: Edit/Rewrite 📌
-
  -->
 
-<!-- Bootrap Icons, SVGs: https://icons.getbootstrap.com/ -->
+<!--
+  ICONS: https://icons.getbootstrap.com/
+  ICONS: https://ionic.io/ionicons
+  ICONS: https://www.svgrepo.com/
+-->
