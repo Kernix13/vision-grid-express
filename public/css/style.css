@@ -24,12 +24,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
 blockquote,
 figure,
 h1,
@@ -124,6 +118,8 @@ textarea {
 
 /* 2. Global styles */
 body {
+  height: 100%;
+  margin: 0;
   font-size: 1.125rem;
   color: var(--text);
   line-height: 1.5;
@@ -166,7 +162,7 @@ h1 {
 }
 
 h2.about-subtitle {
-  margin-bottom: 2rem;
+  margin: 2rem 0 1rem;
 }
 
 h2,
@@ -223,6 +219,11 @@ footer {
 .highlight {
   font-style: italic;
   color: var(--primary);
+  color: hsl(145, 70%, 35%);
+  font-weight: 400;
+  border-bottom: 1px solid hsl(145, 70%, 35%);
+  border-bottom: 1px solid var(--primary);
+  letter-spacing: 0.5px;
 }
 
 .sub-title {
@@ -1234,7 +1235,8 @@ label {
 
 @media (width >= 768px) {
   h1 {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
+    font-weight: 700;
   }
 
   .load-more,

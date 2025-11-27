@@ -451,9 +451,9 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### High-priority
 
 1. **BOARD**: Start a slideshow of just the images, and/or the images + text - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
-2. **README**: Finish Use of AI
-3. **INDEX**: Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
-4. **BOARD**: I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
+2. **INDEX**: Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
+3. **BOARD**: I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
+4. **README**: Finish Use of AI
 
 ### Non-critical
 

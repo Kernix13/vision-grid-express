@@ -70,10 +70,13 @@ export function addSavedImagesToDom() {
     image.className = 'regular';
     image.alt = img.description;
     image.src = img.imageRegular;
+    // The next 4 lines are to try and get Lighthouse above 80%
     if (i === 0) image.fetchPriority = 'high';
+    if (i !== 0) image.loading = "lazy";
+    image.width = img.width;
+    image.height = img.height;
+
     imageText.append(image);
-    // image.style.aspectRatio = img.height / img.width;
-    // console.log(img.height / img.width)
 
     // Create editable div
     const div = document.createElement('div');

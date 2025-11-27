@@ -40,6 +40,7 @@ thumbnailsBtn.addEventListener('click', () => {
 imgTextContainer.addEventListener('click', () => {
   if (thumbnails.classList.contains('onscreen')) {
     thumbnails.classList.remove('onscreen');
+    thumbnailsBtn.innerText = 'Show Thumbnails';
   }
 });
 
