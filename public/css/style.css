@@ -219,9 +219,9 @@ footer {
 .highlight {
   font-style: italic;
   color: var(--primary);
-  color: hsl(145, 70%, 35%);
+  color: hsl(145deg 70% 35%);
   font-weight: 400;
-  border-bottom: 1px solid hsl(145, 70%, 35%);
+  border-bottom: 1px solid hsl(145deg 70% 35%);
   border-bottom: 1px solid var(--primary);
   letter-spacing: 0.5px;
 }
@@ -886,13 +886,6 @@ input[type='search']:focus {
   }
 }
 
-@media (width >= 768px) {
-  .image-text {
-    grid-template-columns: 1fr 1fr;
-    align-items: flex-start;
-  }
-}
-
 /* 6. Board page settings styles */
 
 /* settings-form offscreen onscreen */
@@ -1251,6 +1244,11 @@ label {
 
   .modal {
     flex-direction: row;
+  }
+
+  .image-text {
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
   }
 }
 

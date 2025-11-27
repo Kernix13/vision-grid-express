@@ -5,14 +5,14 @@
 <br>
 
 <p align="center">
-  <a href="https://github.com/Kernix13/vision-grid-express/commits/main/">
-    <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge" /></a>
-  <a href="https://github.com/Kernix13/vision-grid-express/issues">
-    <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" /></a>
-  <a href="https://github.com/Kernix13/vision-grid-express">
-    <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a>
-  <a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" /></a>
+<a href="https://github.com/Kernix13/vision-grid-express/commits/main/">
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge" /></a>
+<a href="https://github.com/Kernix13/vision-grid-express/issues">
+<img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" /></a>
+<a href="https://github.com/Kernix13/vision-grid-express">
+<img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a>
+<a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
+<img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" /></a>
 </p>
 
 <br>
@@ -166,7 +166,7 @@ This is the current state of my project as of November 21st, 2025:
         <ul>
           <li>Meta + SEO tags: title, description, Open Graph, and Twitter card tags</li>
           <li>Site identity: full favicon set (.png, .ico, and sizes for cross-browser support)</li>
-          <li>Semantic HTML + <code>aria-*</code> and <code>data-*</code> attributes</li>
+          <li>Semantic HTML, skip-to-main link, <code>aria-*</code> and <code>data-*</code> attributes</li>
           <li>Supporting files: <code>sitemap.xml</code>, <code>robots.txt</code></li>
         </ul>
       </td>
@@ -222,7 +222,7 @@ This is the current state of my project as of November 21st, 2025:
         <ul>
           <li>Managing dependencies with <code>package.json</code></li>
           <li>Configuring and running npm scripts for development workflow</li>
-          <li>Key packages used: Express, CORS, dotenv</li>
+          <li>Main packages used: Express, CORS, dotenv | ESLint, Prettier, Stylelint</li>
         </ul>
       </td>
     </tr>
@@ -324,10 +324,10 @@ This is the current state of my project as of November 21st, 2025:
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
-## Additional Notes
+<!-- ## Additional Notes
 
 - The project uses `localStorage` to persist saved images data and notes.
-- The project uses self-hosted Google Fonts (Inter, DM Sans).
+- The project uses self-hosted Google Fonts (Inter, DM Sans). -->
 
 <br>
 
@@ -349,7 +349,7 @@ This is the current state of my project as of November 21st, 2025:
     </tr>
     <tr>
       <td>Create a Node.js web server using Express.js</td>
-      <td>Express server with 2 query params</td>
+      <td>Express server with 2 query parameters</td>
     </tr>
     <tr>
       <td>Analyze data that is stored in various data structures</td>
@@ -446,7 +446,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 16 To-Do items left - 4 High-priority + 2 important Non-critical (1 & 2)
+> 14 To-Do items left - 4 High-priority + 2 important Non-critical (1 & 2)
 
 ### High-priority
 
@@ -458,7 +458,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Non-critical
 
 1. Once I have a font for the _logo_, create a PNG or SVG in Inkscape then generate a full set of favicons and add to project.
-2. Add some kind of transition/animation for when the home page cards, or image-text elements on the board page are removed.
+2. Add some kind of transition/animation for when the home page cards, and image-text elements on the board page when they are removed.
 3. **BOARD**: addSavedImagesToDom is in thumbnails.js - that does not make sense. Either change the file name, or move it to a new file.
 4. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
 5. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
@@ -468,11 +468,6 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 2. **BOARD**: Ability to name/rename board(s) - issue [#45](https://github.com/Kernix13/vision-grid-express/issues/45)
 3. Add JSDoc comments?
-
-### Style Questions (Non-critical)
-
-1. Is it okay to have different bg colors for the card buttons (design)? Should I duplicate that for the modal buttons & board page buttons? This is a UI design question where I need opinions/input
-2. **INDEX**: Home page H1 span different color/italic - good, bad?
 
 ### Bugs/Issues
 
