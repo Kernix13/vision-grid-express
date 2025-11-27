@@ -9,6 +9,8 @@
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/issues">
 <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" /></a>
+<a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
+<img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Kernix13/vision-grid-express?style=for-the-badge" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express">
 <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
@@ -295,7 +297,9 @@ This is the current state of my project as of November 21st, 2025:
 ├── server.js            # Express server handling API requests
 ├── eslint.config.mjs    # ESLint configuration for code linting rules
 ├── .editorconfig        # Defines editor settings across IDEs/editors
-└── .env.example         # Template for environment variables
+├── .env.example         # Template for environment variables
+├── .prettierrc          # Configuration for Prettier code formatter
+└── .stylelintrc.json    # Configuration for Stylelint CSS linting rules rules
 └── public/
     ├── index.html
     ├── board.html
