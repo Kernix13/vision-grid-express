@@ -478,7 +478,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 2. **BOARD**: Ability to name/rename board(s) - issue [#45](https://github.com/Kernix13/vision-grid-express/issues/45)
-3. Add JSDoc comments? Yes, if I have time but nt for every function.
+3. Add JSDoc comments? Yes, if I have time.
 
 ### Bugs/Issues
 
