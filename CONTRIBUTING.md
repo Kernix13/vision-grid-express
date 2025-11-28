@@ -55,6 +55,16 @@ feat: update modal image fade logic
 
 > A PR may request minor formatting or naming tweaks before merging.
 
+## Code Quality
+
+This project uses ESLint, Prettier, and Stylelint.
+
+- Run JavaScript linting: `npm run lint`
+- Fix JavaScript linting: `npm run lint:fix`
+- Format code with Prettier: `npm run format`
+- Run CSS linting: `npm run lint:css`
+- Fix CSS linting: `npm run lint:css:fix`
+
 ## Issues / Questions
 
 If you find a problem or have a suggestion:

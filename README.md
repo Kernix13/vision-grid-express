@@ -1,12 +1,13 @@
 # VisionGrid
 
+<!-- Take a new home page screenshot when I am done -->
 <div align="center"><img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" /></div>
 
 <br>
 
 <p align="center">
 <a href="https://github.com/Kernix13/vision-grid-express/commits/main/">
-<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge" /></a>
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge&label=Commits" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/issues">
 <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
@@ -14,7 +15,7 @@
 <a href="https://github.com/Kernix13/vision-grid-express">
 <img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
-<img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" /></a>
+<img alt="License: MIT" src="https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge" /></a>
 </p>
 
 <br>
@@ -122,7 +123,7 @@ You can now search for images, save images to your board page, add notes for eac
 
 ### Vision Board Page
 
-> _Image of thumbnail strip and an image-text element and maybe the settings screen open lower down_
+> _Image of thumbnail strip and an image-text element and maybe the settings screen open lower down and/or board page modal - that is 2-3 screenshots_
 
 - Saved Images Display
   - View all saved images in a large, clean layout.
@@ -299,21 +300,23 @@ This is the current state of my project as of November 21st, 2025:
 ├── .editorconfig        # Defines editor settings across IDEs/editors
 ├── .env.example         # Template for environment variables
 ├── .prettierrc          # Configuration for Prettier code formatter
-└── .stylelintrc.json    # Configuration for Stylelint CSS linting rules rules
+├── .stylelintrc.json    # Configuration for Stylelint CSS linting rules
+└── .github/
+    └── PULL_REQUEST_TEMPLATE.md
 └── public/
     ├── index.html
     ├── board.html
+    ├── about.html
     ├── robots.txt
     ├── sitemap.xml
     ├── css/
     ├── js/
-    │   ├── index.js         # Main file for index.html
-    │   ├── board.js         # Main file for board.html
-    │   ├── api/             # Fetch function to backend /api/photos
-    │   ├── ui/              # Functions for various UI elements
-    │   └── utils/           # Functions for UI classes and localStorage
+    │   ├── index.js         # Logic for index.html
+    │   ├── board.js         # Logic for board.html
+    │   ├── api/             # Fetch function(s) for backend /api/photos
+    │   ├── ui/              # UI behavior functions
+    │   └── utils/           # Shared utility functions (classes, localStorage)
     ├── images/
-    │   └── placeholder.jpg  # Used in the app to improve page performance
     └── fonts/               # DM Sans and Inter .woff2 files
 ```
 
@@ -331,7 +334,8 @@ This is the current state of my project as of November 21st, 2025:
 <!-- ## Additional Notes
 
 - The project uses `localStorage` to persist saved images data and notes.
-- The project uses self-hosted Google Fonts (Inter, DM Sans). -->
+- The project uses self-hosted Google Fonts (Inter, DM Sans).
+-->
 
 <br>
 
@@ -405,6 +409,8 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 <br>
 
+---
+
 ## Future Improvements
 
 - Multiple boards option
@@ -450,14 +456,15 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 14 To-Do items left - 4 High-priority + 2 important Non-critical (1 & 2)
+> 15 To-Do items left - 5 High-priority + 2 important Non-critical (1 & 2)
 
 ### High-priority
 
 1. **BOARD**: Start a slideshow of just the images, and/or the images + text - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
 2. **INDEX**: Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
-3. **BOARD**: I need to figure out how to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the data-id value to storage
-4. **README**: Finish Use of AI
+3. **BOARD**: I need to add the `selected` class to `thumb-item` after each move up/down - I probably have to add the `data-id` value to local storage
+4. Add a `.disabled` class to the prev modal button when index = 0, and to next when index = arr.length - 1, set cursor to none & reduce opacity. Do I also need to add `removeEventListener`?
+5. **README**: Finish Use of AI
 
 ### Non-critical
 
@@ -500,3 +507,14 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
   ICONS: https://ionic.io/ionicons
   ICONS: https://www.svgrepo.com/
 -->
+
+<!--
+  Create a PR Template:
+  - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository
+  - https://axolo.co/blog/p/part-3-github-pull-request-template
+  - https://github.com/Kernix13/github-actions-dotfiles/blob/main/dotfiles.md#dot-github-folder
+
+  Create an issues template
+  - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
+  - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates
+ -->
