@@ -1,5 +1,5 @@
 import { scrollFunction, smoothScrollBackToTop } from './ui/backToTop.js';
-import { setModalContent } from './ui/boardModal.js';
+import { setModalContent } from './ui/modal.js';
 import { initBoardPage } from './ui/initPage.js';
 import { menuButton } from './ui/menu.js';
 import { deleteImage, moveImage, selectImage } from './ui/thumbnails.js';

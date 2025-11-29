@@ -7,9 +7,6 @@ const innerModal = document.querySelector('.modal');
 export function setModalContent(element, item, id) {
 	element.textContent = '';
 
-	const images = getLocalStorage('fetched-search-results');
-	const modalImg = images.find((img) => img.id === id);
-
 	const image = document.createElement('img');
 	image.src = item.src;
 	image.className = 'modal-image';
@@ -21,8 +18,26 @@ export function setModalContent(element, item, id) {
 	// Add navigation + save/remove functionality
 	modalNav(btnsContainer, id, innerModal);
 
-	element.append(image);
-	modalSaveRemove(btnsContainer, id, innerModal);
+	const page = window.location.pathname;
+	console.log(page); // /index.html or / or /board.html
+	let images = [];
+	let modalImg = {};
+
+	if (page === '/board.html') {
+		images = getLocalStorage('saved-images');
+		modalImg = images.find((img) => img.id === id);
+		const quoteContainer = document.createElement('div');
+		quoteContainer.className = 'img-quote';
+		quoteContainer.append(image);
+		editableQuote(quoteContainer, modalImg);
+		element.append(quoteContainer);
+	} else {
+		images = getLocalStorage('fetched-search-results');
+		modalImg = images.find((img) => img.id === id);
+		element.append(image);
+		modalSaveRemove(btnsContainer, id, innerModal);
+	}
+
 	detectAspectRatio(modalImg, element);
 
 	element.append(btnsContainer);
@@ -36,21 +51,34 @@ function modalNav(btnsContainer, id, innerModal) {
 	];
 
 	navItems.forEach((item) => {
+		const page = window.location.pathname;
+		let images = [];
 		const btn = document.createElement('button');
 		btn.className = `nav ${item.name}`;
 		btn.textContent = item.symbol;
 
 		btn.addEventListener('click', () => {
 			// saved-images for board page, fetched-search-results for index
-			const images = getLocalStorage('fetched-search-results');
+			if (page === '/board.html') {
+				images = getLocalStorage('saved-images');
+			} else {
+				images = getLocalStorage('fetched-search-results');
+			}
+
 			const currentIndex = images.findIndex((img) => img.id === id);
 			const nextIndex = currentIndex + item.direction;
 
 			if (nextIndex < 0 || nextIndex >= images.length) return;
 
+			let domImage;
 			const nextImageObj = images[nextIndex];
 			const domImageContainer = document.getElementById(nextImageObj.id);
-			const domImage = domImageContainer.querySelector('.result-image');
+
+			if (page === '/board.html') {
+				domImage = domImageContainer.querySelector('.regular');
+			} else {
+				domImage = domImageContainer.querySelector('.result-image');
+			}
 
 			setModalContent(innerModal, domImage, nextImageObj.id);
 		});
@@ -133,5 +161,28 @@ function modalSaveRemove(btnsContainer, id, innerModal) {
 		});
 
 		btnsContainer.append(btn);
+	});
+}
+
+/* HELPER FUNCTION 5: Create editable blockquote */
+function editableQuote(el, image) {
+	const quote = document.createElement('blockquote');
+	quote.className = 'editable-quote';
+	quote.dataset.id = image.id;
+	quote.setAttribute('contenteditable', true);
+
+	const placeholder =
+		'Write your affirmation or goal statement here. Note: the max character length is 115 and this sentence here is 115.';
+
+	quote.textContent = image.affirmation || placeholder;
+	el.append(quote);
+
+	quote.addEventListener('focusout', () => {
+		const savedImages = getLocalStorage('saved-images');
+		const image = savedImages.find((img) => img.id === quote.dataset.id);
+		if (!image) return;
+
+		image.affirmation = quote.textContent.trim();
+		setLocalStorage('saved-images', savedImages);
 	});
 }
