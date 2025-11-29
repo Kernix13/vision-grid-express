@@ -296,11 +296,10 @@ This is the current state of my project as of November 21st, 2025:
 ├── CONTRIBUTING.md
 ├── package.json         # Dependencies and scripts
 ├── server.js            # Express server handling API requests
-├── eslint.config.mjs    # ESLint configuration for code linting rules
-├── .editorconfig        # Defines editor settings across IDEs/editors
 ├── .env.example         # Template for environment variables
-├── .prettierrc          # Configuration for Prettier code formatter
-├── .stylelintrc.json    # Configuration for Stylelint CSS linting rules
+├── .gitattributes       # Enforces consistent line endings and other Git settings
+├── .gitignore           # Specific files and folders Git should ignore
+├── biome.json           # Biome formatter, linter, and code-quality config
 └── .github/
     └── PULL_REQUEST_TEMPLATE.md
 └── public/
