@@ -6,23 +6,23 @@ window.addEventListener('scroll', scrollFunction);
  * Display or hide back-to-top btn based on scrollY
  */
 export function scrollFunction() {
-  if (window.scrollY > 600) {
-    // Show backToTopButton
-    if (!backToTopButton.classList.contains('btnEntrance')) {
-      backToTopButton.classList.remove('btnExit');
-      backToTopButton.classList.add('btnEntrance');
-      backToTopButton.style.display = 'block';
-    }
-  } else {
-    // Hide backToTopButton
-    if (backToTopButton.classList.contains('btnEntrance')) {
-      backToTopButton.classList.remove('btnEntrance');
-      backToTopButton.classList.add('btnExit');
-      setTimeout(function () {
-        backToTopButton.style.display = 'none';
-      }, 125);
-    }
-  }
+	if (window.scrollY > 600) {
+		// Show backToTopButton
+		if (!backToTopButton.classList.contains('btnEntrance')) {
+			backToTopButton.classList.remove('btnExit');
+			backToTopButton.classList.add('btnEntrance');
+			backToTopButton.style.display = 'block';
+		}
+	} else {
+		// Hide backToTopButton
+		if (backToTopButton.classList.contains('btnEntrance')) {
+			backToTopButton.classList.remove('btnEntrance');
+			backToTopButton.classList.add('btnExit');
+			setTimeout(() => {
+				backToTopButton.style.display = 'none';
+			}, 125);
+		}
+	}
 }
 
 backToTopButton.addEventListener('click', smoothScrollBackToTop);
@@ -31,28 +31,28 @@ backToTopButton.addEventListener('click', smoothScrollBackToTop);
  * Control scroll animation
  */
 export function smoothScrollBackToTop() {
-  const duration = 1250;
-  let start = null;
+	const duration = 1250;
+	let start = null;
 
-  const startPosition = window.scrollY;
-  const distanceToTop = -1 * startPosition;
+	const startPosition = window.scrollY;
+	const distanceToTop = -1 * startPosition;
 
-  window.requestAnimationFrame(step);
+	window.requestAnimationFrame(step);
 
-  /**
-   * Synchronize animation using timestamp
-   */
-  function step(timestamp) {
-    if (!start) start = timestamp;
+	/**
+	 * Synchronize animation using timestamp
+	 */
+	function step(timestamp) {
+		if (!start) start = timestamp;
 
-    const progress = timestamp - start;
-    window.scrollTo(
-      0,
-      easeInOutCubic(progress, startPosition, distanceToTop, duration)
-    );
+		const progress = timestamp - start;
+		window.scrollTo(
+			0,
+			easeInOutCubic(progress, startPosition, distanceToTop, duration),
+		);
 
-    if (progress < duration) window.requestAnimationFrame(step);
-  }
+		if (progress < duration) window.requestAnimationFrame(step);
+	}
 }
 
 /**
@@ -60,10 +60,10 @@ export function smoothScrollBackToTop() {
  * Cubic-bezier function for scroll animation
  */
 function easeInOutCubic(prog, startPos, dist, dur) {
-  prog /= dur / 2;
-  if (prog < 1) {
-    return (dist / 2) * prog * prog * prog + startPos;
-  }
-  prog -= 2;
-  return (dist / 2) * (prog * prog * prog + 2) + startPos;
+	prog /= dur / 2;
+	if (prog < 1) {
+		return (dist / 2) * prog * prog * prog + startPos;
+	}
+	prog -= 2;
+	return (dist / 2) * (prog * prog * prog + 2) + startPos;
 }
