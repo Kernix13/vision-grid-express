@@ -455,14 +455,13 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 15 To-Do items left - 5 High-priority + 2 important Non-critical (1 & 2)
+> 14 To-Do items left - 5 High-priority + 2 important Non-critical (1 & 2)
 
 ### High-priority
 
 1. **BOARD**: Start a slideshow of just the images, and/or the images + text - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
 2. **INDEX**: Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
-3. Add a `.disabled` class to the prev modal button when index = 0, and to next when index = arr.length - 1, set cursor to none & reduce opacity. Do I also need to add `removeEventListener`?
-4. **README**: Finish Use of AI
+3. **README**: Finish Use of AI
 
 ### Non-critical
 

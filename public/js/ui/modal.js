@@ -57,17 +57,24 @@ function modalNav(btnsContainer, id, innerModal) {
 		btn.className = `nav ${item.name}`;
 		btn.textContent = item.symbol;
 
+		// saved-images for board page, fetched-search-results for index
+		if (page === '/board.html') {
+			images = getLocalStorage('saved-images');
+		} else {
+			images = getLocalStorage('fetched-search-results');
+		}
+		
+		const currentIndex = images.findIndex((img) => img.id === id);
+		
+		if (currentIndex === 0 && btn.classList.contains('prev')) {
+			btn.disabled = true;
+		}
+		if (currentIndex === images.length - 1 && btn.classList.contains('next')) {
+			btn.disabled = true;
+		}
+
 		btn.addEventListener('click', () => {
-			// saved-images for board page, fetched-search-results for index
-			if (page === '/board.html') {
-				images = getLocalStorage('saved-images');
-			} else {
-				images = getLocalStorage('fetched-search-results');
-			}
-
-			const currentIndex = images.findIndex((img) => img.id === id);
 			const nextIndex = currentIndex + item.direction;
-
 			if (nextIndex < 0 || nextIndex >= images.length) return;
 
 			let domImage;
