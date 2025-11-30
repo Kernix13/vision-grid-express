@@ -26,9 +26,22 @@
     content="Search, save, and visualize images for your personal projects and goals using VisualGrid." />
   <meta name="twitter:image" content="https://yourdomain.com/twitter-image-home.jpg" />
 
-  <!-- Favicon, fonts and Styles -->
-  <link rel="icon" type="image/png" href="./images/favicon.png" />
-  <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+  <!-- Favicons -->
+  <!-- Standard favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
+  <!-- Fallback ICO for old browsers -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+  <!-- Apple touch icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+
+  <!-- Android / Chrome -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+
+  <!-- Fonts -->
   <link rel="prefetch" href="/fonts/DMSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="prefetch" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="prefetch" href="/fonts/Inter-Italic.woff2" as="font" type="font/woff2" crossorigin />
@@ -42,7 +55,9 @@
   <header aria-label="top navigation bar">
     <div class="container">
       <nav class="nav-bar" aria-label="Main navigation">
-        <span class="logo"><a class="home-link" href="index.html">vG</a></span>
+        <a href="index.html" class="logo">
+          <img src="./images/logo.svg" alt="Visual Grid logo">
+        </a>
         <button id="hamburger" class="hamburger" aria-label="open navigation" aria-expanded="false">
           <span class="bar"></span>
           <span class="bar"></span>

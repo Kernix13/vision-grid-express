@@ -1054,16 +1054,25 @@ h2.about-subtitle {
 }
 
 /* No logo, just text for the menu appearance */
-.logo {
-	color: var(--primary-dark-2);
-	font-family: "Segoe script", "Brush Script MT", cursive;
-	font-weight: 700;
-	letter-spacing: 0.125em;
-	font-size: 2rem;
-	transition: color 500ms ease;
-	border: 1px solid transparent;
+.logo img {
+	width: 4rem;
+	height: auto;
+	display: block;
 	z-index: 1;
 }
+
+.logo {
+	display: inline-block;
+	padding: 0.375rem;
+	transition: outline 300ms ease;
+	outline: 1px solid transparent;
+}
+
+.logo:hover, .logo:focus {
+	outline: 1px solid var(--link-hover);
+}
+
+
 
 /* Nav items */
 .nav-item {

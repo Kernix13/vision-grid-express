@@ -455,7 +455,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 12 To-Do items left - 4 High-priority + 2 important Non-critical (1 & 2)
+> 12 To-Do items left - 4 High-priority + 1 important Non-critical (#1)
 
 ### High-priority
 
@@ -466,9 +466,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### Non-critical
 
-1. Once I have a font for the _logo_, create a PNG or SVG in Inkscape then generate a full set of favicons and add to project.
-2. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
-3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
+1. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
+2. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
 ### Stretch or nice-to-haves
 
