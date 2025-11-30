@@ -35,6 +35,7 @@ const backToTopButton = document.querySelector('#back-to-top-btn');
 // Why do I have these in the global scope? Do I need them here?
 let searchPage = 0;
 const savedSearches = getLocalStorage('search-phrases') || [];
+const badCharacters = [' ',	'_',	'-',	'>',	'.',	'|',	';',	'[',	']',	'{',	'}',	'(',	')',	'*',	'`',	'~',	'"',	':'];
 
 /**
  * * EVENT LISTENERS
@@ -43,11 +44,24 @@ const savedSearches = getLocalStorage('search-phrases') || [];
 // 1. Set initial state on visit to home page
 document.addEventListener('DOMContentLoaded', initHomePage);
 
-// 2. Search form event listener
+// 2. Search form event listener (way too much inside this listener)
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
+	// Handle bad input characters
+	const errorElement = document.querySelector('.error-message');
+	if (input.value === '' || badCharacters.includes(input.value)) {
+		const errorMsg = input.value === '' 
+			? "Please enter a search term"
+			: "Invalid search term - please try again";
+		errorElement.textContent = errorMsg;
+		input.value = '';
+		input.blur();
+		return;
+	}
+
 	if (input.value) {
+		errorElement.textContent = '';
 		searchPage = 1;
 		// Log page # to check against other page # calculations - remove later
 		console.log(`Initial search for '${input.value}', page # ${searchPage}`);
