@@ -466,22 +466,22 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Non-critical
 
 1. Once I have a font for the _logo_, create a PNG or SVG in Inkscape then generate a full set of favicons and add to project.
-2. Add some kind of transition/animation for when the home page cards, and image-text elements on the board page when they are removed.
+2. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
 3. **BOARD**: addSavedImagesToDom is in thumbnails.js - that does not make sense. Either change the file name, or move it to a new file.
-4. Change load more button to match Save button, match modal Save to match card Save btn, change modal Save/Remove & close hover to match page hover bg color, same with close btn on board page. What do I do with Show Settings & Show Thumbnails btns, and Remove Image modal btns?
-5. **INDEX**: I just noticed that the image card containers have the id of the image in the card - AND - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. I'll have to give the image card a `data-id` attribute which means I'll have to change the function that saves and removes the image/image-card from the DOM
-6. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
+4. **INDEX**: The image card containers have the id of the image in the card - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. Give the image card a `data-id` attribute -> change the function that saves and removes the image-card from the DOM
+5. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
 ### Stretch or nice-to-haves
 
 1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 2. **BOARD**: Ability to name/rename board(s) - issue [#45](https://github.com/Kernix13/vision-grid-express/issues/45)
-3. Add JSDoc comments? Yes, if I have time but not for every function!
+3. **BOARD**: Consider using `srcset` for DOM images on different devices on board page for performance reasons
+4. Add JSDoc comments? Yes, if I have time but not for every function!
 
-### Bugs/Issues
+### Bugs/Issues/Questions
 
 1. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
-2. **BOARD**: Consider using `srcset` for DOM images on different devices on board page for performance reasons
+2. **BOARD**: All page and thumbnail related buttons have a primary bg color, the modal nav have accent bg color - that does not match the home page. Leave it like that?
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section
