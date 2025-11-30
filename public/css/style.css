@@ -73,6 +73,7 @@ textarea {
 	--accent-6: hsl(43deg 100% 35%);
 	--link-hover: hsl(43deg 97% 30%);
 	--link-hover-2: hsl(39deg 63% 53%);
+	--red: #af0000;
 }
 
 @font-face {
@@ -266,6 +267,17 @@ input[type="search"]:focus {
 	outline: 2px solid var(--accent-4);
 }
 
+.error-message {
+	text-align: left;
+	padding-top: 0.5rem;
+	color: var(--red);
+}
+
+.error-message:empty {
+	display: none;
+}
+
+/* Home page search results elements */
 .search-terms {
 	margin: 2rem 0 1rem;
 	display: flex;
@@ -816,7 +828,7 @@ input[type="search"]:focus {
 }
 
 .delete {
-	color: rgb(221 0 0);
+	color: var(--red);
 }
 
 /* Thumbnails Delete confirmation modal */

@@ -4,33 +4,9 @@ import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 export async function getSearchResults(searchTerm, page, element) {
 	const searchGrid = document.getElementById('search-grid');
 	const DOMAIN = 'http://localhost:8080';
-	const badCharacters = [
-		'',
-		' ',
-		'_',
-		'-',
-		'>',
-		'.',
-		'|',
-		';',
-		'[',
-		']',
-		'{',
-		'}',
-		'(',
-		')',
-		'*',
-		'`',
-		'~',
-		'"',
-		':',
-	];
 
 	const endpoint = `/api/photos?query=${encodeURIComponent(searchTerm)}&page=${page}`;
 	try {
-		if (badCharacters.includes(searchTerm)) {
-			// Alert? Popup/modal? Add another hidden element to display error? Below input element? Then add return;
-		}
 		const response = await fetch(DOMAIN + endpoint);
 
 		if (!response.ok) throw new Error(`Response status: ${response.status}`);
