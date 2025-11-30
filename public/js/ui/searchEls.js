@@ -62,6 +62,7 @@ export function clearSearchElements() {
 	removeLocalStorage('fetched-search-results');
 	removeLocalStorage('last-search');
 	removeLocalStorage('current-search');
+	removeLocalStorage('search-phrases');
 
 	searchTerms.textContent = '';
 	searchGrid.textContent = '';
