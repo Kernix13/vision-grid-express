@@ -1,6 +1,5 @@
 import { getLocalStorage } from "../utils/localStorage.js";
 
-
 export function addSavedImagesToDom() {
   const savedImages = getLocalStorage('saved-images');
   const imgTextContainer = document.getElementById('img-text-container');

@@ -455,20 +455,20 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 13 To-Do items left - 3 High-priority + 2 important Non-critical (1 & 2)
+> 12 To-Do items left - 4 High-priority + 2 important Non-critical (1 & 2)
 
 ### High-priority
 
-1. **BOARD**: Start a slideshow of just the images, and/or the images + text - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
+1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
 2. **INDEX**: Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
-3. **README**: Finish Use of AI
+3. **ABOUT**: Finish about page copy
+4. **README**: Finish Use of AI
 
 ### Non-critical
 
 1. Once I have a font for the _logo_, create a PNG or SVG in Inkscape then generate a full set of favicons and add to project.
 2. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
-3. **INDEX**: The image card containers have the id of the image in the card - the `<img>` tag on the modal has the same id - everything works but that is probably bad practice. Give the image card a `data-id` attribute -> change the function that saves and removes the image-card from the DOM
-4. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
+3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
 ### Stretch or nice-to-haves
 

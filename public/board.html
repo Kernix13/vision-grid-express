@@ -30,9 +30,9 @@
   <!-- Favicon and Styles -->
   <link rel="icon" type="image/png" href="./images/favicon.png" />
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
-  <link rel="preload" href="/fonts/DMSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/fonts/Inter-Italic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="prefetch" href="/fonts/DMSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="prefetch" href="/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="prefetch" href="/fonts/Inter-Italic.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -112,10 +112,6 @@
     <div class="board-container">
       <h1 class="board-page-title">Your Project Board</h1>
 
-      <h2 class="layout-one">
-        Layout One - Project based: large editable text block.
-      </h2>
-
       <button id="thumbnails-btn" class="thumbnails-btn">
         Show thumbnails
       </button>
@@ -124,17 +120,10 @@
       <!-- image on left, editable div on right -->
       <div id="img-text-container" class="img-text-container"></div>
 
-      <!-- <h2 class="goal-heading layout-two">Layout Two - Goal & Affirmation based: editable figcaption below image.</h2> -->
-      <!-- <p><em>This will be an option in the settings menu.</em></p> -->
-
-      <!-- image on top, editable div or figcaption below on right -->
-      <!-- This and the settings screen will be my stretch goals -->
-      <div id="img-fig-container" class="img-fig-container"></div>
     </div>
   </main>
 
   <footer>
-    <!-- <button id="open" class="clear-btn">Open modal</button> -->
     <div class="container">
       <h3 class="footer-heading">
         Every goal starts with a vision. Create yours today.
@@ -160,13 +149,6 @@
       </svg>
     </button>
   </footer>
-
-  <!-- <div class="thumb-modal-container" id="thumb-modal-bg">
-    <button class="thumb-close-btn" id="thumb-close" aria-label="Close">
-      <i class="fa fa-times"></i>
-    </button>
-    <div class="thumb-modal"></div>
-  </div> -->
 
   <div class="thumb-modal-container" id="thumb-modal">
     <div class="thumb-modal">
