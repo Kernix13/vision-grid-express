@@ -1,7 +1,8 @@
 import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 import { createImgCard } from './cards.js';
 import { addSearchTerm, addSearchText } from './searchEls.js';
-import { addSavedImagesToDom, addThumbnailsToDom } from './thumbnails.js';
+import { addThumbnailsToDom } from './thumbnails.js';
+import { addSavedImagesToDom } from './savedImages.js';
 
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
