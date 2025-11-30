@@ -562,6 +562,22 @@ input[type="search"]:focus {
 	background-color: var(--accent-3);
 }
 
+.modal .prev:disabled, 
+.modal .next:disabled {
+	color: #777;
+	background-color: #aaa;
+	cursor: not-allowed;
+}
+
+.modal .prev:disabled:hover,
+.modal .next:disabled:hover,
+.modal .prev:disabled:active,
+.modal .next:disabled:active {
+	color: #777;
+	background-color: #aaa;
+	border: 1px solid transparent;
+}
+
 .close-btn {
 	background-color: var(--primary-muted-2);
 	color: var(--text);
