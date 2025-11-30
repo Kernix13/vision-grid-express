@@ -115,6 +115,14 @@ textarea {
 	src: url("../fonts/Inter-Italic.woff2") format("woff2");
 }
 
+@font-face {
+	font-family: 'Allura';
+	src: url('../fonts/Allura.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
 /* 2. Global styles */
 body {
 	height: 100%;
@@ -1054,25 +1062,16 @@ h2.about-subtitle {
 }
 
 /* No logo, just text for the menu appearance */
-.logo img {
-	width: 4rem;
-	height: auto;
-	display: block;
+.logo {
+	color: var(--primary-dark-2);
+	font-family: 'Allura', cursive;
+	font-weight: 700;
+	letter-spacing: 0.125em;
+	font-size: 2rem;
+	transition: color 500ms ease;
+	border: 1px solid transparent;
 	z-index: 1;
 }
-
-.logo {
-	display: inline-block;
-	padding: 0.375rem;
-	transition: outline 300ms ease;
-	outline: 1px solid transparent;
-}
-
-.logo:hover, .logo:focus {
-	outline: 1px solid var(--link-hover);
-}
-
-
 
 /* Nav items */
 .nav-item {
