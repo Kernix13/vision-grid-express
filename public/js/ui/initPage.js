@@ -9,6 +9,8 @@ const clearSearches = document.getElementById('clear-searches');
 const resultsTitle = document.getElementById('results-title');
 const searchGrid = document.getElementById('search-grid');
 const loadMore = document.getElementById('load-more');
+const input = document.getElementById('board-title');
+const h1 = document.querySelector('.board-page-title');
 
 // 1. For Home page DOMContentLoaded listener
 export function initHomePage() {
@@ -44,4 +46,8 @@ export function initBoardPage() {
 		addThumbnailsToDom();
 		addSavedImagesToDom();
 	}
+
+	const boardTitle = getLocalStorage('board-title') || 'Your Project Board';
+  h1.textContent = boardTitle;
+  input.value = boardTitle;
 }

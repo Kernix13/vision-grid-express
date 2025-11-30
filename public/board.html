@@ -82,42 +82,22 @@
     <h3 class="settings-form-title">Project boards settings</h3>
     <!-- Instruments -->
     <div id="board-list" class="board-list">
-      <div class="select-radio">
-        <label for="boards">Select board name:</label>
-        <select name="boards" id="boards" class="select boards" aria-label="Default select example">
-          <option value="1" data-length="6">Board 1</option>
-          <option value="2" data-length="5">Board 2</option>
-          <option value="3" data-length="4">Board 3</option>
-        </select>
+      <div class="form-control">
+        <label for="board-title">Edit your board name</label>
+        <input id="board-title" class="board-title" type="text">
       </div>
-
-      <!-- Landscape/Portrait radio buttons -->
-      <fieldset>
-        <legend>Modal text field:</legend>
-        <div id="landscape-position" class="landscape-position">
-          <div>
-            <input type="radio" name="notes-goal" id="notes" value="notes" checked />
-            <label for="notes">Notes</label>
-          </div>
-
-          <div>
-            <input type="radio" name="notes-goal" id="goal" value="goal" />
-            <label for="goal">Goal Statement</label>
-          </div>
-        </div>
-      </fieldset>
 
       <fieldset>
         <legend>Lightbox timing:</legend>
         <div id="potrait-position" class="potrait-position">
           <div>
             <label for="slide-speed">Seconds: </label>
-            <input type="range" id="slide-speed" name="slideSpeed" min="3" max="10" step="1" value="5"
-              oninput="out.value = this.value" />
+            <input type="range" id="slide-speed" min="3" max="10" step="1" value="5">
             <output id="out">5</output>
           </div>
         </div>
       </fieldset>
+
     </div>
   </form>
 
@@ -125,7 +105,7 @@
 
   <main id="main">
     <div class="board-container">
-      <h1 class="board-page-title">Your Project Board</h1>
+      <h1 class="board-page-title"></h1>
 
       <button id="thumbnails-btn" class="thumbnails-btn">
         Show thumbnails

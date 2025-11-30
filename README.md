@@ -455,31 +455,29 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 12 To-Do items left - 4 High-priority + 1 important Non-critical (#1)
+> 10 To-Do items left: 3 High-priority + 1 Non-critical + 2 important Stretch
 
 ### High-priority
 
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
-2. **INDEX**: Implement error messsage/popup for searches of "bad characters" - issue [#46](https://github.com/Kernix13/vision-grid-express/issues/46)
-3. **ABOUT**: Finish about page copy
-4. **README**: Finish Use of AI
+2. **ABOUT**: Finish about page copy
+3. **README**: Finish Use of AI
 
 ### Non-critical
 
 1. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
-2. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
 ### Stretch or nice-to-haves
 
 1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
-2. **BOARD**: Ability to name/rename board(s) - issue [#45](https://github.com/Kernix13/vision-grid-express/issues/45)
-3. **BOARD**: Consider using `srcset` for DOM images on different devices on board page for performance reasons
-4. Add JSDoc comments? Yes, if I have time but not for every function!
+2. **BOARD**: Consider using `srcset` for DOM images on different devices on board page for performance reasons
+3. Add JSDoc comments? Yes, if I have time but not for every function!
+4. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
 ### Bugs/Issues/Questions
 
 1. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
-2. **BOARD**: All page and thumbnail related buttons have a primary bg color, the modal nav have accent bg color - that does not match the home page. Leave it like that?
+2. **BOARD**: All page and thumbnail related buttons have a transparent/primary bg color for normal/hover states, the modal nav has primary/accent - page btns do not match the home page. Leave it like that?
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section

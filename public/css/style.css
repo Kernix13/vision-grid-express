@@ -639,7 +639,7 @@ input[type="search"]:focus {
 /* 5. Board page styles */
 .board-page-title {
 	margin-top: 3rem;
-	padding-top: 2rem;
+	padding: 3rem 0 2rem;
 }
 
 .board-container {
@@ -959,6 +959,12 @@ input[type="search"]:focus {
 	transform: translateX(0);
 }
 
+.edit-input {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
 /* settings-btn */
 .settings-btn {
 	cursor: pointer;
@@ -1002,7 +1008,21 @@ input[type="search"]:focus {
 .board-list {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 0.375rem;
+	gap: 1rem;
+}
+
+.form-control {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 0.5rem;
+}
+
+.bi-pencil-fill {
+	color: var(--primary);
+}
+
+.board-title {
+	padding: 0.25rem 0 0.25rem 0.5rem;
 }
 
 /* select-radio: this class is on the container for the select element */
