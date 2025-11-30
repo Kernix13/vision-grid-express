@@ -84,15 +84,17 @@ window.addEventListener('click', (e) =>
 thumbnails.addEventListener('click', (e) => {
 	const thumbItem = e.target.closest('.thumb-item');
 	if (!thumbItem) return;
+	console.log(thumbItem.dataset.id)
 
 	// Remove previous selection
-	// const selected = document.querySelectorAll('.thumb-item.selected');
+	const selected = document.querySelectorAll('.thumb-item.selected');
 
-	// if (selected.length > 0) {
-	//   selected.forEach(item => item.classList.toggle('selected'));
-	// }
+	if (selected.length > 0) {
+	  selected.forEach(item => item.classList.toggle('selected'));
+	}
 
 	thumbItem.classList.toggle('selected');
+	setLocalStorage('selected-thumb',thumbItem.dataset.id);
 });
 
 // 9. Thumbnail item -> Thumbnail buttons

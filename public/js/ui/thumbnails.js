@@ -11,6 +11,10 @@ export function addThumbnailsToDom() {
 		const thumbItem = document.createElement('div');
 		thumbItem.setAttribute('data-id', img.id);
 		thumbItem.className = 'thumb-item';
+		const selected = getLocalStorage('selected-thumb') || '';
+		if (thumbItem.dataset.id == selected) {
+			thumbItem.classList.add('selected');
+		}
 
 		// Thumbnail
 		const thumbnail = document.createElement('img');
