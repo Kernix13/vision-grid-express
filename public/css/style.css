@@ -1016,6 +1016,10 @@ input[type="search"]:focus {
 	grid-template-columns: 1fr;
 	gap: 0.5rem;
 }
+.check-control {
+	display: flex;
+	gap: 1.5rem;
+}
 
 .bi-pencil-fill {
 	color: var(--primary);

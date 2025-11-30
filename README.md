@@ -119,7 +119,7 @@ You can now search for images, save images to your board page, add notes for eac
   - Navigate through all images currently loaded on the page.
   - Save or remove images from within the modal.
 - Load More
-  - "Load More" fetches the next page of images for the current search term, maintaining pagination across sessions via localStorage.
+  - "Load More" fetches the next page of images for the current search term.
 
 ### Vision Board Page
 
@@ -134,15 +134,15 @@ You can now search for images, save images to your board page, add notes for eac
   - Reorder saved images.
   - Delete images and their notes from your board.
   - Click the page image or editable text box to close the thumbnail strip.
+- Affirmation / Goal Statement
+  - Click any saved image on the page to open a modal with a larger view.
+  - Add an affirmation or goal statement for that image (115 character limit).
+  - Navigate to other saved images within the modal to quickly update each affirmation.
+  - These affirmations are shown in the full-screen slider instead of the standard page notes.
 - Lightbox Slider
   - A full-screen modal that cycles through saved images.
   - Adjustable timing between slides.
   - Displays the image's affirmation/goal statement created in the modal.
-- Affirmation / Goal Statement
-  - Click any saved image on the page to open a modal with a larger view.
-  - Add or edit a dedicated affirmation or goal heading for that image (115 character limit).
-  - Navigate to other saved images within the modal to quickly update multiple affirmations.
-  - These affirmations are shown in the full-screen slider instead of the standard page notes.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -455,7 +455,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!-- ❓ Add important code snippets somewhere? -->
 
 > [!NOTE]
-> 10 To-Do items left: 3 High-priority + 1 Non-critical + 2 important Stretch
+> 10 To-Do items left: 3 High-priority + 1 Non-critical + 1 important Stretch
 
 ### High-priority
 

@@ -88,8 +88,16 @@
       </div>
 
       <fieldset>
-        <legend>Lightbox timing:</legend>
-        <div id="potrait-position" class="potrait-position">
+        <legend>Lightbox text</legend>
+        <div class="check-control">
+          <label for="show-affirmation">Show affirmations</label>
+          <input type="checkbox" id="show-affirmation" checked>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Lightbox timing</legend>
+        <div id="slider-range" class="slider-range">
           <div>
             <label for="slide-speed">Seconds: </label>
             <input type="range" id="slide-speed" min="3" max="10" step="1" value="5">
@@ -98,6 +106,7 @@
         </div>
       </fieldset>
 
+      <button id="play-slider">Play</button>
     </div>
   </form>
 
