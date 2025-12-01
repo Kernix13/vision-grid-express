@@ -416,6 +416,7 @@ Contributions are welcome! If you'd like to help improve this project, please re
 - Dark/Light mode option
 - Add a quote generator API that pairs an inspirational quote with each image
 - Add a music API for motivational music during lightbox slideshow
+- Allow user to select only landscape, portrait, or square-ish image formats
 
 <br>
 
