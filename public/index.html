@@ -27,21 +27,18 @@
   <meta name="twitter:image" content="https://yourdomain.com/twitter-image-home.jpg" />
 
   <!-- Favicons -->
-  <!-- Standard favicon -->
+  <!-- Standard favicons -->
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-
   <!-- Fallback ICO for old browsers -->
   <link rel="shortcut icon" href="images/favicon.ico">
-
   <!-- Apple touch icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-
   <!-- Android / Chrome -->
   <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link rel="prefetch" href="./fonts/DMSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="prefetch" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="prefetch" href="./fonts/Inter-Italic.woff2" as="font" type="font/woff2" crossorigin />
@@ -85,18 +82,22 @@
       </h1>
       <h2 class="sub-title">Search. Save. Stay motivated.</h2>
       <form id="search-form" class="search-form" aria-label="Find images supporting your project">
-        <input type="search" spellcheck="true" autocomplete="off" aria-autocomplete="list" name="search" id="search"
-          aria-label="Search" placeholder="Enter your search phrase . . ." />
+        <input type="search" spellcheck="true" autocomplete="off" name="search" id="search" aria-label="Search"
+          placeholder="Enter your search phrase . . ." />
         <p class="error-message" aria-live="polite"></p>
       </form>
 
-      <div id="search-terms" class="search-terms"></div>
-      <button id="clear-searches" class="clear-searches"></button>
+      <section class="search-history">
+        <div id="search-terms" class="search-terms"></div>
+        <button id="clear-searches" class="clear-searches"></button>
+      </section>
 
-      <h2 id="results-title" class="results-title"></h2>
-      <div id="search-grid" class="search-grid"></div>
+      <section class="search-current">
+        <h2 id="results-title" class="results-title"></h2>
+        <div id="search-grid" class="search-grid"></div>
+        <button id="load-more" class="load-more"></button>
+      </section>
 
-      <button id="load-more" class="load-more"></button>
     </div>
   </main>
 
@@ -127,7 +128,7 @@
     </button>
   </footer>
 
-  <div class="modal-container" id="modal-bg">
+  <div class="modal-container" id="modal-bg" hidden>
     <button class="close-btn" id="close" aria-label="Close">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x"
         viewBox="0 0 16 16">
@@ -135,7 +136,7 @@
           d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
       </svg>
     </button>
-    <div class="modal"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Image Preview"></div>
   </div>
 
   <script src="./js/index.js" type="module"></script>

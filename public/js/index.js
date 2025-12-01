@@ -147,21 +147,29 @@ searchGrid.addEventListener('click', (e) => {
 // 7. Search images grid: open image in modal on image click
 searchGrid.addEventListener('click', (e) => {
 	const img = e.target.closest('img.result-image');
-	console.log(img);
 	if (!img) return;
 
 	const card = img.closest('.image-card');
 	const cardId = card.id;
-
+	
 	modalBg.classList.add('show-modal');
+	modalBg.removeAttribute('hidden'); // not being removed??!?
 	setModalContent(innerModal, img, cardId);
 });
 
-// 8. Modal listeners: Close modal on click of: 1. close button, 2. window
-close.addEventListener('click', () => modalBg.classList.remove('show-modal'));
-window.addEventListener('click', (e) =>
-	e.target === modalBg ? modalBg.classList.remove('show-modal') : false,
-);
+// 8. Modal listeners: Close modal on click of: 1. close button, 2. window, 3. Escape key
+close.addEventListener('click', () => {
+	modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+});
+window.addEventListener('click', (e) => {
+	e.target === modalBg ? modalBg.classList.remove('show-modal') : false;
+	modalBg.hidden = true;
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+});
 
 // 9. Open/close hamburger menu
 hamburger.addEventListener('click', () => {

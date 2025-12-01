@@ -78,7 +78,7 @@
     </div>
   </header>
 
-  <form id="settings-form" class="settings-form offscreen" aria-label="Do I need this">
+  <form id="settings-form" class="settings-form offscreen">
     <h3 class="settings-form-title">Project boards settings</h3>
     <!-- Instruments -->
     <div id="board-list" class="board-list">
@@ -154,9 +154,9 @@
     </button>
   </footer>
 
-  <div class="thumb-modal-container" id="thumb-modal">
-    <div class="thumb-modal">
-      <button class="close-btn" id="close" aria-label="Close">
+  <div class="thumb-modal-container" id="thumb-modal" hidden>
+    <div class="thumb-modal" role="dialog" aria-modal="true" aria-labelledby="delete-modal-title">
+      <button class="close-btn" id="remove-close" aria-label="Close">
         <!-- <i class="fa fa-times"></i> -->
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x"
           viewBox="0 0 16 16">
@@ -165,7 +165,7 @@
         </svg>
       </button>
       <div class="modal-header">
-        <h3>Remove Image</h3>
+        <h3 id="delete-modal-title">Remove Image</h3>
         <p>Are you sure you want to remove this image?</p>
       </div>
       <div class="modal-content">
@@ -177,7 +177,7 @@
     </div>
   </div>
 
-  <div class="modal-container" id="modal-bg">
+  <div class="modal-container" id="modal-bg" hidden>
     <button class="close-btn" id="close-btn" aria-label="Close">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x"
         viewBox="0 0 16 16">
@@ -185,7 +185,7 @@
           d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
       </svg>
     </button>
-    <div class="modal"></div>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Image Preview"></div>
   </div>
 
   <script src="./js/board.js" type="module"></script>

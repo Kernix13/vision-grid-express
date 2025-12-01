@@ -33,7 +33,6 @@ p {
 }
 
 ul {
-	list-style: none;
 	margin: 0;
 	padding: 0;
 }
@@ -207,6 +206,7 @@ footer {
 .footer-flex a {
 	color: var(--primary-muted-2);
 	transition: color 300ms ease;
+	margin-bottom: -0.25em;
 }
 
 .footer-flex a:hover {
@@ -223,7 +223,7 @@ footer {
 	font-style: italic;
 	color: var(--primary-hi-lite);
 	font-weight: 400;
-	/* border-bottom: 1px solid hsl(145deg 70% 35%); */
+	/* border-bottom: 1px solid var(--primary-hi-lite); */
 	border-bottom: 1px solid var(--primary);
 	letter-spacing: 0.5px;
 }
@@ -1066,8 +1066,30 @@ label {
 }
 
 /* 7. About page styles */
+.about-title {
+	padding: 0;
+}
+
 h2.about-subtitle {
 	margin: 2rem 0 1rem;
+}
+
+.about-container {
+	width: 80%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.about-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 1.5rem;
+	padding: 1rem;
+}
+
+.card {
+	padding: 0 2rem 1rem;
+	border: 1px solid black;
 }
 
 /* 8. Menu/Navigation styles */
@@ -1148,10 +1170,10 @@ h2.about-subtitle {
 
 /* Mobile nav starts here */
 .nav-menu {
+	list-style: none;
 	position: fixed;
 	top: -100%;
 	padding: 0.5rem 0;
-	flex-direction: column;
 	background-color: transparent;
 	width: 100%;
 	text-align: center;

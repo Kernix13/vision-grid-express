@@ -14,8 +14,8 @@ export function toggleDisplay(el, btn, str) {
 	el.classList.toggle('onscreen');
 
 	if (el.classList.contains('onscreen')) {
-		btn.innerText = `Hide ${str}`;
+		btn.textContent = `Hide ${str}`;
 	} else {
-		btn.innerText = `Show ${str}`;
+		btn.textContent = `Show ${str}`;
 	}
 }

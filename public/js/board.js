@@ -68,26 +68,31 @@ imgTextContainer.addEventListener('focusout', (e) => {
 
 // 7. open image in modal on click
 imgTextContainer.addEventListener('click', (e) => {
-	// const savedImages = getLocalStorage('saved-images');
 	const regularImg = e.target.closest('.regular');
 	if (!regularImg) return;
-
-	// console.log(regularImg) // image-eNXZvDGqGbM, eNXZvDGqGbM -> id
-	// I need to do the same thing as for thumbnails - add the id as data-id to the container, then the id to the image, then use that image id to add the image to the modal
 
 	const imageText = regularImg.closest('.image-text');
 	const imageTextId = imageText.id;
 	console.log(imageTextId);
 
 	modalBg.classList.add('show-modal');
+	modalBg.hidden = false; // not being removed?!?
 	setModalContent(innerModal, regularImg, imageTextId);
 });
 
-// 8. Modal listeners: Close modal on click of: 1. close button, 2. window
-close.addEventListener('click', () => modalBg.classList.remove('show-modal'));
-window.addEventListener('click', (e) =>
-	e.target === modalBg ? modalBg.classList.remove('show-modal') : false,
-);
+// 8. Modal listeners: Close modal on click of: 1. close button, 2. window, 3. Escape key
+close.addEventListener('click', () => {
+	modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+});
+window.addEventListener('click', (e) => {
+	e.target === modalBg ? modalBg.classList.remove('show-modal') : false;
+	modalBg.hidden = true;
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+});
 
 // 9. Thumbnail item
 thumbnails.addEventListener('click', (e) => {
@@ -103,7 +108,7 @@ thumbnails.addEventListener('click', (e) => {
 	}
 
 	thumbItem.classList.toggle('selected');
-	setLocalStorage('selected-thumb',thumbItem.dataset.id);
+	setLocalStorage('selected-thumb', thumbItem.dataset.id);
 });
 
 // 10. Thumbnail item -> Thumbnail buttons
@@ -140,6 +145,7 @@ thumbnails.addEventListener('click', (e) => {
 
 	if (btn?.classList.contains('delete')) {
 		thumbModal.classList.add('show-modal');
+		thumbModal.hidden = false;
 		setLocalStorage('delete-item-id', id);
 	}
 });
@@ -150,6 +156,7 @@ thumbnails.addEventListener('click', (e) => {
 function closeThumbDeleteModal() {
 	const thumbModal = document.getElementById('thumb-modal');
 	thumbModal.classList.remove('show-modal');
+	thumbModal.hidden = true;
 }
 
 // 12. Delete saved image confirmation button listener
@@ -163,7 +170,7 @@ confirmBtn.addEventListener('click', () => {
 const cancelBtn = document.getElementById('cancel-delete-btn');
 cancelBtn.addEventListener('click', closeThumbDeleteModal);
 
-const closeDeleteModal = document.getElementById('close');
+const closeDeleteModal = document.getElementById('remove-close');
 closeDeleteModal.addEventListener('click', closeThumbDeleteModal);
 
 // 14. Open/close hamburger menu
