@@ -153,7 +153,7 @@ searchGrid.addEventListener('click', (e) => {
 	const cardId = card.id;
 	
 	modalBg.classList.add('show-modal');
-	modalBg.removeAttribute('hidden'); // not being removed??!?
+	modalBg.hidden = false;
 	setModalContent(innerModal, img, cardId);
 });
 
@@ -163,8 +163,10 @@ close.addEventListener('click', () => {
 	modalBg.hidden = true;
 });
 window.addEventListener('click', (e) => {
-	e.target === modalBg ? modalBg.classList.remove('show-modal') : false;
-	modalBg.hidden = true;
+	if (e.target === modalBg) {
+    modalBg.classList.remove('show-modal');
+    modalBg.hidden = true;
+  }
 });
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") modalBg.classList.remove('show-modal');

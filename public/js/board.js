@@ -76,7 +76,7 @@ imgTextContainer.addEventListener('click', (e) => {
 	console.log(imageTextId);
 
 	modalBg.classList.add('show-modal');
-	modalBg.hidden = false; // not being removed?!?
+	modalBg.hidden = false;
 	setModalContent(innerModal, regularImg, imageTextId);
 });
 
@@ -86,8 +86,10 @@ close.addEventListener('click', () => {
 	modalBg.hidden = true;
 });
 window.addEventListener('click', (e) => {
-	e.target === modalBg ? modalBg.classList.remove('show-modal') : false;
-	modalBg.hidden = true;
+	if (e.target === modalBg) {
+    modalBg.classList.remove('show-modal');
+    modalBg.hidden = true;
+  }
 });
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") modalBg.classList.remove('show-modal');

@@ -125,7 +125,6 @@ textarea {
 
 /* 2. Global styles */
 body {
-	height: 100%;
 	margin: 0;
 	font-size: 1.125rem;
 	color: var(--text);
@@ -134,10 +133,11 @@ body {
 	font-weight: 400;
 	display: flex;
 	flex-direction: column;
+	min-height: 100vh;
 }
 
 main {
-	flex: 1;
+	flex: 1 1 auto;;
 }
 
 h1,
@@ -182,7 +182,7 @@ h3 {
 /* Footer styles */
 footer {
 	padding: 3rem 0 0;
-	margin: 5rem 0 0;
+	margin-top: 3rem;
 	color: var(--white);
 	background-color: var(--primary-dark-2);
 	min-height: 4rem;
@@ -607,10 +607,11 @@ input[type="search"]:focus {
 }
 
 .close-btn {
-	background-color: var(--primary-muted-2);
+	background-color: var(--white);
 	color: var(--text);
 	cursor: pointer;
 	border: 1px solid var(--white);
+	border-radius: 0.25rem;
 	line-height: 1;
 	font-size: 1rem;
 	position: absolute;
@@ -622,8 +623,9 @@ input[type="search"]:focus {
 }
 
 .close-btn:hover {
-	background-color: var(--primary-dark-2);
-	color: var(--white);
+	background-color: var(--accent-3);
+	color: var(--dark-gray);
+	border: 1px solid var(--white);
 }
 
 @keyframes modalopen {
