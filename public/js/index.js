@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', initHomePage);
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	// Handle bad input characters
+	// Handle bad input characters - create function in other file
 	const errorElement = document.querySelector('.error-message');
 	if (input.value === '' || badCharacters.includes(input.value)) {
 		const errorMsg = input.value === '' 
@@ -60,19 +60,18 @@ form.addEventListener('submit', (e) => {
 		return;
 	}
 
+	// Get user's search phrase
 	if (input.value) {
 		errorElement.textContent = '';
-		searchPage = 1;
-		// Log page # to check against other page # calculations - remove later
-		console.log(`Initial search for '${input.value}', page # ${searchPage}`);
 		searchGrid.textContent = '';
+		
+		searchPage = 1;
 
+		// Fetch
 		getSearchResults(input.value, searchPage, searchGrid);
-		console.log(input.value);
-
+		
 		saveSearchTerm(input.value, searchTerms, savedSearches);
 		renderSearchEls(input.value);
-
 		setLocalStorage('current-search', {
 			search: input.value,
 			page: searchPage,
@@ -93,15 +92,7 @@ form.addEventListener('submit', (e) => {
 	input.value = '';
 });
 
-// 3. Clear save searches and related buttons from the DOM
-clearSearches.addEventListener('click', (e) => {
-	// These 2 lines added to clear an Aria warning in console
-	e.target.inert = true;
-	e.target.hidden = true;
-	clearSearchElements();
-});
-
-// 4. Load More button fetch (uses fetchFromButtons)
+// 3. Load More button fetch
 loadMore.addEventListener('click', () => {
 	const lastSearch = getLocalStorage('last-search');
 	const page = incrementSearchPage(lastSearch);
@@ -109,13 +100,13 @@ loadMore.addEventListener('click', () => {
 	console.log(`Clicked load more for '${lastSearch}', page # ${page}`);
 
 	searchGrid.textContent = '';
-	getSearchResults(lastSearch, page, searchGrid);
 
+	getSearchResults(lastSearch, page, searchGrid);
 	saveSearchTerm(lastSearch, searchTerms, savedSearches);
 	renderSearchEls(lastSearch);
 });
 
-// 5. Search terms fetch
+// 4. Search terms fetch
 searchTerms.addEventListener('click', (e) => {
 	const btn = e.target.closest('button');
 	if (!btn) return;
@@ -128,7 +119,6 @@ searchTerms.addEventListener('click', (e) => {
 	searchGrid.textContent = '';
 
 	getSearchResults(searchTerm, page, searchGrid);
-
 	setLocalStorage('last-search', searchTerm);
 	saveSearchTerm(searchTerm, searchTerms, savedSearches);
 	renderSearchEls(searchTerm);
@@ -157,7 +147,15 @@ searchGrid.addEventListener('click', (e) => {
 	setModalContent(innerModal, img, cardId);
 });
 
-// 8. Modal listeners: Close modal on click of: 1. close button, 2. window, 3. Escape key
+// 8. Clear save searches and related buttons from the DOM
+clearSearches.addEventListener('click', (e) => {
+	// These 2 lines added to clear an Aria warning in console
+	e.target.inert = true;
+	e.target.hidden = true;
+	clearSearchElements();
+});
+
+// 9. Close modal listeners on click of: 1. close button, 2. window, 3. Escape key
 close.addEventListener('click', () => {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;

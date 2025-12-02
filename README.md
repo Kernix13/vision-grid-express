@@ -88,6 +88,14 @@ You can now search for images, save images to your board page, add notes for eac
 
 <br>
 
+8. **(OPTIONAL)**: Run Biome to run linting and formatting checks on your files as a pre-commit check:
+
+```sh
+npm run check
+```
+
+<br>
+
 <!-- Consider an h3 here for the app.get function in server.js where 3 other params would be good options: per_page, color, and orientation -->
 
 ### Getting an Unsplash API key
@@ -363,6 +371,10 @@ This is the current state of my project as of November 21st, 2025:
       <td>Retrieve API JSON, save as <code>localStorage</code> objects and strings</td>
     </tr>
     <tr>
+      <td>Have at least two pages/routes</td>
+      <td>index.html, board.html, about.html</td>
+    </tr>
+    <tr>
       <td>Display information about the data in your app</td>
       <td>
         <ul>
@@ -461,24 +473,24 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### High-priority
 
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
-2. **ABOUT**: Finish about page copy
+2. **ABOUT**: Finish about page copy and styles
 3. **README**: Finish Use of AI
 
 ### Non-critical
 
-1. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
+1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
+2. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
 
 ### Stretch or nice-to-haves
 
-1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
-2. **BOARD**: Consider using `srcset` for DOM images on different devices on board page for performance reasons
+1. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
+2. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 3. Add JSDoc comments? Yes, if I have time but not for every function!
-4. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 
 ### Bugs/Issues/Questions
 
 1. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
-2. **BOARD**: All page and thumbnail related buttons have a transparent/primary bg color for normal/hover states, the modal nav has primary/accent - page btns do not match the home page. Leave it like that?
+2. **BOARD**: I built the settings menu and maybe thubnails wrong because they are offscreen but they can be tabbed to while not visible.
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section

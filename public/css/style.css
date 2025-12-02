@@ -18,6 +18,10 @@
 	box-sizing: border-box;
 }
 
+// * {
+// 	outline: 1px solid red;
+// }
+
 html {
 	scroll-behavior: smooth;
 }
@@ -1443,17 +1447,15 @@ h2.about-subtitle {
 }
 
 .about-card ul li, .feature-list li {
-	position: relative;
-	padding-left: 1.2rem;
+	padding-left: 0.5rem;
 	margin-bottom: 0.25rem;
+	margin-left: 1.0625rem;
 }
 
-.about-card ul li::before, .feature-list li::before {
+.about-card ul li::marker, .feature-list li::marker {
 	content: "✓";
-	position: absolute;
-	left: 0;
-	top: 0;
-	color: var(--primary);
+
+	color: var(--primary-hi-lite);
 	font-weight: bold;
 }
 
@@ -1497,9 +1499,10 @@ h2.about-subtitle {
 }
 
 .feature-description h3 {
+	text-align: center;
 	font-weight: 700;
 	font-size: 1.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 	line-height: 1.3;
 }
 
@@ -1509,4 +1512,18 @@ h2.about-subtitle {
 	width: 50%;
 	height: auto;
 	object-fit: contain;
+}
+
+.images-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	margin: 2rem 0;
+	padding: 2rem;
+	background-color: var(--primary-muted-2);
+}
+
+.images-grid img {
+
+	outline: 5px solid var(--primary-muted-1);
 }
