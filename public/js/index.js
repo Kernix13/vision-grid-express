@@ -166,7 +166,7 @@ window.addEventListener('click', (e) => {
     modalBg.hidden = true;
   }
 });
-document.addEventListener("keydown", (e) => {
+document.addEventListener('keydown', (e) => {
   if (e.key === "Escape") modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
 });
@@ -178,4 +178,3 @@ hamburger.addEventListener('click', () => {
 
 // 10. Back To Top
 window.addEventListener('scroll', scrollFunction);
-backToTopButton.addEventListener('click', smoothScrollBackToTop);

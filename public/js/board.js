@@ -80,27 +80,10 @@ imgTextContainer.addEventListener('click', (e) => {
 	setModalContent(innerModal, regularImg, imageTextId);
 });
 
-// 8. Modal listeners: Close modal on click of: 1. close button, 2. window, 3. Escape key
-close.addEventListener('click', () => {
-	modalBg.classList.remove('show-modal');
-	modalBg.hidden = true;
-});
-window.addEventListener('click', (e) => {
-	if (e.target === modalBg) {
-    modalBg.classList.remove('show-modal');
-    modalBg.hidden = true;
-  }
-});
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") modalBg.classList.remove('show-modal');
-	modalBg.hidden = true;
-});
-
-// 9. Thumbnail item
+// 8. Thumbnail item
 thumbnails.addEventListener('click', (e) => {
 	const thumbItem = e.target.closest('.thumb-item');
 	if (!thumbItem) return;
-	console.log(thumbItem.dataset.id)
 
 	// Remove previous selection
 	const selected = document.querySelectorAll('.thumb-item.selected');
@@ -113,7 +96,7 @@ thumbnails.addEventListener('click', (e) => {
 	setLocalStorage('selected-thumb', thumbItem.dataset.id);
 });
 
-// 10. Thumbnail item -> Thumbnail buttons
+// 9. Thumbnail item -> Thumbnail buttons
 thumbnails.addEventListener('click', (e) => {
 	const btn = e.target.closest('button');
 	const thumbItem = e.target.closest('.thumb-item');
@@ -132,11 +115,10 @@ thumbnails.addEventListener('click', (e) => {
 	} else if (e.target.classList.contains('thumb-image')) {
 		// Does it make sense for selectImage to scrollIntoView? Is that it?
 		selectImage(id);
-		console.log(imageTextItem.id);
 	}
 });
 
-// 11. Thumbnail delete button listener
+// 10. Thumbnail delete button listener
 thumbnails.addEventListener('click', (e) => {
 	const thumbModal = document.getElementById('thumb-modal');
 	const btn = e.target.closest('button');
@@ -161,19 +143,35 @@ function closeThumbDeleteModal() {
 	thumbModal.hidden = true;
 }
 
-// 12. Delete saved image confirmation button listener
+// 11. Delete saved image confirmation button listener
 const confirmBtn = document.getElementById('confirm-delete-btn');
 confirmBtn.addEventListener('click', () => {
 	deleteImage(getLocalStorage('delete-item-id'));
 	closeThumbDeleteModal();
 });
 
-// 13. Cancel and close button listener for thumbnail delete
+// 12. Cancel and close button listener for thumbnail delete
 const cancelBtn = document.getElementById('cancel-delete-btn');
 cancelBtn.addEventListener('click', closeThumbDeleteModal);
 
 const closeDeleteModal = document.getElementById('remove-close');
 closeDeleteModal.addEventListener('click', closeThumbDeleteModal);
+
+// 13. Modal listeners: Close modal on click of: 1. close button, 2. window, 3. Escape key
+close.addEventListener('click', () => {
+	modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+});
+window.addEventListener('click', (e) => {
+	if (e.target === modalBg) {
+    modalBg.classList.remove('show-modal');
+    modalBg.hidden = true;
+  }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+});
 
 // 14. Open/close hamburger menu
 hamburger.addEventListener('click', () => {

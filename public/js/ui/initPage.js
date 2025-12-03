@@ -49,5 +49,6 @@ export function initBoardPage() {
 
 	const boardTitle = getLocalStorage('board-title') || 'Your Project Board';
   h1.textContent = boardTitle;
+	// I can't believe I used 'input' and it works?!?
   input.value = boardTitle;
 }

@@ -88,7 +88,7 @@ You can now search for images, save images to your board page, add notes for eac
 
 <br>
 
-8. **(OPTIONAL)**: Run Biome to run linting and formatting checks on your files as a pre-commit check:
+8. **(OPTIONAL)**: Run Biome for linting and formatting checks on your files as a pre-commit check:
 
 ```sh
 npm run check
@@ -110,7 +110,7 @@ npm run check
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
-## Features
+## How It Works
 
 ### Home / Search Page
 
@@ -158,7 +158,7 @@ npm run check
 
 <!-- See all devicons here: https://github.com/devicons/devicon -->
 
-This is the current state of my project as of November 21st, 2025:
+This is the current state of my project as of December 2nd, 2025:
 
 <table>
   <thead>
@@ -208,7 +208,7 @@ This is the current state of my project as of November 21st, 2025:
           <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>
           <li>UI interactions: mobile menu, back-to-top button, and modals</li>
           </li>
-          <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, and <code>DOMContentLoaded</code> listeners, event delegation</li>
+          <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, <code>input</code>, and <code>DOMContentLoaded</code> listeners; event delegation for many elements</li>
         </ul>
       </td>
     </tr>
@@ -329,10 +329,10 @@ This is the current state of my project as of November 21st, 2025:
 
 <!--
   Project Tree Structure generators:
-  1. ChatGPT
+  1. ChatGPT is best IMO
   2. https://tree.nathanfriend.com/
   3. https://ascii-tree-generator.com/
-  4. VSCode File Tree Generator: https://marketplace.visualstudio.com/items?itemName=MutableUniverse.vscode-file-tree-generator
+  4. VSCode File Tree Generator extension
   5. npm tree-cli: https://www.npmjs.com/package/tree-cli
 -->
 
@@ -349,6 +349,8 @@ This is the current state of my project as of November 21st, 2025:
 ---
 
 ## Capstone Requirements
+
+<!-- HTML table syntax required or else editing the table in VS Code would be difficult -->
 
 <table>
   <thead>
@@ -424,11 +426,11 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ## Future Improvements
 
+- Allow user to select only landscape, portrait, or square-ish image formats
 - Multiple boards option
 - Dark/Light mode option
 - Add a quote generator API that pairs an inspirational quote with each image
 - Add a music API for motivational music during lightbox slideshow
-- Allow user to select only landscape, portrait, or square-ish image formats
 
 <br>
 
@@ -449,6 +451,28 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 <br>
 
+## Additional Resources
+
+> The following resources were helpful during the design and development process
+
+- Code:You Slack for Q&A
+- [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples
+- Traversy Media Discord server: help with npm packages and Biome
+- [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
+- [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically, the using `req.query`
+- [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
+- [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties
+- [Google Fonts](https://fonts.google.com/): Downloaded the woff2 files for DM Sans, Inter, and Allura
+- Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues
+- [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for checking specific text color choices
+- [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
+- [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility check on my pages
+- [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the font size and weight.
+- [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
+- CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey)
+
+<br>
+
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
@@ -461,13 +485,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
----
-
 ## ~~To-Do~~ (Remove this section later...)
 
-<!-- ❓ Add important code snippets somewhere? -->
-
-> [!NOTE]
 > 10 To-Do items left: 3 High-priority + 1 Non-critical + 1 important Stretch
 
 ### High-priority
@@ -498,7 +517,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
   2. Project Overview ✅
   3. Tech Stack ✅
   4. Getting Started ✅
-  5. Features ✅
+  5. How It Works ✅
   6. Project Structure ✅
   7. Additional Notes ❓
   8. Capstone Requirements ✅
@@ -506,6 +525,15 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
   10. Future Improvements ✅
   11. Use of AI 📌
   12. License ✅
+  13. Additional Resources - I don't have this - should I? -
+    - Traversy Media Discord server: help with npm packages and Biome
+    - [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for checking specific text color choices
+    - [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for checking contrast ratio for page elements
+    - [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility check on my pages
+    - [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the font size and weight.
+    - [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): `req.query`
+    - BroCode React video,
+    - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey)
   - CODE_OF_CONDUCT.md file: Edit/Rewrite 📌
  -->
 
