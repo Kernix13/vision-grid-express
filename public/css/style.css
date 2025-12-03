@@ -54,7 +54,7 @@ textarea {
 	margin: 0;
 }
 
-/* :root and @font-face */
+/* :root and @font-face | NOTE: only 1 use of --primary-muted-3 & --primary-muted-4 */
 :root {
 	--white: #fff;
 	--black: #000;
@@ -69,19 +69,23 @@ textarea {
 	--primary-muted-3: hsl(146deg 10% 90%);
 	--primary-muted-4: hsl(146deg 5% 95%);
 	--accent: hsl(43deg 63% 47%);
-	--accent-2: hsl(43deg 80% 40%);
 	--accent-3: hsl(43deg 90% 45%);
 	--accent-4: hsl(43deg 100% 45%);
-	--accent-5: hsl(43deg 100% 55%);
-	--accent-6: hsl(43deg 100% 35%);
 	--link-hover: hsl(43deg 97% 30%);
-	--link-hover-2: hsl(39deg 63% 53%);
 	--red: #af0000;
 }
 
 @font-face {
 	font-family: "DM Sans";
-	src: url("../fonts/DMSans-Regular.woff2") format("woff2");
+	src: url("../fonts/DMSans-400-italic.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Sans";
+	src: url("../fonts/DMSans-400-regular.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -89,7 +93,7 @@ textarea {
 
 @font-face {
 	font-family: "DM Sans";
-	src: url("../fonts/DMSans-Regular.woff2") format("woff2");
+	src: url("../fonts/DMSans-500-regular.woff2") format("woff2");
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -97,8 +101,8 @@ textarea {
 
 @font-face {
 	font-family: "DM Sans";
-	src: url("../fonts/DMSans-Regular.woff2") format("woff2");
-	font-weight: 700;
+	src: url("../fonts/DMSans-600-regular.woff2") format("woff2");
+	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
 }
@@ -167,18 +171,18 @@ header {
 
 h1 {
 	font-size: 2rem;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: 2px;
 	margin: 2rem 0 1rem;
 	padding: 0 1rem;
 }
 
 h2 {
-	font-weight: 500;
+	font-weight: 600;
 }
 
 h3 {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .container {
@@ -1128,7 +1132,7 @@ h2.about-subtitle {
 .logo {
 	color: var(--primary-dark-2);
 	font-family: 'Allura', cursive;
-	font-weight: 700;
+	font-weight: 600;
 	letter-spacing: 0.125em;
 	font-size: 2rem;
 	transition: color 500ms ease;
@@ -1328,7 +1332,7 @@ h2.about-subtitle {
 @media (width >=768px) {
 	h1 {
 		font-size: 2.75rem;
-		font-weight: 700;
+		font-weight: 500;
 	}
 
 	.load-more,
@@ -1433,7 +1437,7 @@ h2.about-subtitle {
 
 .about-card h3 {
 	margin-top: 1rem;
-	font-weight: 700;
+	font-weight: 600;
 	padding-bottom: 0.25rem;
 	border-bottom: 1px solid var(--primary-hi-lite);
 }
@@ -1500,7 +1504,7 @@ h2.about-subtitle {
 
 .feature-description h3 {
 	text-align: center;
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 1.5rem;
 	margin-bottom: 0.5rem;
 	line-height: 1.3;

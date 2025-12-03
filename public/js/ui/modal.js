@@ -96,9 +96,11 @@ function modalNav(btnsContainer, id, innerModal) {
 
 /* HELPER FUNCTION 2: Detect aspect ratio of image */
 function detectAspectRatio(img, el) {
+	// Calculate ratio
 	const w = Number(img.width);
 	const h = Number(img.height);
 	const ratio = Number((w / h).toFixed(2));
+	// Set an arbitrary tolerance (only needed for square-ish)
 	const tolerance = 0.15;
 
 	el.classList.remove('portrait', 'landscape', 'square');
