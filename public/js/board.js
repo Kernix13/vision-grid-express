@@ -2,7 +2,7 @@ import { scrollFunction, smoothScrollBackToTop } from './ui/backToTop.js';
 import { setModalContent } from './ui/modal.js';
 import { initBoardPage } from './ui/initPage.js';
 import { menuButton } from './ui/menu.js';
-import { deleteImage, moveImage, selectImage } from './ui/thumbnails.js';
+import { deleteImage, moveImage, selectImage, closeThumbDeleteModal } from './ui/thumbnails.js';
 import { toggleDisplay } from './ui/classUtils.js';
 import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
 
@@ -32,18 +32,19 @@ settingsBtn.addEventListener('click', () => {
 	toggleDisplay(settingsForm, settingsBtn, 'Settings');
 });
 
-// 3. 
+// 3. Sets the H1 textContent to value set by user in settings form
 input.addEventListener('input', () => {
 	const value = input.value;
   h1.textContent = value;
   setLocalStorage('board-title', value);
 });
 
-// 4. Show/hide thumbnails
+// 4. Show/hide thumbnails strip and changes button textContent
 thumbnailsBtn.addEventListener('click', () => {
 	toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
 });
-// 5. Close thumbnails on window click
+
+// 5. Close thumbnails on click img-text-container element
 imgTextContainer.addEventListener('click', () => {
 	if (thumbnails.classList.contains('onscreen')) {
 		thumbnails.classList.remove('onscreen');
@@ -51,7 +52,7 @@ imgTextContainer.addEventListener('click', () => {
 	}
 });
 
-// 6. Save editable text to local storage
+// 6. Save editable text to local storage for associated image object
 imgTextContainer.addEventListener('focusout', (e) => {
 	const savedImages = getLocalStorage('saved-images');
 	const editable = e.target.closest('.editable');
@@ -66,7 +67,7 @@ imgTextContainer.addEventListener('focusout', (e) => {
 	setLocalStorage('saved-images', savedImages);
 });
 
-// 7. open image in modal on click
+// 7. Add image to modal on click of any page image
 imgTextContainer.addEventListener('click', (e) => {
 	const regularImg = e.target.closest('.regular');
 	if (!regularImg) return;
@@ -80,7 +81,7 @@ imgTextContainer.addEventListener('click', (e) => {
 	setModalContent(innerModal, regularImg, imageTextId);
 });
 
-// 8. Thumbnail item
+// 8. Adds/removes 'selected' class on click of any thumbnail
 thumbnails.addEventListener('click', (e) => {
 	const thumbItem = e.target.closest('.thumb-item');
 	if (!thumbItem) return;
@@ -96,29 +97,28 @@ thumbnails.addEventListener('click', (e) => {
 	setLocalStorage('selected-thumb', thumbItem.dataset.id);
 });
 
-// 9. Thumbnail item -> Thumbnail buttons
+// 9. Scroll to image-textt for thumbnail clicked, move image up or down
 thumbnails.addEventListener('click', (e) => {
 	const btn = e.target.closest('button');
 	const thumbItem = e.target.closest('.thumb-item');
 	if (!thumbItem) return;
 
 	const id = thumbItem.dataset.id;
-	const imageTextItem = document.getElementById(id);
 
-	if (btn?.classList.contains('move-up')) {
+	// Move image up or down
+	if (btn && btn.classList.contains('move-up')) {
 		moveImage(id, 'up');
-		// I can't get the selected class to stick?
 		thumbItem.classList.add('selected');
-	} else if (btn?.classList.contains('move-down')) {
+	} else if (btn && btn.classList.contains('move-down')) {
 		moveImage(id, 'down');
 		thumbItem.classList.add('selected');
-	} else if (e.target.classList.contains('thumb-image')) {
-		// Does it make sense for selectImage to scrollIntoView? Is that it?
+	} else {
+		// scrollIntoView to image-text element for the thumbnail clicked
 		selectImage(id);
 	}
 });
 
-// 10. Thumbnail delete button listener
+// 10. Thumbnail delete button listener: opens a modal for confirmation when the delete button is clicked, adds the image id to localStorage
 thumbnails.addEventListener('click', (e) => {
 	const thumbModal = document.getElementById('thumb-modal');
 	const btn = e.target.closest('button');
@@ -127,23 +127,14 @@ thumbnails.addEventListener('click', (e) => {
 
 	const id = thumbItem.dataset.id;
 
-	if (btn?.classList.contains('delete')) {
+	if (btn && btn.classList.contains('delete')) {
 		thumbModal.classList.add('show-modal');
 		thumbModal.hidden = false;
 		setLocalStorage('delete-item-id', id);
 	}
 });
 
-/* 
-  This function and the following 3 listeners are all for thumbnail delete btn
-*/
-function closeThumbDeleteModal() {
-	const thumbModal = document.getElementById('thumb-modal');
-	thumbModal.classList.remove('show-modal');
-	thumbModal.hidden = true;
-}
-
-// 11. Delete saved image confirmation button listener
+// 11. Delete saved image if Delete button clicked 
 const confirmBtn = document.getElementById('confirm-delete-btn');
 confirmBtn.addEventListener('click', () => {
 	deleteImage(getLocalStorage('delete-item-id'));
@@ -157,7 +148,7 @@ cancelBtn.addEventListener('click', closeThumbDeleteModal);
 const closeDeleteModal = document.getElementById('remove-close');
 closeDeleteModal.addEventListener('click', closeThumbDeleteModal);
 
-// 13. Modal listeners: Close modal on click of: 1. close button, 2. window, 3. Escape key
+// 13. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
 close.addEventListener('click', () => {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
@@ -178,6 +169,6 @@ hamburger.addEventListener('click', () => {
 	menuButton(hamburger, navMenu);
 });
 
-// 15. Back To Top
+// 15. Back To Top button
 window.addEventListener('scroll', scrollFunction);
 backToTopButton.addEventListener('click', smoothScrollBackToTop);

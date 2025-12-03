@@ -449,7 +449,7 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 7. I asked ChatGPT about including robots.txt and sitemap.xml. It suggested to add them and wrote the contents for sitemap.xml.
 8. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, and Express)
 
-<br>
+<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Acknowledgments
 

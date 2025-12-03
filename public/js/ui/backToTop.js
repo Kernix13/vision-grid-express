@@ -4,6 +4,7 @@ window.addEventListener('scroll', scrollFunction);
 
 /**
  * Display or hide back-to-top btn based on scrollY
+ * https://codepen.io/Coding_Journey/pen/LMrLQV
  */
 export function scrollFunction() {
 	if (window.scrollY > 600) {

@@ -32,17 +32,14 @@ const innerModal = document.querySelector('.modal');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
-// Why do I have this in the global scope? Can I set it to 1 inside the form listener?
-let searchPage = 0;
-
 /**
  * * EVENT LISTENERS
  */
 
-// 1. Set initial state on visit to home page
+// 1. Loads localStorage elements if they exist
 document.addEventListener('DOMContentLoaded', initHomePage);
 
-// 2. Search form event listener (way too much inside this listener)
+// 2. Handle & validate form input, fetch images, render results
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const savedSearches = getLocalStorage('search-phrases') || [];
@@ -51,16 +48,19 @@ form.addEventListener('submit', (e) => {
 	const errorElement = document.querySelector('.error-message');
 	if (!checkUserInput(input, errorElement)) return;
 
-	// Get user's search phrase
 	if (input.value) {
 		errorElement.textContent = '';
 		searchGrid.textContent = '';
 		
-		searchPage = 1;
+		let searchPage = 1;
 
+		// Fetch data
 		getSearchResults(input.value, searchPage, searchGrid);
-		saveSearchTerm(input.value, searchTerms, savedSearches);
+		// Render page elements
 		renderSearchEls(input.value);
+		
+		// Save values to localStorage
+		saveSearchTerm(input.value, searchTerms, savedSearches);
 		setLocalStorage('current-search', {
 			search: input.value,
 			page: searchPage,
@@ -72,6 +72,7 @@ form.addEventListener('submit', (e) => {
 		setLocalStorage('search-phrases-page', searchPhrasesPage);
 	}
 
+	// Show hidden elements
 	addRemoveClass(clearSearches, 'inline', 'none');
 	addRemoveClass(loadMore, 'inline', 'none');
 	addRemoveClass(resultsTitle, 'block', 'none');
@@ -81,7 +82,7 @@ form.addEventListener('submit', (e) => {
 	input.value = '';
 });
 
-// 3. Load More button fetch
+// 3. Fetch more images for current search term on Load More button click
 loadMore.addEventListener('click', () => {
 	const savedSearches = getLocalStorage('search-phrases') || [];
 	const lastSearch = getLocalStorage('last-search');
@@ -91,12 +92,13 @@ loadMore.addEventListener('click', () => {
 
 	searchGrid.textContent = '';
 
+	// Fetch data
 	getSearchResults(lastSearch, page, searchGrid);
-	saveSearchTerm(lastSearch, searchTerms, savedSearches);
+	// Render page elements
 	renderSearchEls(lastSearch);
 });
 
-// 4. Search terms fetch
+// 4. Fetch more images if a past search term button is clicked
 searchTerms.addEventListener('click', (e) => {
 	const savedSearches = getLocalStorage('search-phrases') || [];
 	const btn = e.target.closest('button');
@@ -104,18 +106,22 @@ searchTerms.addEventListener('click', (e) => {
 
 	const searchTerm = btn.textContent;
 
+	// Increment page number for search term
 	const page = incrementSearchPage(searchTerm);
 	console.log(`Clicked search term for '${searchTerm}', page # ${page}`);
 
 	searchGrid.textContent = '';
 
+	// Fetch data
 	getSearchResults(searchTerm, page, searchGrid);
+	// Render page elements
+	renderSearchEls(searchTerm);
+	// Save values to localStorage
 	setLocalStorage('last-search', searchTerm);
 	saveSearchTerm(searchTerm, searchTerms, savedSearches);
-	renderSearchEls(searchTerm);
 });
 
-// 6. Search images grid: Save and Remove buttons
+// 6. Search images grid: Handle clicks on Save or Remove buttons and removes the clicked image card from the DOM. Removes H2 when last card is removed
 searchGrid.addEventListener('click', (e) => {
 	removeImageCard(e);
 
@@ -143,10 +149,11 @@ clearSearches.addEventListener('click', (e) => {
 	// These 2 lines added to clear an Aria warning in console
 	e.target.inert = true;
 	e.target.hidden = true;
+	// Resets localStorage for Home page related items
 	clearSearchElements();
 });
 
-// 9. Close modal listeners on click of: 1. close button, 2. window, 3. Escape key
+// 9. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
 close.addEventListener('click', () => {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
@@ -167,5 +174,5 @@ hamburger.addEventListener('click', () => {
 	menuButton(hamburger, navMenu);
 });
 
-// 10. Back To Top
+// 10. Back To Top button
 window.addEventListener('scroll', scrollFunction);

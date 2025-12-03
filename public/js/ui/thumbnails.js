@@ -1,4 +1,5 @@
 import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
+import { addSavedImagesToDom } from './savedImages.js';
 
 export function addThumbnailsToDom() {
 	const savedImages = getLocalStorage('saved-images');
@@ -92,4 +93,11 @@ export function deleteImage(id) {
 	setLocalStorage('saved-images', newSavedImages);
 	thumbItem.remove();
 	imageTextItem.remove();
+}
+
+
+export function closeThumbDeleteModal() {
+	const thumbModal = document.getElementById('thumb-modal');
+	thumbModal.classList.remove('show-modal');
+	thumbModal.hidden = true;
 }
