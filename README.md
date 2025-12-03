@@ -451,22 +451,22 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 <br>
 
-## Additional Resources
+## Acknowledgments
 
-> The following resources were helpful during the design and development process
+> _The following resources were helpful during the design and development process_
 
 - Code:You Slack for Q&A
 - [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples
 - Traversy Media Discord server: help with npm packages and Biome
 - [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
-- [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically, the using `req.query`
+- [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`
 - [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
 - [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties
 - [Google Fonts](https://fonts.google.com/): Downloaded the woff2 files for DM Sans, Inter, and Allura
 - Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues
 - [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for checking specific text color choices
 - [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
-- [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility check on my pages
+- [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages
 - [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the font size and weight.
 - [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
 - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey)
