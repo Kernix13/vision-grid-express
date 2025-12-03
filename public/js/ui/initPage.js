@@ -20,6 +20,7 @@ export function initHomePage() {
 	) {
 		setLocalStorage('search-phrases', []);
 
+		// I should not have empty elements in the DOM, I should be creating them
 		clearSearches.classList.add('none');
 		loadMore.classList.add('none');
 		resultsTitle.classList.add('none');
@@ -36,7 +37,7 @@ export function initHomePage() {
 		const loadMoreText = 'Start new search & clear search results';
 		addSearchText(clearSearches, loadMoreText, 'clear-searches');
 
-		createImgCard(images, searchGrid);
+		createImgCard(images);
 	}
 }
 

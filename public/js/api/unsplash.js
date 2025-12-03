@@ -1,7 +1,7 @@
 import { createImgCard } from '../ui/cards.js';
 import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 
-export async function getSearchResults(searchTerm, page, element) {
+export async function getSearchResults(searchTerm, page) {
 	const searchGrid = document.getElementById('search-grid');
 	const DOMAIN = 'http://localhost:8080';
 
@@ -32,7 +32,7 @@ export async function getSearchResults(searchTerm, page, element) {
 
 		setLocalStorage('fetched-search-results', resultsObject);
 		searchGrid.textContent = '';
-		createImgCard(getLocalStorage('fetched-search-results'), element);
+		createImgCard(getLocalStorage('fetched-search-results'), searchGrid);
 		console.log(data);
 		return data;
 	} catch (err) {

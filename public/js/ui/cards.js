@@ -1,6 +1,7 @@
 import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 
-export function createImgCard(arr, element) {
+export function createImgCard(arr) {
+	const searchGrid = document.getElementById('search-grid');
 	arr.forEach((obj, i) => {
 		const imgCard = document.createElement('div');
 		imgCard.className = 'image-card';
@@ -34,7 +35,7 @@ export function createImgCard(arr, element) {
 		imgCard.append(imgContainer);
 		imgCard.append(btnsContainer);
 
-		element.append(imgCard);
+		searchGrid.append(imgCard);
 	});
 }
 

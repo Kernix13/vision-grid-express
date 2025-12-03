@@ -1,7 +1,8 @@
-import { getSearchResults } from './api/unsplash.js';
-import { scrollFunction, smoothScrollBackToTop } from './ui/backToTop.js';
-import { removeImageCard } from './ui/cards.js';
 import { initHomePage } from './ui/initPage.js';
+import { getSearchResults } from './api/unsplash.js';
+import { checkUserInput } from './utils/checkUserInput.js';
+import { scrollFunction } from './ui/backToTop.js';
+import { removeImageCard } from './ui/cards.js';
 import { menuButton } from './ui/menu.js';
 import { setModalContent } from './ui/modal.js';
 import {
@@ -15,7 +16,6 @@ import {
 	incrementSearchPage,
 	setLocalStorage,
 } from './utils/localStorage.js';
-import { checkUserInput } from './utils/checkUserInput.js';
 
 const form = document.getElementById('search-form');
 const input = document.getElementById('search');
@@ -24,11 +24,9 @@ const clearSearches = document.getElementById('clear-searches');
 const loadMore = document.getElementById('load-more');
 const searchGrid = document.getElementById('search-grid');
 const resultsTitle = document.getElementById('results-title');
-
 const close = document.getElementById('close');
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
-
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
@@ -55,7 +53,7 @@ form.addEventListener('submit', (e) => {
 		let searchPage = 1;
 
 		// Fetch data
-		getSearchResults(input.value, searchPage, searchGrid);
+		getSearchResults(input.value, searchPage);
 		// Render page elements
 		renderSearchEls(input.value);
 		
@@ -84,16 +82,14 @@ form.addEventListener('submit', (e) => {
 
 // 3. Fetch more images for current search term on Load More button click
 loadMore.addEventListener('click', () => {
-	const savedSearches = getLocalStorage('search-phrases') || [];
 	const lastSearch = getLocalStorage('last-search');
 	const page = incrementSearchPage(lastSearch);
-
 	console.log(`Clicked load more for '${lastSearch}', page # ${page}`);
 
 	searchGrid.textContent = '';
 
 	// Fetch data
-	getSearchResults(lastSearch, page, searchGrid);
+	getSearchResults(lastSearch, page);
 	// Render page elements
 	renderSearchEls(lastSearch);
 });
@@ -113,7 +109,7 @@ searchTerms.addEventListener('click', (e) => {
 	searchGrid.textContent = '';
 
 	// Fetch data
-	getSearchResults(searchTerm, page, searchGrid);
+	getSearchResults(searchTerm, page);
 	// Render page elements
 	renderSearchEls(searchTerm);
 	// Save values to localStorage
