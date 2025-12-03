@@ -9,7 +9,7 @@ import {
 	renderSearchEls,
 	saveSearchTerm,
 } from './ui/searchEls.js';
-import { addRemoveClass } from './utils/classUtils.js';
+import { addRemoveClass } from './ui/classUtils.js';
 import {
 	getLocalStorage,
 	incrementSearchPage,

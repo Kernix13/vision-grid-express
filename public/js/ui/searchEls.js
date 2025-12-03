@@ -1,4 +1,4 @@
-import { addRemoveClass } from '../utils/classUtils.js';
+import { addRemoveClass } from '../ui/classUtils.js';
 import {
 	getLocalStorage,
 	removeLocalStorage,

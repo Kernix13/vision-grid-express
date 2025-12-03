@@ -18,10 +18,6 @@
 	box-sizing: border-box;
 }
 
-// * {
-// 	outline: 1px solid red;
-// }
-
 html {
 	scroll-behavior: smooth;
 }
@@ -54,7 +50,7 @@ textarea {
 	margin: 0;
 }
 
-/* :root and @font-face | NOTE: only 1 use of --primary-muted-3 & --primary-muted-4 */
+/* :root and @font-face | NOTE: only 1 use of --primary-muted-3 & --primary-muted-4, only 2 for --accent-3 and --link-hover */
 :root {
 	--white: #fff;
 	--black: #000;
@@ -146,7 +142,6 @@ body {
 
 main {
 	flex: 1 1 auto;
-	;
 }
 
 h1,
@@ -235,7 +230,6 @@ footer {
 	font-style: italic;
 	color: var(--primary-hi-lite);
 	font-weight: 400;
-	/* border-bottom: 1px solid var(--primary-hi-lite); */
 	border-bottom: 1px solid var(--primary);
 	letter-spacing: 0.5px;
 }
@@ -297,7 +291,6 @@ input[type="search"]:focus {
 	gap: 1rem;
 }
 
-/* Search results grid + image cards */
 .search-grid {
 	--min-col-size: 300px;
 
@@ -322,11 +315,7 @@ input[type="search"]:focus {
 	/* width seems to have no affect, consider removing */
 	width: 100%;
 	height: 100%;
-
-	/* Make sure all images/cards are the same size: */
 	aspect-ratio: 1 / 1;
-
-	/* object-fit maintains proportions; consider cover, contain & none also: */
 	object-fit: contain;
 	opacity: 0.8;
 	transition:
@@ -949,8 +938,6 @@ input[type="search"]:focus {
 }
 
 /* 6. Board page settings styles */
-
-/* settings-form offscreen onscreen */
 .settings-form {
 	position: fixed;
 	top: 11.5rem;
@@ -1046,7 +1033,7 @@ input[type="search"]:focus {
 	padding: 0.25rem 0 0.25rem 0.5rem;
 }
 
-/* select-radio: this class is on the container for the select element */
+/* select-radio: I replaced the select list with range - switch back */
 .select-radio {
 	display: grid;
 	gap: 1rem;
@@ -1056,7 +1043,6 @@ input[type="search"]:focus {
 	height: 100%;
 }
 
-/* select, option, label */
 select {
 	font-family: inherit;
 	border: 1px solid var(--black);
@@ -1066,7 +1052,6 @@ option {
 	font-size: 1rem;
 }
 
-/* I do not think this works, but the JS has not been created yet */
 option:hover {
 	color: var(--white);
 	background-color: var(--black);
@@ -1098,8 +1083,148 @@ h2.about-subtitle {
 	margin: 0 auto;
 }
 
-/* CURRENT STYLES AT END OF FILE */
+/* About page cards */
+.about-container h1 {
+	margin-top: 3rem;
+}
 
+.about-container h2 {
+	margin-top: 5rem;
+}
+
+.compact {
+	width: 75ch;
+	margin: 0 auto 2rem;
+}
+
+.compact p {
+	margin-bottom: 1rem;
+	font-size: 1.375rem;
+}
+
+.feature-cards {
+	--min-col-size: 300px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--min-col-size), 1fr));
+	gap: 2rem;
+	margin: 2rem 0;
+}
+
+.about-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: center;
+	text-align: center;
+	padding: 2rem 1rem;
+	background-color: var(--white);
+	box-shadow: 0 4px 12px 2px var(--primary-muted-2);
+	box-shadow: 0 2px 8px var(--primary-muted-2);
+}
+
+.about-card svg {
+	text-align: center;
+}
+
+.about-card h3 {
+	margin-top: 1rem;
+	font-weight: 600;
+	padding-bottom: 0.25rem;
+	border-bottom: 1px solid var(--primary-hi-lite);
+}
+
+.about-card ul,
+.feature-list {
+	text-align: left;
+	margin-top: 1rem;
+	list-style: none;
+	padding-left: 0;
+	margin: 1rem auto 0;
+}
+
+.about-card ul li,
+.feature-list li {
+	padding-left: 0.5rem;
+	margin-bottom: 0.25rem;
+	margin-left: 1.0625rem;
+}
+
+.about-card ul li::marker,
+.feature-list li::marker {
+	content: "✓";
+
+	color: var(--primary-hi-lite);
+	font-weight: bold;
+}
+
+/* Class to style the SVG */
+.large {
+	width: 2rem;
+	height: auto;
+	color: var(--primary-hi-lite);
+	margin: 0 0.5rem;
+}
+
+.two-col,
+.two-col-reverse {
+	display: flex;
+	gap: 1rem;
+	padding: 2rem;
+	background-color: var(--primary-muted-2);
+	margin: 2rem 0 4rem;
+	justify-content: flex-start;
+}
+
+.two-col-reverse {
+	flex-direction: row-reverse;
+}
+
+.two-col .feature-description,
+.two-col-reverse .feature-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+	background-color: var(--white);
+}
+
+.two-col .feature-description {
+	margin-left: 2rem;
+}
+
+.two-col-reverse .feature-description {
+	margin-right: 2rem;
+}
+
+.feature-description h3 {
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	line-height: 1.3;
+}
+
+.two-col img,
+.two-col-reverse img {
+	display: block;
+	width: 50%;
+	height: auto;
+	object-fit: contain;
+}
+
+.images-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 4rem;
+	margin: 2rem 0;
+	padding: 2rem;
+	background-color: var(--primary-muted-2);
+}
+
+.images-grid img {
+
+	outline: 5px solid var(--primary-muted-1);
+}
 
 /* 8. Menu/Navigation styles */
 .skip-to-content {
@@ -1189,7 +1314,7 @@ h2.about-subtitle {
 	transition: top 500ms ease-in-out;
 }
 
-.nav-menu>* {
+.nav-menu > * {
 	margin: 0.5rem 0;
 }
 
@@ -1208,11 +1333,9 @@ h2.about-subtitle {
 	display: block;
 	background-color: var(--primary-dark-2);
 	width: 24px;
-
 	/* The following 2 properties are essential in creating the "X" */
 	height: 2px;
 	margin: 6px auto;
-
 	/* -webkit-transition: all 300ms ease;  */
 	transition:
 		transform 300ms ease-in-out,
@@ -1392,142 +1515,4 @@ h2.about-subtitle {
 	.clear-searches {
 		width: 50%;
 	}
-}
-
-/* About page cards */
-.about-container h1 {
-	margin-top: 3rem;
-}
-.about-container h2 {
-	margin-top: 5rem;
-}
-.compact {
-	width: 75ch;
-	margin: 0 auto 2rem;
-}
-
-.compact p {
-	margin-bottom: 1rem;
-	font-size: 1.375rem;
-}
-
-.feature-cards {
-	--min-col-size: 300px;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(var(--min-col-size), 1fr));
-	gap: 2rem;
-	margin: 2rem 0;
-}
-
-.about-card {
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-	align-items: center;
-	text-align: center;
-	padding: 2rem 1rem;
-	background-color: var(--white);
-	box-shadow: 0 4px 12px 2px var(--primary-muted-2);
-	box-shadow: 0 2px 8px var(--primary-muted-2);
-}
-
-.about-card svg {
-	text-align: center;
-}
-
-.about-card h3 {
-	margin-top: 1rem;
-	font-weight: 600;
-	padding-bottom: 0.25rem;
-	border-bottom: 1px solid var(--primary-hi-lite);
-}
-
-.about-card ul, .feature-list {
-	text-align: left;
-	margin-top: 1rem;
-	list-style: none;
-	padding-left: 0;
-	margin: 1rem auto 0;
-}
-
-.about-card ul li, .feature-list li {
-	padding-left: 0.5rem;
-	margin-bottom: 0.25rem;
-	margin-left: 1.0625rem;
-}
-
-.about-card ul li::marker, .feature-list li::marker {
-	content: "✓";
-
-	color: var(--primary-hi-lite);
-	font-weight: bold;
-}
-
-/* Class to style the SVG */
-.large {
-	width: 2rem;
-	height: auto;
-	color: var(--primary-hi-lite);
-	margin: 0 0.5rem;
-}
-
-.two-col,
-.two-col-reverse {
-	display: flex;
-	gap: 1rem;
-	padding: 2rem;
-	background-color: var(--primary-muted-2);
-	margin: 2rem 0 4rem;
-	justify-content: flex-start;
-}
-
-.two-col-reverse {
-	flex-direction: row-reverse;
-}
-
-.two-col .feature-description,
-.two-col-reverse .feature-description {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 1rem;
-	background-color: var(--white);
-}
-
-.two-col .feature-description {
-	margin-left: 2rem;
-}
-
-.two-col-reverse .feature-description {
-	margin-right: 2rem;
-}
-
-.feature-description h3 {
-	text-align: center;
-	font-weight: 600;
-	font-size: 1.5rem;
-	margin-bottom: 0.5rem;
-	line-height: 1.3;
-}
-
-.two-col img,
-.two-col-reverse img {
-	display: block;
-	width: 50%;
-	height: auto;
-	object-fit: contain;
-}
-
-.images-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 4rem;
-	margin: 2rem 0;
-	padding: 2rem;
-	background-color: var(--primary-muted-2);
-}
-
-.images-grid img {
-
-	outline: 5px solid var(--primary-muted-1);
 }
