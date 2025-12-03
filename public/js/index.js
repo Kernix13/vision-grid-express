@@ -15,6 +15,7 @@ import {
 	incrementSearchPage,
 	setLocalStorage,
 } from './utils/localStorage.js';
+import { checkUserInput } from './utils/checkUserInput.js';
 
 const form = document.getElementById('search-form');
 const input = document.getElementById('search');
@@ -30,12 +31,9 @@ const innerModal = document.querySelector('.modal');
 
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
-const backToTopButton = document.querySelector('#back-to-top-btn');
 
-// Why do I have these in the global scope? Do I need them here?
+// Why do I have this in the global scope? Can I set it to 1 inside the form listener?
 let searchPage = 0;
-const savedSearches = getLocalStorage('search-phrases') || [];
-const badCharacters = [' ',	'_',	'-',	'>',	'.',	'|',	';',	'[',	']',	'{',	'}',	'(',	')',	'*',	'`',	'~',	'"',	':'];
 
 /**
  * * EVENT LISTENERS
@@ -47,18 +45,11 @@ document.addEventListener('DOMContentLoaded', initHomePage);
 // 2. Search form event listener (way too much inside this listener)
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
+	const savedSearches = getLocalStorage('search-phrases') || [];
 
-	// Handle bad input characters - create function in other file
+	// Handle bad input characters
 	const errorElement = document.querySelector('.error-message');
-	if (input.value === '' || badCharacters.includes(input.value)) {
-		const errorMsg = input.value === '' 
-			? "Please enter a search term"
-			: "Invalid search term - please try again";
-		errorElement.textContent = errorMsg;
-		input.value = '';
-		input.blur();
-		return;
-	}
+	if (!checkUserInput(input, errorElement)) return;
 
 	// Get user's search phrase
 	if (input.value) {
@@ -67,9 +58,7 @@ form.addEventListener('submit', (e) => {
 		
 		searchPage = 1;
 
-		// Fetch
 		getSearchResults(input.value, searchPage, searchGrid);
-		
 		saveSearchTerm(input.value, searchTerms, savedSearches);
 		renderSearchEls(input.value);
 		setLocalStorage('current-search', {
@@ -94,6 +83,7 @@ form.addEventListener('submit', (e) => {
 
 // 3. Load More button fetch
 loadMore.addEventListener('click', () => {
+	const savedSearches = getLocalStorage('search-phrases') || [];
 	const lastSearch = getLocalStorage('last-search');
 	const page = incrementSearchPage(lastSearch);
 
@@ -108,6 +98,7 @@ loadMore.addEventListener('click', () => {
 
 // 4. Search terms fetch
 searchTerms.addEventListener('click', (e) => {
+	const savedSearches = getLocalStorage('search-phrases') || [];
 	const btn = e.target.closest('button');
 	if (!btn) return;
 
