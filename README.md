@@ -490,7 +490,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 10 To-Do items left: 3 High-priority + 1 Non-critical + 1 important Stretch
+> 13 To-Do items left: 3 High-priority + 1 Non-critical + 1 important Stretch
 
 ### High-priority
 
@@ -503,8 +503,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 2. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
 3. Menu items need padding
-4. Modal editable affirmation needs padding
-5. split out CSS by page: `index.css` instead of `style.css` for home page, `board.css`, and `about.css`
+4. `.feature-cards` on about page: why can't I center the element when it is 1 or 2 columns? Nothing I tried worked.
 
 ### Stretch or nice-to-haves
 
