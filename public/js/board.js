@@ -150,8 +150,8 @@ confirmBtn.addEventListener('click', () => {
 const cancelBtn = document.getElementById('cancel-delete-btn');
 cancelBtn.addEventListener('click', closeDeleteModal);
 
-const closeDeleteModal = document.getElementById('remove-close');
-closeDeleteModal.addEventListener('click', closeDeleteModal);
+const deleteClose = document.getElementById('delete-close');
+deleteClose.addEventListener('click', closeDeleteModal);
 
 // 13. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
 close.addEventListener('click', () => {

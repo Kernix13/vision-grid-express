@@ -504,6 +504,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 2. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
 3. Menu items need padding
 4. Modal editable affirmation needs padding
+5. split out CSS by page: `index.css` instead of `style.css` for home page, `board.css`, and `about.css`
 
 ### Stretch or nice-to-haves
 
@@ -558,38 +559,3 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
   - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
   - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates
  -->
-
-Comparing above with `python` to no language below to see if no language highlights comments as gray
-
-```
-/
-├── README.md
-├── assets/                     # Images used in README only
-├── LICENSE
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── package.json                # Dependencies and scripts
-├── server.js                   # Express server handling API requests
-├── .env.example                # Template for environment variables
-├── .gitattributes              # Enforces consistent line endings and other Git settings
-├── .gitignore                  # Specific files and folders Git should ignore
-├── biome.json                  # Biome formatter, linter, and code-quality config
-├── .github/
-│   ├── ISSUE_TEMPLATE
-│   └── PULL_REQUEST_TEMPLATE.md
-├── public/
-│   ├── index.html
-│   ├── board.html
-│   ├── about.html
-│   ├── robots.txt
-│   ├── sitemap.xml
-│   ├── css/
-│   ├── js/
-│   │   ├── index.js            # Logic for index.html
-│   │   ├── board.js            # Logic for board.html
-│   │   ├── api/                # Fetch function(s) for backend /api/photos
-│   │   ├── ui/                 # UI behavior functions
-│   │   └── utils/              # Shared utility functions (localStorage)
-│   ├── images/
-│   └── fonts/                  # DM Sans and Inter .woff2 files
-```
