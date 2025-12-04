@@ -7,7 +7,6 @@ import { addSavedImagesToDom } from './savedImages.js';
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
 const resultsTitle = document.getElementById('results-title');
-const searchGrid = document.getElementById('search-grid');
 const loadMore = document.getElementById('load-more');
 const input = document.getElementById('board-title');
 const h1 = document.querySelector('.board-page-title');
@@ -41,6 +40,7 @@ export function initHomePage() {
 	}
 }
 
+// For Board page DOMContentLoaded listener
 export function initBoardPage() {
 	const savedImages = getLocalStorage('saved-images');
 	if (savedImages.length > 0) {

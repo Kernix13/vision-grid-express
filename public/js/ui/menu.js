@@ -8,6 +8,7 @@ export function menuButton(btn, nav) {
 	btn.setAttribute('aria-expanded', menuOpen);
 }
 
+// This function is only to close the menu for same-page anchor links
 export function closeMenu(btn, nav) {
 	btn.classList.remove('active');
 	nav.classList.remove('active');

@@ -1,14 +1,14 @@
 /*
   -- 🔎 TOC - use term/phrase to search for sections 🔍 --
-  1. Resets, :root, and @font-face ✅
-  2. Global styles ✅
-  3. Home page styles ✅
-  4. Modal styles ✅
-  5. Board page styles ✅
-  6. Board page settings styles ✅
-  7. About page styles 📌
-  8. Menu/Navigation styles ✅
-  9. Mobile first media queries ✅
+  1. Resets, :root, and @font-face 
+  2. Global styles 
+  3. Home page styles 
+  4. Modal styles 
+  5. Board page styles 
+  6. Board page settings styles 
+  7. About page styles 
+  8. Menu/Navigation styles 
+  9. Mobile first media queries 
 */
 
 /* 1. Resets, :root, and @font-face  */
@@ -60,6 +60,7 @@ textarea {
 	--primary-hi-lite: hsl(145deg 70% 35%);
 	--primary-dark-1: hsl(146deg 29% 30%);
 	--primary-dark-2: hsl(146deg 20% 20%);
+	--primary-dark-3: hsl(146deg 15% 15%);
 	--primary-muted-1: hsl(146deg 20% 60%);
 	--primary-muted-2: hsl(146deg 20% 80%);
 	--primary-muted-3: hsl(146deg 10% 90%);
@@ -142,6 +143,7 @@ body {
 
 main {
 	flex: 1 1 auto;
+	margin-bottom: 4rem;
 }
 
 h1,
@@ -191,7 +193,7 @@ footer {
 	padding: 3rem 0 0;
 	margin-top: 3rem;
 	color: var(--white);
-	background-color: var(--primary-dark-2);
+	background-color: var(--primary-dark-3);
 	min-height: 4rem;
 }
 

@@ -1,20 +1,20 @@
-import { scrollFunction, smoothScrollBackToTop } from './ui/backToTop.js';
-import { setModalContent } from './ui/modal.js';
+import { scrollFunction } from './ui/backToTop.js';
 import { initBoardPage } from './ui/initPage.js';
+import { setModalContent } from './ui/modal.js';
 import { menuButton } from './ui/menu.js';
-import { deleteImage, moveImage, selectImage, closeThumbDeleteModal } from './ui/thumbnails.js';
+import { deleteImage, moveImage, selectImage, closeDeleteModal } from './ui/thumbnails.js';
 import { toggleDisplay } from './ui/classUtils.js';
 import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
 const input = document.getElementById('board-title');
+const playSlider = document.getElementById('play-slider');
 const h1 = document.querySelector('.board-page-title');
 const thumbnails = document.querySelector('.thumbnails');
 const thumbnailsBtn = document.getElementById('thumbnails-btn');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
-const backToTopButton = document.querySelector('#back-to-top-btn');
 const imgTextContainer = document.querySelector('#img-text-container');
 const close = document.getElementById('close-btn');
 const modalBg = document.getElementById('modal-bg');
@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', initBoardPage);
 settingsBtn.addEventListener('click', () => {
 	toggleDisplay(settingsForm, settingsBtn, 'Settings');
 });
+
+// 3. Play button...
+playSlider.addEventListener('click', () => {
+	console.log('button clicked')
+})
 
 // 3. Sets the H1 textContent to value set by user in settings form
 input.addEventListener('input', () => {
@@ -138,15 +143,15 @@ thumbnails.addEventListener('click', (e) => {
 const confirmBtn = document.getElementById('confirm-delete-btn');
 confirmBtn.addEventListener('click', () => {
 	deleteImage(getLocalStorage('delete-item-id'));
-	closeThumbDeleteModal();
+	closeDeleteModal();
 });
 
 // 12. Cancel and close button listener for thumbnail delete
 const cancelBtn = document.getElementById('cancel-delete-btn');
-cancelBtn.addEventListener('click', closeThumbDeleteModal);
+cancelBtn.addEventListener('click', closeDeleteModal);
 
 const closeDeleteModal = document.getElementById('remove-close');
-closeDeleteModal.addEventListener('click', closeThumbDeleteModal);
+closeDeleteModal.addEventListener('click', closeDeleteModal);
 
 // 13. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
 close.addEventListener('click', () => {
@@ -171,4 +176,3 @@ hamburger.addEventListener('click', () => {
 
 // 15. Back To Top button
 window.addEventListener('scroll', scrollFunction);
-backToTopButton.addEventListener('click', smoothScrollBackToTop);

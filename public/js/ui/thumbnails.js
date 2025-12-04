@@ -96,7 +96,7 @@ export function deleteImage(id) {
 }
 
 
-export function closeThumbDeleteModal() {
+export function closeDeleteModal() {
 	const thumbModal = document.getElementById('thumb-modal');
 	thumbModal.classList.remove('show-modal');
 	thumbModal.hidden = true;
