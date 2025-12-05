@@ -458,7 +458,7 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 > _The following resources were helpful during the design and development process_
 
-- Code:You Slack for Q&A
+- Code:You module lesson material, suggested videos, and Q&A in Slack
 - [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples
 - Traversy Media Discord server: help with npm packages and Biome
 - [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
@@ -490,7 +490,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 13 To-Do items left: 3 High-priority + 1 Non-critical + 1 important Stretch
+> 11 To-Do items left: 3 High-priority + 1 Non-critical + 1 important Stretch
 
 ### High-priority
 
@@ -502,8 +502,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 2. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
-3. Menu items need padding
-4. `.feature-cards` on about page: why can't I center the element when it is 1 or 2 columns? Nothing I tried worked.
+3. `.feature-cards` on about.html: why can't I center the element(s) when it is 1 or 2 columns? Nothing I tried worked.
 
 ### Stretch or nice-to-haves
 
@@ -515,6 +514,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 1. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
 2. **BOARD**: I built the settings menu and maybe thubnails wrong because they are offscreen but they can be tabbed to while not visible.
+3. **HOME**: Should I have a confirmation for the "clear all" button?
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section

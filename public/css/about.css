@@ -14,8 +14,6 @@
   box-sizing: border-box;
 }
 
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -48,13 +46,10 @@ textarea {
   margin: 0;
 }
 
-/* :root and @font-face | NOTE: only 1 use of --primary-muted-3 & --primary-muted-4, only 2 for --accent-3 and --link-hover */
 :root {
   --white: #fff;
-  --black: #000;
   --dark-gray: #222;
   --text: #333;
-  --primary: hsl(146deg 48% 31%);
   --primary-hi-lite: hsl(145deg 70% 35%);
   --primary-dark-1: hsl(146deg 29% 30%);
   --primary-dark-2: hsl(146deg 20% 20%);
@@ -62,12 +57,9 @@ textarea {
   --primary-muted-1: hsl(146deg 20% 60%);
   --primary-muted-2: hsl(146deg 20% 80%);
   --primary-muted-3: hsl(146deg 10% 90%);
-  --primary-muted-4: hsl(146deg 5% 95%);
   --accent: hsl(43deg 63% 47%);
   --accent-3: hsl(43deg 90% 45%);
-  --accent-4: hsl(43deg 100% 45%);
   --link-hover: hsl(43deg 97% 30%);
-  --red: #af0000;
 }
 
 @font-face {

@@ -229,11 +229,11 @@ footer {
   color: var(--primary-hi-lite);
   font-weight: 400;
   border-bottom: 1px solid var(--primary);
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .sub-title {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0 2rem;
   font-size: 1.75rem;
 }
 
