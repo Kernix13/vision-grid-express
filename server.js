@@ -27,6 +27,7 @@ app.get('/api/photos', async (req, res) => {
 	try {
 		const response = await fetch(BASE_URL + endpoint);
 		const data = await response.json();
+		// res.flush(); // check npm compression docs
 		res.json(data);
 	} catch (err) {
 		console.error(err);

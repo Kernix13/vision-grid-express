@@ -234,7 +234,7 @@ This is the current state of my project as of December 2nd, 2025:
         <ul>
           <li>Managing dependencies with <code>package.json</code></li>
           <li>Configuring and running npm scripts for development workflow</li>
-          <li>Main packages used: Express, CORS, dotenv | ESLint, Prettier, Stylelint</li>
+          <li>Packages used: Express, CORS, dotenv, compression | Biome</li>
         </ul>
       </td>
     </tr>
@@ -246,7 +246,7 @@ This is the current state of my project as of December 2nd, 2025:
         <ul>
           <li>Express server for basic routing and for handling Unsplash API requests securely</li>
           <li>Served static files using <code>express.static</code> middleware</li>
-          <li>Used middleware for handling simple CORS</li>
+          <li>Used middleware for handling simple CORS & gzip/deflate compression</li>
         </ul>
       </td>
     </tr>
@@ -272,7 +272,8 @@ This is the current state of my project as of December 2nd, 2025:
           <li>Issue tracking with descriptive labels</li>
           <li>Feature branch pull request workflow with merge commits</li>
           <li>Contributing: MIT License, CONTRIBUTING.md, and CODE_OF_CONDUCT.md</li>
-          <li>Comprehensive README using open-source best practices</li>
+          <li><code>.github</code> folder for Issues ans Pull Request templates</li>
+          <!-- <li>Comprehensive README using open-source best practices</li> -->
         </ul>
       </td>
     </tr>
@@ -282,9 +283,9 @@ This is the current state of my project as of December 2nd, 2025:
           width="40" height="40" alt="VS Code icon" title="VS Code" /></td>
       <td>
         <ul>
-          <!-- <li>Primary editor: VS Code with extensions for code formatting and workflow efficiency</li> -->
+          <li>Primary editor: VS Code with extensions for code formatting and workflow efficiency</li>
           <li>Integrated terminal for Git commands, installing packages, and running Node.js/NPM scripts</li>
-          <li>Used <code>.editorconfig</code> for consistent formatting across editors</li>
+          <!-- <li>Used <code>.editorconfig</code> for consistent formatting across editors</li> -->
           <li>Resolved merge conflicts using VS Code's built-in diff/merge tools during local branch merges</li>
         </ul>
       </td>
@@ -511,7 +512,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
 2. **ABOUT**: `.feature-cards` element - why can't I center the element(s) when it is 1 or 2 columns? Nothing I tried worked.
 3. **ABOUT**: Finish about page copy and styles
-4. **README**: Finish Use of AI
+4. **README**: Finish Use of AI + add screenshots
 
 ### Non-critical
 
