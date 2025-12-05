@@ -10,12 +10,13 @@
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge&label=Commits" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/issues">
 <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" /></a>
-<a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
-<img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Kernix13/vision-grid-express?style=for-the-badge" /></a>
-<a href="https://github.com/Kernix13/vision-grid-express">
-<img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
 <img alt="License: MIT" src="https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge" /></a>
+<a href="https://github.com/Kernix13/vision-grid-express">
+<img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a>
+<!-- <a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
+<img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Kernix13/vision-grid-express?style=for-the-badge" /></a> -->
+
 </p>
 
 <br>
@@ -284,7 +285,7 @@ This is the current state of my project as of December 2nd, 2025:
           <!-- <li>Primary editor: VS Code with extensions for code formatting and workflow efficiency</li> -->
           <li>Integrated terminal for Git commands, installing packages, and running Node.js/NPM scripts</li>
           <li>Used <code>.editorconfig</code> for consistent formatting across editors</li>
-          <li>Resolved merge conflicts using VS Code’s built-in diff/merge tools during local branch merges</li>
+          <li>Resolved merge conflicts using VS Code's built-in diff/merge tools during local branch merges</li>
         </ul>
       </td>
     </tr>
@@ -454,13 +455,13 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
-## Acknowledgments
+## Acknowledgments & Resources
 
 > _The following resources were helpful during the design and development process_
 
 - Code:You module lesson material, suggested videos, and Q&A in Slack
 - [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples
-- Traversy Media Discord server: help with npm packages and Biome
+- Traversy Media Discord server: help with npm packages, specifically Biome
 - [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
 - [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`
 - [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
@@ -470,9 +471,10 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 - [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for checking specific text color choices
 - [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
 - [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages
-- [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the font size and weight.
+- [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
 - [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
-- CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey)
+- [Boostrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page
+<!-- - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey) -->
 
 <br>
 
@@ -490,31 +492,31 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 11 To-Do items left: 3 High-priority + 1 Non-critical + 1 important Stretch
+> 12 To-Do items left: 4 High-priority + 1 Non-critical + 1 bug + 2 important Stretch = 8
 
 ### High-priority
 
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
-2. **ABOUT**: Finish about page copy and styles
-3. **README**: Finish Use of AI
+2. **ABOUT**: `.feature-cards` element - why can't I center the element(s) when it is 1 or 2 columns? Nothing I tried worked.
+3. **ABOUT**: Finish about page copy and styles
+4. **README**: Finish Use of AI
 
 ### Non-critical
 
-1. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
-2. Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
-3. `.feature-cards` on about.html: why can't I center the element(s) when it is 1 or 2 columns? Nothing I tried worked.
-
-### Stretch or nice-to-haves
-
-1. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
-2. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
-3. Add JSDoc comments? Yes, if I have time but not for every function!
+1. **HOME**: Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
+2. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 
 ### Bugs/Issues/Questions
 
-1. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
-2. **BOARD**: I built the settings menu and maybe thubnails wrong because they are offscreen but they can be tabbed to while not visible.
-3. **HOME**: Should I have a confirmation for the "clear all" button?
+1. **BOARD**: I can <kbd>TAB</kbd> to form elements when it is offscreen (not visible), most likely the same for the thumbnails - that has to be fixed, bad UI.
+2. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
+
+### Stretch or nice-to-haves
+
+1. **HOME**: Should I have a confirmation for the "clear all" button?
+2. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
+3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
+4. Add JSDoc comments? Yes, if I have time but not for every function!
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section
