@@ -217,7 +217,7 @@ footer {
   color: var(--primary-muted-2);
 }
 
-/* 7. About page styles */
+/* 3. About page styles */
 .about-title {
   padding: 0;
   text-align: center;
@@ -377,7 +377,7 @@ h2.about-subtitle {
   outline: 5px solid var(--primary-muted-1);
 }
 
-/* 8. Menu/Navigation styles */
+/* 4. Menu/Navigation styles */
 .skip-to-content {
   position: absolute;
   background: var(--primary-dark-2);
@@ -573,7 +573,7 @@ h2.about-subtitle {
   }
 }
 
-/* 9. Mobile first media queries */
+/* 5. Mobile first media queries */
 @media (width >=768px) {
   h1 {
     font-size: 2.75rem;

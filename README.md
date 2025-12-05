@@ -312,7 +312,7 @@ This is the current state of my project as of December 2nd, 2025:
 ├── .gitignore                  # Specific files and folders Git should ignore
 ├── biome.json                  # Biome formatter, linter, and code-quality config
 ├── .github/
-│   ├── ISSUE_TEMPLATE
+│   ├── ISSUE_TEMPLATE/
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── public/
 │   ├── index.html
@@ -459,21 +459,33 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 > _The following resources were helpful during the design and development process_
 
-- Code:You module lesson material, suggested videos, and Q&A in Slack
-- [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples
-- Traversy Media Discord server: help with npm packages, specifically Biome
-- [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
-- [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`
-- [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
-- [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties
-- [Google Fonts](https://fonts.google.com/): Downloaded the woff2 files for DM Sans, Inter, and Allura
-- Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues
-- [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for checking specific text color choices
-- [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
-- [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages
-- [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
-- [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
-- [Boostrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page
+Docs/Informational:
+
+1. Code:You module lesson material, suggested videos, and Q&A in Slack
+2. [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples
+
+Code/Technical:
+
+3. Traversy Media Discord server: help with npm packages, specifically Biome
+4. [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
+5. [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`
+6. [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
+7. Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues
+
+Design & UI:
+
+8. [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
+9. [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties
+10. [Google Fonts](https://fonts.google.com/): Downloaded the woff2 files for DM Sans, Inter, and Allura
+11. [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
+12. [Boostrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page
+
+Accessibility:
+
+13. [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for making color palette choices
+14. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
+15. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages
+
 <!-- - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey) -->
 
 <br>
