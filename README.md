@@ -192,7 +192,7 @@ This is the current state of my project as of December 2nd, 2025:
           <li>Mobile-first design with media queries using various breakpoints</li>
           <li>Layout techniques: Flexbox, Grid, absolute positioning</li>
           <li>Animations using CSS transitions and <code>@keyframes</code></li>
-          <li>CSS custom properties (variables) for consistent colors</li>
+          <li>CSS custom properties for consistent colors, and CSS Nesting</li>
           <li>Self-hosted Google Fonts for performance</li>
         </ul>
       </td>
@@ -206,7 +206,7 @@ This is the current state of my project as of December 2nd, 2025:
         <ul>
           <li>ES Modules, async code using the Fetch API, <code>localStorage</code> for client-side persistence</li>
           <li>Modern JavaScript features: array destructuring, spread operator, and template literals</li>
-          <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>
+          <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>, <code>map</code>
           <li>UI interactions: mobile menu, back-to-top button, and modals</li>
           </li>
           <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, <code>input</code>, and <code>DOMContentLoaded</code> listeners; event delegation for many elements</li>
@@ -272,7 +272,7 @@ This is the current state of my project as of December 2nd, 2025:
           <li>Issue tracking with descriptive labels</li>
           <li>Feature branch pull request workflow with merge commits</li>
           <li>Contributing: MIT License, CONTRIBUTING.md, and CODE_OF_CONDUCT.md</li>
-          <li><code>.github</code> folder for Issues ans Pull Request templates</li>
+          <li><code>.github</code> folder for Issues and Pull Request templates</li>
           <!-- <li>Comprehensive README using open-source best practices</li> -->
         </ul>
       </td>
@@ -505,19 +505,20 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 12 To-Do items left: 4 High-priority + 1 Non-critical + 1 bug + 2 important Stretch = 8
+> 13 To-Do items left: 4 High-priority + 1 Non-critical + 1 bug + 2 important Stretch = 8
 
 ### High-priority
 
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
-2. **ABOUT**: `.feature-cards` element - why can't I center the element(s) when it is 1 or 2 columns? Nothing I tried worked.
-3. **ABOUT**: Finish about page copy and styles
-4. **README**: Finish Use of AI + add screenshots
+2. **ABOUT**: Finish about page copy and styles
+3. **README**: Finish Use of AI + add screenshots
 
 ### Non-critical
 
 1. **HOME**: Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
 2. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
+3. Finish refactoring the CSS to have CSS nesting (about ✔️, bord, index)
+4. See if I can use clamp, calc et. in my CSS
 
 ### Bugs/Issues/Questions
 

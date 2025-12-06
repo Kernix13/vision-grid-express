@@ -206,16 +206,16 @@ footer {
   align-items: center;
   gap: 1rem;
   padding: 1.5rem 0;
-}
 
-.footer-flex a {
-  color: var(--primary-muted-2);
-  transition: color 300ms ease;
-  margin-bottom: -0.25em;
-}
+  a {
+    color: var(--primary-muted-2);
+    transition: color 300ms ease;
+    margin-bottom: -0.25em;
 
-.footer-flex a:hover {
-  color: var(--accent-3);
+    &:hover {
+      color: var(--accent-3);
+    }
+  }
 }
 
 .copyright {
