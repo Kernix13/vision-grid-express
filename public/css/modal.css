@@ -72,24 +72,24 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: end;
   gap: 1rem;
-}
 
-.modal-buttons button {
-  cursor: pointer;
-  font-size: 0.875rem;
-  padding: 0.375em 0.75em;
-  border-radius: 0.25rem;
-  border: 1px solid transparent;
-  transition:
-    background-color 300ms ease,
-    border 300ms ease,
-    color 300ms ease;
+  button {
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0.375em 0.75em;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+    transition:
+      background-color 300ms ease,
+      border 300ms ease,
+      color 300ms ease;
+  }
 }
 
 .modal-buttons .modal-save {
   color: var(--white);
   background-color: var(--primary);
-  border: 1px solid var(--white);
+  border: 1px solid transparent;
 }
 
 .modal-buttons button:hover {
@@ -177,12 +177,12 @@
   transition:
     color 300ms ease,
     background-color 300ms ease;
-}
 
-.close-btn:hover {
-  background-color: var(--accent-3);
-  color: var(--dark-gray);
-  border: 1px solid var(--white);
+  &:hover {
+    background-color: var(--accent-3);
+    color: var(--dark-gray);
+    border: 1px solid var(--white);
+  }
 }
 
 @keyframes modalopen {

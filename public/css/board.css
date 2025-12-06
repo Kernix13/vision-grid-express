@@ -78,17 +78,17 @@
   background-color: transparent;
   border: 2px solid var(--primary-muted-2);
   border-radius: 0.25rem;
-}
 
-.thumbnails-btn:hover {
-  color: var(--white);
-  background-color: var(--primary);
-}
+  &:hover {
+    color: var(--white);
+    background-color: var(--primary);
+  }
 
-.thumbnails-btn:focus-visible {
-  outline: 2px solid var(--accent-3);
-  background-color: var(--accent-3);
-  color: var(--black);
+  &:focus-visible {
+    outline: 2px solid var(--accent-3);
+    background-color: var(--accent-3);
+    color: var(--black);
+  }
 }
 
 .thumbnails {
@@ -109,6 +109,17 @@
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
+  
+  img {
+    width: 150px;
+    height: auto;
+    transition: opacity 300ms ease;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
 }
 
 .thumbnails.offscreen {
@@ -126,20 +137,9 @@
   padding: 0.25em 0.375em;
 }
 
-.thumbnails>* {
+.thumbnails > * {
   border: 1px solid hsl(146deg 30% 50%);
   transition: opacity 0.3s ease;
-}
-
-.thumbnails img {
-  width: 150px;
-  height: auto;
-  transition: opacity 300ms ease;
-}
-
-.thumbnails img:hover {
-  cursor: pointer;
-  opacity: 0.8;
 }
 
 /* new thumbnails elements */
@@ -180,15 +180,15 @@
     background-color 300ms ease,
     color 300ms ease;
   padding: 0.125em;
-}
 
-.thumb-btns button:hover {
-  background-color: var(--primary);
-  color: var(--white);
-}
+  &:hover {
+    background-color: var(--primary);
+    color: var(--white);
+  }
 
-.thumb-btns button:active {
-  background-color: var(--accent-4);
+  &:active {
+    background-color: var(--accent-4);
+  }
 }
 
 .move-down,
@@ -243,34 +243,34 @@
     color 300ms ease,
     background-color 300ms ease,
     border 300ms ease;
-}
-
-.thumb-modal-btn:hover {
-  color: var(--white);
-  background-color: var(--primary);
-  border: 2px solid transparent;
+  
+  &:hover {
+    color: var(--white);
+    background-color: var(--primary);
+    border: 2px solid transparent;
+  }
 }
 
 .modal-header {
   background-color: var(--primary-dark-1);
   padding: 1rem;
-}
 
-.modal-header h3,
-.modal-header p {
-  text-align: center;
-  color: var(--white);
-  margin-bottom: 0.5rem;
+  h3,
+  p {
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
 }
 
 .modal-content {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.modal-content button {
-  width: 25%;
+  button {
+    width: 25%;
+  }
 }
 
 /* the div housing the img and blockquote */
@@ -352,17 +352,17 @@
   background-color: transparent;
   border: 2px solid var(--primary-muted-2);
   border-radius: 0.25rem;
-}
 
-.settings-btn:hover {
-  color: var(--white);
-  background-color: var(--primary);
-}
+  &:hover {
+    color: var(--white);
+    background-color: var(--primary);
+  }
 
-.settings-btn:focus-visible {
-  outline: 2px solid var(--accent-3);
-  background-color: var(--accent-3);
-  color: var(--black);
+  &:focus-visible {
+    outline: 2px solid var(--accent-3);
+    background-color: var(--accent-3);
+    color: var(--black);
+  }
 }
 
 /* settings-form-title */

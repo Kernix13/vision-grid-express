@@ -93,12 +93,12 @@ input[type="search"]:focus {
   transition:
     transform 300ms ease,
     opacity 300ms ease;
-}
 
-.result-image:hover {
-  opacity: 1;
-  cursor: pointer;
-  transform: scale(1.03);
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.03);
+  }
 }
 
 /* All Page Buttons */

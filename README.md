@@ -516,7 +516,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Non-critical
 
 1. **HOME**: Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
-2. Finish refactoring the CSS to have CSS nesting (about ✔️, bord, index)
+2. **BOARD**: Delete modal is hitting the window edges at ~ 455px - refactor the styles, then add current styles to the 525px media query
 3. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 
 ### Bugs/Issues/Questions

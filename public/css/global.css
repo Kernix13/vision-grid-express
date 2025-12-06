@@ -308,7 +308,7 @@ footer {
   transition: top 500ms ease-in-out;
 }
 
-.nav-menu>* {
+.nav-menu > * {
   margin: 0.5rem 0;
 }
 
