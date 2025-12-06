@@ -510,7 +510,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 12 To-Do items left: 3 High-priority + 2 Non-critical + 1 bug + 1 important Stretch = 7
+> 10 To-Do items left: 3 High-priority + 1 Non-critical + 1 bug + 1 important Stretch = 6
 
 ### High-priority
 
@@ -521,13 +521,11 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Non-critical
 
 1. **HOME**: Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
-2. **BOARD**: Delete modal is hitting the window edges at ~ 455px - refactor the styles, then add current styles to the 525px media query
-3. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
+2. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 
 ### Bugs/Issues/Questions
 
-1. **BOARD**: I can <kbd>TAB</kbd> to form elements when it is offscreen (not visible), most likely the same for the thumbnails - that has to be fixed, bad UI.
-2. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
+1. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
 
 ### Stretch or nice-to-haves
 

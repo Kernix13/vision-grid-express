@@ -225,7 +225,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 100%;
-  width: 25em;
+  width: 19em;
   border-radius: 0.5rem;
   animation-name: modal2open;
   animation-duration: 1000ms;
@@ -253,7 +253,7 @@
 
 .modal-header {
   background-color: var(--primary-dark-1);
-  padding: 1rem;
+  padding: 0.5rem;
 
   h3,
   p {
@@ -432,6 +432,16 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 /* Mobile first media queries */
+@media (width >=470px) {
+  .thumb-modal {
+    width: 25em;
+  }
+
+  .modal-header {
+    background-color: var(--primary-dark-1);
+    padding: 1rem;
+  }
+}
 @media (width >=768px) {
   .image-text {
     grid-template-columns: 1fr 1fr;
