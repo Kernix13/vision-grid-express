@@ -192,7 +192,7 @@ This is the current state of my project as of December 2nd, 2025:
           <li>Mobile-first design with media queries using various breakpoints</li>
           <li>Layout techniques: Flexbox, Grid, absolute positioning</li>
           <li>Animations using CSS transitions and <code>@keyframes</code></li>
-          <li>CSS custom properties for consistent colors, and CSS Nesting</li>
+          <li>CSS Nesting, custom properties for consistent colors</li>
           <li>Self-hosted Google Fonts for performance</li>
         </ul>
       </td>
@@ -505,7 +505,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 13 To-Do items left: 4 High-priority + 1 Non-critical + 1 bug + 2 important Stretch = 8
+> 12 To-Do items left: 3 High-priority + 2 Non-critical + 1 bug + 1 important Stretch = 7
 
 ### High-priority
 
@@ -516,9 +516,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Non-critical
 
 1. **HOME**: Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
-2. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
-3. Finish refactoring the CSS to have CSS nesting (about ✔️, bord, index)
-4. See if I can use clamp, calc et. in my CSS
+2. Finish refactoring the CSS to have CSS nesting (about ✔️, bord, index)
+3. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 
 ### Bugs/Issues/Questions
 
@@ -546,15 +545,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
   10. Future Improvements ✅
   11. Use of AI 📌
   12. License ✅
-  13. Additional Resources - I don't have this - should I? -
-    - Traversy Media Discord server: help with npm packages and Biome
-    - [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for checking specific text color choices
-    - [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for checking contrast ratio for page elements
-    - [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility check on my pages
-    - [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the font size and weight.
-    - [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): `req.query`
-    - BroCode React video,
-    - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey)
+  13. Acknowledgments & Resourceses ✅
   - CODE_OF_CONDUCT.md file: Edit/Rewrite 📌
  -->
 
