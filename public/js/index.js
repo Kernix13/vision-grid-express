@@ -3,7 +3,7 @@ import { getSearchResults } from './api/unsplash.js';
 import { checkUserInput } from './utils/checkUserInput.js';
 import { scrollFunction } from './ui/backToTop.js';
 import { removeImageCard } from './ui/cards.js';
-import { menuButton } from './ui/menu.js';
+import { toggleMenu } from './ui/menu.js';
 import { setModalContent } from './ui/modal.js';
 import {
 	clearSearchElements,
@@ -29,6 +29,7 @@ const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
+const desktop = window.matchMedia('(min-width: 962px)');
 
 /**
  * * EVENT LISTENERS
@@ -167,8 +168,9 @@ document.addEventListener('keydown', (e) => {
 
 // 9. Open/close hamburger menu
 hamburger.addEventListener('click', () => {
-	menuButton(hamburger, navMenu);
+	toggleMenu(hamburger, navMenu);
 });
 
 // 10. Back To Top button
 window.addEventListener('scroll', scrollFunction);
+

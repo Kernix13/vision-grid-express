@@ -1,4 +1,4 @@
-import { menuButton } from './ui/menu.js';
+import { toggleMenu } from './ui/menu.js';
 import { scrollFunction, smoothScrollBackToTop } from './ui/backToTop.js';
 
 const hamburger = document.getElementById('hamburger');
@@ -10,7 +10,7 @@ const backToTopButton = document.querySelector('#back-to-top-btn');
  */
 // Open/close hamburger menu
 hamburger.addEventListener('click', () => {
-  menuButton(hamburger, navMenu);
+  toggleMenu(hamburger, navMenu);
 });
 
 // Back To Top

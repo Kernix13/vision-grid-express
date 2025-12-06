@@ -487,6 +487,11 @@ Accessibility:
 14. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
 15. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages
 
+<!-- Various articles:
+
+16. [Event Delegation](https://imdac.github.io/modules/js/js-dom-events/event-delegation.html)
+18. [Guide to Finding Closest Target](https://www.devzery.com/post/closest-target) -->
+
 <!-- - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey) -->
 
 <br>

@@ -1,7 +1,7 @@
 import { scrollFunction } from './ui/backToTop.js';
 import { initBoardPage } from './ui/initPage.js';
 import { setModalContent } from './ui/modal.js';
-import { menuButton } from './ui/menu.js';
+import { toggleMenu } from './ui/menu.js';
 import { deleteImage, moveImage, selectImage, closeDeleteModal } from './ui/thumbnails.js';
 import { toggleDisplay } from './ui/classUtils.js';
 import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', initBoardPage);
 // 2. Show/Hide settings form
 settingsBtn.addEventListener('click', () => {
 	toggleDisplay(settingsForm, settingsBtn, 'Settings');
+	settingsForm.removeAttribute('inert');
+	settingsForm.setAttribute('aria-hidden', 'false');
 });
 
 // 3. Play button...
@@ -47,6 +49,8 @@ input.addEventListener('input', () => {
 // 4. Show/hide thumbnails strip and changes button textContent
 thumbnailsBtn.addEventListener('click', () => {
 	toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
+	thumbnails.removeAttribute('inert');
+	thumbnails.setAttribute('aria-hidden', 'false');
 });
 
 // 5. Close thumbnails on click img-text-container element
@@ -171,7 +175,7 @@ document.addEventListener("keydown", (e) => {
 
 // 14. Open/close hamburger menu
 hamburger.addEventListener('click', () => {
-	menuButton(hamburger, navMenu);
+	toggleMenu(hamburger, navMenu);
 });
 
 // 15. Back To Top button

@@ -56,12 +56,13 @@
     <div class="board-container">
       <nav class="nav-bar" aria-label="Main navigation">
         <span class="logo"><a class="home-link" href="index.html">VG</a></span>
-        <button id="hamburger" class="hamburger" aria-label="open navigation" aria-expanded="false">
+        <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+          aria-controls="nav-menu">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
         </button>
-        <ul class="nav-menu" id="nav-menu">
+        <ul class="nav-menu" id="nav-menu" aria-hidden="true">
           <li class="nav-item">
             <a href="./index.html" class="nav-link">Home</a>
           </li>
@@ -76,7 +77,7 @@
     </div>
   </header>
 
-  <form id="settings-form" class="settings-form offscreen">
+  <form id="settings-form" class="settings-form offscreen" aria-hidden="true" inert>
     <h3 class="settings-form-title">Project boards settings</h3>
     <!-- Instruments -->
     <div id="board-list" class="board-list">
@@ -89,22 +90,44 @@
         <legend>Lightbox text</legend>
         <div class="check-control">
           <label for="show-affirmation">Show affirmations</label>
-          <input type="checkbox" id="show-affirmation" checked>
+          <input type="checkbox" id="show-affirmation" class="affirmation" checked>
         </div>
       </fieldset>
 
       <fieldset>
-        <legend>Lightbox timing</legend>
-        <div id="slider-range" class="slider-range">
-          <div>
-            <label for="slide-speed">Seconds: </label>
-            <input type="range" id="slide-speed" min="3" max="10" step="1" value="5">
-            <output id="out">5</output>
+        <legend>Lightbox timing (seconds)</legend>
+
+        <div id="slider-time" class="slider-time">
+
+          <div class="radio-option">
+            <input type="radio" name="lightbox-speed" id="speed-6" value="6" checked>
+            <label for="speed-6">6</label>
           </div>
+
+          <div class="radio-option">
+            <input type="radio" name="lightbox-speed" id="speed-8" value="8">
+            <label for="speed-8">8</label>
+          </div>
+
+          <div class="radio-option">
+            <input type="radio" name="lightbox-speed" id="speed-10" value="10">
+            <label for="speed-10">10</label>
+          </div>
+
+          <div class="radio-option">
+            <input type="radio" name="lightbox-speed" id="speed-12" value="12">
+            <label for="speed-12">12</label>
+          </div>
+
+          <div class="radio-option">
+            <input type="radio" name="lightbox-speed" id="speed-18" value="18">
+            <label for="speed-18">18</label>
+          </div>
+
         </div>
       </fieldset>
 
-      <button type="button" id="play-slider">Play</button>
+      <button type="button" id="play-slider" class="play-slider">Start Slider</button>
     </div>
   </form>
 
@@ -117,7 +140,7 @@
       <button id="thumbnails-btn" class="thumbnails-btn">
         Show thumbnails
       </button>
-      <div class="thumbnails offscreen"></div>
+      <div class="thumbnails offscreen" aria-hidden="true" inert></div>
 
       <!-- image on left, editable div on right -->
       <div id="img-text-container" class="img-text-container"></div>
