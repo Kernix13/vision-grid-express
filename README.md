@@ -192,8 +192,7 @@ This is the current state of my project as of December 2nd, 2025:
           <li>Mobile-first design with media queries using various breakpoints</li>
           <li>Layout techniques: Flexbox, Grid, absolute positioning</li>
           <li>Animations using CSS transitions and <code>@keyframes</code></li>
-          <li>CSS Nesting, custom properties for consistent colors</li>
-          <li>Self-hosted Google Fonts for performance</li>
+          <li>CSS Nesting, custom properties for colors, <code>@font-face</code> for Google fonts</li>
         </ul>
       </td>
     </tr>
@@ -207,9 +206,9 @@ This is the current state of my project as of December 2nd, 2025:
           <li>ES Modules, async code using the Fetch API, <code>localStorage</code> for client-side persistence</li>
           <li>Modern JavaScript features: array destructuring, spread operator, and template literals</li>
           <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>, <code>map</code>
-          <li>UI interactions: mobile menu, back-to-top button, and modals</li>
+          <!-- <li>UI interactions: mobile menu, back-to-top button, and modals</li> -->
           </li>
-          <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, <code>input</code>, and <code>DOMContentLoaded</code> listeners; event delegation for many elements</li>
+          <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, <code>input</code>, and <code>DOMContentLoaded</code> listeners; event delegation for dynamic elements</li>
         </ul>
       </td>
     </tr>
@@ -220,7 +219,7 @@ This is the current state of my project as of December 2nd, 2025:
       <td>
         <ul>
           <li>Local development server environment</li>
-          <li>Custom npm scripts</li>
+          <!-- <li>Custom npm scripts</li> -->
           <li>Environment variables (<code>process.env</code>) for secure API keys and configuration</li>
           <li>Express integration for API routing and serving static files</li>
         </ul>
@@ -259,7 +258,7 @@ This is the current state of my project as of December 2nd, 2025:
           <li>Version control using add > commit > push workflow</li>
           <li>Local feature-branch development and merging</li>
           <li>Clean commit history with descriptive commit messages</li>
-          <li>Managed sensitive files using <code>.gitignore</code></li>
+          <!-- <li>Managed sensitive files using <code>.gitignore</code></li> -->
         </ul>
       </td>
     </tr>
@@ -384,6 +383,7 @@ This is the current state of my project as of December 2nd, 2025:
     <tr>
       <td>Display information about the data in your app</td>
       <td>
+      <!-- do these count? -->
         <ul>
           <li>Images displayed in 3 different sizes</li>
           <li>Image <code>alt_descriptions</code> added as <code>img</code> <code>alt</code> attribute</li>
@@ -399,7 +399,7 @@ This is the current state of my project as of December 2nd, 2025:
       <li><code>saveSearchTerm(str, el, arr)</code></li>
       <li><code>moveImage(event, id, direction)</code></li>
       <li><code>setLocalStorage(str, val)</code></li>
-      <li>+ 8 more functions (not all have <code>return</code> KW)</li>
+      <li>+ more but not all have <code>return</code> KWs</li>
       </ul>
       </td>
     </tr>
@@ -460,21 +460,18 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
 > _The following resources were helpful during the design and development process_
 
-Docs/Informational:
+Code/Technical:
 
 1. Code:You module lesson material, suggested videos, and Q&A in Slack
 2. [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples
-
-Code/Technical:
-
 3. Traversy Media Discord server: help with npm packages, specifically Biome
-4. [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
-5. [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`
-6. [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
-7. Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues
+4. [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`
+5. [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
+6. Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues
 
 Design & UI:
 
+7. [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
 8. [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
 9. [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties
 10. [Google Fonts](https://fonts.google.com/): Downloaded the woff2 files for DM Sans, Inter, and Allura
@@ -510,7 +507,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 10 To-Do items left: 3 High-priority + 1 Non-critical + 1 bug + 1 important Stretch = 6
+> 12 To-Do items left: 3 High-priority + 2 Non-critical + 1 bug + 1 important Stretch = 7
 
 ### High-priority
 
@@ -520,12 +517,14 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### Non-critical
 
-1. **HOME**: Add some kind of transition/animation for when the home page cards, and board page image-text elements are removed.
+1. **HOME**: Add some kind of transition/animation for when the home page cards are removed.
 2. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 
 ### Bugs/Issues/Questions
 
 1. **BOARD**: Use of innerHTML for board page editable text is an issue!!!
+2. Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image
+3. Did I actually set a char limit for the editable blockquote of 115? I don't think I did.
 
 ### Stretch or nice-to-haves
 

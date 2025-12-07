@@ -39,12 +39,11 @@ export function setModalContent(element, item, id) {
 	}
 
 	detectAspectRatio(modalImg, element);
-
 	element.append(btnsContainer);
 }
 
 /* HELPER FUNCTION 1: prev and next buttons */
-function modalNav(btnsContainer, id, innerModal) {
+function modalNav(btnsElement, imgId, modalElement) {
 	const navItems = [
 		{ name: 'prev', symbol: '<', direction: -1 },
 		{ name: 'next', symbol: '>', direction: 1 },
@@ -64,7 +63,7 @@ function modalNav(btnsContainer, id, innerModal) {
 			images = getLocalStorage('fetched-search-results');
 		}
 		
-		const currentIndex = images.findIndex((img) => img.id === id);
+		const currentIndex = images.findIndex((img) => img.id === imgId);
 		
 		if (currentIndex === 0 && btn.classList.contains('prev')) {
 			btn.disabled = true;
@@ -86,21 +85,73 @@ function modalNav(btnsContainer, id, innerModal) {
 			} else {
 				domImage = domImageContainer.querySelector('.result-image');
 			}
-
-			setModalContent(innerModal, domImage, nextImageObj.id);
+			setModalContent(modalElement, domImage, nextImageObj.id);
 		});
 
-		btnsContainer.append(btn);
+		btnsElement.append(btn);
 	});
 }
 
-/* HELPER FUNCTION 2: Detect aspect ratio of image */
+/* HELPER FUNCTION 2: Save and Remove buttons + nav to next item */
+// This is a huge function because of btn.addEventListener. Refactor?
+function modalSaveRemove(btnsElement, imgId, modalElement) {
+	const arr = ['Save', 'Remove'];
+
+	arr.forEach((item) => {
+		const btn = document.createElement('button');
+		btn.className = `modal-${item.toLowerCase()}`;
+		btn.textContent = item;
+
+		btn.addEventListener('click', () => {
+			const images = getLocalStorage('fetched-search-results');
+			const image = images.find((img) => img.id === imgId);
+			const imageIndex = images.findIndex((img) => img.id === imgId);
+
+			// Get the index to load into the modal when image removed
+			const advanceToIndex = imageIndex === 0 ? 0 : imageIndex - 1;
+
+			if (item === 'Save') {
+				const savedImages = getLocalStorage('saved-images') || [];
+				if (image) {
+					savedImages.push(image);
+					setLocalStorage('saved-images', savedImages);
+				}
+			}
+
+			// Remove from fetched results and DOM
+			const updatedFetched = images.filter((img) => img.id !== imgId);
+			setLocalStorage('fetched-search-results', updatedFetched);
+
+			const card = document.getElementById(imgId);
+			if (card) card.remove();
+
+			// Advance or close modal
+			const updatedImages = getLocalStorage('fetched-search-results');
+			if (updatedImages.length > 0) {
+				const nextImageObj = updatedImages[advanceToIndex];
+				const domImageContainer = document.getElementById(nextImageObj.id);
+				const domImage = domImageContainer.querySelector('.result-image');
+
+				// Recursive call of setModalContent because this Fx is called there
+				setModalContent(modalElement, domImage, nextImageObj.id);
+			}
+
+			if (updatedImages.length === 1) {
+				modalBg.classList.remove('show-modal');
+			}
+		});
+
+		btnsElement.append(btn);
+	});
+}
+
+/* HELPER FUNCTION 3: Detect aspect ratio of image */
 function detectAspectRatio(img, el) {
 	// Calculate ratio
 	const w = Number(img.width);
 	const h = Number(img.height);
 	const ratio = Number((w / h).toFixed(2));
-	// Set an arbitrary tolerance (only needed for square-ish)
+	// Set an arbitrary tolerance (only needed for square-ish images)
 	const tolerance = 0.15;
 
 	el.classList.remove('portrait', 'landscape', 'square');
@@ -114,66 +165,7 @@ function detectAspectRatio(img, el) {
 	}
 }
 
-/* HELPER FUNCTION 3: Save and Remove buttons + nav to next item */
-// This is a huge function because of btn.addEventListener. Refactor?
-function modalSaveRemove(btnsContainer, id, innerModal) {
-	const arr = ['Save', 'Remove'];
-
-	arr.forEach((item) => {
-		const btn = document.createElement('button');
-		btn.className = `modal-${item.toLowerCase()}`;
-		btn.textContent = item;
-
-		// This is the prev
-		btn.addEventListener('click', () => {
-			const images = getLocalStorage('fetched-search-results');
-			const imageItem = images.find((img) => img.id === id);
-			const imageItemIndex = images.findIndex((img) => img.id === id);
-			let advanceToIndex;
-			// Is this logic is correct?
-			if (imageItemIndex === 0) {
-				advanceToIndex = 0;
-			} else if (imageItemIndex > 0) {
-				advanceToIndex = imageItemIndex - 1;
-			} else {
-				advanceToIndex = imageItemIndex + 1;
-			}
-
-			if (item === 'Save') {
-				const savedImages = getLocalStorage('saved-images') || [];
-				if (imageItem) {
-					savedImages.push(imageItem);
-					setLocalStorage('saved-images', savedImages);
-				}
-			}
-
-			// Remove from fetched results and DOM
-			const updatedFetched = images.filter((img) => img.id !== id);
-			setLocalStorage('fetched-search-results', updatedFetched);
-
-			const card = document.getElementById(id);
-			if (card) card.remove();
-
-			// Advance or close modal
-			const updatedImages = getLocalStorage('fetched-search-results');
-			if (updatedImages.length > 0) {
-				const nextImageObj = updatedImages[advanceToIndex];
-				const domImageContainer = document.getElementById(nextImageObj.id);
-				const domImage = domImageContainer.querySelector('.result-image');
-
-				setModalContent(innerModal, domImage, nextImageObj.id);
-			}
-
-			if (updatedImages.length === 1) {
-				modalBg.classList.remove('show-modal');
-			}
-		});
-
-		btnsContainer.append(btn);
-	});
-}
-
-/* HELPER FUNCTION 5: Create editable blockquote */
+/* HELPER FUNCTION 4: Create editable blockquote in board page modal */
 function editableQuote(el, image) {
 	const quote = document.createElement('blockquote');
 	quote.className = 'editable-quote';

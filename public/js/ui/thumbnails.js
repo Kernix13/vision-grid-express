@@ -95,7 +95,6 @@ export function deleteImage(id) {
 	imageTextItem.remove();
 }
 
-
 export function closeDeleteModal() {
 	const thumbModal = document.getElementById('thumb-modal');
 	thumbModal.classList.remove('show-modal');

@@ -11,15 +11,15 @@ const resultsTitle = document.getElementById('results-title');
 const searchGrid = document.getElementById('search-grid');
 const loadMore = document.getElementById('load-more');
 
-export function saveSearchTerm(str, el, arr) {
+export function saveSearchTerm(str, arr) {
 	if (str !== arr[arr.length - 1]) {
-		el.textContent = '';
+		searchTerms.textContent = '';
 		if (arr.includes(str)) {
 			arr.splice(arr.indexOf(str), 1);
 		}
 		arr.push(str);
 		setLocalStorage('search-phrases', arr);
-		addSearchTerm(el, arr);
+		addSearchTerm(searchTerms, arr);
 	}
 }
 

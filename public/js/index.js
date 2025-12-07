@@ -59,7 +59,7 @@ form.addEventListener('submit', (e) => {
 		renderSearchEls(input.value);
 		
 		// Save values to localStorage
-		saveSearchTerm(input.value, searchTerms, savedSearches);
+		saveSearchTerm(input.value, savedSearches);
 		setLocalStorage('current-search', {
 			search: input.value,
 			page: searchPage,
@@ -115,13 +115,14 @@ searchTerms.addEventListener('click', (e) => {
 	renderSearchEls(searchTerm);
 	// Save values to localStorage
 	setLocalStorage('last-search', searchTerm);
-	saveSearchTerm(searchTerm, searchTerms, savedSearches);
+	saveSearchTerm(searchTerm, savedSearches);
 });
 
 // 6. Search images grid: Handle clicks on Save or Remove buttons and removes the clicked image card from the DOM. Removes H2 when last card is removed
 searchGrid.addEventListener('click', (e) => {
 	removeImageCard(e);
 
+	// Do I want to remove the results title if the user saves or removes every image?
 	const renderedImages = searchGrid.querySelectorAll('img');
 	if (renderedImages.length === 0) {
 		addRemoveClass(resultsTitle, 'none', 'block');
@@ -148,6 +149,7 @@ clearSearches.addEventListener('click', (e) => {
 	e.target.hidden = true;
 	// Resets localStorage for Home page related items
 	clearSearchElements();
+	document.querySelector('.error-message').textContent = '';
 });
 
 // 9. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown

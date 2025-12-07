@@ -53,13 +53,14 @@ textarea {
   --primary-dark-1: hsl(146deg 29% 30%);
   --primary-dark-2: hsl(146deg 20% 20%);
   --primary-dark-3: hsl(146deg 15% 15%);
+  --primary-dark-4: hsl(146deg 25% 25%);
   --primary-muted-1: hsl(146deg 20% 60%);
   --primary-muted-2: hsl(146deg 20% 80%);
   --primary-muted-3: hsl(146deg 10% 90%);
   --primary-muted-4: hsl(146deg 5% 95%);
   --primary-muted-5: hsl(146deg 15% 94%);
   --accent: hsl(43deg 63% 47%);
-  --accent-3: hsl(43deg 90% 45%);
+  --accent-3: hsl(43deg 75% 55%);
   --accent-4: hsl(43deg 100% 45%);
   --link-hover: hsl(43deg 97% 30%);
   --red: #af0000;
@@ -149,7 +150,7 @@ h3 {
 }
 
 :not(body)::selection {
-  background-color: var(--primary-dark-2);
+  background-color: var(--primary-dark-4);
   color: var(--white);
 }
 
