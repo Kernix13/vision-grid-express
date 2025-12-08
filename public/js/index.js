@@ -139,7 +139,7 @@ searchGrid.addEventListener('click', (e) => {
 	
 	modalBg.classList.add('show-modal');
 	modalBg.hidden = false;
-	setModalContent(innerModal, img, cardId);
+	setModalContent(innerModal, img.src, cardId);
 });
 
 // 8. Clear save searches and related buttons from the DOM

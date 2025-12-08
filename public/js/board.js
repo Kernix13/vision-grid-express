@@ -53,7 +53,7 @@ playSlider.addEventListener('click', () => {
 
 	// setModalContent is bad for this because of the second argument: img.src
 	// I need to pass that in I need to refactor the Fx and all functions calls
-	setModalContent(innerModal, pageImages[0], imageTextEls[0].id);
+	setModalContent(innerModal, pageImages[0].src, imageTextEls[0].id);
 
 	console.log(savedImages[0].imageRegular === pageImages[0].src)
 	console.log(savedImages[0].id === imageTextEls[0].id)
@@ -113,7 +113,7 @@ imgTextContainer.addEventListener('click', (e) => {
 
 	modalBg.classList.add('show-modal');
 	modalBg.hidden = false;
-	setModalContent(innerModal, regularImg, imageTextId);
+	setModalContent(innerModal, regularImg.src, imageTextId);
 });
 
 // 8. Adds/removes 'selected' class on click of any thumbnail
