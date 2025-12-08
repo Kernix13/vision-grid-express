@@ -7,6 +7,7 @@ const loadMore = document.getElementById('load-more');
 const resultsTitle = document.getElementById('results-title');
 const searchTerms = document.getElementById('search-terms');
 
+// On visit to index.html
 export function initHomePage() {
   if (
     !getLocalStorage('search-phrases') ||

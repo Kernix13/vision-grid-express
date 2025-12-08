@@ -1,8 +1,8 @@
 import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
-import { initBoardPage } from './handlers/boardEvents.js';
+import { initBoardPage, addPageImageToModal, saveUserText, handleThumbnailClick, handleThumbnailBtns } from './handlers/boardEvents.js';
 import { setModalContent } from './ui/modal.js';
 import { toggleMenu } from './handlers/globalEvents.js';
-import { deleteImage, moveImage, selectImage, closeDeleteModal } from './ui/thumbnails.js';
+import { deleteImage, closeDeleteModal } from './ui/thumbnails.js';
 import { toggleDisplay } from './ui/classUtils.js';
 import { scrollFunction } from './handlers/globalEvents.js';
 
@@ -35,7 +35,29 @@ settingsBtn.addEventListener('click', () => {
 	settingsForm.setAttribute('aria-hidden', 'false');
 });
 
-// 3. Play button...
+// 3. Sets the H1 textContent to value set by user in settings form
+input.addEventListener('input', () => {
+	const value = input.value;
+  h1.textContent = value;
+  setLocalStorage('board-title', value);
+});
+
+// 4. Show/hide thumbnails strip and changes button textContent
+thumbnailsBtn.addEventListener('click', () => {
+	toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
+	thumbnails.removeAttribute('inert');
+	thumbnails.setAttribute('aria-hidden', 'false');
+});
+
+// 5. Close thumbnails on click img-text-container element
+imgTextContainer.addEventListener('click', () => {
+	if (thumbnails.classList.contains('onscreen')) {
+		thumbnails.classList.remove('onscreen');
+		thumbnailsBtn.innerText = 'Show Thumbnails';
+	}
+});
+
+// 6. Play button... WIP
 playSlider.addEventListener('click', () => {
 	console.log('Start Slider button clicked');
 	// I need a boolean in setModalContent so as not to load the modal with the nav buttons:
@@ -64,96 +86,17 @@ const sliderSpeed = sliderTime.querySelector('input[name="lightbox-speed"]:check
 ).value;
 console.log(sliderSpeed)
 
-// 3. Sets the H1 textContent to value set by user in settings form
-input.addEventListener('input', () => {
-	const value = input.value;
-  h1.textContent = value;
-  setLocalStorage('board-title', value);
-});
+// 7. Save editable text to local storage for associated image object
+imgTextContainer.addEventListener('focusout', saveUserText);
 
-// 4. Show/hide thumbnails strip and changes button textContent
-thumbnailsBtn.addEventListener('click', () => {
-	toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
-	thumbnails.removeAttribute('inert');
-	thumbnails.setAttribute('aria-hidden', 'false');
-});
+// 8. Add page image to modal on click of any page image
+imgTextContainer.addEventListener('click', addPageImageToModal);
 
-// 5. Close thumbnails on click img-text-container element
-imgTextContainer.addEventListener('click', () => {
-	if (thumbnails.classList.contains('onscreen')) {
-		thumbnails.classList.remove('onscreen');
-		thumbnailsBtn.innerText = 'Show Thumbnails';
-	}
-});
+// 8. Adds/removes 'selected' class on click of any thumbnail image and scrolls to that page image
+thumbnails.addEventListener('click', handleThumbnailClick);
 
-// 6. Save editable text to local storage for associated image object
-imgTextContainer.addEventListener('focusout', (e) => {
-	const savedImages = getLocalStorage('saved-images');
-	const editable = e.target.closest('.editable');
-	if (!editable) return;
-
-	const parent = editable.closest('.image-text');
-	const id = parent.id;
-	const imgObj = savedImages.find((img) => img.id === id);
-
-	imgObj.notes = editable.innerHTML.trim();
-
-	setLocalStorage('saved-images', savedImages);
-});
-
-// 7. Add image to modal on click of any page image
-imgTextContainer.addEventListener('click', (e) => {
-	const regularImg = e.target.closest('.regular');
-	if (!regularImg) return;
-
-	const imageText = regularImg.closest('.image-text');
-	const imageTextId = imageText.id;
-	console.log(imageTextId);
-
-	modalBg.classList.add('show-modal');
-	modalBg.hidden = false;
-	setModalContent(innerModal, regularImg.src, imageTextId);
-});
-
-// 8. Adds/removes 'selected' class on click of any thumbnail
-thumbnails.addEventListener('click', (e) => {
-	const thumbItem = e.target.closest('.thumb-item');
-	if (!thumbItem) return;
-
-	// Remove previous selection
-	const selected = document.querySelectorAll('.thumb-item.selected');
-
-	if (selected.length > 0) {
-	  selected.forEach(item => item.classList.toggle('selected'));
-	}
-
-	thumbItem.classList.toggle('selected');
-	setLocalStorage('selected-thumb', thumbItem.dataset.id);
-});
-
-// 9. Handle a click on a thumbnail image, or one of the 3 buttons for each thumbnail
-thumbnails.addEventListener('click', (e) => {
-	const thumbModal = document.getElementById('thumb-modal');
-	const btn = e.target.closest('button');
-	const thumbItem = e.target.closest('.thumb-item');
-	if (!thumbItem) return;
-
-	const id = thumbItem.dataset.id;
-
-	if (btn && btn.classList.contains('move-up')) {
-		moveImage(id, 'up');
-		thumbItem.classList.add('selected');
-	} else if (btn && btn.classList.contains('move-down')) {
-		moveImage(id, 'down');
-		thumbItem.classList.add('selected');
-	} else if (btn && btn.classList.contains('delete')) {
-		thumbModal.classList.add('show-modal');
-		thumbModal.hidden = false;
-		setLocalStorage('delete-item-id', id);
-	} else {
-		selectImage(id);
-	}
-});
+// 9. Handle a click on one of the 3 buttons for each thumbnail
+thumbnails.addEventListener('click', handleThumbnailBtns);
 
 // 10. Delete saved image if Delete button clicked 
 const confirmBtn = document.getElementById('confirm-delete-btn');
