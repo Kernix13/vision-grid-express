@@ -45,8 +45,8 @@ form.addEventListener('submit', (e) => {
 
 	// Handle bad input characters
 	const errorElement = document.querySelector('.error-message');
-	if (!checkUserInput(input, errorElement)) return;
-
+	if (checkUserInput(input, errorElement)) return;
+	
 	if (input.value) {
 		errorElement.textContent = '';
 		searchGrid.textContent = '';
