@@ -1,9 +1,9 @@
-import { initHomePage } from './ui/initPage.js';
+import { initHomePage } from './handlers/indexEvents.js';
 import { getSearchResults } from './api/unsplash.js';
 import { checkUserInput } from './utils/checkUserInput.js';
-import { scrollFunction } from './ui/backToTop.js';
+import { scrollFunction } from './handlers/globalEvents.js';
 import { removeImageCard } from './ui/cards.js';
-import { toggleMenu } from './ui/menu.js';
+import { toggleMenu } from './handlers/globalEvents.js';
 import { setModalContent } from './ui/modal.js';
 import {
 	clearSearchElements,
@@ -28,8 +28,6 @@ const close = document.getElementById('close');
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-const desktop = window.matchMedia('(min-width: 962px)');
 
 /**
  * * EVENT LISTENERS
@@ -170,7 +168,7 @@ document.addEventListener('keydown', (e) => {
 
 // 9. Open/close hamburger menu
 hamburger.addEventListener('click', () => {
-	toggleMenu(hamburger, navMenu);
+	toggleMenu();
 });
 
 // 10. Back To Top button

@@ -1,6 +1,17 @@
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
 const backToTopButton = document.querySelector('#back-to-top-btn');
 
-window.addEventListener('scroll', scrollFunction);
+// Mobile menu
+export function toggleMenu() {
+	/* Toggle active class */
+	hamburger.classList.toggle('active');
+	navMenu.classList.toggle('active');
+
+	/* Toggle aria-expanded value */
+	const menuOpen = navMenu.classList.contains('active');
+	hamburger.setAttribute('aria-expanded', menuOpen);
+}
 
 /**
  * Display or hide back-to-top btn based on scrollY
@@ -31,7 +42,7 @@ backToTopButton.addEventListener('click', smoothScrollBackToTop);
 /**
  * Control scroll animation
  */
-export function smoothScrollBackToTop() {
+function smoothScrollBackToTop() {
 	const duration = 1250;
 	let start = null;
 

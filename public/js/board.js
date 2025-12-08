@@ -1,10 +1,10 @@
-import { scrollFunction } from './ui/backToTop.js';
-import { initBoardPage } from './ui/initPage.js';
+import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
+import { initBoardPage } from './handlers/boardEvents.js';
 import { setModalContent } from './ui/modal.js';
-import { toggleMenu } from './ui/menu.js';
+import { toggleMenu } from './handlers/globalEvents.js';
 import { deleteImage, moveImage, selectImage, closeDeleteModal } from './ui/thumbnails.js';
 import { toggleDisplay } from './ui/classUtils.js';
-import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
+import { scrollFunction } from './handlers/globalEvents.js';
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
@@ -16,7 +16,6 @@ const h1 = document.querySelector('.board-page-title');
 const thumbnails = document.querySelector('.thumbnails');
 const thumbnailsBtn = document.getElementById('thumbnails-btn');
 const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
 const imgTextContainer = document.querySelector('#img-text-container');
 const close = document.getElementById('close-btn');
 const modalBg = document.getElementById('modal-bg');
@@ -188,7 +187,7 @@ document.addEventListener("keydown", (e) => {
 
 // 13. Open/close hamburger menu
 hamburger.addEventListener('click', () => {
-	toggleMenu(hamburger, navMenu);
+	toggleMenu();
 });
 
 // 14. Back To Top button
