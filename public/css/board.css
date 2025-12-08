@@ -49,9 +49,9 @@
   text-align: left;
   outline: 1px solid var(--primary-muted-1);
   box-sizing: border-box;
-  height: 30rem;
+  min-height: 16rem;
+  max-height: 32rem;
   overflow-y: auto;
-  align-self: center;
   transition: box-shadow 300ms ease;
 }
 
@@ -446,6 +446,12 @@ input[type="checkbox"], input[type="radio"] {
   .image-text {
     grid-template-columns: 1fr 1fr;
     align-items: flex-start;
+  }
+
+  .editable {
+    min-height: 0;
+    max-height: none;
+    align-self: stretch;
   }
 }
 
