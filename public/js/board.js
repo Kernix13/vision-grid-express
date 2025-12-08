@@ -132,28 +132,7 @@ thumbnails.addEventListener('click', (e) => {
 	setLocalStorage('selected-thumb', thumbItem.dataset.id);
 });
 
-// 9. Scroll to image-textt for thumbnail clicked, move image up or down
-thumbnails.addEventListener('click', (e) => {
-	const btn = e.target.closest('button');
-	const thumbItem = e.target.closest('.thumb-item');
-	if (!thumbItem) return;
-
-	const id = thumbItem.dataset.id;
-
-	// Move image up or down
-	if (btn && btn.classList.contains('move-up')) {
-		moveImage(id, 'up');
-		thumbItem.classList.add('selected');
-	} else if (btn && btn.classList.contains('move-down')) {
-		moveImage(id, 'down');
-		thumbItem.classList.add('selected');
-	} else {
-		// scrollIntoView to image-text element for the thumbnail clicked
-		selectImage(id);
-	}
-});
-
-// 10. Thumbnail delete button listener: opens a modal for confirmation when the delete button is clicked, adds the image id to localStorage
+// 9. Handle a click on a thumbnail image, or one of the 3 buttons for each thumbnail
 thumbnails.addEventListener('click', (e) => {
 	const thumbModal = document.getElementById('thumb-modal');
 	const btn = e.target.closest('button');
@@ -162,28 +141,36 @@ thumbnails.addEventListener('click', (e) => {
 
 	const id = thumbItem.dataset.id;
 
-	if (btn && btn.classList.contains('delete')) {
+	if (btn && btn.classList.contains('move-up')) {
+		moveImage(id, 'up');
+		thumbItem.classList.add('selected');
+	} else if (btn && btn.classList.contains('move-down')) {
+		moveImage(id, 'down');
+		thumbItem.classList.add('selected');
+	} else if (btn && btn.classList.contains('delete')) {
 		thumbModal.classList.add('show-modal');
 		thumbModal.hidden = false;
 		setLocalStorage('delete-item-id', id);
+	} else {
+		selectImage(id);
 	}
 });
 
-// 11. Delete saved image if Delete button clicked 
+// 10. Delete saved image if Delete button clicked 
 const confirmBtn = document.getElementById('confirm-delete-btn');
 confirmBtn.addEventListener('click', () => {
 	deleteImage(getLocalStorage('delete-item-id'));
 	closeDeleteModal();
 });
 
-// 12. Cancel and close button listener for thumbnail delete
+// 11. Cancel and close button listener for thumbnail delete
 const cancelBtn = document.getElementById('cancel-delete-btn');
 cancelBtn.addEventListener('click', closeDeleteModal);
 
 const deleteClose = document.getElementById('delete-close');
 deleteClose.addEventListener('click', closeDeleteModal);
 
-// 13. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
+// 12. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
 close.addEventListener('click', () => {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
@@ -199,10 +186,10 @@ document.addEventListener("keydown", (e) => {
 	modalBg.hidden = true;
 });
 
-// 14. Open/close hamburger menu
+// 13. Open/close hamburger menu
 hamburger.addEventListener('click', () => {
 	toggleMenu(hamburger, navMenu);
 });
 
-// 15. Back To Top button
+// 14. Back To Top button
 window.addEventListener('scroll', scrollFunction);
