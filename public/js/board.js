@@ -1,6 +1,13 @@
 import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
-import { initBoardPage, addPageImageToModal, saveUserText, handleThumbnailClick, handleThumbnailBtns } from './handlers/boardEvents.js';
-import { setModalContent } from './ui/modal.js';
+import { 
+	initBoardPage, 
+	addPageImageToModal, 
+	saveUserText, 
+	handleThumbnailClick, 
+	handleThumbnailBtns,
+	handleSliderPlayBtn,
+	handleRadioCheck
+} from './handlers/boardEvents.js';
 import { toggleMenu } from './handlers/globalEvents.js';
 import { deleteImage, closeDeleteModal } from './ui/thumbnails.js';
 import { toggleDisplay } from './ui/classUtils.js';
@@ -10,7 +17,6 @@ const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
 const input = document.getElementById('board-title');
 const playSlider = document.getElementById('play-slider');
-const sliderTime = document.getElementById('slider-time');
 const allTimes = document.querySelectorAll('input[name="lightbox-speed"]');
 const h1 = document.querySelector('.board-page-title');
 const thumbnails = document.querySelector('.thumbnails');
@@ -58,33 +64,12 @@ imgTextContainer.addEventListener('click', () => {
 });
 
 // 6. Play button... WIP
-playSlider.addEventListener('click', () => {
-	console.log('Start Slider button clicked');
-	// I need a boolean in setModalContent so as not to load the modal with the nav buttons:
-	let isSlider = true;
+playSlider.addEventListener('click', handleSliderPlayBtn);
 
-	// I need to start with the 1st saved image then loop thru all of them
-	const savedImages = getLocalStorage('saved-images');
-
-	// I need to get the first get first DOM image and load it for now
-	const pageImages = document.querySelectorAll('img.regular');
-	const imageTextEls = document.querySelectorAll('.image-text');
-	modalBg.classList.add('show-modal');
-	modalBg.hidden = false;
-
-	// setModalContent is bad for this because of the second argument: img.src
-	// I need to pass that in I need to refactor the Fx and all functions calls
-	setModalContent(innerModal, pageImages[0].src, imageTextEls[0].id);
-
-	console.log(savedImages[0].imageRegular === pageImages[0].src)
-	console.log(savedImages[0].id === imageTextEls[0].id)
-	toggleDisplay(settingsForm, settingsBtn, 'Settings');
-})
-
-// Radio buttons listener here I think - not sure what to do with it
-const sliderSpeed = sliderTime.querySelector('input[name="lightbox-speed"]:checked'
-).value;
-console.log(sliderSpeed)
+// 7. Radio buttons listener here I think - not sure what to do with it
+allTimes.forEach(time => {
+  time.addEventListener('change', handleRadioCheck);
+});
 
 // 7. Save editable text to local storage for associated image object
 imgTextContainer.addEventListener('focusout', saveUserText);
@@ -117,12 +102,14 @@ close.addEventListener('click', () => {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
 });
+
 window.addEventListener('click', (e) => {
 	if (e.target === modalBg) {
     modalBg.classList.remove('show-modal');
     modalBg.hidden = true;
   }
 });
+
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
