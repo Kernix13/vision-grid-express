@@ -10,6 +10,8 @@ const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
 const input = document.getElementById('board-title');
 const playSlider = document.getElementById('play-slider');
+const sliderTime = document.getElementById('slider-time');
+const allTimes = document.querySelectorAll('input[name="lightbox-speed"]');
 const h1 = document.querySelector('.board-page-title');
 const thumbnails = document.querySelector('.thumbnails');
 const thumbnailsBtn = document.getElementById('thumbnails-btn');
@@ -36,8 +38,32 @@ settingsBtn.addEventListener('click', () => {
 
 // 3. Play button...
 playSlider.addEventListener('click', () => {
-	console.log('button clicked')
+	console.log('Start Slider button clicked');
+	// I need a boolean in setModalContent so as not to load the modal with the nav buttons, and anothr one to show or not the affirmation/goal statement thay that will be the result of the check box.
+	let isSlider = true;
+
+	// I need to start with the 1st saved image then loop thru all of them
+	const savedImages = getLocalStorage('saved-images');
+
+	// I need to get the first get first DOM image and load it for now
+	const pageImages = document.querySelectorAll('img.regular');
+	const imageTextEls = document.querySelectorAll('.image-text');
+	modalBg.classList.add('show-modal');
+	modalBg.hidden = false;
+
+	// setModalContent is bad for this because of the second argument: img.src
+	// I need to pass that in I need to refactor the Fx and all functions calls
+	setModalContent(innerModal, pageImages[0], imageTextEls[0].id);
+
+	console.log(savedImages[0].imageRegular === pageImages[0].src)
+	console.log(savedImages[0].id === imageTextEls[0].id)
+	toggleDisplay(settingsForm, settingsBtn, 'Settings');
 })
+
+// Radio buttons listener here I think - not sure what to do with it
+const sliderSpeed = sliderTime.querySelector('input[name="lightbox-speed"]:checked'
+).value;
+console.log(sliderSpeed)
 
 // 3. Sets the H1 textContent to value set by user in settings form
 input.addEventListener('input', () => {

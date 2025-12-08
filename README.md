@@ -512,6 +512,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### High-priority
 
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
+   - I need to refactor `setModalContent` to take an image `src` for the 2nd arg, not the DOM image object. Then I should be able to just loop through 'saved-images' in LS. Right now I am loading the 1st DOM image on the settings button click
 2. **ABOUT**: Finish about page copy and styles
 3. **README**: Finish Use of AI + add screenshots
 

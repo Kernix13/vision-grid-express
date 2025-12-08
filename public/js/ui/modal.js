@@ -11,21 +11,21 @@ export function setModalContent(element, item, id) {
 	image.src = item.src;
 	image.className = 'modal-image';
 
-	// Button container
 	const btnsContainer = document.createElement('div');
 	btnsContainer.className = 'modal-buttons';
 
-	// Add navigation + save/remove functionality
+	// Add prev/next navigation which calls setModalContent
+	// This needs to be in the if statement
 	modalNav(btnsContainer, id, innerModal);
 
-	const page = window.location.pathname;
-	console.log(page); // /index.html or / or /board.html
 	let images = [];
 	let modalImg = {};
+	const page = window.location.pathname;
 
 	if (page === '/board.html') {
 		images = getLocalStorage('saved-images');
 		modalImg = images.find((img) => img.id === id);
+
 		const quoteContainer = document.createElement('div');
 		quoteContainer.className = 'img-quote';
 		quoteContainer.append(image);
@@ -34,6 +34,7 @@ export function setModalContent(element, item, id) {
 	} else {
 		images = getLocalStorage('fetched-search-results');
 		modalImg = images.find((img) => img.id === id);
+
 		element.append(image);
 		modalSaveRemove(btnsContainer, id, innerModal);
 	}
