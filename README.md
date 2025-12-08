@@ -10,12 +10,13 @@
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge&label=Commits" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/issues">
 <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" /></a>
+<a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
+<img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Kernix13/vision-grid-express?style=for-the-badge&color=%236b61ef
+" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
 <img alt="License: MIT" src="https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge" /></a>
-<a href="https://github.com/Kernix13/vision-grid-express">
-<img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a>
-<!-- <a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
-<img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Kernix13/vision-grid-express?style=for-the-badge" /></a> -->
+<!-- <a href="https://github.com/Kernix13/vision-grid-express">
+<img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a> -->
 
 </p>
 
@@ -468,6 +469,7 @@ Code/Technical:
 4. [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`
 5. [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
 6. Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues
+<!-- ?. [Guide to Finding Closest Target](https://www.devzery.com/post/closest-target) -->
 
 Design & UI:
 
@@ -483,11 +485,6 @@ Accessibility:
 13. [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for making color palette choices
 14. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
 15. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages
-
-<!-- Various articles:
-
-16. [Event Delegation](https://imdac.github.io/modules/js/js-dom-events/event-delegation.html)
-18. [Guide to Finding Closest Target](https://www.devzery.com/post/closest-target) -->
 
 <!-- - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey) -->
 
@@ -507,12 +504,12 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 12 To-Do items left: 3 High-priority + 2 Non-critical + 1 bug + 1 important Stretch = 7
+> 11 To-Do items left: 3 High-priority + 2 Non-critical + 1 bug + 1 important Stretch = 7
 
 ### High-priority
 
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
-   - I need to refactor `setModalContent` to take an image `src` for the 2nd arg, not the DOM image object. Then I should be able to just loop through 'saved-images' in LS. Right now I am loading the 1st DOM image on the settings button click
+   - Right now I am loading the 1st DOM image on the settings button click
 2. **ABOUT**: Finish about page copy and styles
 3. **README**: Finish Use of AI + add screenshots
 
@@ -532,7 +529,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. **HOME**: Should I have a confirmation for the "clear all" button?
 2. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
 3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
-4. Add JSDoc comments? Yes, if I have time but not for every function!
+<!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section

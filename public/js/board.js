@@ -39,7 +39,7 @@ settingsBtn.addEventListener('click', () => {
 // 3. Play button...
 playSlider.addEventListener('click', () => {
 	console.log('Start Slider button clicked');
-	// I need a boolean in setModalContent so as not to load the modal with the nav buttons, and anothr one to show or not the affirmation/goal statement thay that will be the result of the check box.
+	// I need a boolean in setModalContent so as not to load the modal with the nav buttons:
 	let isSlider = true;
 
 	// I need to start with the 1st saved image then loop thru all of them
