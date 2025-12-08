@@ -4,11 +4,11 @@ const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
 // WHAT IMAGE SIZE AM I LOADING? It should be .regular, I think it is .small
-export function setModalContent(element, item, id) {
+export function setModalContent(element, imgSrc, id) {
 	element.textContent = '';
 
 	const image = document.createElement('img');
-	image.src = item.src;
+	image.src = imgSrc;
 	image.className = 'modal-image';
 
 	const btnsContainer = document.createElement('div');
@@ -82,9 +82,9 @@ function modalNav(btnsElement, imgId, modalElement) {
 			const domImageContainer = document.getElementById(nextImageObj.id);
 
 			if (page === '/board.html') {
-				domImage = domImageContainer.querySelector('.regular');
+				domImage = domImageContainer.querySelector('.regular').src;
 			} else {
-				domImage = domImageContainer.querySelector('.result-image');
+				domImage = domImageContainer.querySelector('.result-image').src;
 			}
 			setModalContent(modalElement, domImage, nextImageObj.id);
 		});
@@ -134,7 +134,7 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 				const domImage = domImageContainer.querySelector('.result-image');
 
 				// Recursive call of setModalContent because this Fx is called there
-				setModalContent(modalElement, domImage, nextImageObj.id);
+				setModalContent(modalElement, domImage.src, nextImageObj.id);
 			}
 
 			if (updatedImages.length === 1) {
