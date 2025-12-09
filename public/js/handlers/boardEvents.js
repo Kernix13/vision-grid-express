@@ -28,7 +28,7 @@ export function initBoardPage() {
 }
 
 /**
- * * 6. Save editable text to local storage for associated image object
+ * * 5. Save editable text to local storage for associated image object
  */ 
 export function saveUserText(event) {
 	const savedImages = getLocalStorage('saved-images');
@@ -45,7 +45,7 @@ export function saveUserText(event) {
 }
 
 /**
- * * 7. Add page image to modal on click of any page image
+ * * 6. Add page image to modal on click of any page image
  */ 
 export function addPageImageToModal(event) {
 	const regularImg = event.target.closest('.regular');
@@ -61,7 +61,7 @@ export function addPageImageToModal(event) {
 }
 
 /**
- * * 8. Adds/removes 'selected' class on click of any thumbnail image
+ * * 11. Adds/removes 'selected' class on click of any thumbnail image
  */ 
 export function handleThumbnailClick(event) {
 	const thumbItem = event.target.closest('.thumb-item');
@@ -82,7 +82,7 @@ export function handleThumbnailClick(event) {
 }
 
 /**
- * * 9. Handle a click on one of the 3 buttons for each thumbnail
+ * * 12. Handle a click on one of the 3 buttons for each thumbnail
  */ 
 export function handleThumbnailBtns(event) {
 	const thumbModal = document.getElementById('thumb-modal');
@@ -108,7 +108,7 @@ export function handleThumbnailBtns(event) {
 }
 
 /**
- * * 10. Play button... WIP
+ * * 19. Play button... WIP
  */ 
 export function handleSliderPlayBtn() {
 	console.log('Start Slider button clicked');
@@ -132,7 +132,7 @@ export function handleSliderPlayBtn() {
 }
 
 /**
- * * 11. Radio buttons listener... WIP
+ * * 20. Radio buttons listener... WIP
  */ 
 export function handleRadioCheck(event) {
 	console.log('Selected radio:', event.target.value);

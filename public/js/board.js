@@ -39,9 +39,7 @@ const backToTopButton = document.querySelector('#back-to-top-btn');
 document.addEventListener('DOMContentLoaded', initBoardPage);
 
 // 2. Open/close hamburger menu
-hamburger.addEventListener('click', () => {
-	toggleMenu();
-});
+hamburger.addEventListener('click', toggleMenu);
 
 // 3. Show Back To Top button
 window.addEventListener('scroll', scrollFunction);

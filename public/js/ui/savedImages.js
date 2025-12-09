@@ -30,16 +30,14 @@ export function addSavedImagesToDom() {
     imageText.append(image);
 
     // Create editable div
-    const div = document.createElement('div');
-    div.className = 'editable';
-    div.setAttribute('contenteditable', true);
+    const p = document.createElement('p');
+    p.className = 'editable';
+    p.setAttribute('contenteditable', true);
 
     // Show saved notes if they exist, otherwise show placeholder
-    div.innerHTML = img.notes
-      ? img.notes.replace(/\n/g, '<br>')
-      : 'You can add or edit notes here...';
-
-    imageText.append(div);
+    p.innerHTML = img.notes || 'You can add or edit notes here...';
+  
+    imageText.append(p);
     imgTextContainer.append(imageText);
   });
 }
