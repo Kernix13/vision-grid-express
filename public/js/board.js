@@ -29,78 +29,35 @@ const cancelBtn = document.getElementById('cancel-delete-btn');
 const deleteClose = document.getElementById('delete-close');
 
 /**
- * * EVENT LISTENERS
+ * * GLOBAL UI LISTENERS
  */
-
 // 1. Load saved images on DOMContentLoaded
 document.addEventListener('DOMContentLoaded', initBoardPage);
 
-// 2. Show/Hide settings form
-settingsBtn.addEventListener('click', () => {
-	toggleDisplay(settingsForm, settingsBtn, 'Settings');
-	settingsForm.removeAttribute('inert');
-	settingsForm.setAttribute('aria-hidden', 'false');
+// 2. Open/close hamburger menu
+hamburger.addEventListener('click', () => {
+	toggleMenu();
 });
 
-// 3. Sets the H1 textContent to value set by user in settings form
-input.addEventListener('input', () => {
-	const value = input.value;
-  h1.textContent = value;
-  setLocalStorage('board-title', value);
-});
+// 3. Back To Top button
+window.addEventListener('scroll', scrollFunction);
 
-// 4. Show/hide thumbnails strip and changes button textContent
-thumbnailsBtn.addEventListener('click', () => {
-	toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
-	thumbnails.removeAttribute('inert');
-	thumbnails.setAttribute('aria-hidden', 'false');
-});
-
-// 5. Close thumbnails on click img-text-container element
-imgTextContainer.addEventListener('click', () => {
-	if (thumbnails.classList.contains('onscreen')) {
-		thumbnails.classList.remove('onscreen');
-		thumbnailsBtn.innerText = 'Show Thumbnails';
-	}
-});
-
-// 6. Save editable text to local storage for associated image object
+/**
+ * * Page image, editable text element, & image modal listeners
+ */
+// 4. Save editable text to local storage for each image object
 imgTextContainer.addEventListener('focusout', saveUserText);
 
-// 7. Add page image to modal on click of any page image
+// 5. Add page image to modal on click of any page image
 imgTextContainer.addEventListener('click', addPageImageToModal);
 
-// 8. Adds/removes 'selected' class on click of any thumbnail image and scrolls to that page image
-thumbnails.addEventListener('click', handleThumbnailClick);
-
-// 9. Handle a click on one of the 3 buttons for each thumbnail
-thumbnails.addEventListener('click', handleThumbnailBtns);
-
-// 10. Play button... WIP
-playSlider.addEventListener('click', handleSliderPlayBtn);
-
-// 11. Radio buttons listener... WIP
-allTimes.forEach(time => {
-  time.addEventListener('change', handleRadioCheck);
-});
-
-// 12. Delete saved image if Delete button clicked 
-const confirmBtn = document.getElementById('confirm-delete-btn');
-confirmBtn.addEventListener('click', () => {
-	deleteImage(getLocalStorage('delete-item-id'));
-	closeDeleteModal();
-});
-
-// 13. & 14. Cancel and close button listener for thumbnail delete
-cancelBtn.addEventListener('click', closeDeleteModal);
-deleteClose.addEventListener('click', closeDeleteModal);
-
-// 15. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
+// 6. Close image modal on close button click
 close.addEventListener('click', () => {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
 });
 
+// 7. Close image modal on window click
 window.addEventListener('click', (e) => {
 	if (e.target === modalBg) {
     modalBg.classList.remove('show-modal');
@@ -108,15 +65,73 @@ window.addEventListener('click', (e) => {
   }
 });
 
+// 8. Close image modal on Escape key keydown
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
 });
 
-// 16. Open/close hamburger menu
-hamburger.addEventListener('click', () => {
-	toggleMenu();
+/**
+ * * Thumbnails listners
+ */
+// 9. Show/hide thumbnails strip & change button label
+thumbnailsBtn.addEventListener('click', () => {
+	toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
+	thumbnails.removeAttribute('inert');
+	thumbnails.setAttribute('aria-hidden', 'false');
 });
 
-// 17. Back To Top button
-window.addEventListener('scroll', scrollFunction);
+// 10. Add/remove 'selected' class on click of any thumbnail image + scroll to page image
+thumbnails.addEventListener('click', handleThumbnailClick);
+
+// 11. Handle a click on one of the 3 buttons for each thumbnail
+thumbnails.addEventListener('click', handleThumbnailBtns);
+
+// 12. Close thumbnails on click of img-text-container element
+imgTextContainer.addEventListener('click', () => {
+	if (thumbnails.classList.contains('onscreen')) {
+		thumbnails.classList.remove('onscreen');
+		thumbnailsBtn.innerText = 'Show Thumbnails';
+	}
+});
+
+// 13. Delete saved image if thumbnails Delete button clicked 
+const confirmBtn = document.getElementById('confirm-delete-btn');
+confirmBtn.addEventListener('click', () => {
+	deleteImage(getLocalStorage('delete-item-id'));
+	closeDeleteModal();
+});
+
+// 14. & 15. Cancel and close button listener for thumbnail delete
+cancelBtn.addEventListener('click', closeDeleteModal);
+deleteClose.addEventListener('click', closeDeleteModal);
+
+/**
+ * * Settings form listners
+ */
+// 16. Show/Hide settings form & change button label
+settingsBtn.addEventListener('click', () => {
+	toggleDisplay(settingsForm, settingsBtn, 'Settings');
+	settingsForm.removeAttribute('inert');
+	settingsForm.setAttribute('aria-hidden', 'false');
+});
+
+// 17. Set the H1 text to value set by user in settings form input field
+input.addEventListener('input', () => {
+	const value = input.value;
+  h1.textContent = value;
+  setLocalStorage('board-title', value);
+});
+
+// 18. Image slider Play button listener... WIP
+playSlider.addEventListener('click', handleSliderPlayBtn);
+
+// 19. Radio buttons listener for image slider timing... WIP
+allTimes.forEach(time => {
+  time.addEventListener('change', handleRadioCheck);
+});
+
+
+
+
+

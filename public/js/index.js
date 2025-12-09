@@ -22,22 +22,38 @@ const modalBg = document.getElementById('modal-bg');
 const hamburger = document.getElementById('hamburger');
 
 /**
- * * EVENT LISTENERS
+ * * GLOBAL UI LISTENERS
  */
-
-// 1. Loads localStorage elements if they exist
+// 1. Loads localStorage fetched image objects if they exist
 document.addEventListener('DOMContentLoaded', initHomePage);
 
-// 2. Handle & validate form input, fetch images, render results
+// 2. Open/close hamburger menu
+hamburger.addEventListener('click', () => {
+	toggleMenu();
+});
+
+// 3. Back To Top button
+window.addEventListener('scroll', scrollFunction);
+
+/**
+ * * Unsplash API fetch listeners
+ */
+// 4. Handle & validate form input, fetch images, render results
 form.addEventListener('submit', handleFormSubmit);
 
-// 3. Fetch more images for current search term on Load More button click
+// 5. Fetch more images for current search term on Load More button click
 loadMore.addEventListener('click', handleLoadMoreBtn);
 
-// 4. Fetch more images if a past search term button is clicked
+// 6. Fetch more images on click of a past search term button
 searchTerms.addEventListener('click', handleSearchTermBtn);
 
-// 5. Remove card when card button is clicked
+/**
+ * * Results/grid card image, card buttons, & image modal listeners
+ */
+// 7. Open image in modal on card image click
+searchGrid.addEventListener('click', addCardImageToModal);
+
+// 8. Remove card when Save/Remove button is clicked
 searchGrid.addEventListener('click', (e) => {
 	removeImageCard(e);
 
@@ -46,10 +62,30 @@ searchGrid.addEventListener('click', (e) => {
 	if (cardImages.length === 0) addRemoveClass(resultsTitle, 'none', 'block');
 });
 
-// 6. Search images grid: open image in modal on image click
-searchGrid.addEventListener('click', addCardImageToModal);
+// 9. Close modal listener on close button click
+close.addEventListener('click', () => {
+	modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+});
 
-// 7. Clear save searches and related buttons from the DOM
+// 10. Close modal listener on window click 
+window.addEventListener('click', (e) => {
+	if (e.target === modalBg) {
+    modalBg.classList.remove('show-modal');
+    modalBg.hidden = true;
+  }
+});
+
+// 11. Close modal listener on Escape key keydown
+document.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+});
+
+/**
+ * * Page/search reset listener
+ */
+// 7. Clear save searches and related buttons & elements from DOM
 clearSearches.addEventListener('click', (e) => {
 	// These 2 lines added to clear an Aria warning in console
 	e.target.inert = true;
@@ -58,29 +94,3 @@ clearSearches.addEventListener('click', (e) => {
 	clearSearchElements();
 	document.querySelector('.error-message').textContent = '';
 });
-
-// 8. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
-close.addEventListener('click', () => {
-	modalBg.classList.remove('show-modal');
-	modalBg.hidden = true;
-});
-
-window.addEventListener('click', (e) => {
-	if (e.target === modalBg) {
-    modalBg.classList.remove('show-modal');
-    modalBg.hidden = true;
-  }
-});
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === "Escape") modalBg.classList.remove('show-modal');
-	modalBg.hidden = true;
-});
-
-// 9. Open/close hamburger menu
-hamburger.addEventListener('click', () => {
-	toggleMenu();
-});
-
-// 10. Back To Top button
-window.addEventListener('scroll', scrollFunction);
