@@ -26,10 +26,15 @@ export function saveSearchTerm(str, arr) {
 // Does this function make sense?
 export function renderSearchEls(str) {
 	setLocalStorage('last-search', str);
+	
+	loadMore.hidden = false;
 	addSearchText(loadMore, 'Load 12 more images for ', 'load-more-search');
+	
+	resultsTitle.hidden = false;
 	addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
-
+	
 	const loadMoreText = 'Start new search & clear search results';
+	clearSearches.hidden = false;
 	addSearchText(clearSearches, loadMoreText);
 }
 
