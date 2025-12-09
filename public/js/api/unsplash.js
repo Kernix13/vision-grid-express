@@ -27,6 +27,7 @@ export async function getSearchResults(searchTerm, page) {
 				width: result.width,
 				notes: '',
 				affirmation: '',
+				includeInSlider: true,
 			};
 		});
 

@@ -504,11 +504,11 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 13 To-Do items left: 3 High-priority + 2 Non-critical + 1 bug + 1 important Stretch = 7
+> 13 To-Do items left: 3 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 8
 
 <!--
   Blockers:
-  📌 load-more, search-terms, results-title, clear-searches - hardcoded in HTML - should they be removed and created by JS?
+  📌 1.
  -->
 
 ### High-priority
@@ -521,8 +521,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Non-critical
 
 1. **HOME**: Add some kind of transition/animation for when the home page cards are removed.
-2. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
-3. **REFACTOR**: for all pages, create a handlers folder, moved functions for the listeners into that folder - issue [#67](https://github.com/Kernix13/vision-grid-express/issues/67)
+2. **BOARD**: Allow user to uncheck showing a saved image in the lightbox slider
+3. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
 
 ### Bugs/Issues/Questions
 

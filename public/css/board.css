@@ -168,7 +168,7 @@
 
 .thumb-btns button {
   align-self: center;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   line-height: 1;
   min-width: 24px;
   min-height: 24px;
@@ -198,6 +198,10 @@
 
 .delete {
   color: var(--red);
+}
+
+.show-in-slider {
+  transform: scale(1.2);
 }
 
 /* Thumbnails Delete confirmation modal */

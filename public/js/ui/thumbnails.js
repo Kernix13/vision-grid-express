@@ -27,8 +27,7 @@ export function addThumbnailsToDom() {
 		const thumbBtns = document.createElement('div');
 		thumbBtns.className = 'thumb-btns';
 
-		// Up, Down, and Delete buttons - consider using fontawesome:
-		// arrow-up, arrow-down, trash
+		// arrow-up, arrow-down, delete and checkbox
 		const upBtn = document.createElement('button');
 		upBtn.textContent = '↑';
 		upBtn.className = 'move-up';
@@ -47,7 +46,17 @@ export function addThumbnailsToDom() {
 		deleteBtn.setAttribute('title', 'Delete image');
 		deleteBtn.setAttribute('aria-label', 'Delete image');
 
-		thumbBtns.append(upBtn, downBtn, deleteBtn);
+		const showInSlider = document.createElement('input');
+		showInSlider.type = 'checkbox';
+		showInSlider.className = 'show-in-slider';
+		showInSlider.name = 'show-in-slider';
+		showInSlider.checked = true;
+		// I need to clear LS because uncommented below and removing above
+		// showInSlider.checked = img.includeInSlider;
+		showInSlider.setAttribute('title', 'Show image in lightbox');
+		showInSlider.setAttribute('aria-label', 'Include this image in the slideshow');
+
+		thumbBtns.append(upBtn, downBtn, showInSlider, deleteBtn);
 		thumbItem.append(thumbnail, thumbBtns);
 		thumbnails.append(thumbItem);
 	});
