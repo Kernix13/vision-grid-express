@@ -63,9 +63,9 @@ function modalNav(btnsElement, imgId, modalElement) {
 		} else {
 			images = getLocalStorage('fetched-search-results');
 		}
-		
+
 		const currentIndex = images.findIndex((img) => img.id === imgId);
-		
+
 		if (currentIndex === 0 && btn.classList.contains('prev')) {
 			btn.disabled = true;
 		}

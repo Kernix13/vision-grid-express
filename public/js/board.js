@@ -1,20 +1,20 @@
-import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
-import { 
-	initBoardPage, 
-	addPageImageToModal, 
-	saveUserText, 
-	handleThumbnailClick, 
-	handleThumbnailBtns,
+import {
+	addPageImageToModal,
+	handleRadioCheck,
 	handleSliderPlayBtn,
-	handleRadioCheck
+	handleThumbnailBtns,
+	handleThumbnailClick,
+	initBoardPage,
+	saveUserText,
 } from './handlers/boardEvents.js';
-import { toggleMenu } from './handlers/globalEvents.js';
-import { deleteImage, closeDeleteModal } from './ui/thumbnails.js';
-import { toggleDisplay } from './ui/classUtils.js';
-import { 
-	scrollFunction, 
-	smoothScrollBackToTop 
+import {
+	scrollFunction,
+	smoothScrollBackToTop,
+	toggleMenu,
 } from './handlers/globalEvents.js';
+import { toggleDisplay } from './ui/classUtils.js';
+import { closeDeleteModal, deleteImage } from './ui/thumbnails.js';
+import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
@@ -65,14 +65,14 @@ close.addEventListener('click', () => {
 // 8. Close image modal on window click
 window.addEventListener('click', (e) => {
 	if (e.target === modalBg) {
-    modalBg.classList.remove('show-modal');
-    modalBg.hidden = true;
-  }
+		modalBg.classList.remove('show-modal');
+		modalBg.hidden = true;
+	}
 });
 
 // 9. Close image modal on Escape key keydown
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") modalBg.classList.remove('show-modal');
+document.addEventListener('keydown', (e) => {
+	if (e.key === 'Escape') modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
 });
 
@@ -100,7 +100,7 @@ imgTextContainer.addEventListener('click', () => {
 	}
 });
 
-// 14. Delete saved image if thumbnails Delete button clicked 
+// 14. Delete saved image if thumbnails Delete button clicked
 const confirmBtn = document.getElementById('confirm-delete-btn');
 confirmBtn.addEventListener('click', () => {
 	deleteImage(getLocalStorage('delete-item-id'));
@@ -124,19 +124,14 @@ settingsBtn.addEventListener('click', () => {
 // 18. Set the H1 text to value set by user in settings form input field
 input.addEventListener('input', () => {
 	const value = input.value;
-  h1.textContent = value;
-  setLocalStorage('board-title', value);
+	h1.textContent = value;
+	setLocalStorage('board-title', value);
 });
 
 // 19. Image slider Play button listener... WIP
 playSlider.addEventListener('click', handleSliderPlayBtn);
 
 // 20. Radio buttons listener for image slider timing... WIP
-allTimes.forEach(time => {
-  time.addEventListener('change', handleRadioCheck);
+allTimes.forEach((time) => {
+	time.addEventListener('change', handleRadioCheck);
 });
-
-
-
-
-

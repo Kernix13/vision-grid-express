@@ -1,5 +1,8 @@
-import { toggleMenu } from './handlers/globalEvents.js';
-import { scrollFunction, smoothScrollBackToTop } from './handlers/globalEvents.js';
+import {
+	scrollFunction,
+	smoothScrollBackToTop,
+	toggleMenu,
+} from './handlers/globalEvents.js';
 
 const hamburger = document.getElementById('hamburger');
 const backToTopButton = document.querySelector('#back-to-top-btn');

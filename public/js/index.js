@@ -1,18 +1,18 @@
-import { 
-	initHomePage, 
-	handleLoadMoreBtn, 
-	handleSearchTermBtn,
-	addCardImageToModal,
-	handleFormSubmit
-} from './handlers/indexEvents.js';
-import { 
-	scrollFunction, 
-	smoothScrollBackToTop 
+import {
+	scrollFunction,
+	smoothScrollBackToTop,
+	toggleMenu,
 } from './handlers/globalEvents.js';
+import {
+	addCardImageToModal,
+	handleFormSubmit,
+	handleLoadMoreBtn,
+	handleSearchTermBtn,
+	initHomePage,
+} from './handlers/indexEvents.js';
 import { removeImageCard } from './ui/cards.js';
-import { toggleMenu } from './handlers/globalEvents.js';
-import { clearSearchElements } from './ui/searchEls.js';
 import { addRemoveClass } from './ui/classUtils.js';
+import { clearSearchElements } from './ui/searchEls.js';
 
 const form = document.getElementById('search-form');
 const loadMore = document.getElementById('load-more');
@@ -73,17 +73,17 @@ close.addEventListener('click', () => {
 	modalBg.hidden = true;
 });
 
-// 11. Close image modal listener on window click 
+// 11. Close image modal listener on window click
 window.addEventListener('click', (e) => {
 	if (e.target === modalBg) {
-    modalBg.classList.remove('show-modal');
-    modalBg.hidden = true;
-  }
+		modalBg.classList.remove('show-modal');
+		modalBg.hidden = true;
+	}
 });
 
 // 12. Close image modal listener on Escape key keydown
 document.addEventListener('keydown', (e) => {
-  if (e.key === "Escape") modalBg.classList.remove('show-modal');
+	if (e.key === 'Escape') modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
 });
 

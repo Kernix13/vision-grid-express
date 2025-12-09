@@ -54,7 +54,10 @@ export function addThumbnailsToDom() {
 		// I need to clear LS because uncommented below and removing above
 		// showInSlider.checked = img.includeInSlider;
 		showInSlider.setAttribute('title', 'Show image in lightbox');
-		showInSlider.setAttribute('aria-label', 'Include this image in the slideshow');
+		showInSlider.setAttribute(
+			'aria-label',
+			'Include this image in the slideshow',
+		);
 
 		thumbBtns.append(upBtn, downBtn, showInSlider, deleteBtn);
 		thumbItem.append(thumbnail, thumbBtns);

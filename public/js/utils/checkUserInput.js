@@ -1,11 +1,30 @@
 export function checkUserInput(input, el) {
-  const badCharacters = [' ',	'_',	'-',	'>',	'.',	'|',	';',	'[',	']',	'{',	'}',	'(',	')',	'*',	'`',	'~',	'"',	':'];
-  const value = input.value.trim();
+	const badCharacters = [
+		' ',
+		'_',
+		'-',
+		'>',
+		'.',
+		'|',
+		';',
+		'[',
+		']',
+		'{',
+		'}',
+		'(',
+		')',
+		'*',
+		'`',
+		'~',
+		'"',
+		':',
+	];
+	const value = input.value.trim();
 
 	if (!value || (value.length === 1 && badCharacters.includes(value))) {
-    const errorMsg = !value
-      ? "Please enter a search term"
-      : "Invalid search term - please try again";
+		const errorMsg = !value
+			? 'Please enter a search term'
+			: 'Invalid search term - please try again';
 
 		el.textContent = errorMsg;
 		input.value = '';
