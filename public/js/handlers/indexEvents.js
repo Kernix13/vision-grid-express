@@ -45,10 +45,14 @@ export function initHomePage() {
     // Add search phrase as button
     addSearchTerm(searchTerms, savedSearches);
 
-    // 
-    addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
+    loadMore.hidden = false;
     addSearchText(loadMore, 'Load 12 more images for ', 'load-more-search');
+
+    resultsTitle.hidden = false;
+    addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
+    
     const loadMoreText = 'Start new search & clear search results';
+    clearSearches.hidden = false;
     addSearchText(clearSearches, loadMoreText);
 
     createImgCard(images);
