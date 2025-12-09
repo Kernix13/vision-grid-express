@@ -11,8 +11,8 @@
 <a href="https://github.com/Kernix13/vision-grid-express/issues">
 <img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
-<img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Kernix13/vision-grid-express?style=for-the-badge&color=%236b61ef
-" /></a>
+<a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
+<img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Kernix13/vision-grid-express?style=for-the-badge&color=%236b61ef" /></a>
 <a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
 <img alt="License: MIT" src="https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge" /></a>
 <!-- <a href="https://github.com/Kernix13/vision-grid-express">
