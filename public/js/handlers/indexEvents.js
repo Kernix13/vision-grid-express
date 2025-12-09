@@ -31,7 +31,8 @@ export function initHomePage() {
   ) {
     setLocalStorage('search-phrases', []);
 
-    // I should not have empty elements in the DOM, I should be creating them
+    // Should I have empty elements in the DOM, or should I be creating them?
+    // These elements show even with no page search elements
     clearSearches.classList.add('none');
     loadMore.classList.add('none');
     resultsTitle.classList.add('none');
@@ -41,12 +42,14 @@ export function initHomePage() {
 
     searchTerms.textContent = '';
 
+    // Add search phrase as button
     addSearchTerm(searchTerms, savedSearches);
-    addSearchText(loadMore, 'Load 12 more images for ', 'load-more-search');
-    addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
 
+    // 
+    addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
+    addSearchText(loadMore, 'Load 12 more images for ', 'load-more-search');
     const loadMoreText = 'Start new search & clear search results';
-    addSearchText(clearSearches, loadMoreText, 'clear-searches');
+    addSearchText(clearSearches, loadMoreText);
 
     createImgCard(images);
   }
@@ -74,23 +77,25 @@ export function handleFormSubmit(event) {
     // Render page elements
     renderSearchEls(input.value);
     
-    // Save values to localStorage
-    saveSearchTerm(input.value, savedSearches);
+    // Save 3 values to localStorage
+    // 1. 'search-phrases':
+    saveSearchTerm(input.value, savedSearches); 
+    // 2. 'current-search'
     setLocalStorage('current-search', {
       search: input.value,
       page: searchPage,
     });
-
-    const saveNewSearch = { search: input.value, page: searchPage };
+    // 3. 'search-phrases-page'
+    const newSearch = { search: input.value, page: searchPage };
     const searchPhrasesPage = getLocalStorage('search-phrases-page') || [];
-    searchPhrasesPage.push(saveNewSearch);
+    searchPhrasesPage.push(newSearch);
     setLocalStorage('search-phrases-page', searchPhrasesPage);
   }
 
   // Show hidden elements
   addRemoveClass(clearSearches, 'inline', 'none');
-  addRemoveClass(loadMore, 'inline', 'none');
   addRemoveClass(resultsTitle, 'block', 'none');
+  addRemoveClass(loadMore, 'inline', 'none');
 
   resultsTitle.scrollIntoView({ behavior: 'smooth' });
 
@@ -103,7 +108,6 @@ export function handleFormSubmit(event) {
 export function handleLoadMoreBtn() {
   const lastSearch = getLocalStorage('last-search');
   const page = incrementSearchPage(lastSearch);
-  console.log(`Clicked load more for '${lastSearch}', page # ${page}`);
 
   searchGrid.textContent = '';
 
@@ -123,9 +127,8 @@ export function handleSearchTermBtn(event) {
 
   const searchTerm = btn.textContent;
 
-  // Increment page number for search term
+  // Increment page number for search term clicked
   const page = incrementSearchPage(searchTerm);
-  console.log(`Clicked search term for '${searchTerm}', page # ${page}`);
 
   searchGrid.textContent = '';
 
@@ -133,7 +136,7 @@ export function handleSearchTermBtn(event) {
   getSearchResults(searchTerm, page);
   // Render page elements
   renderSearchEls(searchTerm);
-  // Save values to localStorage
+  // Save values to localStorage: 'last-search' & 'search-phrases'
   setLocalStorage('last-search', searchTerm);
   saveSearchTerm(searchTerm, savedSearches);
 }

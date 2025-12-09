@@ -506,6 +506,11 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 > 13 To-Do items left: 3 High-priority + 2 Non-critical + 1 bug + 1 important Stretch = 7
 
+<!--
+  Blockers:
+  📌 load-more, search-terms, results-title, clear-searches - hardcoded in HTML - should they be removed and created by JS?
+ -->
+
 ### High-priority
 
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)

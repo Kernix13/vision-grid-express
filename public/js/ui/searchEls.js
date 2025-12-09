@@ -30,7 +30,7 @@ export function renderSearchEls(str) {
 	addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
 
 	const loadMoreText = 'Start new search & clear search results';
-	addSearchText(clearSearches, loadMoreText, 'clear-searches');
+	addSearchText(clearSearches, loadMoreText);
 }
 
 export function addSearchText(el, text, spanClass) {

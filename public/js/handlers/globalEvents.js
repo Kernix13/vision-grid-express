@@ -2,7 +2,7 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const backToTopButton = document.querySelector('#back-to-top-btn');
 
-// Mobile menu
+// Mobile menu - this function is from previous projects of mine & needs to be rewritten because it has issues
 export function toggleMenu() {
 	/* Toggle active class */
 	hamburger.classList.toggle('active');
@@ -15,7 +15,7 @@ export function toggleMenu() {
 
 /**
  * Display or hide back-to-top btn based on scrollY
- * https://codepen.io/Coding_Journey/pen/LMrLQV
+ * Code from https://codepen.io/Coding_Journey/pen/LMrLQV
  */
 export function scrollFunction() {
 	if (window.scrollY > 600) {
