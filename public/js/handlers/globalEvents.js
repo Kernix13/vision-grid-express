@@ -37,12 +37,10 @@ export function scrollFunction() {
 	}
 }
 
-backToTopButton.addEventListener('click', smoothScrollBackToTop);
-
 /**
  * Control scroll animation
  */
-function smoothScrollBackToTop() {
+export function smoothScrollBackToTop() {
 	const duration = 1250;
 	let start = null;
 
