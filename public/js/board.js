@@ -25,7 +25,8 @@ const hamburger = document.getElementById('hamburger');
 const imgTextContainer = document.querySelector('#img-text-container');
 const close = document.getElementById('close-btn');
 const modalBg = document.getElementById('modal-bg');
-const innerModal = document.querySelector('.modal');
+const cancelBtn = document.getElementById('cancel-delete-btn');
+const deleteClose = document.getElementById('delete-close');
 
 /**
  * * EVENT LISTENERS
@@ -63,18 +64,10 @@ imgTextContainer.addEventListener('click', () => {
 	}
 });
 
-// 6. Play button... WIP
-playSlider.addEventListener('click', handleSliderPlayBtn);
-
-// 7. Radio buttons listener here I think - not sure what to do with it
-allTimes.forEach(time => {
-  time.addEventListener('change', handleRadioCheck);
-});
-
-// 7. Save editable text to local storage for associated image object
+// 6. Save editable text to local storage for associated image object
 imgTextContainer.addEventListener('focusout', saveUserText);
 
-// 8. Add page image to modal on click of any page image
+// 7. Add page image to modal on click of any page image
 imgTextContainer.addEventListener('click', addPageImageToModal);
 
 // 8. Adds/removes 'selected' class on click of any thumbnail image and scrolls to that page image
@@ -83,21 +76,26 @@ thumbnails.addEventListener('click', handleThumbnailClick);
 // 9. Handle a click on one of the 3 buttons for each thumbnail
 thumbnails.addEventListener('click', handleThumbnailBtns);
 
-// 10. Delete saved image if Delete button clicked 
+// 10. Play button... WIP
+playSlider.addEventListener('click', handleSliderPlayBtn);
+
+// 11. Radio buttons listener... WIP
+allTimes.forEach(time => {
+  time.addEventListener('change', handleRadioCheck);
+});
+
+// 12. Delete saved image if Delete button clicked 
 const confirmBtn = document.getElementById('confirm-delete-btn');
 confirmBtn.addEventListener('click', () => {
 	deleteImage(getLocalStorage('delete-item-id'));
 	closeDeleteModal();
 });
 
-// 11. Cancel and close button listener for thumbnail delete
-const cancelBtn = document.getElementById('cancel-delete-btn');
+// 13. & 14. Cancel and close button listener for thumbnail delete
 cancelBtn.addEventListener('click', closeDeleteModal);
-
-const deleteClose = document.getElementById('delete-close');
 deleteClose.addEventListener('click', closeDeleteModal);
 
-// 12. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
+// 15. Close modal listeners on: 1. close button click, 2. window click, 3. Escape key keydown
 close.addEventListener('click', () => {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
@@ -115,10 +113,10 @@ document.addEventListener("keydown", (e) => {
 	modalBg.hidden = true;
 });
 
-// 13. Open/close hamburger menu
+// 16. Open/close hamburger menu
 hamburger.addEventListener('click', () => {
 	toggleMenu();
 });
 
-// 14. Back To Top button
+// 17. Back To Top button
 window.addEventListener('scroll', scrollFunction);

@@ -12,7 +12,9 @@ const innerModal = document.querySelector('.modal');
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
 
-// On visit to board.html
+/**
+ * * 1. Load saved images on DOMContentLoaded
+ */ 
 export function initBoardPage() {
 	const savedImages = getLocalStorage('saved-images');
 	if (savedImages.length > 0) {
@@ -25,21 +27,9 @@ export function initBoardPage() {
   input.value = boardTitle;
 }
 
-// Add page image to modal on click of any page image
-export function addPageImageToModal(event) {
-	const regularImg = event.target.closest('.regular');
-	if (!regularImg) return;
-
-	const imageText = regularImg.closest('.image-text');
-	const imageTextId = imageText.id;
-	console.log(imageTextId);
-
-	modalBg.classList.add('show-modal');
-	modalBg.hidden = false;
-	setModalContent(innerModal, regularImg.src, imageTextId);
-}
-
-// Save editable text to local storage for associated image object
+/**
+ * * 6. Save editable text to local storage for associated image object
+ */ 
 export function saveUserText(event) {
 	const savedImages = getLocalStorage('saved-images');
 	const editable = event.target.closest('.editable');
@@ -54,7 +44,25 @@ export function saveUserText(event) {
 	setLocalStorage('saved-images', savedImages);
 }
 
-// Adds/removes 'selected' class on click of any thumbnail image andscroll to the page image
+/**
+ * * 7. Add page image to modal on click of any page image
+ */ 
+export function addPageImageToModal(event) {
+	const regularImg = event.target.closest('.regular');
+	if (!regularImg) return;
+
+	const imageText = regularImg.closest('.image-text');
+	const imageTextId = imageText.id;
+	console.log(imageTextId);
+
+	modalBg.classList.add('show-modal');
+	modalBg.hidden = false;
+	setModalContent(innerModal, regularImg.src, imageTextId);
+}
+
+/**
+ * * 8. Adds/removes 'selected' class on click of any thumbnail image
+ */ 
 export function handleThumbnailClick(event) {
 	const thumbItem = event.target.closest('.thumb-item');
 	if (!thumbItem) return;
@@ -73,6 +81,9 @@ export function handleThumbnailClick(event) {
 	selectImage(id);
 }
 
+/**
+ * * 9. Handle a click on one of the 3 buttons for each thumbnail
+ */ 
 export function handleThumbnailBtns(event) {
 	const thumbModal = document.getElementById('thumb-modal');
 	const btn = event.target.closest('button');
@@ -96,6 +107,9 @@ export function handleThumbnailBtns(event) {
 	} 
 }
 
+/**
+ * * 10. Play button... WIP
+ */ 
 export function handleSliderPlayBtn() {
 	console.log('Start Slider button clicked');
 	// I need a boolean in setModalContent so as not to load the modal with the nav buttons:
@@ -110,8 +124,6 @@ export function handleSliderPlayBtn() {
 	modalBg.classList.add('show-modal');
 	modalBg.hidden = false;
 
-	// setModalContent is bad for this because of the second argument: img.src
-	// I need to pass that in I need to refactor the Fx and all functions calls
 	setModalContent(innerModal, pageImages[0].src, imageTextEls[0].id);
 
 	console.log(savedImages[0].imageRegular === pageImages[0].src)
@@ -119,6 +131,9 @@ export function handleSliderPlayBtn() {
 	toggleDisplay(settingsForm, settingsBtn, 'Settings');
 }
 
+/**
+ * * 11. Radio buttons listener... WIP
+ */ 
 export function handleRadioCheck(event) {
 	console.log('Selected radio:', event.target.value);
 	const selected = document.querySelector('input[name="lightbox-speed"]:checked');
