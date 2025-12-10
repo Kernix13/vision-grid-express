@@ -508,7 +508,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 13 To-Do items left: 3 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 8
+> 12 To-Do items left: 2 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 7
 
 <!--
   Blockers:
@@ -519,8 +519,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
    - Right now I am loading the 1st DOM image on the settings button click
-2. **ABOUT**: Finish about page copy and styles
-3. **README**: Finish Use of AI + add screenshots
+2. **README**: Finish Use of AI + add screenshots
 
 ### Non-critical
 
@@ -530,7 +529,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### Bugs/Issues/Questions
 
-1. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem
+1. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 2. Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image
 3. Did I actually set a char limit for the editable blockquote of 115? I don't think I did.
 4. Once the 'x' Delete button for a thumbnail is clicked, setLocalStorage sets the id for the saved images as the value in 'delete-item-id'. If the user cancels the delete process, should that be removed/cleared? I think technically yes, but it also does not matter if it remains, because it will be replaced by any other click on a delete 'x' button.
