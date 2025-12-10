@@ -3,7 +3,6 @@ import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
-// WHAT IMAGE SIZE AM I LOADING? It should be .regular, I think it is .small
 export function setModalContent(element, imgSrc, id) {
 	element.textContent = '';
 

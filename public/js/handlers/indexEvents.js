@@ -152,13 +152,18 @@ export function handleSearchTermBtn(event) {
  * * 6. Search images grid: open image in modal on image click
  */
 export function addCardImageToModal(event) {
+	const images = getLocalStorage('fetched-search-results');
 	const img = event.target.closest('img.result-image');
 	if (!img) return;
-
+	
 	const card = img.closest('.image-card');
 	const cardId = card.id;
+	
+	// Get the clicked image object from LocalStorage
+	const cardImgId = images.findIndex(img => img.id === cardId)
+	const cardImgObject = images[cardImgId]
 
 	modalBg.classList.add('show-modal');
 	modalBg.hidden = false;
-	setModalContent(innerModal, img.src, cardId);
+	setModalContent(innerModal, cardImgObject.imageRegular, cardId);
 }

@@ -64,7 +64,9 @@ searchGrid.addEventListener('click', (e) => {
 
 	// Remove the results title if the user saves or removes every image?
 	const cardImages = searchGrid.querySelectorAll('img');
-	if (cardImages.length === 0) addRemoveClass(resultsTitle, 'none', 'block');
+	if (cardImages.length === 0) {
+		addRemoveClass(resultsTitle, 'none', 'block');
+	}
 });
 
 // 10. Close image modal listener on close button click
