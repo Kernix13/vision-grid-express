@@ -75,18 +75,21 @@ export function moveImage(id, direction) {
 
 	console.log(`id: ${id}, direction: ${direction}`);
 
-	const newOrder = [...savedImages];
-
+	// Move the image up
 	if (direction === 'up' && idx > 0) {
-		[newOrder[idx], newOrder[idx - 1]] = [newOrder[idx - 1], newOrder[idx]];
-		setLocalStorage('saved-images', newOrder);
+		// Swap positions in the array then resave to LS
+		[savedImages[idx], savedImages[idx - 1]] = [savedImages[idx - 1], savedImages[idx]];
+		setLocalStorage('saved-images', savedImages);
 	}
 
+	// Move the image down
 	if (direction === 'down' && idx < savedImages.length - 1) {
-		[newOrder[idx], newOrder[idx + 1]] = [newOrder[idx + 1], newOrder[idx]];
-		setLocalStorage('saved-images', newOrder);
+		// Swap positions in the array then resave to LS
+		[savedImages[idx], savedImages[idx + 1]] = [savedImages[idx + 1], savedImages[idx]];
+		setLocalStorage('saved-images', savedImages);
 	}
 
+	// re-render page and thumbnails images based on new order
 	addThumbnailsToDom();
 	addSavedImagesToDom();
 }

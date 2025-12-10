@@ -113,7 +113,7 @@ npm run check
 9. Go to your application's detail page by clicking on your app name. You can get there by clicking Your apps on the developers main page.
 10. Scroll down to the **_Keys_** section that displays application id, access key, and secret key. The access key is the API key that you will need for this project
 
-- **NOTE**: During this process you will be sent an email to the email address you enetered above. Click the link in the email to "Confirm your account".
+- **NOTE**: During this process you will be sent an email to the email address you enetered above. Click the link in the email to "Confirm your account". You also may need to go nack to the developers page and your "Your apps" again to get to your Keys.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
