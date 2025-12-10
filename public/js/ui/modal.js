@@ -14,7 +14,11 @@ export function setModalContent(element, imgSrc, id) {
 	btnsContainer.className = 'modal-buttons';
 
 	// Add prev/next navigation which calls setModalContent
-	// This needs to be in the if statement
+	/** modalNav needs to be in the if statement for both pages because I need
+	* 	to identify when the modal is opened by the settings play button
+	*		In that case I either need to not show the nav btns, or add a class
+	* 	that reduces the opacity to 0 or hides the < & > btns
+	*/
 	modalNav(btnsContainer, id, innerModal);
 
 	let images = [];
@@ -54,11 +58,12 @@ function modalNav(btnsElement, imgId, modalElement) {
 	navItems.forEach((item) => {
 		const page = window.location.pathname;
 		let images = [];
+
 		const btn = document.createElement('button');
 		btn.className = `nav ${item.name}`;
 		btn.textContent = item.symbol;
 
-		// saved-images for board page, fetched-search-results for index
+		// 'saved-images' for board page, 'fetched-search-results' for index
 		if (page === '/board.html') {
 			images = getLocalStorage('saved-images');
 		} else {
@@ -67,6 +72,7 @@ function modalNav(btnsElement, imgId, modalElement) {
 
 		const currentIndex = images.findIndex((img) => img.id === imgId);
 
+		// Disable nav btns for first or last image
 		if (currentIndex === 0 && btn.classList.contains('prev')) {
 			btn.disabled = true;
 		}
@@ -80,13 +86,15 @@ function modalNav(btnsElement, imgId, modalElement) {
 
 			let domImage;
 			const nextImageObj = images[nextIndex];
+			// Both pages are in a div container that has the image id
 			const domImageContainer = document.getElementById(nextImageObj.id);
-
+			
 			if (page === '/board.html') {
 				domImage = domImageContainer.querySelector('.regular').src;
 			} else {
 				domImage = domImageContainer.querySelector('.result-image').src;
 			}
+			// Recursive call of setModalContent
 			setModalContent(modalElement, domImage, nextImageObj.id);
 		});
 
@@ -109,9 +117,6 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 			const image = images.find((img) => img.id === imgId);
 			const imageIndex = images.findIndex((img) => img.id === imgId);
 
-			// Get the index to load into the modal when image removed
-			const advanceToIndex = imageIndex === 0 ? 0 : imageIndex - 1;
-
 			if (item === 'Save') {
 				const savedImages = getLocalStorage('saved-images') || [];
 				if (image) {
@@ -127,6 +132,8 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 			const card = document.getElementById(imgId);
 			if (card) card.remove();
 
+			// Get the index to load into the modal when image removed
+			const advanceToIndex = imageIndex === 0 ? 0 : imageIndex - 1;
 			// Advance or close modal
 			const updatedImages = getLocalStorage('fetched-search-results');
 			if (updatedImages.length > 0) {
