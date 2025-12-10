@@ -42,6 +42,7 @@ export function saveUserText(event) {
 	const id = parent.id;
 	const imgObj = savedImages.find((img) => img.id === id);
 
+	// I had to use innerHTML to preserve line breaks in the editable element
 	imgObj.notes = editable.innerHTML.trim();
 
 	setLocalStorage('saved-images', savedImages);
