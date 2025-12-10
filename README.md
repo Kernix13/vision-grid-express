@@ -28,11 +28,7 @@
 
 ## Project Overview
 
-VisualGrid is a responsive web application for visual project planning, goal-setting, and creative inspiration. It allows users to search the Unsplash API for images, curate their favorites into a personalized "vision board," and attach notes, ideas, or goal statements to each image.
-
-Whether the user is planning a home renovation, building an inspiration board, organizing a personal goal-setting workflow, or brainstorming a creative project, VisualGrid provides a simple way to collect images, annotate them, and revisit them in a structured space.
-
-Users can search for images, browse them in grid or modal views, save their favorites, and revisit past searches at any time. Saved images, and their associated notes, are stored locally and displayed on a dedicated board page, where users can reorder, edit, or remove items. From the board page, users can open any saved image in a modal to add a dedicated affirmation or goal heading, and navigate between all saved images to streamline editing. VisualGrid also includes a full-screen lightbox/slider that cycles through saved images, displaying either the user’s page notes or their affirmation/goal statements.
+VisualGrid is a client-side web app for visual project planning and goal-setting. Users can search the Unsplash API, save images to a personalized board, and attach notes or goal statements to each item. The app includes modal image views, a full-screen slider, localStorage persistence, and tools for organizing, annotating, and revisiting saved images.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
