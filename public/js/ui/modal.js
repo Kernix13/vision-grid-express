@@ -26,9 +26,11 @@ export function setModalContent(element, imgSrc, id) {
 		images = getLocalStorage('saved-images');
 		modalImg = images.find((img) => img.id === id);
 
+		// quoteContainer is a bad name - it has the img and blockquote elements
 		const quoteContainer = document.createElement('div');
 		quoteContainer.className = 'img-quote';
 		quoteContainer.append(image);
+
 		editableQuote(quoteContainer, modalImg);
 		element.append(quoteContainer);
 	} else {
@@ -148,22 +150,23 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 
 /* HELPER FUNCTION 3: Detect aspect ratio of image */
 function detectAspectRatio(img, el) {
-	// Calculate ratio
-	const w = Number(img.width);
-	const h = Number(img.height);
-	const ratio = Number((w / h).toFixed(2));
-	// Set an arbitrary tolerance (only needed for square-ish images)
-	const tolerance = 0.15;
+  // Convert localStorage values to number
+  const w = Number(img.width);
+  const h = Number(img.height);
+  // Calculate aspect ratio
+  const ratio = Number((w / h).toFixed(2));
+  // Set an arbitrary tolerance (only needed for square-ish images)
+  const tolerance = 0.15;
 
-	el.classList.remove('portrait', 'landscape', 'square');
+  el.classList.remove('portrait', 'landscape', 'square');
 
-	if (Math.abs(1 - ratio) <= tolerance) {
-		el.classList.add('square');
-	} else if (w > h) {
-		el.classList.add('landscape');
-	} else {
-		el.classList.add('portrait');
-	}
+  if (Math.abs(1 - ratio) <= tolerance) {
+    el.classList.add('square');
+  } else if (w > h) {
+    el.classList.add('landscape');
+  } else {
+    el.classList.add('portrait');
+  }
 }
 
 /* HELPER FUNCTION 4: Create editable blockquote in board page modal */
@@ -176,9 +179,11 @@ function editableQuote(el, image) {
 	const placeholder =
 		'Write your affirmation or goal statement here. Note: the max character length is 115 and this sentence here is 115.';
 
+	// Load localStorage text or default/placeholder if empty 
 	quote.textContent = image.affirmation || placeholder;
 	el.append(quote);
 
+	// Set blockquote text to localStorage while modal open
 	quote.addEventListener('focusout', () => {
 		const savedImages = getLocalStorage('saved-images');
 		const image = savedImages.find((img) => img.id === quote.dataset.id);
