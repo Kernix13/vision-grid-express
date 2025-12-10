@@ -102,13 +102,18 @@ npm run check
 
 ### Getting an Unsplash API key
 
-1. Navigate to [Unsplash](https://unsplash.com/) and click the hamburger menu in the top-right corner and choose Developers/API.
-2. Click the button "Register as a Developer".
-3. Fill out the form and click join to register your account.
-4. Click the "Your apps" button on the page.
-5. Click the empty area with the text, "New Application."
-6. Fill out the application information form and click the "Create Application" button.
-7. Scroll down to the section that displays application id, access key, and secret key. The access key is the API key that you will need for this project.
+1. Go to the [Unsplash website](https://unsplash.com/) & click the hamburger icon in the top right.
+2. Under the Product heading click Developers/API which takes you to [Unsplash Developers](https://unsplash.com/developers).
+3. Click the button labeled "_Register as a developer_".
+4. Fill out the form and click _Join_ to register your account: first name, last name, email address, username, and password.
+5. Click the button labeled "_You apps_".
+6. Click the box with the text "_New Application_".
+7. Under the heading "**_API Use and Guidelines_**", check all of the checkboxes, Read the _Terms of Use_ documentation then click _Accept terms_.
+8. You are presented with a popup asking to enter an _Application name_ and _Description_. Enter a name and description then click "_Create application_".
+9. Go to your application's detail page by clicking on your app name. You can get there by clicking Your apps on the developers main page.
+10. Scroll down to the **_Keys_** section that displays application id, access key, and secret key. The access key is the API key that you will need for this project
+
+- **NOTE**: During this process you will be sent an email to the email address you enetered above. Click the link in the email to "Confirm your account".
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -123,7 +128,7 @@ npm run check
   - Past search terms are saved and can be revisited, each automatically loading the next page of results.
 - Image Cards
   - Browse results as compact cards.
-  - Save or remove images directly from the grid.
+  - Save or remove images directly from the cards.
   - Click any image to view a larger, aspect-correct version in a modal.
 - Modal Viewer
   - Navigate through all images currently loaded on the page.
@@ -141,8 +146,9 @@ npm run check
 - Thumbnail Strip
   - See all saved items in a compact strip for quick navigation.
   - Clicking on any thumbnail takes you to that image on the page.
-  - Reorder saved images.
-  - Delete images and their notes from your board.
+  - Reorder saved images by moving them up or down.
+  - Delete images and their notes from your project.
+  - Choose to show or hide the image in the lightbox slider (WIP)
   - Click the page image or editable text box to close the thumbnail strip.
 - Affirmation / Goal Statement
   - Click any saved image on the page to open a modal with a larger view.
@@ -160,7 +166,7 @@ npm run check
 
 <!-- See all devicons here: https://github.com/devicons/devicon -->
 
-This is the current state of my project as of December 2nd, 2025:
+This is the current state of my project as of December 10th, 2025:
 
 <table>
   <thead>
@@ -460,6 +466,8 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 ## Acknowledgments & Resources
 
 > _The following resources were helpful during the design and development process_
+
+<br>
 
 Code/Technical:
 

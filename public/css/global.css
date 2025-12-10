@@ -149,7 +149,8 @@ h3 {
 	color: var(--text);
 }
 
-:not(body)::selection {
+::selection,
+::-moz-selection {
 	background-color: var(--primary-dark-4);
 	color: var(--white);
 }

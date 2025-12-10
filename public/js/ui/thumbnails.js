@@ -8,11 +8,12 @@ export function addThumbnailsToDom() {
 	thumbnails.innerHTML = '';
 
 	savedImages.forEach((img) => {
-		// Thumbnail and buttons container
+		// Container for thumbnails and button container 
 		const thumbItem = document.createElement('div');
 		thumbItem.setAttribute('data-id', img.id);
 		thumbItem.className = 'thumb-item';
 		const selected = getLocalStorage('selected-thumb') || '';
+
 		if (thumbItem.dataset.id === selected) {
 			thumbItem.classList.add('selected');
 		}
@@ -28,6 +29,7 @@ export function addThumbnailsToDom() {
 		thumbBtns.className = 'thumb-btns';
 
 		// arrow-up, arrow-down, delete and checkbox
+		// How can I use a function to generate the code below for the btns
 		const upBtn = document.createElement('button');
 		upBtn.textContent = '↑';
 		upBtn.className = 'move-up';
@@ -46,12 +48,13 @@ export function addThumbnailsToDom() {
 		deleteBtn.setAttribute('title', 'Delete image');
 		deleteBtn.setAttribute('aria-label', 'Delete image');
 
+		// checkbox
 		const showInSlider = document.createElement('input');
 		showInSlider.type = 'checkbox';
 		showInSlider.className = 'show-in-slider';
 		showInSlider.name = 'show-in-slider';
 		showInSlider.checked = true;
-		// I need to clear LS because uncommented below and removing above
+		// I need to clear LS then uncommented below and remove above
 		// showInSlider.checked = img.includeInSlider;
 		showInSlider.setAttribute('title', 'Show image in lightbox');
 		showInSlider.setAttribute(

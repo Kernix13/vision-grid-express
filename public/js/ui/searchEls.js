@@ -62,19 +62,18 @@ export function addSearchTerm(parent, arr) {
 
 export function clearSearchElements() {
 	setLocalStorage('search-phrases-page', []);
+	
 	removeLocalStorage('fetched-search-results');
 	removeLocalStorage('last-search');
 	removeLocalStorage('current-search');
 	removeLocalStorage('search-phrases');
 
 	searchTerms.textContent = '';
+	resultsTitle.textContent = '';
 	searchGrid.textContent = '';
+	loadMore.textContent = '';
 
 	addRemoveClass(clearSearches, 'none', 'inline');
-
-	loadMore.textContent = '';
 	addRemoveClass(loadMore, 'none', 'inline');
-
-	resultsTitle.textContent = '';
 	addRemoveClass(resultsTitle, 'none', 'block');
 }
