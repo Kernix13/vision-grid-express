@@ -71,17 +71,14 @@ export function handleThumbnailClick(event) {
 	if (!thumbItem) return;
 
 	const id = thumbItem.dataset.id;
+	const selected = document.querySelector('.thumb-item.selected');
 
-	// Remove previous selection
-	const selected = document.querySelectorAll('.thumb-item.selected');
-
-	if (selected.length > 0) {
-		selected.forEach((item) => {
-			item.classList.toggle('selected')
-		});
+	// Deselect the previously selected thumbnail, if there is one
+	if (selected) {
+		selected.classList.remove('selected');
 	}
 
-	thumbItem.classList.toggle('selected');
+	thumbItem.classList.add('selected');
 	setLocalStorage('selected-thumb', thumbItem.dataset.id);
 	selectImage(id);
 }
