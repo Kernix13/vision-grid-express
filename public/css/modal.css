@@ -93,7 +93,6 @@
 }
 
 .modal-buttons button:hover {
-	background-color: var(--primary);
 	border: 1px solid var(--white);
 	color: var(--dark-gray);
 	background-color: var(--accent-3);

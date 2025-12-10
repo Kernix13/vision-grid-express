@@ -13,7 +13,7 @@ export function addThumbnailsToDom() {
 		thumbItem.setAttribute('data-id', img.id);
 		thumbItem.className = 'thumb-item';
 		const selected = getLocalStorage('selected-thumb') || '';
-		if (thumbItem.dataset.id == selected) {
+		if (thumbItem.dataset.id === selected) {
 			thumbItem.classList.add('selected');
 		}
 

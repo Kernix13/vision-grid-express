@@ -76,7 +76,9 @@ export function handleThumbnailClick(event) {
 	const selected = document.querySelectorAll('.thumb-item.selected');
 
 	if (selected.length > 0) {
-		selected.forEach((item) => item.classList.toggle('selected'));
+		selected.forEach((item) => {
+			item.classList.toggle('selected')
+		});
 	}
 
 	thumbItem.classList.toggle('selected');
