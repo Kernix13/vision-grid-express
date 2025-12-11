@@ -82,15 +82,8 @@ export function handleFormSubmit(event) {
 		// Render page elements
 		renderSearchEls(input.value);
 
-		// Save 3 values to localStorage
-		// 1. 'search-phrases':
+		// Save 2 values to localStorage: 'search-phrases' & 'search-phrases-page'
 		saveSearchTerm(input.value, savedSearches);
-		// 2. 'current-search'
-		setLocalStorage('current-search', {
-			search: input.value,
-			page: searchPage,
-		});
-		// 3. 'search-phrases-page'
 		const newSearch = { search: input.value, page: searchPage };
 		const searchPhrasesPage = getLocalStorage('search-phrases-page') || [];
 		searchPhrasesPage.push(newSearch);
