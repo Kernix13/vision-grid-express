@@ -12,11 +12,14 @@ const searchGrid = document.getElementById('search-grid');
 const loadMore = document.getElementById('load-more');
 
 export function saveSearchTerm(str, arr) {
+	// Make sure the search term is not the last search term
 	if (str !== arr[arr.length - 1]) {
 		searchTerms.textContent = '';
+		// Splice the search term out of the search terms array
 		if (arr.includes(str)) {
 			arr.splice(arr.indexOf(str), 1);
 		}
+		// push the search term to the end so it renders as the last button
 		arr.push(str);
 		setLocalStorage('search-phrases', arr);
 		addSearchTerm(searchTerms, arr);
