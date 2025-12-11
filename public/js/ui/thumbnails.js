@@ -29,24 +29,9 @@ export function addThumbnailsToDom() {
 		thumbBtns.className = 'thumb-btns';
 
 		// arrow-up, arrow-down, delete and checkbox
-		// How can I use a function to generate the code below for the btns
-		const upBtn = document.createElement('button');
-		upBtn.textContent = '↑';
-		upBtn.className = 'move-up';
-		upBtn.setAttribute('title', 'Move image up');
-		upBtn.setAttribute('aria-label', 'Move image up');
-
-		const downBtn = document.createElement('button');
-		downBtn.textContent = '↓';
-		downBtn.className = 'move-down';
-		downBtn.setAttribute('title', 'Move image down');
-		downBtn.setAttribute('aria-label', 'Move image down');
-
-		const deleteBtn = document.createElement('button');
-		deleteBtn.textContent = 'x';
-		deleteBtn.className = 'delete';
-		deleteBtn.setAttribute('title', 'Delete image');
-		deleteBtn.setAttribute('aria-label', 'Delete image');
+		const upBtn = createThumbnailBtn('↑', 'move-up', 'Move image up');
+		const downBtn = createThumbnailBtn('↓', 'move-down', 'Move image down');
+		const deleteBtn = createThumbnailBtn('x', 'delete', 'Delete image');
 
 		// checkbox
 		const showInSlider = document.createElement('input');
@@ -117,4 +102,22 @@ export function closeDeleteModal() {
 	const thumbModal = document.getElementById('thumb-modal');
 	thumbModal.classList.remove('show-modal');
 	thumbModal.hidden = true;
+}
+
+/*
+		
+		downBtn.textContent = '↓';
+		downBtn.className = 'move-down';
+		downBtn.setAttribute('title', 'Move image down');
+		downBtn.setAttribute('aria-label', 'Move image down');
+*/
+
+// HELPER FUCTION
+function createThumbnailBtn(str1, str2, str3) {
+	const btn = document.createElement('button');
+	btn.textContent = str1;
+	btn.className = str2;
+	btn.setAttribute('title', str3);
+	btn.setAttribute('aria-label', str3);
+	return btn;
 }
