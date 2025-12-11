@@ -20,7 +20,7 @@ const settingsBtn = document.getElementById('settings-btn');
  */
 export function initBoardPage() {
 	const savedImages = getLocalStorage('saved-images');
-	if (savedImages.length > 0) {
+	if (savedImages) {
 		addThumbnailsToDom();
 		addSavedImagesToDom();
 	}

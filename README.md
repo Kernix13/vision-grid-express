@@ -508,7 +508,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 12 To-Do items left: 2 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 7
+> 13 To-Do items left: 3 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 8
 
 <!--
   Blockers:
@@ -520,6 +520,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
    - Right now I am loading the 1st DOM image on the settings button click
 2. **README**: Finish Use of AI + add screenshots
+3. **BOARD**: imgTextContainer.textContent not displaying msg if there are no sabed images because img-text-container element does not exist - fix that - see screenshot in downloads folder
 
 ### Non-critical
 
@@ -540,6 +541,15 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 2. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
 3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 <!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
+
+Double-check this in boardEvents.js - I just changed it because the conditional was throwing an error
+
+```js
+if (savedImages) {
+  addThumbnailsToDom();
+  addSavedImagesToDom();
+}
+```
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section

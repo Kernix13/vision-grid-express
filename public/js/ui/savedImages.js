@@ -6,6 +6,8 @@ export function addSavedImagesToDom() {
 	imgTextContainer.innerHTML = '';
 
 	if (!savedImages || savedImages.length === 0) {
+		// THIS IS NOT DISPLAYING BECAUSE THERE IS NO img-text-container ELEMENT!
+		// I'm going to need another element or something...?!?
 		imgTextContainer.textContent = 'No saved images to display...';
 		return;
 	}
