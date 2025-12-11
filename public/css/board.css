@@ -48,7 +48,6 @@
 	caret-color: var(--primary);
 	text-align: left;
 	outline: 1px solid var(--primary-muted-1);
-	box-sizing: border-box;
 	min-height: 16rem;
 	max-height: 32rem;
 	overflow-y: auto;

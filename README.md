@@ -109,7 +109,7 @@ npm run check
 9. Go to your application's detail page by clicking on your app name. You can get there by clicking Your apps on the developers main page.
 10. Scroll down to the **_Keys_** section that displays application id, access key, and secret key. The access key is the API key that you will need for this project
 
-- **NOTE**: During this process you will be sent an email to the email address you enetered above. Click the link in the email to "Confirm your account". You also may need to go nack to the developers page and your "Your apps" again to get to your Keys.
+- **NOTE**: During this process you will be sent an email to the email address you entered above. Click the link in the email to "Confirm your account". You also may need to go back to the developers page and "Your apps" again to get to your Keys.
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -150,7 +150,7 @@ npm run check
   - Click any saved image on the page to open a modal with a larger view.
   - Add an affirmation or goal statement for that image (115 character limit).
   - Navigate to other saved images within the modal to quickly update each affirmation.
-  - These affirmations are shown in the full-screen slider instead of the standard page notes.
+  - These affirmations are shown in the full-screen slider instead of your page notes.
 - Lightbox Slider
   - A full-screen modal that cycles through saved images.
   - Adjustable timing between slides.
@@ -180,8 +180,8 @@ This is the current state of my project as of December 10th, 2025:
       <td>
         <ul>
           <li>Meta + SEO tags: title, description, Open Graph, and Twitter card tags</li>
-          <li>Site identity: full favicon set (.png, .ico, and sizes for cross-browser support)</li>
-          <li>Semantic HTML, skip-to-main link, <code>aria-*</code> and <code>data-*</code> attributes</li>
+          <li>Site identity: full favicon set (<code>.png</code>, <code>.ico</code>, and sizes for cross-browser support)</li>
+          <li>Semantic HTML, skip-to-main link, hidden, inert, <code>aria-*</code> and <code>data-*</code> attributes</li>
           <li>Supporting files: <code>sitemap.xml</code>, <code>robots.txt</code></li>
         </ul>
       </td>
@@ -193,7 +193,7 @@ This is the current state of my project as of December 10th, 2025:
       <td>
         <ul>
           <li>Mobile-first design with media queries using various breakpoints</li>
-          <li>Layout techniques: Flexbox, Grid, absolute positioning</li>
+          <li>Layout techniques: Flexbox, Grid, and CSS positioning (relative, absolute, fixed)</li>
           <li>Animations using CSS transitions and <code>@keyframes</code></li>
           <li>CSS Nesting, custom properties for colors, <code>@font-face</code> for Google fonts</li>
         </ul>
@@ -285,10 +285,9 @@ This is the current state of my project as of December 10th, 2025:
           width="40" height="40" alt="VS Code icon" title="VS Code" /></td>
       <td>
         <ul>
-          <li>Primary editor: VS Code with extensions for code formatting and workflow efficiency</li>
-          <li>Integrated terminal for Git commands, installing packages, and running Node.js/NPM scripts</li>
-          <!-- <li>Used <code>.editorconfig</code> for consistent formatting across editors</li> -->
-          <li>Resolved merge conflicts using VS Code's built-in diff/merge tools during local branch merges</li>
+          <li>Customized VS Code settings (<code>settings.json</code>) and project-level configuration (<code>.vscode/</code>) to control formatting tools</li>
+          <li>Use the integrated terminal for Git commands, package management, and running Node.js/NPM scripts</li>
+          <li>Resolved local branch merge conflicts using VS Code's built-in Merge Editor</li>
         </ul>
       </td>
     </tr>
@@ -304,19 +303,18 @@ This is the current state of my project as of December 10th, 2025:
 ```python
 /
 ├── README.md
-├── assets/                     # Images used in README only
+├── assets/                 # Images used in README only
 ├── LICENSE
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
-├── package.json                # Dependencies and scripts
-├── server.js                   # Express server handling API requests
-├── .env.example                # Template for environment variables
-├── .gitattributes              # Enforces consistent line endings and other Git settings
-├── .gitignore                  # Specific files and folders Git should ignore
-├── biome.json                  # Biome formatter, linter, and code-quality config
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   └── PULL_REQUEST_TEMPLATE.md
+├── package.json            # Dependencies and scripts
+├── server.js               # Express server handling API requests
+├── .env.example            # Template for environment variables
+├── .gitattributes          # Enforces consistent line endings and other Git settings
+├── .gitignore              # Specific files and folders Git should ignore
+├── biome.json              # Biome formatter, linter, and code-quality config
+├── .github/                # GitHub Issue and PR templates
+├── .vscode/                # Project-specific VS Code settings
 ├── public/
 │   ├── index.html
 │   ├── board.html
@@ -325,13 +323,13 @@ This is the current state of my project as of December 10th, 2025:
 │   ├── sitemap.xml
 │   ├── css/
 │   ├── js/
-│   │   ├── index.js            # Logic for index.html
-│   │   ├── board.js            # Logic for board.html
-│   │   ├── api/                # Fetch function(s) for backend /api/photos
-│   │   ├── ui/                 # UI behavior functions
-│   │   └── utils/              # Shared utility functions (localStorage)
+│   │   ├── index.js        # Logic for index.html
+│   │   ├── board.js        # Logic for board.html
+│   │   ├── api/            # Fetch function(s) for backend /api/photos
+│   │   ├── ui/             # UI behavior functions
+│   │   └── utils/          # Shared utility functions (localStorage)
 │   ├── images/
-│   └── fonts/                  # DM Sans and Inter .woff2 files
+│   └── fonts/              # DM Sans and Inter .woff2 files
 ```
 
 <!--
@@ -508,7 +506,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 13 To-Do items left: 3 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 8
+> 14 To-Do items left: 2 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 7
 
 <!--
   Blockers:
@@ -526,6 +524,8 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. **HOME**: Add some kind of transition/animation for when the home page cards are removed.
 2. **BOARD**: Allow user to uncheck showing a saved image in the lightbox slider
 3. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
+4. Double check my primary and accent colors. I think there are a few that I am only using once or twice, when there are other shades that are very close - try to use the other ones and remove the unused ones
+5. use JavaScript to dynamically update the footer copyright date
 
 ### Bugs/Issues/Questions
 
@@ -540,15 +540,6 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 2. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
 3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
 <!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
-
-Double-check this in boardEvents.js - I just changed it because the conditional was throwing an error
-
-```js
-if (savedImages) {
-  addThumbnailsToDom();
-  addSavedImagesToDom();
-}
-```
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section
