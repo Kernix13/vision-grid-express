@@ -1,3 +1,4 @@
+// Used in index.js and indexEvents.js
 export function addRemoveClass(element, add, remove) {
 	element.classList.add(add);
 	element.classList.remove(remove);
@@ -9,7 +10,7 @@ export function addRemoveClass(element, add, remove) {
 	}
 }
 
-// This is a function only used on the board page - move?
+// Used in board.js and boardEvents.js
 export function toggleDisplay(el, btn, str) {
 	el.classList.toggle('onscreen');
 

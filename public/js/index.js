@@ -15,11 +15,11 @@ import { addRemoveClass } from './ui/classUtils.js';
 import { clearSearchElements } from './ui/searchEls.js';
 
 const form = document.getElementById('search-form');
-const loadMore = document.getElementById('load-more');
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
-const searchGrid = document.getElementById('search-grid');
 const resultsTitle = document.getElementById('results-title');
+const searchGrid = document.getElementById('search-grid');
+const loadMore = document.getElementById('load-more');
 const close = document.getElementById('close');
 const modalBg = document.getElementById('modal-bg');
 const hamburger = document.getElementById('hamburger');

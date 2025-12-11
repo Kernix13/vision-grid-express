@@ -107,7 +107,7 @@ confirmBtn.addEventListener('click', () => {
 	closeDeleteModal();
 });
 
-// 15. & 16. Cancel and close button listener for thumbnail delete
+// 15. & 16. Cancel and close button listener for thumbnail delete modal
 cancelBtn.addEventListener('click', closeDeleteModal);
 deleteClose.addEventListener('click', closeDeleteModal);
 

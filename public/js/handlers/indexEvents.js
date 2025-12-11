@@ -16,11 +16,11 @@ import {
 } from '../utils/localStorage.js';
 
 const input = document.getElementById('search');
-const clearSearches = document.getElementById('clear-searches');
-const loadMore = document.getElementById('load-more');
-const resultsTitle = document.getElementById('results-title');
 const searchTerms = document.getElementById('search-terms');
+const clearSearches = document.getElementById('clear-searches');
+const resultsTitle = document.getElementById('results-title');
 const searchGrid = document.getElementById('search-grid');
+const loadMore = document.getElementById('load-more');
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
@@ -34,8 +34,6 @@ export function initHomePage() {
 	) {
 		setLocalStorage('search-phrases', []);
 
-		// Should I have empty elements in the DOM, or should I be creating them?
-		// These elements show even with no page search elements
 		clearSearches.classList.add('none');
 		loadMore.classList.add('none');
 		resultsTitle.classList.add('none');

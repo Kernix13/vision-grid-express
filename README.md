@@ -314,7 +314,6 @@ This is the current state of my project as of December 10th, 2025:
 ├── .gitignore              # Specific files and folders Git should ignore
 ├── biome.json              # Biome formatter, linter, and code-quality config
 ├── .github/                # GitHub Issue and PR templates
-├── .vscode/                # Project-specific VS Code settings
 ├── public/
 │   ├── index.html
 │   ├── board.html
@@ -533,6 +532,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 2. Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image
 3. Did I actually set a char limit for the editable blockquote of 115? I don't think I did.
 4. Once the 'x' Delete button for a thumbnail is clicked, setLocalStorage sets the id for the saved images as the value in 'delete-item-id'. If the user cancels the delete process, should that be removed/cleared? I think technically yes, but it also does not matter if it remains, because it will be replaced by any other click on a delete 'x' button.
+5. localStorage -> `'last-search'` = string only, `'current-search'` = `{'search': 'phrase', 'page': int}` - why do I have both since `'last-search'` === `'current-search'.'search'`? Find occurrences using 'last-search', replace with current-search'.'search', then remove 'last-search' from localStorage
 
 ### Stretch or nice-to-haves
 

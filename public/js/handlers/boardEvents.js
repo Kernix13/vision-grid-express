@@ -22,13 +22,13 @@ export function initBoardPage() {
 	const savedImages = getLocalStorage('saved-images');
 	if (!savedImages) {
 		setLocalStorage('saved-images', []);
+
 		const imgTextContainer = document.getElementById('img-text-container');
 		imgTextContainer.innerHTML = '';
 		imgTextContainer.textContent = 'No saved images to display...';
 	} else {
 		addThumbnailsToDom();
 		addSavedImagesToDom();
-		
 	}
 
 	const boardTitle = getLocalStorage('board-title') || 'Your Project Board';
@@ -37,15 +37,15 @@ export function initBoardPage() {
 }
 
 /**
- * * 5. Save editable text to local storage for associated image object
+ * * 5. Save editable text to local storage for each image object
  */
 export function saveUserText(event) {
 	const savedImages = getLocalStorage('saved-images');
 	const editable = event.target.closest('.editable');
 	if (!editable) return;
 
-	const parent = editable.closest('.image-text');
-	const id = parent.id;
+	const imageText = editable.closest('.image-text');
+	const id = imageText.id;
 	const imgObj = savedImages.find((img) => img.id === id);
 
 	// I had to use innerHTML to preserve line breaks in the editable element

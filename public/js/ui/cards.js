@@ -15,6 +15,7 @@ export function createImgCard(arr) {
 		image.src = obj.imageSmall;
 		image.alt = obj.description;
 		if (i === 0) image.fetchPriority = 'high';
+		if (i !== 0) image.loading = 'lazy';
 
 		imgContainer.append(image);
 
