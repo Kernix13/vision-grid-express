@@ -20,9 +20,15 @@ const settingsBtn = document.getElementById('settings-btn');
  */
 export function initBoardPage() {
 	const savedImages = getLocalStorage('saved-images');
-	if (savedImages) {
+	if (!savedImages) {
+		setLocalStorage('saved-images', []);
+		const imgTextContainer = document.getElementById('img-text-container');
+		imgTextContainer.innerHTML = '';
+		imgTextContainer.textContent = 'No saved images to display...';
+	} else {
 		addThumbnailsToDom();
 		addSavedImagesToDom();
+		
 	}
 
 	const boardTitle = getLocalStorage('board-title') || 'Your Project Board';

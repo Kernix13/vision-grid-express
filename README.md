@@ -520,7 +520,6 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
    - Right now I am loading the 1st DOM image on the settings button click
 2. **README**: Finish Use of AI + add screenshots
-3. **BOARD**: imgTextContainer.textContent not displaying msg if there are no sabed images because img-text-container element does not exist - fix that - see screenshot in downloads folder
 
 ### Non-critical
 
