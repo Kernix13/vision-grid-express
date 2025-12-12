@@ -505,7 +505,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ## ~~To-Do~~ (Remove this section later...)
 
-> 14 To-Do items left: 2 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 7
+> 11 To-Do items left: 2 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 7
 
 <!--
   Blockers:
@@ -523,15 +523,12 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 1. **HOME**: Add some kind of transition/animation for when the home page cards are removed.
 2. **BOARD**: Allow user to uncheck showing a saved image in the lightbox slider
 3. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
-4. Double check my primary and accent colors. I think there are a few that I am only using once or twice, when there are other shades that are very close - try to use the other ones and remove the unused ones
-5. use JavaScript to dynamically update the footer copyright date
 
 ### Bugs/Issues/Questions
 
 1. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 2. Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image
 3. Did I actually set a char limit for the editable blockquote of 115? I don't think I did.
-4. Once the 'x' Delete button for a thumbnail is clicked, setLocalStorage sets the id for the saved images as the value in 'delete-item-id'. If the user cancels the delete process, should that be removed/cleared? I think technically yes, but it also does not matter if it remains, because it will be replaced by any other click on a delete 'x' button.
 
 ### Stretch or nice-to-haves
 

@@ -33,7 +33,7 @@ input[type="search"] {
 	border-radius: 0.25rem;
 	outline: 2px solid var(--primary-muted-2);
 	border: none;
-	background-color: var(--primary-muted-4);
+	background-color: var(--primary-muted-3);
 	padding: 0.5rem 0.25rem 0.5rem 0.5rem;
 }
 
@@ -42,7 +42,7 @@ input[type="search"]::placeholder {
 }
 
 input[type="search"]:focus {
-	outline: 2px solid var(--accent-4);
+	outline: 2px solid var(--accent-5);
 }
 
 .error-message {
