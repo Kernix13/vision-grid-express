@@ -74,6 +74,7 @@ export function clearSearchElements() {
 	resultsTitle.textContent = '';
 	searchGrid.textContent = '';
 	loadMore.textContent = '';
+	clearSearches.textContent = '';
 
 	addRemoveClass(clearSearches, 'none', 'inline');
 	addRemoveClass(loadMore, 'none', 'inline');

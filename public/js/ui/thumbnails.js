@@ -28,7 +28,7 @@ export function addThumbnailsToDom() {
 		const thumbBtns = document.createElement('div');
 		thumbBtns.className = 'thumb-btns';
 
-		// arrow-up, arrow-down, delete and checkbox
+		// move-up, move-down, and delete buttons
 		const upBtn = createThumbnailBtn('↑', 'move-up', 'Move image up');
 		const downBtn = createThumbnailBtn('↓', 'move-down', 'Move image down');
 		const deleteBtn = createThumbnailBtn('x', 'delete', 'Delete image');
@@ -104,15 +104,7 @@ export function closeDeleteModal() {
 	thumbModal.hidden = true;
 }
 
-/*
-		
-		downBtn.textContent = '↓';
-		downBtn.className = 'move-down';
-		downBtn.setAttribute('title', 'Move image down');
-		downBtn.setAttribute('aria-label', 'Move image down');
-*/
-
-// HELPER FUCTION
+// HELPER FUNCTION
 function createThumbnailBtn(str1, str2, str3) {
 	const btn = document.createElement('button');
 	btn.textContent = str1;
