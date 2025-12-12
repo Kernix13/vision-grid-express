@@ -1,6 +1,18 @@
+const modalBg = document.getElementById('modal-bg');
+const innerModal = document.querySelector('.modal');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const backToTopButton = document.querySelector('#back-to-top-btn');
+
+/**
+ * * Close Home and Board page modal
+ */
+export function closeModal() {
+  modalBg.classList.remove('show-modal');
+  modalBg.hidden = true;
+
+  innerModal.classList.remove('play');
+}
 
 /**  
  * TODO: Mobile menu - this function is from previous projects of mine & needs to be rewritten because it has issues

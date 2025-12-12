@@ -19,7 +19,9 @@ export function setModalContent(element, imgSrc, id) {
 	*		In that case I either need to not show the nav btns, or add a class
 	* 	that reduces the opacity to 0 or hides the < & > btns
 	*/
-	modalNav(btnsContainer, id, innerModal);
+	if (!innerModal.classList.contains('play')) {
+		modalNav(btnsContainer, id, innerModal);
+	}
 
 	let images = [];
 	let modalImg = {};

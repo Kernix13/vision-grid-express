@@ -11,6 +11,7 @@ import {
 	scrollFunction,
 	smoothScrollBackToTop,
 	toggleMenu,
+	closeModal,
 } from './handlers/globalEvents.js';
 import { toggleDisplay } from './ui/classUtils.js';
 import { closeDeleteModal, deleteImage } from './ui/thumbnails.js';
@@ -58,23 +59,16 @@ imgTextContainer.addEventListener('focusout', saveUserText);
 imgTextContainer.addEventListener('click', addPageImageToModal);
 
 // 7. Close image modal on close button click
-close.addEventListener('click', () => {
-	modalBg.classList.remove('show-modal');
-	modalBg.hidden = true;
-});
+close.addEventListener('click', closeModal);
 
 // 8. Close image modal on window click
 window.addEventListener('click', (e) => {
-	if (e.target === modalBg) {
-		modalBg.classList.remove('show-modal');
-		modalBg.hidden = true;
-	}
+	if (e.target === modalBg) closeModal();
 });
 
 // 9. Close image modal on Escape key keydown
 document.addEventListener('keydown', (e) => {
-	if (e.key === 'Escape') modalBg.classList.remove('show-modal');
-	modalBg.hidden = true;
+	if (e.key === 'Escape') closeModal();
 });
 
 /**

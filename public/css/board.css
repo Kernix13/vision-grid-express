@@ -315,7 +315,7 @@
 	grid-template-columns: 1fr;
 	justify-content: center;
 	gap: 0.75rem;
-	background-color: var(--primary-muted-5);
+	background-color: var(--primary-muted-3);
 	border: 1px solid var(--primary-dark-2);
 	padding: 0.75rem;
 	width: 20.5rem;

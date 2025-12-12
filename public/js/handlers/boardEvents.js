@@ -120,11 +120,7 @@ export function handleThumbnailBtns(event) {
  * * 19. Play button... WIP
  */
 export function handleSliderPlayBtn() {
-	console.log('Start Slider button clicked');
-	// I need a boolean in setModalContent so as not to load the modal with the nav buttons:
-	const isSlider = true;
-
-	// I need to start with the 1st saved image then loop thru all of them
+	innerModal.classList.add('play');
 	const savedImages = getLocalStorage('saved-images');
 
 	// I need to get the first get first DOM image and load it for now
@@ -135,8 +131,6 @@ export function handleSliderPlayBtn() {
 
 	setModalContent(innerModal, pageImages[0].src, imageTextEls[0].id);
 
-	console.log(savedImages[0].imageRegular === pageImages[0].src);
-	console.log(savedImages[0].id === imageTextEls[0].id);
 	toggleDisplay(settingsForm, settingsBtn, 'Settings');
 }
 
