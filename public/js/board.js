@@ -15,6 +15,7 @@ import {
 import { toggleDisplay } from './ui/classUtils.js';
 import { closeDeleteModal, deleteImage } from './ui/thumbnails.js';
 import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
+import { copyrightYear } from './utils/currentYear.js';
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
@@ -135,3 +136,9 @@ playSlider.addEventListener('click', handleSliderPlayBtn);
 allTimes.forEach((time) => {
 	time.addEventListener('change', handleRadioCheck);
 });
+
+/**
+ * * Set Copyright year in footer
+ */
+const year = document.getElementById('year');
+year.textContent = copyrightYear();

@@ -3,6 +3,7 @@ import {
 	smoothScrollBackToTop,
 	toggleMenu,
 } from './handlers/globalEvents.js';
+import { copyrightYear } from './utils/currentYear.js';
 
 const hamburger = document.getElementById('hamburger');
 const backToTopButton = document.querySelector('#back-to-top-btn');
@@ -18,3 +19,9 @@ window.addEventListener('scroll', scrollFunction);
 
 // 3. Back To Top button listener
 backToTopButton.addEventListener('click', smoothScrollBackToTop);
+
+/**
+ * * Set Copyright year in footer
+ */
+const year = document.getElementById('year');
+year.textContent = copyrightYear();

@@ -13,6 +13,7 @@ import {
 import { removeImageCard } from './ui/cards.js';
 import { addRemoveClass } from './ui/classUtils.js';
 import { clearSearchElements } from './ui/searchEls.js';
+import { copyrightYear } from './utils/currentYear.js';
 
 const form = document.getElementById('search-form');
 const searchTerms = document.getElementById('search-terms');
@@ -24,6 +25,7 @@ const close = document.getElementById('close');
 const modalBg = document.getElementById('modal-bg');
 const hamburger = document.getElementById('hamburger');
 const backToTopButton = document.querySelector('#back-to-top-btn');
+
 
 /**
  * * GLOBAL UI LISTENERS
@@ -101,3 +103,9 @@ clearSearches.addEventListener('click', (e) => {
 	clearSearchElements();
 	document.querySelector('.error-message').textContent = '';
 });
+
+/**
+ * * Set Copyright year in footer
+ */
+const year = document.getElementById('year');
+year.textContent = copyrightYear();
