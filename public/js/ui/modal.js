@@ -13,12 +13,7 @@ export function setModalContent(element, imgSrc, id) {
 	const btnsContainer = document.createElement('div');
 	btnsContainer.className = 'modal-buttons';
 
-	// Add prev/next navigation which calls setModalContent
-	/** modalNav needs to be in the if statement for both pages because I need
-	* 	to identify when the modal is opened by the settings play button
-	*		In that case I either need to not show the nav btns, or add a class
-	* 	that reduces the opacity to 0 or hides the < & > btns
-	*/
+	// Add prev/next navigation only if play btn has not been clicked
 	if (!innerModal.classList.contains('play')) {
 		modalNav(btnsContainer, id, innerModal);
 	}
@@ -27,11 +22,12 @@ export function setModalContent(element, imgSrc, id) {
 	let modalImg = {};
 	const page = window.location.pathname;
 
+	// Load modal elements based on the page
 	if (page === '/board.html') {
 		images = getLocalStorage('saved-images');
 		modalImg = images.find((img) => img.id === id);
 
-		// quoteContainer is a bad name - it has the img and blockquote elements
+		// quoteContainer - img and editable blockquote
 		const quoteContainer = document.createElement('div');
 		quoteContainer.className = 'img-quote';
 		quoteContainer.append(image);
@@ -72,6 +68,7 @@ function modalNav(btnsElement, imgId, modalElement) {
 			images = getLocalStorage('fetched-search-results');
 		}
 
+		// Get the localStorage index for the image opened in the modal
 		const currentIndex = images.findIndex((img) => img.id === imgId);
 
 		// Disable nav btns for first or last image
@@ -83,14 +80,16 @@ function modalNav(btnsElement, imgId, modalElement) {
 		}
 
 		btn.addEventListener('click', () => {
+			// Decrement or increment the index based on the button clicked
 			const nextIndex = currentIndex + item.direction;
 			if (nextIndex < 0 || nextIndex >= images.length) return;
 
 			let domImage;
 			const nextImageObj = images[nextIndex];
-			// Both pages are in a div container that has the image id
+			// Images for both pages are in a div container that has the image id, this is needed to get the img src
 			const domImageContainer = document.getElementById(nextImageObj.id);
 			
+			// Get the img src value
 			if (page === '/board.html') {
 				domImage = domImageContainer.querySelector('.regular').src;
 			} else {
@@ -105,7 +104,6 @@ function modalNav(btnsElement, imgId, modalElement) {
 }
 
 /* HELPER FUNCTION 2: Save and Remove buttons + nav to next item */
-// This is a huge function because of btn.addEventListener. Refactor?
 function modalSaveRemove(btnsElement, imgId, modalElement) {
 	const arr = ['Save', 'Remove'];
 
@@ -121,10 +119,8 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 
 			if (item === 'Save') {
 				const savedImages = getLocalStorage('saved-images') || [];
-				if (image) {
-					savedImages.push(image);
-					setLocalStorage('saved-images', savedImages);
-				}
+				savedImages.push(image);
+				setLocalStorage('saved-images', savedImages);
 			}
 
 			// Remove from fetched results and DOM
@@ -132,21 +128,25 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 			setLocalStorage('fetched-search-results', updatedFetched);
 
 			const card = document.getElementById(imgId);
+			// Here is where I need some kind of transition/animation
 			if (card) card.remove();
 
-			// Get the index to load into the modal when image removed
+			// Get the index for next image to load into the modal when image removed
 			const advanceToIndex = imageIndex === 0 ? 0 : imageIndex - 1;
-			// Advance or close modal
+
+			// Load new image in modal after image is removed 
 			const updatedImages = getLocalStorage('fetched-search-results');
 			if (updatedImages.length > 0) {
+				// Same logic from modalNav
 				const nextImageObj = updatedImages[advanceToIndex];
 				const domImageContainer = document.getElementById(nextImageObj.id);
 				const domImage = domImageContainer.querySelector('.result-image');
 
-				// Recursive call of setModalContent because this Fx is called there
+				// Recursively call setModalContent
 				setModalContent(modalElement, domImage.src, nextImageObj.id);
 			}
 
+			// Close modal if last image has been removed
 			if (updatedImages.length === 1) {
 				modalBg.classList.remove('show-modal');
 			}
@@ -156,7 +156,7 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 	});
 }
 
-/* HELPER FUNCTION 3: Detect aspect ratio of image */
+/* HELPER FUNCTION 3: Detect aspect ratio of image (mainly for the CSS) */
 function detectAspectRatio(img, el) {
   // Convert localStorage values to number
   const w = Number(img.width);
