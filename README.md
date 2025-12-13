@@ -66,7 +66,7 @@ PORT=port_number
 
 <br>
 
-4. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` with the port you want to use.
+4. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` to ``8080` or with the port you want to use.
 5. Delete the file `.env.example`.
 6. Start the development server:
 
@@ -86,7 +86,7 @@ You can now search for images, save images to your board page, add notes for eac
 
 <br>
 
-8. **(OPTIONAL)**: Run Biome for linting and formatting checks on your files as a pre-commit check:
+8. **(OPTIONAL)**: Run Biome for linting and formatting checks on your files:
 
 ```sh
 npm run check
@@ -123,14 +123,14 @@ npm run check
   - Enter a search phrase to fetch 12 images from the Unsplash API.
   - Past search terms are saved and can be revisited, each automatically loading the next page of results.
 - Image Cards
-  - Browse results as compact cards.
+  - View each image in compact form in the cards that are created from your search.
   - Save or remove images directly from the cards.
   - Click any image to view a larger, aspect-correct version in a modal.
 - Modal Viewer
   - Navigate through all images currently loaded on the page.
   - Save or remove images from within the modal.
 - Load More
-  - "Load More" fetches the next page of images for the current search term.
+  - The "Load More" button fetches the next page of images for the current search term.
 
 ### Vision Board Page
 
@@ -162,7 +162,7 @@ npm run check
 
 <!-- See all devicons here: https://github.com/devicons/devicon -->
 
-This is the current state of my project as of December 10th, 2025:
+This is the current state of my project as of December 12th, 2025:
 
 <table>
   <thead>
@@ -181,7 +181,7 @@ This is the current state of my project as of December 10th, 2025:
         <ul>
           <li>Meta + SEO tags: title, description, Open Graph, and Twitter card tags</li>
           <li>Site identity: full favicon set (<code>.png</code>, <code>.ico</code>, and sizes for cross-browser support)</li>
-          <li>Semantic HTML, skip-to-main link, hidden, inert, <code>aria-*</code> and <code>data-*</code> attributes</li>
+          <li>Semantic HTML, skip-to-main link, and use of <code>hidden</code>, <code>inert</code>, <code>aria-*</code> and <code>data-*</code> attributes</li>
           <li>Supporting files: <code>sitemap.xml</code>, <code>robots.txt</code></li>
         </ul>
       </td>
@@ -206,7 +206,7 @@ This is the current state of my project as of December 10th, 2025:
           width="40" height="40" alt="javascript icon" title="JavaScript" /></td>
       <td>
         <ul>
-          <li>ES Modules, async code using the Fetch API, <code>localStorage</code> for client-side persistence</li>
+          <li>ES Modules, async code using the Fetch API, and <code>localStorage</code> for client-side persistence</li>
           <li>Modern JavaScript features: array destructuring, spread operator, and template literals</li>
           <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>, <code>map</code>
           <!-- <li>UI interactions: mobile menu, back-to-top button, and modals</li> -->
@@ -285,7 +285,7 @@ This is the current state of my project as of December 10th, 2025:
           width="40" height="40" alt="VS Code icon" title="VS Code" /></td>
       <td>
         <ul>
-          <li>Customized VS Code settings (<code>settings.json</code>) and project-level configuration (<code>.vscode/</code>) to control formatting tools</li>
+          <!-- <li>Customized VS Code settings (<code>settings.json</code>) and project-level configuration (<code>.vscode/</code>) to control formatting tools</li> -->
           <li>Use the integrated terminal for Git commands, package management, and running Node.js/NPM scripts</li>
           <li>Resolved local branch merge conflicts using VS Code's built-in Merge Editor</li>
         </ul>
@@ -322,8 +322,9 @@ This is the current state of my project as of December 10th, 2025:
 │   ├── sitemap.xml
 │   ├── css/
 │   ├── js/
-│   │   ├── index.js        # Logic for index.html
-│   │   ├── board.js        # Logic for board.html
+│   │   ├── index.js        # Main file for index.html
+│   │   ├── board.js        # Main file for board.html
+│   │   ├── about.js        # Main file for about.html
 │   │   ├── api/            # Fetch function(s) for backend /api/photos
 │   │   ├── ui/             # UI behavior functions
 │   │   └── utils/          # Shared utility functions (localStorage)
@@ -527,14 +528,14 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Bugs/Issues/Questions
 
 1. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
-2. Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image
-3. Did I actually set a char limit for the editable blockquote of 115? I don't think I did.
+2. Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image.
+3. Did I actually set a char limit for the editable blockquote of 115? Check.
 
 ### Stretch or nice-to-haves
 
 1. **HOME**: Should I have a confirmation for the "clear all" button?
 2. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
-3. Change the hrefs in robots.txt, sitemap.xml, and meta tags when/if I go live
+3. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
 <!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
 
 <!--
