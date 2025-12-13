@@ -30,6 +30,14 @@ export function initBoardPage() {
 	} else {
 		addThumbnailsToDom();
 		addSavedImagesToDom();
+
+		const time = getLocalStorage('slider-time');
+
+		radioBtns.forEach(radio => {
+			if (time && radio.value === time) {
+				radio.setAttribute('checked', '');
+			}
+		})
 	}
 
 	const boardTitle = getLocalStorage('board-title') || 'Your Project Board';
@@ -130,12 +138,10 @@ export function handleSliderPlayBtn() {
 }
 
 /**
- * * 20. Radio buttons listener... WIP
+ * * 20. Radio buttons listener
  */
 export function handleRadioCheck(event) {
-	console.log('Selected radio:', event.target.value);
-	const selected = document.querySelector(
-		'input[name="lightbox-speed"]:checked',
-	);
-	console.log('Currently selected:', selected.value);
+	event.target.checked = true;
+	event.target.setAttribute('checked', '')
+	setLocalStorage('slider-time', event.target.value)
 }

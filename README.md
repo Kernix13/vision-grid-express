@@ -433,7 +433,9 @@ Contributions are welcome! If you'd like to help improve this project, please re
 ## Future Improvements
 
 - Allow user to select only landscape, portrait, or square-ish image formats
-- Multiple boards option
+- Allow user to to not show any saved image in the lightbox slider
+- Use `srcset` for DOM images on different devices for performance reasons
+- Allow the user to have more than one board
 - Dark/Light mode option
 - Add a quote generator API that pairs an inspirational quote with each image
 - Add a music API for motivational music during lightbox slideshow
@@ -526,28 +528,22 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!--
 ## ~~To-Do~~ (Remove this section later...)
 
-> 9 To-Do items left: 2 Priority + 1 Non-critical + 2 questions = 4
+> 6 LEFT
 
-### Priority
+### Main
 
 1. **HOME**: Add some kind of transition/animation for when the home page cards are removed and for the image slider.
-2. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
-
-### Non-critical
-
-1. **BOARD**: Allow user to uncheck showing a saved image in the lightbox slider
-
-### Bugs/Issues/Questions
-
-1. **HOME**: Should I have a confirmation for the "clear all" button?
-2. **BOARD**: Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image.
-3. Did I actually set a char limit for the editable blockquote of 115? Check.
-4. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
-
-### Stretch or nice-to-haves
-
-1. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
 2. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
+
+### Questions
+
+3. **HOME**: Should I have a confirmation for the "clear all" button?
+4. **BOARD**: Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image.
+5. Did I actually set a char limit for the editable blockquote of 115? Check.
+
+### Bugs
+
+6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 
 -->
 

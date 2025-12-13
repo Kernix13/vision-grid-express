@@ -2,6 +2,7 @@ import { getLocalStorage } from '../utils/localStorage.js';
 import { setModalContent } from './modal.js';
 
 const innerModal = document.querySelector('.modal');
+const radioBtns = document.querySelectorAll('.radio-option input');
 
 export function addSavedImagesToDom() {
 	const savedImages = getLocalStorage('saved-images');
@@ -44,9 +45,10 @@ let sliderInterval = null;
 
 export function playImageSlider() {
   const images = getLocalStorage('saved-images');
+	const sliderTime = getLocalStorage('slider-time') || 6;
   let idx = 0;
-	// timing should default to 6000,  but I need to grab what the user sets
-  let timing = 3000;
+
+	let timing = sliderTime * 1000;
 
 	// I needed the first image out of setInterval because...
   setModalContent(innerModal, images[idx].imageRegular, images[idx].id);
@@ -61,4 +63,9 @@ export function playImageSlider() {
 
 export function stopImageSlider() {
   clearInterval(sliderInterval);
+	radioBtns.forEach(time => {
+		if (time.checked) {
+			time.removeAttribute('checked')
+		}
+	})
 }
