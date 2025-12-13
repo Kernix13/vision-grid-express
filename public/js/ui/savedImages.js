@@ -40,19 +40,25 @@ export function addSavedImagesToDom() {
 	});
 }
 
+let sliderInterval = null;
+
 export function playImageSlider() {
   const images = getLocalStorage('saved-images');
   let idx = 0;
-	// Eventually 6000 (defaults) & then grab the user's value
+	// timing should default to 6000,  but I need to grab what the user sets
   let timing = 3000;
 
 	// I needed the first image out of setInterval because...
   setModalContent(innerModal, images[idx].imageRegular, images[idx].id);
 
-  setInterval(() => {
+  sliderInterval = setInterval(() => {
     idx++;
     if (idx >= images.length) idx = 0;
 
     setModalContent(innerModal, images[idx].imageRegular, images[idx].id);
   }, timing);
+}
+
+export function stopImageSlider() {
+  clearInterval(sliderInterval);
 }

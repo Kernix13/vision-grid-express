@@ -14,6 +14,7 @@ const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');
+const radioBtns = document.querySelectorAll('.radio-option input');
 
 /**
  * * 1. Load saved images on DOMContentLoaded
@@ -117,7 +118,7 @@ export function handleThumbnailBtns(event) {
 }
 
 /**
- * * 19. Play button... WIP
+ * * 19. Play image slider on play button click
  */
 export function handleSliderPlayBtn() {
 	innerModal.classList.add('play');

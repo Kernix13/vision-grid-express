@@ -1,3 +1,5 @@
+import { stopImageSlider } from "../ui/savedImages.js";
+
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 const hamburger = document.getElementById('hamburger');
@@ -10,8 +12,9 @@ const backToTopButton = document.querySelector('#back-to-top-btn');
 export function closeModal() {
   modalBg.classList.remove('show-modal');
   modalBg.hidden = true;
-
   innerModal.classList.remove('play');
+
+	stopImageSlider();
 }
 
 /**  
