@@ -1,4 +1,7 @@
 import { getLocalStorage } from '../utils/localStorage.js';
+import { setModalContent } from './modal.js';
+
+const innerModal = document.querySelector('.modal');
 
 export function addSavedImagesToDom() {
 	const savedImages = getLocalStorage('saved-images');
@@ -35,4 +38,21 @@ export function addSavedImagesToDom() {
 		imageText.append(p);
 		imgTextContainer.append(imageText);
 	});
+}
+
+export function playImageSlider() {
+  const images = getLocalStorage('saved-images');
+  let idx = 0;
+	// Eventually 6000 (defaults) & then grab the user's value
+  let timing = 3000;
+
+	// I needed the first image out of setInterval because...
+  setModalContent(innerModal, images[idx].imageRegular, images[idx].id);
+
+  setInterval(() => {
+    idx++;
+    if (idx >= images.length) idx = 0;
+
+    setModalContent(innerModal, images[idx].imageRegular, images[idx].id);
+  }, timing);
 }

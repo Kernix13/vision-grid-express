@@ -1,6 +1,6 @@
 import { toggleDisplay } from '../ui/classUtils.js';
 import { setModalContent } from '../ui/modal.js';
-import { addSavedImagesToDom } from '../ui/savedImages.js';
+import { addSavedImagesToDom, playImageSlider } from '../ui/savedImages.js';
 import {
 	addThumbnailsToDom,
 	moveImage,
@@ -121,16 +121,10 @@ export function handleThumbnailBtns(event) {
  */
 export function handleSliderPlayBtn() {
 	innerModal.classList.add('play');
-	const savedImages = getLocalStorage('saved-images');
-
-	// I need to get the first get first DOM image and load it for now
-	const pageImages = document.querySelectorAll('img.regular');
-	const imageTextEls = document.querySelectorAll('.image-text');
 	modalBg.classList.add('show-modal');
 	modalBg.hidden = false;
 
-	setModalContent(innerModal, pageImages[0].src, imageTextEls[0].id);
-
+	playImageSlider();
 	toggleDisplay(settingsForm, settingsBtn, 'Settings');
 }
 
