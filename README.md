@@ -450,10 +450,29 @@ ChatGPT writes better copy than I do. ChatGPT was used for the following:
 2. It generated the "Project Structure" code block above.
 3. I had boilerplate for `CONTRIBUTING.md` from previous projects. It wrote the content I have for this project and the paragraph of text for that section.
 4. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
-5. I asked ChatGPT about a `.editorconfig` file - it generated the content for that file which I used.
-6. ChatGPT gave me an outline for the "Features" section
-7. I asked ChatGPT about including robots.txt and sitemap.xml. It suggested to add them and wrote the contents for sitemap.xml.
-8. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, and Express)
+5. ChatGPT gave me an outline for the "How it Works" section
+6. I asked ChatGPT about including robots.txt and sitemap.xml. It suggested to add them and wrote the contents for sitemap.xml.
+7. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, and Express)
+
+### CODE
+
+1. ChatGPT helped me with the code to "contain" the image in the image cards, specifically using `aspect-ratio` and `object-fit`:
+
+```css
+.result-image {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+```
+
+2. Although I was able to save the `contenteditable` text to `localStorage`, I could not figure out how to preserve line breaks. ChatGPT suggested `innerHTML`:
+
+```js
+// in boardEvents.js > saveUserText:
+imgObj.notes = editable.innerHTML.trim();
+// in savedImages.js > addSavedImagesToDom:
+p.innerHTML = img.notes || 'You can add or edit notes here...';
+```
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -504,39 +523,40 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
+<!--
 ## ~~To-Do~~ (Remove this section later...)
 
-> 11 To-Do items left: 2 High-priority + 3 Non-critical + 1 bug + 1 important Stretch = 7
+> 9 To-Do items left: 2 Priority + 1 Non-critical + 2 questions = 4
+
+### Priority
+
+1. **HOME**: Add some kind of transition/animation for when the home page cards are removed and for the image slider.
+2. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
+
+### Non-critical
+
+1. **BOARD**: Allow user to uncheck showing a saved image in the lightbox slider
+
+### Bugs/Issues/Questions
+
+1. **HOME**: Should I have a confirmation for the "clear all" button?
+2. **BOARD**: Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image.
+3. Did I actually set a char limit for the editable blockquote of 115? Check.
+4. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+
+### Stretch or nice-to-haves
+
+1. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
+2. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
+
+-->
+
+<!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
 
 <!--
   Blockers:
   📌 1.
  -->
-
-### High-priority
-
-1. **BOARD**: Start a slideshow of the images and goal/affirmation statement - issue [#44](https://github.com/Kernix13/vision-grid-express/issues/44)
-   - Right now I am loading the 1st DOM image on the settings button click
-2. **README**: Finish Use of AI + add screenshots
-
-### Non-critical
-
-1. **HOME**: Add some kind of transition/animation for when the home page cards are removed.
-2. **BOARD**: Allow user to uncheck showing a saved image in the lightbox slider
-3. **BOARD**: Allow user to set the timing for the slideshow - issue [#48](https://github.com/Kernix13/vision-grid-express/issues/48)
-
-### Bugs/Issues/Questions
-
-1. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
-2. Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image.
-3. Did I actually set a char limit for the editable blockquote of 115? Check.
-
-### Stretch or nice-to-haves
-
-1. **HOME**: Should I have a confirmation for the "clear all" button?
-2. **BOARD**: Consider using `srcset` for DOM images on different devices on for performance reasons
-3. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
-<!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
 
 <!--
   CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section
