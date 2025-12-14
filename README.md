@@ -432,8 +432,9 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ## Future Improvements
 
-- Allow user to select only landscape, portrait, or square-ish image formats
-- Allow user to to not show any saved image in the lightbox slider
+- Save everything to a MySQL database instead of `localStorage`
+- Allow user to fetch only landscape, portrait, or square-ish image formats
+- Allow user to uncheck showing any saved image in the lightbox slider
 - Use `srcset` for DOM images on different devices for performance reasons
 - Allow the user to have more than one board
 - Dark/Light mode option
@@ -526,9 +527,9 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 <!--
-## ~~To-Do~~ (Remove this section later...)
+## To-Do
 
-> 6 LEFT
+> 6 LEFT - 2-5 important
 
 ### Main
 
@@ -540,10 +541,11 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 3. **HOME**: Should I have a confirmation for the "clear all" button?
 4. **BOARD**: Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image.
 5. Did I actually set a char limit for the editable blockquote of 115? Check.
+6 Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
 
 ### Bugs
 
-6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+7. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 
 -->
 
