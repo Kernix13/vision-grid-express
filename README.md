@@ -211,7 +211,7 @@ This is the current state of my project as of December 12th, 2025:
           <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>, <code>map</code>
           <!-- <li>UI interactions: mobile menu, back-to-top button, and modals</li> -->
           </li>
-          <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, <code>input</code>, and <code>DOMContentLoaded</code> listeners; event delegation for dynamic elements</li>
+          <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, <code>input</code>, <code>transitionend</code>, and <code>DOMContentLoaded</code> listeners; event delegation for dynamic elements</li>
         </ul>
       </td>
     </tr>
@@ -529,23 +529,22 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!--
 ## To-Do
 
-> 6 LEFT - 2-5 important
+> 6 LEFT - 3 important
 
-### Main
+### Important
 
-1. **HOME**: Add some kind of transition/animation for when the home page cards are removed and for the image slider.
-2. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
+1. **HOME**: Add a confirmation for the "clear all" button
+2. **BOARD**: Add an option to remove all saved images, otherwise, the user has to manually click "x" and confirm for each saved image.
+3. Add a char limit for the editable blockquote of 115
 
-### Questions
+### Questions/Other
 
-3. **HOME**: Should I have a confirmation for the "clear all" button?
-4. **BOARD**: Should I add an option to remove all saved images? Otherwise, the user has to manually click "x" and confirm for each saved image.
-5. Did I actually set a char limit for the editable blockquote of 115? Check.
-6 Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
+4. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
+5. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
 
 ### Bugs
 
-7. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 
 -->
 

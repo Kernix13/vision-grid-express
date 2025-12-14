@@ -123,10 +123,10 @@ input.addEventListener('input', () => {
 	setLocalStorage('board-title', value);
 });
 
-// 19. Image slider Play button listener... WIP
+// 19. Image slider Play button listener
 playSlider.addEventListener('click', handleSliderPlayBtn);
 
-// 20. Radio buttons listener for image slider timing... WIP
+// 20. Radio buttons listener for image slider timing
 allTimes.forEach((time) => {
 	time.addEventListener('change', handleRadioCheck);
 });

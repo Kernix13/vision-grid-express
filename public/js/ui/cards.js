@@ -48,6 +48,7 @@ export function removeImageCard(event) {
 		event.target.classList.contains('remove')
 	) {
 		const imageCard = event.target.closest('.image-card');
+		if (!imageCard) return;
 		const id = imageCard.id;
 
 		// Save button only
@@ -61,7 +62,11 @@ export function removeImageCard(event) {
 		// End Save only, Remove from fetched list and UI
 		const filteredImages = images.filter((img) => img.id !== id);
 		setLocalStorage('fetched-search-results', filteredImages);
+		
+		imageCard.classList.add('remove');
 
-		imageCard.remove();
+		imageCard.addEventListener('transitionend', () => {
+			imageCard.remove()
+		});
 	}
 }
