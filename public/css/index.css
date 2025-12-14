@@ -88,7 +88,7 @@ input[type="search"]:focus {
 
 .image-card.remove {
 	opacity: 0;
-	transform: scale(0.95);
+	transform: scale(0.75);
 }
 
 .result-image {
