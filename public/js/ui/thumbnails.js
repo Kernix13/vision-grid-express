@@ -8,7 +8,7 @@ export function addThumbnailsToDom() {
 	thumbnails.innerHTML = '';
 
 	savedImages.forEach((img) => {
-		// Container for thumbnails and button container 
+		// Container for thumbnails and button container
 		const thumbItem = document.createElement('div');
 		thumbItem.setAttribute('data-id', img.id);
 		thumbItem.className = 'thumb-item';
@@ -63,14 +63,20 @@ export function moveImage(id, direction) {
 	// Move the image up
 	if (direction === 'up' && idx > 0) {
 		// Swap positions in the array then resave to LS
-		[savedImages[idx], savedImages[idx - 1]] = [savedImages[idx - 1], savedImages[idx]];
+		[savedImages[idx], savedImages[idx - 1]] = [
+			savedImages[idx - 1],
+			savedImages[idx],
+		];
 		setLocalStorage('saved-images', savedImages);
 	}
 
 	// Move the image down
 	if (direction === 'down' && idx < savedImages.length - 1) {
 		// Swap positions in the array then resave to LS
-		[savedImages[idx], savedImages[idx + 1]] = [savedImages[idx + 1], savedImages[idx]];
+		[savedImages[idx], savedImages[idx + 1]] = [
+			savedImages[idx + 1],
+			savedImages[idx],
+		];
 		setLocalStorage('saved-images', savedImages);
 	}
 

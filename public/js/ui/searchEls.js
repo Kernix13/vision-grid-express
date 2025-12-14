@@ -65,7 +65,7 @@ export function addSearchTerm(parent, arr) {
 
 export function clearSearchElements() {
 	setLocalStorage('search-phrases-page', []);
-	
+
 	removeLocalStorage('fetched-search-results');
 	removeLocalStorage('last-search');
 	removeLocalStorage('search-phrases');

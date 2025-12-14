@@ -8,15 +8,15 @@ import {
 	saveUserText,
 } from './handlers/boardEvents.js';
 import {
+	closeModal,
 	scrollFunction,
 	smoothScrollBackToTop,
 	toggleMenu,
-	closeModal,
 } from './handlers/globalEvents.js';
 import { toggleDisplay } from './ui/classUtils.js';
 import { closeDeleteModal, deleteImage } from './ui/thumbnails.js';
-import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
 import { copyrightYear } from './utils/currentYear.js';
+import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
 
 const settingsForm = document.getElementById('settings-form');
 const settingsBtn = document.getElementById('settings-btn');

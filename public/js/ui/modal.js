@@ -88,7 +88,7 @@ function modalNav(btnsElement, imgId, modalElement) {
 			const nextImageObj = images[nextIndex];
 			// Images for both pages are in a div container that has the image id, this is needed to get the img src
 			const domImageContainer = document.getElementById(nextImageObj.id);
-			
+
 			// Get the img src value
 			if (page === '/board.html') {
 				domImage = domImageContainer.querySelector('.regular').src;
@@ -134,7 +134,7 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 			// Get the index for next image to load into the modal when image removed
 			const advanceToIndex = imageIndex === 0 ? 0 : imageIndex - 1;
 
-			// Load new image in modal after image is removed 
+			// Load new image in modal after image is removed
 			const updatedImages = getLocalStorage('fetched-search-results');
 			if (updatedImages.length > 0) {
 				// Same logic from modalNav
@@ -158,23 +158,23 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 
 /* HELPER FUNCTION 3: Detect aspect ratio of image (mainly for the CSS) */
 function detectAspectRatio(img, el) {
-  // Convert localStorage values to number
-  const w = Number(img.width);
-  const h = Number(img.height);
-  // Calculate aspect ratio
-  const ratio = Number((w / h).toFixed(2));
-  // Set an arbitrary tolerance (only needed for square-ish images)
-  const tolerance = 0.15;
+	// Convert localStorage values to number
+	const w = Number(img.width);
+	const h = Number(img.height);
+	// Calculate aspect ratio
+	const ratio = Number((w / h).toFixed(2));
+	// Set an arbitrary tolerance (only needed for square-ish images)
+	const tolerance = 0.15;
 
-  el.classList.remove('portrait', 'landscape', 'square');
+	el.classList.remove('portrait', 'landscape', 'square');
 
-  if (Math.abs(1 - ratio) <= tolerance) {
-    el.classList.add('square');
-  } else if (w > h) {
-    el.classList.add('landscape');
-  } else {
-    el.classList.add('portrait');
-  }
+	if (Math.abs(1 - ratio) <= tolerance) {
+		el.classList.add('square');
+	} else if (w > h) {
+		el.classList.add('landscape');
+	} else {
+		el.classList.add('portrait');
+	}
 }
 
 /* HELPER FUNCTION 4: Create editable blockquote in board page modal */
@@ -187,7 +187,7 @@ function editableQuote(el, image) {
 	const placeholder =
 		'Write your affirmation or goal statement here. Note: the max character length is 115 and this sentence here is 115.';
 
-	// Load localStorage text or default/placeholder if empty 
+	// Load localStorage text or default/placeholder if empty
 	quote.textContent = image.affirmation || placeholder;
 	el.append(quote);
 

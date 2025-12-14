@@ -33,11 +33,11 @@ export function initBoardPage() {
 
 		const time = getLocalStorage('slider-time');
 
-		radioBtns.forEach(radio => {
+		radioBtns.forEach((radio) => {
 			if (time && radio.value === time) {
 				radio.setAttribute('checked', '');
 			}
-		})
+		});
 	}
 
 	const boardTitle = getLocalStorage('board-title') || 'Your Project Board';
@@ -142,6 +142,6 @@ export function handleSliderPlayBtn() {
  */
 export function handleRadioCheck(event) {
 	event.target.checked = true;
-	event.target.setAttribute('checked', '')
-	setLocalStorage('slider-time', event.target.value)
+	event.target.setAttribute('checked', '');
+	setLocalStorage('slider-time', event.target.value);
 }

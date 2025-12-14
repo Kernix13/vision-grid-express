@@ -428,8 +428,6 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 <br>
 
----
-
 ## Future Improvements
 
 - Save everything to a MySQL database instead of `localStorage`
@@ -437,6 +435,7 @@ Contributions are welcome! If you'd like to help improve this project, please re
 - Allow user to uncheck showing any saved image in the lightbox slider
 - Use `srcset` for DOM images on different devices for performance reasons
 - Allow the user to have more than one board
+- Get the image slider to go full-screen
 - Dark/Light mode option
 - Add a quote generator API that pairs an inspirational quote with each image
 - Add a music API for motivational music during lightbox slideshow
@@ -493,22 +492,23 @@ Code/Technical:
 4. [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`
 5. [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
 6. Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues
+7. Wes Bos' [JavaScript30 course](https://javascript30.com/), JavaScript Drum Kit video on using the `transitionend` event type for my transitions for the image card removals.
 <!-- ?. [Guide to Finding Closest Target](https://www.devzery.com/post/closest-target) -->
 
 Design & UI:
 
-7. [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
-8. [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
-9. [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties
-10. [Google Fonts](https://fonts.google.com/): Downloaded the woff2 files for DM Sans, Inter, and Allura
-11. [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
-12. [Boostrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page
+8. [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
+9. [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
+10. [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties
+11. [Google Fonts](https://fonts.google.com/): Downloaded the woff2 files for DM Sans, Inter, and Allura
+12. [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
+13. [Boostrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page
 
 Accessibility:
 
-13. [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for making color palette choices
-14. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
-15. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages
+14. [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for making color palette choices
+15. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
+16. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages
 
 <!-- - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey) -->
 

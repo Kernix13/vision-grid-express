@@ -62,11 +62,11 @@ export function removeImageCard(event) {
 		// End Save only, Remove from fetched list and UI
 		const filteredImages = images.filter((img) => img.id !== id);
 		setLocalStorage('fetched-search-results', filteredImages);
-		
+
 		imageCard.classList.add('remove');
 
 		imageCard.addEventListener('transitionend', () => {
-			imageCard.remove()
+			imageCard.remove();
 		});
 	}
 }

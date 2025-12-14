@@ -1,4 +1,4 @@
-import { stopImageSlider } from "../ui/savedImages.js";
+import { stopImageSlider } from '../ui/savedImages.js';
 
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
@@ -10,14 +10,14 @@ const backToTopButton = document.querySelector('#back-to-top-btn');
  * * Close Home and Board page modal
  */
 export function closeModal() {
-  modalBg.classList.remove('show-modal');
-  modalBg.hidden = true;
-  innerModal.classList.remove('play');
+	modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+	innerModal.classList.remove('play');
 
 	stopImageSlider();
 }
 
-/**  
+/**
  * TODO: Mobile menu - this function is from previous projects of mine & needs to be rewritten because it has issues
  */
 export function toggleMenu() {

@@ -26,7 +26,6 @@ const modalBg = document.getElementById('modal-bg');
 const hamburger = document.getElementById('hamburger');
 const backToTopButton = document.querySelector('#back-to-top-btn');
 
-
 /**
  * * GLOBAL UI LISTENERS
  */
