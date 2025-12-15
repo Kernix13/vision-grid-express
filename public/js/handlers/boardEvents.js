@@ -21,11 +21,10 @@ const radioBtns = document.querySelectorAll('.radio-option input');
  */
 export function initBoardPage() {
 	const savedImages = getLocalStorage('saved-images');
-	if (!savedImages) {
+	if (!savedImages || savedImages.length === 0) {
 		setLocalStorage('saved-images', []);
 
 		const imgTextContainer = document.getElementById('img-text-container');
-		imgTextContainer.innerHTML = '';
 		imgTextContainer.textContent = 'No saved images to display...';
 	} else {
 		addThumbnailsToDom();
@@ -57,7 +56,7 @@ export function saveUserText(event) {
 	const id = imageText.id;
 	const imgObj = savedImages.find((img) => img.id === id);
 
-	// I had to use innerHTML to preserve line breaks in the editable element
+	// ChatGPT: Use innerHTML to preserve line breaks in the editable element
 	imgObj.notes = editable.innerHTML.trim();
 
 	setLocalStorage('saved-images', savedImages);
@@ -72,7 +71,6 @@ export function addPageImageToModal(event) {
 
 	const imageText = regularImg.closest('.image-text');
 	const imageTextId = imageText.id;
-	console.log(imageTextId);
 
 	modalBg.classList.add('show-modal');
 	modalBg.hidden = false;

@@ -26,6 +26,8 @@
 
 <div id="back-to-top"></div>
 
+> ### BUILD A GOOD SAMPLE BOARD PAGE AND THEN GET SCREENSHOTS FOR HEADER AND FOR "How It Works" SECTION
+
 ## Project Overview
 
 VisualGrid is a client-side web app for visual project planning and goal-setting. Users can search the Unsplash API, save images to a personalized board, and attach notes or goal statements to each item. The app includes modal image views, a full-screen slider, localStorage persistence, and tools for organizing, annotating, and revisiting saved images.
@@ -526,27 +528,30 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
-<!--
-## To-Do
+## ~~To-Do~~ (REMOVE THIS SECTION BY FRIDAY)
 
-> 6 LEFT - 3 important
+> 8 LEFT - 2 important
 
 ### Important
 
-1. **HOME**: Add a confirmation for the "clear all" button
-2. **BOARD**: Add an option to remove all saved images, otherwise, the user has to manually click "x" and confirm for each saved image.
-3. Add a char limit for the editable blockquote of 115
+1. ⚠️ BUILD A GOOD SAMPLE BOARD PAGE AND THEN GET SCREENSHOTS FOR HEADER AND FOR "How It Works" SECTION
+2. ⚠️ 5Test from empty page to full board page on:
+   - Brave ✅
+   - Chrome
+   - Firefox
+   - Edge
+3. **HOME**: Add a confirmation for the "clear all" button
+4. **BOARD**: Add an option to remove all saved images, otherwise, the user has to manually click "x" and confirm for each saved image (EASY - settings form?)
+5. Add a character limit for the editable blockquote of 115
 
 ### Questions/Other
 
-4. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
-5. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
+6. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
+7. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
 
 ### Bugs
 
-6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
-
--->
+8. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 
 <!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
 
