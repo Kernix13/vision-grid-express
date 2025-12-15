@@ -6,19 +6,27 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const backToTopButton = document.querySelector('#back-to-top-btn');
 
+// If device is 962px or less wide, add aria-expanded attribute
+function setAriaExpanded() {
+	const width = document.documentElement.clientWidth;
+	if (width <= 962) {
+		hamburger.setAttribute('aria-expanded', false);
+	} 
+}
+setAriaExpanded();
+
 /**
  * * Close Home and Board page modal
  */
 export function closeModal() {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
-	innerModal.classList.remove('play');
-
+	innerModal.classList.remove('play');	
 	stopImageSlider();
 }
 
 /**
- * TODO: Mobile menu - this function is from previous projects of mine & needs to be rewritten because it has issues
+ * * Toggle mobile menu - this function is from previous projects
  */
 export function toggleMenu() {
 	/* Toggle active class */

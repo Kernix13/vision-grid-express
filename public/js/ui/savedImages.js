@@ -44,20 +44,20 @@ export function addSavedImagesToDom() {
 let sliderInterval = null;
 
 export function playImageSlider() {
-	const images = getLocalStorage('saved-images');
+	const savedImages = getLocalStorage('saved-images');
 	const sliderTime = getLocalStorage('slider-time') || 6;
 	let idx = 0;
 
 	const timing = sliderTime * 1000;
 
 	// I needed the first image out of setInterval because...
-	setModalContent(innerModal, images[idx].imageRegular, images[idx].id);
+	setModalContent(innerModal, savedImages[idx].imageRegular, savedImages[idx].id);
 
 	sliderInterval = setInterval(() => {
 		idx++;
-		if (idx >= images.length) idx = 0;
+		if (idx >= savedImages.length) idx = 0;
 
-		setModalContent(innerModal, images[idx].imageRegular, images[idx].id);
+		setModalContent(innerModal, savedImages[idx].imageRegular, savedImages[idx].id);
 	}, timing);
 }
 

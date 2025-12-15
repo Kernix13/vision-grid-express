@@ -535,7 +535,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Important
 
 1. ⚠️ BUILD A GOOD SAMPLE BOARD PAGE AND THEN GET SCREENSHOTS FOR HEADER AND FOR "How It Works" SECTION
-2. ⚠️ 5Test from empty page to full board page on:
+2. ⚠️ Test from empty page to full board page on:
    - Brave ✅
    - Chrome
    - Firefox

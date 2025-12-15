@@ -13,7 +13,6 @@ export async function getSearchResults(searchTerm, page) {
 
 		const data = await response.json();
 		const results = await data.results;
-		console.log(results);
 		const resultsObject = await results.map((result) => {
 			return {
 				id: result.id,
@@ -34,7 +33,6 @@ export async function getSearchResults(searchTerm, page) {
 		setLocalStorage('fetched-search-results', resultsObject);
 		searchGrid.textContent = '';
 		createImgCard(getLocalStorage('fetched-search-results'), searchGrid);
-		console.log(data);
 		return data;
 	} catch (err) {
 		console.error(err);
