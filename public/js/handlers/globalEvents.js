@@ -33,9 +33,10 @@ export function toggleMenu() {
 	hamburger.classList.toggle('active');
 	navMenu.classList.toggle('active');
 
-	/* Toggle aria-expanded value */
+	/* Toggle aria-expanded & aria-hidden values */
 	const menuOpen = navMenu.classList.contains('active');
 	hamburger.setAttribute('aria-expanded', menuOpen);
+	navMenu.setAttribute('aria-hidden', !menuOpen);
 }
 
 /**

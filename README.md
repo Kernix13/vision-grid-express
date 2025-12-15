@@ -528,31 +528,26 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
+<!--
 ## ~~To-Do~~ (REMOVE THIS SECTION BY FRIDAY)
 
-> 8 LEFT - 2 important
+> 6 LEFT - 3 important
 
 ### Important
 
 1. ⚠️ BUILD A GOOD SAMPLE BOARD PAGE AND THEN GET SCREENSHOTS FOR HEADER AND FOR "How It Works" SECTION
-2. ⚠️ Test from empty page to full board page on:
-   - Brave ✅
-   - Chrome
-   - Firefox
-   - Edge
-3. **HOME**: Add a confirmation for the "clear all" button
-4. **BOARD**: Add an option to remove all saved images, otherwise, the user has to manually click "x" and confirm for each saved image (EASY - settings form?)
-5. Add a character limit for the editable blockquote of 115
+2. **HOME**: Add a confirmation for the "clear all" button
+3. **BOARD**: Add an option to remove all saved images, otherwise, the user has to manually click "x" and confirm for each saved image (EASY - settings form?)
 
 ### Questions/Other
 
-6. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
-7. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
+4. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
+5. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
 
 ### Bugs
 
-8. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
-
+6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+-->
 <!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
 
 <!--
