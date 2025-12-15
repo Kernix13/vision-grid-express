@@ -51,13 +51,21 @@ export function playImageSlider() {
 	const timing = sliderTime * 1000;
 
 	// I needed the first image out of setInterval because...
-	setModalContent(innerModal, savedImages[idx].imageRegular, savedImages[idx].id);
+	setModalContent(
+		innerModal,
+		savedImages[idx].imageRegular,
+		savedImages[idx].id,
+	);
 
 	sliderInterval = setInterval(() => {
 		idx++;
 		if (idx >= savedImages.length) idx = 0;
 
-		setModalContent(innerModal, savedImages[idx].imageRegular, savedImages[idx].id);
+		setModalContent(
+			innerModal,
+			savedImages[idx].imageRegular,
+			savedImages[idx].id,
+		);
 	}, timing);
 }
 

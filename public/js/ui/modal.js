@@ -185,12 +185,12 @@ function editableQuote(el, image) {
 	quote.setAttribute('contenteditable', true);
 
 	const placeholder =
-	'Write your affirmation or goal statement here. Note: the max character length is 115 and this sentence here is 115.';
-	
+		'Write your affirmation or goal statement here. Note: the max character length is 115 and this sentence here is 115.';
+
 	// Load localStorage text or default/placeholder if empty
 	quote.textContent = image.affirmation || placeholder;
 	el.append(quote);
-	
+
 	// Set blockquote text to localStorage from modal, save first 115 chars
 	const MAX_LENGTH = 115;
 	quote.addEventListener('focusout', () => {
@@ -198,7 +198,7 @@ function editableQuote(el, image) {
 		const image = savedImages.find((img) => img.id === quote.dataset.id);
 		if (!image) return;
 
-		image.affirmation = quote.textContent.trim().slice(0, MAX_LENGTH);;
+		image.affirmation = quote.textContent.trim().slice(0, MAX_LENGTH);
 		setLocalStorage('saved-images', savedImages);
 	});
 }

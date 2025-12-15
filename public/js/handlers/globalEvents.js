@@ -11,7 +11,7 @@ function setAriaExpanded() {
 	const width = document.documentElement.clientWidth;
 	if (width <= 962) {
 		hamburger.setAttribute('aria-expanded', false);
-	} 
+	}
 }
 setAriaExpanded();
 
@@ -21,7 +21,7 @@ setAriaExpanded();
 export function closeModal() {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
-	innerModal.classList.remove('play');	
+	innerModal.classList.remove('play');
 	stopImageSlider();
 }
 
