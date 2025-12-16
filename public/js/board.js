@@ -1,11 +1,11 @@
 import {
+	addPageImageToModal,
+	handleRadioCheck,
+	handleSliderPlayBtn,
+	handleThumbnailBtns,
+	handleThumbnailClick,
 	initBoardPage,
 	saveUserText,
-	addPageImageToModal,
-	handleThumbnailClick,
-	handleThumbnailBtns,
-	handleSliderPlayBtn,
-	handleRadioCheck,
 } from './handlers/boardEvents.js';
 import {
 	closeModal,
@@ -15,8 +15,8 @@ import {
 } from './handlers/globalEvents.js';
 import { toggleDisplay } from './ui/classUtils.js';
 import { closeDeleteModal, deleteImage } from './ui/thumbnails.js';
-import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
 import { copyrightYear } from './utils/currentYear.js';
+import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
 
 // Button to toggle visibility of the settings form:
 const settingsBtn = document.getElementById('settings-btn');

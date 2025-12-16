@@ -4,7 +4,6 @@ import { addRemoveClass } from '../ui/classUtils.js';
 import { setModalContent } from '../ui/modal.js';
 import {
 	addSearchTerm,
-	addSearchText,
 	renderSearchEls,
 	saveSearchTerm,
 } from '../ui/searchEls.js';
@@ -68,7 +67,7 @@ export function handleFormSubmit(event) {
 
 		// Fetch data
 		getSearchResults(input.value, searchPage);
-		
+
 		// Save 3 values to localStorage
 		setLocalStorage('last-search', input.value);
 		saveSearchTerm(input.value, savedSearches);

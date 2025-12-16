@@ -338,7 +338,6 @@
 /* settings-btn */
 .settings-btn {
 	font-size: 1.125rem;
-	font: inherit;
 	line-height: 1.1;
 	color: var(--dark-gray);
 	cursor: pointer;
@@ -420,7 +419,7 @@ input[type="radio"] {
 	transition:
 		color 300ms ease,
 		background-color 300ms ease;
-		
+
 	&:hover {
 		color: var(--white);
 		background-color: var(--primary);
