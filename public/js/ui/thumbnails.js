@@ -1,6 +1,7 @@
 import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 import { addSavedImagesToDom } from './savedImages.js';
 
+// Add thumbnail version user saved images to the page on board.html
 export function addThumbnailsToDom() {
 	const savedImages = getLocalStorage('saved-images');
 
@@ -8,17 +9,18 @@ export function addThumbnailsToDom() {
 	thumbnails.innerHTML = '';
 
 	savedImages.forEach((img) => {
-		// Container for thumbnails and button container
+		// Container for thumbnail and button container
 		const thumbItem = document.createElement('div');
 		thumbItem.setAttribute('data-id', img.id);
 		thumbItem.className = 'thumb-item';
 		const selected = getLocalStorage('selected-thumb') || '';
 
+		// 'selected' class shows the buttons for the thumbnail image
 		if (thumbItem.dataset.id === selected) {
 			thumbItem.classList.add('selected');
 		}
 
-		// Thumbnail
+		// Thumbnail image
 		const thumbnail = document.createElement('img');
 		thumbnail.src = img.imageThumb;
 		thumbnail.alt = img.description || 'Thumbnail';
@@ -33,14 +35,12 @@ export function addThumbnailsToDom() {
 		const downBtn = createThumbnailBtn('↓', 'move-down', 'Move image down');
 		const deleteBtn = createThumbnailBtn('x', 'delete', 'Delete image');
 
-		// checkbox
+		// thumbnail checkbox (functionality not implemented yet)
 		const showInSlider = document.createElement('input');
 		showInSlider.type = 'checkbox';
 		showInSlider.className = 'show-in-slider';
 		showInSlider.name = 'show-in-slider';
-		showInSlider.checked = true;
-		// I need to clear LS then uncommented below and remove above
-		// showInSlider.checked = img.includeInSlider;
+		showInSlider.checked = img.includeInSlider;
 		showInSlider.setAttribute('title', 'Show image in lightbox');
 		showInSlider.setAttribute(
 			'aria-label',
@@ -53,12 +53,11 @@ export function addThumbnailsToDom() {
 	});
 }
 
+// More the thumbnail & page image up or down
 export function moveImage(id, direction) {
 	const savedImages = getLocalStorage('saved-images');
 	const idx = savedImages.findIndex((img) => img.id === id);
 	if (idx === -1) return;
-
-	console.log(`id: ${id}, direction: ${direction}`);
 
 	// Move the image up
 	if (direction === 'up' && idx > 0) {
@@ -85,6 +84,7 @@ export function moveImage(id, direction) {
 	addSavedImagesToDom();
 }
 
+// Scroll to page image when thumbnail is clicked
 export function selectImage(id) {
 	const imageText = document.getElementById(id);
 	if (!imageText) return;
@@ -92,6 +92,7 @@ export function selectImage(id) {
 	imageText.scrollIntoView({ behavior: 'smooth' });
 }
 
+// Function that removes the page image and thumbnail with delete modal confirmation
 export function deleteImage(id) {
 	const thumbItem = document.querySelector(`[data-id="${id}"]`);
 	const imageTextItem = document.getElementById(id);
@@ -110,7 +111,7 @@ export function closeDeleteModal() {
 	thumbModal.hidden = true;
 }
 
-// HELPER FUNCTION
+// HELPER FUNCTION: used in addThumbnailsToDom
 function createThumbnailBtn(str1, str2, str3) {
 	const btn = document.createElement('button');
 	btn.textContent = str1;

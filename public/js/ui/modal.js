@@ -3,6 +3,7 @@ import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
+// Add image + other elements to modal on image or play button click
 export function setModalContent(element, imgSrc, id) {
 	element.textContent = '';
 
@@ -42,6 +43,7 @@ export function setModalContent(element, imgSrc, id) {
 		modalSaveRemove(btnsContainer, id, innerModal);
 	}
 
+	// To determine landscape vs portrait, adds a class, may not be useful
 	detectAspectRatio(modalImg, element);
 	element.append(btnsContainer);
 }
@@ -103,7 +105,7 @@ function modalNav(btnsElement, imgId, modalElement) {
 	});
 }
 
-/* HELPER FUNCTION 2: Save and Remove buttons + nav to next item */
+/* HELPER FUNCTION 2: Save and Remove buttons from modal + nav to next item */
 function modalSaveRemove(btnsElement, imgId, modalElement) {
 	const arr = ['Save', 'Remove'];
 
@@ -128,7 +130,6 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 			setLocalStorage('fetched-search-results', updatedFetched);
 
 			const card = document.getElementById(imgId);
-			// Here is where I need some kind of transition/animation
 			if (card) card.remove();
 
 			// Get the index for next image to load into the modal when image removed

@@ -4,13 +4,14 @@ import { setModalContent } from './modal.js';
 const innerModal = document.querySelector('.modal');
 const radioBtns = document.querySelectorAll('.radio-option input');
 
+// Add user saved images to the page on board.html
 export function addSavedImagesToDom() {
 	const savedImages = getLocalStorage('saved-images');
 	const imgTextContainer = document.getElementById('img-text-container');
 	imgTextContainer.innerHTML = '';
 
 	savedImages.forEach((img, i) => {
-		// Create container for regular sized image and text
+		// Create container for regular sized image and editable text element
 		const imageText = document.createElement('div');
 		imageText.id = img.id;
 		imageText.className = 'image-text';
@@ -28,7 +29,7 @@ export function addSavedImagesToDom() {
 
 		imageText.append(image);
 
-		// Create editable div
+		// Create editable paragraph element
 		const p = document.createElement('p');
 		p.className = 'editable';
 		p.setAttribute('contenteditable', true);
@@ -41,16 +42,18 @@ export function addSavedImagesToDom() {
 	});
 }
 
+// Global variable needed for stopImageSlider called in closeModal
 let sliderInterval = null;
 
 export function playImageSlider() {
 	const savedImages = getLocalStorage('saved-images');
+	// Get the user setting or use 6 seconds as default for slider
 	const sliderTime = getLocalStorage('slider-time') || 6;
 	let idx = 0;
 
 	const timing = sliderTime * 1000;
 
-	// I needed the first image out of setInterval because...
+	// I needed the first image outside of setInterval or else innerModal collapses
 	setModalContent(
 		innerModal,
 		savedImages[idx].imageRegular,

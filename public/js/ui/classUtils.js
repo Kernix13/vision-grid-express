@@ -1,4 +1,4 @@
-// Used in index.js and indexEvents.js
+// Adds and removes a class for elements to either show or hide element
 export function addRemoveClass(element, add, remove) {
 	element.classList.add(add);
 	element.classList.remove(remove);
@@ -10,7 +10,7 @@ export function addRemoveClass(element, add, remove) {
 	}
 }
 
-// Used in board.js and boardEvents.js
+// Toggle display of settings form and thumbnails strip
 export function toggleDisplay(el, btn, str) {
 	el.classList.toggle('onscreen');
 

@@ -6,7 +6,6 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const backToTopButton = document.querySelector('#back-to-top-btn');
 
-console.log('I always run');
 // If device is 962px (menu media query) or less wide, add aria-expanded attribute
 function setAriaExpanded() {
 	const width = document.documentElement.clientWidth;

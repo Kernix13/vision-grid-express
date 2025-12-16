@@ -9,10 +9,14 @@ export async function getSearchResults(searchTerm, page) {
 	try {
 		const response = await fetch(DOMAIN + endpoint);
 
-		if (!response.ok) throw new Error(`Response status: ${response.status}`);
+		if (!response.ok) {
+			throw new Error(`Response status: ${response.status}`);
+		}
 
 		const data = await response.json();
 		const results = await data.results;
+
+		// Pull out important properties for each image + 3 added properties
 		const resultsObject = await results.map((result) => {
 			return {
 				id: result.id,
@@ -30,8 +34,10 @@ export async function getSearchResults(searchTerm, page) {
 			};
 		});
 
+		// Save results to localStorage for use on index.html
 		setLocalStorage('fetched-search-results', resultsObject);
 		searchGrid.textContent = '';
+		// Display image cards for each of the 12 images fetched
 		createImgCard(getLocalStorage('fetched-search-results'), searchGrid);
 		return data;
 	} catch (err) {

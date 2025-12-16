@@ -27,24 +27,27 @@ export function saveSearchTerm(str, arr) {
 }
 
 // Does this function make sense?
-export function renderSearchEls(str) {
-	setLocalStorage('last-search', str);
-
+export function renderSearchEls() {
+	// Display load more button & button text
 	loadMore.hidden = false;
 	addSearchText(loadMore, 'Load 12 more images for ', 'load-more-search');
 
+	// Show search grid title and title text
 	resultsTitle.hidden = false;
 	addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
 
+	// Show clear searches button and button text
 	const loadMoreText = 'Start new search & clear search results';
 	clearSearches.hidden = false;
 	addSearchText(clearSearches, loadMoreText);
 }
 
+// Adds the textcontent and a span class for 3 elements on the home page
 export function addSearchText(el, text, spanClass) {
 	el.textContent = '';
 	el.textContent = text;
 
+	// span class not needed for the clear search results button
 	if (el !== clearSearches) {
 		const span = document.createElement('span');
 		span.className = spanClass;
@@ -55,6 +58,7 @@ export function addSearchText(el, text, spanClass) {
 	}
 }
 
+// Adds each user search term/phrase to the DOM as buttons
 export function addSearchTerm(parent, arr) {
 	arr.forEach((item) => {
 		const button = document.createElement('button');
@@ -63,6 +67,7 @@ export function addSearchTerm(parent, arr) {
 	});
 }
 
+// Buttons that clears the home page search related elements and buttons
 export function clearSearchElements() {
 	setLocalStorage('search-phrases-page', []);
 

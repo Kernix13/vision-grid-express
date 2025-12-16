@@ -31,37 +31,20 @@ const innerModal = document.querySelector('.modal');
  * * 1. Loads localStorage elements if they exist
  */
 export function initHomePage() {
-	if (
-		!getLocalStorage('search-phrases') ||
-		!getLocalStorage('fetched-search-results')
-	) {
+	const savedSearches = getLocalStorage('search-phrases');
+	const images = getLocalStorage('fetched-search-results');
+	if (!savedSearches || !images) {
 		setLocalStorage('search-phrases', []);
-
-		clearSearches.classList.add('none');
-		loadMore.classList.add('none');
-		resultsTitle.classList.add('none');
 	} else {
-		const savedSearches = getLocalStorage('search-phrases');
-		const images = getLocalStorage('fetched-search-results');
-
 		searchTerms.textContent = '';
 
-		// Add search phrase as button
+		// Add search phrase(s) as button(s)
 		addSearchTerm(searchTerms, savedSearches);
 
-		// Display load more button & button text
-		loadMore.hidden = false;
-		addSearchText(loadMore, 'Load 12 more images for ', 'load-more-search');
+		// Render search related heading and buttons
+		renderSearchEls();
 
-		// Show search grid title and title text
-		resultsTitle.hidden = false;
-		addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
-
-		// Show clear searches button and button text
-		const clearSearchesText = 'Start new search & clear search results';
-		clearSearches.hidden = false;
-		addSearchText(clearSearches, clearSearchesText);
-
+		// Render image cards
 		createImgCard(images);
 	}
 }
@@ -85,15 +68,17 @@ export function handleFormSubmit(event) {
 
 		// Fetch data
 		getSearchResults(input.value, searchPage);
-		// Render page elements
-		renderSearchEls(input.value);
-
-		// Save 2 values to localStorage: 'search-phrases' & 'search-phrases-page'
+		
+		// Save 3 values to localStorage
+		setLocalStorage('last-search', input.value);
 		saveSearchTerm(input.value, savedSearches);
 		const newSearch = { search: input.value, page: searchPage };
 		const searchPhrasesPage = getLocalStorage('search-phrases-page') || [];
 		searchPhrasesPage.push(newSearch);
 		setLocalStorage('search-phrases-page', searchPhrasesPage);
+
+		// Render search related heading and buttons
+		renderSearchEls();
 	}
 
 	// Show hidden elements
@@ -118,8 +103,8 @@ export function handleLoadMoreBtn() {
 
 	// Fetch data
 	getSearchResults(lastSearch, page);
-	// Render page elements
-	renderSearchEls(lastSearch);
+	// Render search related heading and buttons
+	renderSearchEls();
 }
 
 /**
@@ -140,8 +125,8 @@ export function handleSearchTermBtn(event) {
 
 	// Fetch data
 	getSearchResults(searchTerm, page);
-	// Render page elements
-	renderSearchEls(searchTerm);
+	// Render search related heading and buttons
+	renderSearchEls();
 	// Save values to localStorage: 'last-search' & 'search-phrases'
 	setLocalStorage('last-search', searchTerm);
 	saveSearchTerm(searchTerm, savedSearches);
