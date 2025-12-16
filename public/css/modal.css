@@ -15,18 +15,18 @@
 	display: flex;
 	gap: 1rem;
 	color: var(--white);
-	background-color: rgb(0 0 0 / 80%);
 	padding: 1rem 0;
-	max-width: 100%;
 	width: 97%;
 	height: auto;
+	max-width: 100%;
+	background-color: rgb(0 0 0 / 80%);
 	border-radius: 0.25rem;
 	box-shadow: 0 0 10px rgb(255 255 255 / 25%);
 	position: absolute;
-	overflow: hidden;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	overflow: hidden; /* Prevent content from spilling outside modal */
+	top: 50%; /* Center vertically */
+	left: 50%; /* Center horizontally */
+	transform: translate(-50%, -50%); /* Center modal on screen */
 	animation-name: modalopen;
 	animation-duration: 300ms;
 }
@@ -101,20 +101,20 @@
 .modal-buttons button:focus,
 .modal-buttons button:active {
 	color: var(--dark-gray);
-	border: 1px solid var(--white);
 	background-color: var(--accent-3);
+	border: 1px solid var(--white);
 	outline: transparent;
 }
 
 .modal .nav {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background: rgb(0 0 0 / 50%);
-	color: var(--white);
-	padding: 0.125rem 0.5rem 0.5rem;
 	font-size: 2rem;
 	line-height: 1;
+	color: var(--white);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%); /* Vertically center nav button */
+	padding: 0.125rem 0.5rem 0.5rem;
+	background: rgb(0 0 0 / 50%);
 	z-index: 10;
 }
 
@@ -139,8 +139,8 @@
 .modal .prev:hover,
 .modal .next:hover {
 	color: var(--dark-gray);
-	border: 1px solid var(--white);
 	background-color: var(--accent-3);
+	border: 1px solid var(--white);
 }
 
 .modal .prev:disabled,
@@ -160,15 +160,15 @@
 }
 
 .close-btn {
+	cursor: pointer;
+	font-size: 0.75rem;
+	line-height: 1;
 	background-color: var(--primary);
 	color: var(--white);
 	opacity: 0.75;
-	cursor: pointer;
-	border-radius: 0.25rem;
-	line-height: 1;
-	font-size: 0.75rem;
-	position: absolute;
 	padding: 0;
+	border-radius: 0.25rem;
+	position: absolute;
 	top: 0.75rem;
 	right: 1.25rem;
 	z-index: 10;
@@ -177,9 +177,9 @@
 		background-color 300ms ease;
 
 	&:hover {
-		background-color: var(--accent-3);
 		color: var(--dark-gray);
 		opacity: 1;
+		background-color: var(--accent-3);
 	}
 }
 

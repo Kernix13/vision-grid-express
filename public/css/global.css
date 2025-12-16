@@ -120,18 +120,29 @@ textarea {
 }
 
 /* 2. Global styles */
+
+/* 
+  Use flex on the body to create a full-height page layout.
+  This allows the footer to remain at the bottom of the viewport
+  when there are no image results.
+*/
 body {
 	margin: 0;
 	font-size: 1.125rem;
 	color: var(--text);
-	line-height: 1.5;
 	font-family: Inter, sans-serif;
 	font-weight: 400;
+	line-height: 1.5;
+
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 }
 
+/* 
+  Allow main content to expand and push the footer downward
+  within the body flex layout.
+*/
 main {
 	flex: 1 1 auto;
 	margin-bottom: 4rem;
@@ -147,8 +158,8 @@ h3 {
 }
 
 ::selection {
-	background-color: var(--primary-dark-2);
 	color: var(--white);
+	background-color: var(--primary-dark-2);
 }
 
 /* Header, headings, container */
@@ -178,11 +189,11 @@ h3 {
 
 /* Footer styles */
 footer {
-	padding: 3rem 0 0;
-	margin-top: 3rem;
 	color: var(--white);
-	background-color: var(--primary-dark-3);
+	padding: 3rem 0 0;
 	min-height: 4rem;
+	margin-top: 3rem;
+	background-color: var(--primary-dark-3);
 }
 
 .footer-heading {
@@ -193,14 +204,14 @@ footer {
 }
 
 .footer-flex {
+	font-size: 0.875rem;
+	color: var(--primary-muted-2);
 	opacity: 0.8;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
 	padding: 1.5rem 0 1rem;
-	font-size: 0.875rem;
-	color: var(--primary-muted-2);
 
 	a {
 		color: var(--primary-muted-2);
@@ -215,40 +226,40 @@ footer {
 
 /* 3. Menu/Navigation styles */
 .skip-to-content {
-	position: absolute;
-	background: var(--primary-dark-2);
 	color: var(--white);
+	position: absolute;
 	left: 50%;
-	padding: 0.25em 0.5em;
 	height: 2.125em;
+	padding: 0.25em 0.5em;
+	background: var(--primary-dark-2);
 	transform: translateY(-100%);
 	transition: transform 300ms;
 }
 
 .skip-to-content:focus {
+	opacity: 1;
 	left: 50%;
 	transform: translateX(-50%);
-	opacity: 1;
 }
 
 /* Nav styles that do not involve the mobile icon/menu */
 .nav-bar {
-	min-height: 4.5em;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	min-height: 4.5em;
 	padding: 0;
 }
 
 /* No logo, just text for the menu appearance */
 .logo {
-	color: var(--primary-dark-2);
+	font-size: 2rem;
 	font-family: "Allura", cursive;
 	font-weight: 600;
 	letter-spacing: 0.125em;
-	font-size: 2rem;
-	transition: color 500ms ease;
+	color: var(--primary-dark-2);
 	border: 1px solid transparent;
+	transition: color 500ms ease;
 	z-index: 1;
 }
 
@@ -259,23 +270,23 @@ footer {
 
 .home-link,
 .home-link:visited {
-	text-decoration: none;
-	border: 1px solid transparent;
-	transition: 300ms ease;
-	color: var(--primary-dark-2);
-	font-weight: 600;
 	font-size: 2rem;
+	font-weight: 600;
+	color: var(--primary-dark-2);
+	border: 1px solid transparent;
+	text-decoration: none;
 	padding: 0.25em 0.5em;
+	transition: 300ms ease;
 }
 
 .nav-link,
 .nav-link:visited {
+	font-size: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-decoration: none;
 	color: var(--primary-dark-2);
 	padding: 0.25em 0.5em;
-	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 1rem;
-	text-decoration: none;
 	border: 1px solid transparent;
 	transition: 300ms ease;
 }
@@ -291,13 +302,13 @@ footer {
 
 /* Mobile nav starts here */
 .nav-menu {
+	text-align: center;
 	list-style: none;
 	position: fixed;
 	top: -100%;
 	padding: 0.5rem 0;
-	background-color: transparent;
 	width: 100%;
-	text-align: center;
+	background-color: transparent;
 	transition: top 500ms ease-in-out;
 }
 
@@ -318,12 +329,11 @@ footer {
 
 .bar {
 	display: block;
-	background-color: var(--primary-dark-2);
 	width: 24px;
 	/* The following 2 properties are essential in creating the "X" */
 	height: 2px;
 	margin: 6px auto;
-	/* -webkit-transition: all 300ms ease;  */
+	background-color: var(--primary-dark-2);
 	transition:
 		transform 300ms ease-in-out,
 		opacity 300ms ease-in-out;
@@ -343,18 +353,18 @@ footer {
 
 /* Back To Top button */
 #back-to-top-btn {
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--white);
+	background-color: var(--primary-dark-1);
+	border: 2px solid var(--primary-muted-1);
 	display: none;
 	position: fixed;
-	font-size: 18px;
-	width: 32px;
-	height: 32px;
 	bottom: 1rem;
 	right: 1rem;
-	font-weight: bolder;
-	border: 2px solid var(--primary-muted-1);
-	background-color: var(--primary-dark-1);
-	color: var(--white);
 	cursor: pointer;
+	width: 32px;
+	height: 32px;
 	padding: 0.125em 0.25em;
 	border-radius: 0.25em;
 	transition:
@@ -365,9 +375,9 @@ footer {
 
 #back-to-top-btn:hover,
 #back-to-top-btn:focus {
-	background-color: var(--accent);
 	color: var(--dark-gray);
 	border: 2px solid var(--accent);
+	background-color: var(--accent);
 }
 
 /* Animations */
@@ -418,14 +428,15 @@ footer {
 
 @media (width >= 962px) {
 	.container {
-		max-width: 1300px;
 		width: 95%;
+		max-width: 1300px;
 	}
 
 	.logo {
 		z-index: 0;
 	}
 
+	/* switch mobile menu to desktop */
 	.nav-menu {
 		position: static;
 		display: flex;

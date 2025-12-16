@@ -526,7 +526,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!--
 ## ~~To-Do~~ (REMOVE THIS SECTION BY FRIDAY)
 
-> 7 LEFT - 3 important
+> 8 LEFT - 3 important
 
 ### Important
 
@@ -543,6 +543,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 ### Bugs
 
 7. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+8. The delete modal close btn "x" has an odd border that I noticed in other nrowsers - remove it
 
 -->
 <!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
