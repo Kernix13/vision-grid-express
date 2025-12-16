@@ -6,7 +6,7 @@ import {
 import { copyrightYear } from './utils/currentYear.js';
 
 const hamburger = document.getElementById('hamburger');
-const backToTopButton = document.querySelector('#back-to-top-btn');
+const backToTopButton = document.getElementById('back-to-top-btn');
 
 /**
  * * EVENT LISTENERS

@@ -8,13 +8,16 @@ import {
 } from '../ui/thumbnails.js';
 import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 
+// Button to toggle visibility of the settings form:
+const settingsBtn = document.getElementById('settings-btn');
+// Settings form and form elements:
+const settingsForm = document.getElementById('settings-form');
 const input = document.getElementById('board-title');
 const h1 = document.querySelector('.board-page-title');
+const radioBtns = document.querySelectorAll('.radio-option input');
+// Image modal elements:
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
-const settingsForm = document.getElementById('settings-form');
-const settingsBtn = document.getElementById('settings-btn');
-const radioBtns = document.querySelectorAll('.radio-option input');
 
 /**
  * * 1. Load saved images on DOMContentLoaded
@@ -27,8 +30,8 @@ export function initBoardPage() {
 		const imgTextContainer = document.getElementById('img-text-container');
 		imgTextContainer.textContent = 'No saved images to display...';
 	} else {
-		addThumbnailsToDom();
 		addSavedImagesToDom();
+		addThumbnailsToDom();
 
 		const time = getLocalStorage('slider-time');
 
@@ -49,11 +52,14 @@ export function initBoardPage() {
  */
 export function saveUserText(event) {
 	const savedImages = getLocalStorage('saved-images');
+	// EVENT DELEGATION: .editable inside #img-text-container
 	const editable = event.target.closest('.editable');
 	if (!editable) return;
 
+	// EVENT DELEGATION: container element for saved image and editable element
 	const imageText = editable.closest('.image-text');
 	const id = imageText.id;
+	// Get the image object in LS that was clicked on
 	const imgObj = savedImages.find((img) => img.id === id);
 
 	// ChatGPT: Use innerHTML to preserve line breaks in the editable element
@@ -66,9 +72,11 @@ export function saveUserText(event) {
  * * 6. Add page image to modal on click of any page image
  */
 export function addPageImageToModal(event) {
+	// EVENT DELEGATION: image inside #img-text-container
 	const regularImg = event.target.closest('.regular');
 	if (!regularImg) return;
 
+	// EVENT DELEGATION: container element for saved image and editable element
 	const imageText = regularImg.closest('.image-text');
 	const imageTextId = imageText.id;
 
@@ -78,12 +86,14 @@ export function addPageImageToModal(event) {
 }
 
 /**
- * * 11. Adds/removes 'selected' class on click of any thumbnail image
+ * * 11. Add/removes 'selected' class on click of any thumbnail image
  */
 export function handleThumbnailClick(event) {
+	// EVENT DELEGATION: image inside .thumbnails container
 	const thumbItem = event.target.closest('.thumb-item');
 	if (!thumbItem) return;
 
+	// Get the id of the image from the data-id value
 	const id = thumbItem.dataset.id;
 	const selected = document.querySelector('.thumb-item.selected');
 
@@ -94,6 +104,7 @@ export function handleThumbnailClick(event) {
 
 	thumbItem.classList.add('selected');
 	setLocalStorage('selected-thumb', thumbItem.dataset.id);
+	// Scroll to the page image for the thumbnail clicked
 	selectImage(id);
 }
 
@@ -102,7 +113,9 @@ export function handleThumbnailClick(event) {
  */
 export function handleThumbnailBtns(event) {
 	const thumbModal = document.getElementById('thumb-modal');
+	// EVENT DELEGATION: clicked button inside .thumbnails container
 	const btn = event.target.closest('button');
+	// EVENT DELEGATION: image tied to button click inside .thumb-item container
 	const thumbItem = event.target.closest('.thumb-item');
 	if (!thumbItem) return;
 

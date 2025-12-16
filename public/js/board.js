@@ -1,11 +1,11 @@
 import {
-	addPageImageToModal,
-	handleRadioCheck,
-	handleSliderPlayBtn,
-	handleThumbnailBtns,
-	handleThumbnailClick,
 	initBoardPage,
 	saveUserText,
+	addPageImageToModal,
+	handleThumbnailClick,
+	handleThumbnailBtns,
+	handleSliderPlayBtn,
+	handleRadioCheck,
 } from './handlers/boardEvents.js';
 import {
 	closeModal,
@@ -15,29 +15,35 @@ import {
 } from './handlers/globalEvents.js';
 import { toggleDisplay } from './ui/classUtils.js';
 import { closeDeleteModal, deleteImage } from './ui/thumbnails.js';
-import { copyrightYear } from './utils/currentYear.js';
 import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
+import { copyrightYear } from './utils/currentYear.js';
 
-const settingsForm = document.getElementById('settings-form');
+// Button to toggle visibility of the settings form:
 const settingsBtn = document.getElementById('settings-btn');
+const settingsForm = document.getElementById('settings-form');
 const input = document.getElementById('board-title');
 const playSlider = document.getElementById('play-slider');
 const allTimes = document.querySelectorAll('input[name="lightbox-speed"]');
+// Page elements
 const h1 = document.querySelector('.board-page-title');
 const thumbnails = document.querySelector('.thumbnails');
 const thumbnailsBtn = document.getElementById('thumbnails-btn');
-const imgTextContainer = document.querySelector('#img-text-container');
+const imgTextContainer = document.getElementById('img-text-container');
+// Image modal elements:
 const close = document.getElementById('close-btn');
 const modalBg = document.getElementById('modal-bg');
+// Delete image modal elements:
 const cancelBtn = document.getElementById('cancel-delete-btn');
 const deleteClose = document.getElementById('delete-close');
+const confirmBtn = document.getElementById('confirm-delete-btn');
+// Menu and B2T buttons
 const hamburger = document.getElementById('hamburger');
-const backToTopButton = document.querySelector('#back-to-top-btn');
+const backToTopButton = document.getElementById('back-to-top-btn');
 
 /**
  * * GLOBAL UI LISTENERS
  */
-// 1. Load saved images on DOMContentLoaded
+// 1. Load saved images on DOMContentLoaded if they exist
 document.addEventListener('DOMContentLoaded', initBoardPage);
 
 // 2. Open/close hamburger menu
@@ -96,7 +102,6 @@ imgTextContainer.addEventListener('click', () => {
 });
 
 // 14. Delete saved image if thumbnails Delete button clicked
-const confirmBtn = document.getElementById('confirm-delete-btn');
 confirmBtn.addEventListener('click', () => {
 	deleteImage(getLocalStorage('delete-item-id'));
 	closeDeleteModal();

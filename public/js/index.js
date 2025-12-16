@@ -15,16 +15,19 @@ import { addRemoveClass } from './ui/classUtils.js';
 import { clearSearchElements } from './ui/searchEls.js';
 import { copyrightYear } from './utils/currentYear.js';
 
+// Input search form and page elements:
 const form = document.getElementById('search-form');
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
 const resultsTitle = document.getElementById('results-title');
 const searchGrid = document.getElementById('search-grid');
 const loadMore = document.getElementById('load-more');
+// Image modal elements:
 const close = document.getElementById('close');
 const modalBg = document.getElementById('modal-bg');
+// Menu and B2T elements
 const hamburger = document.getElementById('hamburger');
-const backToTopButton = document.querySelector('#back-to-top-btn');
+const backToTopButton = document.getElementById('back-to-top-btn');
 
 /**
  * * GLOBAL UI LISTENERS

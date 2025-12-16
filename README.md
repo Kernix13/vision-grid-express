@@ -359,7 +359,7 @@ This is the current state of my project as of December 12th, 2025:
 
 <!-- HTML table syntax required or else editing the table in VS Code would be difficult -->
 
-### Feature implentation
+### Feature Implementation
 
 - Integrate an API into your project: Fetch images from the Unsplash API: `/api/photos`
 - At least one media query: 8 different media query breakpoints across 5 CSS files
@@ -403,14 +403,15 @@ This is the current state of my project as of December 12th, 2025:
       <td>Persist data to local storage, display/use that data</td>
       <td>
         <ul>
-          <li>Fetched and saved image data from Unsplash API as an array of objects</li>
-          <li>5 user interactions/values as strings, arrays, and objects</li>
+          <li>Fetched and saved image data from Unsplash API as an array of objects in localStorage</li>
+          <li>5 user interactions/values as strings, arrays, and objects saved to localStorage</li>
           <li>Images displayed on the page and in modals</li>
+          <li>Settings form data saved to localStorage</li>
         </ul>
       </td>
     </tr>
     <tr>
-      <td><strong>TABLE 2</strong>: Create a Node.js web server using Express.js</td>
+      <td><strong><ins>TABLE 2</ins></strong>: Create a Node.js web server using Express.js</td>
       <td>Express server with 2 query parameters and middleware</td>
     </tr>
   </tbody>
@@ -525,7 +526,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!--
 ## ~~To-Do~~ (REMOVE THIS SECTION BY FRIDAY)
 
-> 6 LEFT - 3 important
+> 7 LEFT - 3 important
 
 ### Important
 
@@ -535,12 +536,14 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### Questions/Other
 
-4. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
-5. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
+4. Can I call checkUserInput for the error message in the catch block of getSearchREsults instead of handleFormSubmit?
+5. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
+6. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
 
 ### Bugs
 
-6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+7. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+
 -->
 <!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
 

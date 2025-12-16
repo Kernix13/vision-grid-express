@@ -15,12 +15,15 @@ import {
 	setLocalStorage,
 } from '../utils/localStorage.js';
 
+// Form input:
 const input = document.getElementById('search');
+// Page elements:
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
 const resultsTitle = document.getElementById('results-title');
 const searchGrid = document.getElementById('search-grid');
 const loadMore = document.getElementById('load-more');
+// Image modal elements:
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
@@ -46,15 +49,18 @@ export function initHomePage() {
 		// Add search phrase as button
 		addSearchTerm(searchTerms, savedSearches);
 
+		// Display load more button & button text
 		loadMore.hidden = false;
 		addSearchText(loadMore, 'Load 12 more images for ', 'load-more-search');
 
+		// Show search grid title and title text
 		resultsTitle.hidden = false;
 		addSearchText(resultsTitle, 'Results for ', 'h2-search-term');
 
-		const loadMoreText = 'Start new search & clear search results';
+		// Show clear searches button and button text
+		const clearSearchesText = 'Start new search & clear search results';
 		clearSearches.hidden = false;
-		addSearchText(clearSearches, loadMoreText);
+		addSearchText(clearSearches, clearSearchesText);
 
 		createImgCard(images);
 	}
@@ -67,7 +73,7 @@ export function handleFormSubmit(event) {
 	event.preventDefault();
 	const savedSearches = getLocalStorage('search-phrases') || [];
 
-	// Handle bad input characters
+	// Handle bad input characters - can I call checkUserInput in getSearchResults instead?
 	const errorElement = document.querySelector('.error-message');
 	if (checkUserInput(input, errorElement)) return;
 
@@ -105,6 +111,7 @@ export function handleFormSubmit(event) {
  */
 export function handleLoadMoreBtn() {
 	const lastSearch = getLocalStorage('last-search');
+	// Increment page number for search term clicked
 	const page = incrementSearchPage(lastSearch);
 
 	searchGrid.textContent = '';
@@ -120,6 +127,7 @@ export function handleLoadMoreBtn() {
  */
 export function handleSearchTermBtn(event) {
 	const savedSearches = getLocalStorage('search-phrases') || [];
+	// EVENT DELEGATION: clicked button inside search-terms container
 	const btn = event.target.closest('button');
 	if (!btn) return;
 
@@ -144,17 +152,19 @@ export function handleSearchTermBtn(event) {
  */
 export function addCardImageToModal(event) {
 	const images = getLocalStorage('fetched-search-results');
+	// EVENT DELEGATION: clicked image inside search-grid container
 	const img = event.target.closest('img.result-image');
 	if (!img) return;
 
+	// EVENT DELEGATION: the card for the image clicked
 	const card = img.closest('.image-card');
 	const cardId = card.id;
 
 	// Get the clicked image object from LocalStorage
 	const cardImgId = images.findIndex((img) => img.id === cardId);
-	const cardImgObject = images[cardImgId];
+	const cardImgObj = images[cardImgId];
 
 	modalBg.classList.add('show-modal');
 	modalBg.hidden = false;
-	setModalContent(innerModal, cardImgObject.imageRegular, cardId);
+	setModalContent(innerModal, cardImgObj.imageRegular, cardId);
 }
