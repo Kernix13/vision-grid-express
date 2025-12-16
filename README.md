@@ -225,8 +225,8 @@ This is the current state of my project as of December 12th, 2025:
         <ul>
           <li>Local development server environment</li>
           <!-- <li>Custom npm scripts</li> -->
-          <li>Environment variables (<code>process.env</code>) for secure API keys and configuration</li>
-          <li>Express integration for API routing and serving static files</li>
+          <li>Environment variables (<code>process.env</code>) for API keys and configuration</li>
+          <li>API routing and static file serving via Express.js</li>
         </ul>
       </td>
     </tr>
@@ -238,7 +238,7 @@ This is the current state of my project as of December 12th, 2025:
         <ul>
           <li>Managing dependencies with <code>package.json</code></li>
           <li>Configuring and running npm scripts for development workflow</li>
-          <li>Packages used: Express, CORS, dotenv, compression | Biome</li>
+          <li>Packages used: Express, CORS, dotenv, compression, Biome</li>
         </ul>
       </td>
     </tr>
@@ -249,8 +249,8 @@ This is the current state of my project as of December 12th, 2025:
       <td>
         <ul>
           <li>Express server for basic routing and for handling Unsplash API requests securely</li>
-          <li>Served static files using <code>express.static</code> middleware</li>
-          <li>Used middleware for handling simple CORS & gzip/deflate compression</li>
+          <li>Static file serving via <code>express.static</code> middleware</li>
+          <li>CORS and gzip/deflate compression using third-party middleware</li>
         </ul>
       </td>
     </tr>
@@ -261,7 +261,7 @@ This is the current state of my project as of December 12th, 2025:
       <td>
         <ul>
           <li>Version control using add > commit > push workflow</li>
-          <li>Local feature-branch development and merging</li>
+          <li>Local feature branch development with local merges</li>
           <li>Clean commit history with descriptive commit messages</li>
           <!-- <li>Managed sensitive files using <code>.gitignore</code></li> -->
         </ul>
@@ -273,8 +273,8 @@ This is the current state of my project as of December 12th, 2025:
       </td>
       <td>
         <ul>
-          <li>Issue tracking with descriptive labels</li>
-          <li>Feature branch pull request workflow with merge commits</li>
+          <li>Issues with labels for task tracking and bug reporting</li>
+          <li>Branch-based development using pull requests and merge commits</li>
           <li>Contributing: MIT License, CONTRIBUTING.md, and CODE_OF_CONDUCT.md</li>
           <li><code>.github</code> folder for Issues and Pull Request templates</li>
           <!-- <li>Comprehensive README using open-source best practices</li> -->
@@ -309,12 +309,12 @@ This is the current state of my project as of December 12th, 2025:
 ├── LICENSE
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
+├── biome.json              # Biome formatter, linter, and code-quality config
 ├── package.json            # Dependencies and scripts
 ├── server.js               # Express server handling API requests
-├── .env.example            # Template for environment variables
+├── .env.example            # Template for required environment variables in .env
 ├── .gitattributes          # Enforces consistent line endings and other Git settings
 ├── .gitignore              # Specific files and folders Git should ignore
-├── biome.json              # Biome formatter, linter, and code-quality config
 ├── .github/                # GitHub Issue and PR templates
 ├── public/
 │   ├── index.html
@@ -329,7 +329,7 @@ This is the current state of my project as of December 12th, 2025:
 │   │   ├── about.js        # Main file for about.html
 │   │   ├── api/            # Fetch function(s) for backend /api/photos
 │   │   ├── ui/             # UI behavior functions
-│   │   └── utils/          # Shared utility functions (localStorage)
+│   │   └── utils/          # Shared/utility functions
 │   ├── images/
 │   └── fonts/              # DM Sans and Inter .woff2 files
 ```
@@ -359,6 +359,14 @@ This is the current state of my project as of December 12th, 2025:
 
 <!-- HTML table syntax required or else editing the table in VS Code would be difficult -->
 
+### Feature implentation
+
+- Integrate an API into your project: Fetch images from the Unsplash API: `/api/photos`
+- At least one media query: 8 different media query breakpoints across 5 CSS files
+- Have at least two pages/routes: `index.html`, `board.html`, `about.html`
+
+### Features List (Table 1 & 2)
+
 <table>
   <thead>
     <tr>
@@ -367,57 +375,43 @@ This is the current state of my project as of December 12th, 2025:
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>Integrate an API into your project</td>
-      <td>Fetch images from the Unsplash API: <code>/api/photos</code></td>
+  <tr>
+      <td><em>Analyze</em> data that is stored in various data structures</td>
+      <td>Retrieve API JSON, save as <code>localStorage</code> objects and strings, used in many functions</td>
     </tr>
     <tr>
-      <td>Create a Node.js web server using Express.js</td>
-      <td>Express server with 2 query parameters</td>
-    </tr>
-    <tr>
-      <td>Analyze data that is stored in various data structures</td>
-      <td>Retrieve API JSON, save as <code>localStorage</code> objects and strings</td>
-    </tr>
-    <tr>
-      <td>Have at least two pages/routes</td>
-      <td>index.html, board.html, about.html</td>
-    </tr>
-    <tr>
-      <td>Display information about the data in your app</td>
-      <td>
-      <!-- do these count? -->
-        <ul>
-          <li>Images displayed in 3 different sizes</li>
-          <li>Image <code>alt_descriptions</code> added as <code>img</code> <code>alt</code> attribute</li>
-          <li>Add image id to elements <code>id</code> and <code>data-id</code> attributes</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Have a function with 2 or more params with a <code>return</code> value</td>
+      <td>Create a function with 2 or more params with a <code>return</code> value</td>
       <td>
       <ul>
-      <li><code>getSearchResults(searchTerm, page, element)</code></li>
-      <li><code>saveSearchTerm(str, el, arr)</code></li>
-      <li><code>moveImage(event, id, direction)</code></li>
-      <li><code>setLocalStorage(str, val)</code></li>
-      <li>+ more but not all have <code>return</code> KWs</li>
+        <li><code>createThumbnailBtn</code> in thumbnails.js</li>
+        <li><code>checkUserInput</code> in checkUserInput.js</li>
+        <li><code>setLocalStorage</code> in localStorage.js</li>
       </ul>
       </td>
     </tr>
     <tr>
-      <td>Persist & use data to the user to local storage</td>
+      <td>Display information about the data in your app</td>
       <td>
         <ul>
-          <li>Current search phrase</li>
-          <li>Current search phrase page number</li>
-          <li>Fetched image objects</li>
-          <li>Saved images objects</li>
-          <li>List of all user search phrases</li>
-          <li>User images text/notes</li>
+          <li>Images displayed in 3 different sizes in image cards and in modals</li>
+          <li>Image <code>alt_descriptions</code> added as <code>img</code> <code>alt</code> attribute</li>
+          <li>Add image <code>id</code> as <code>id</code> and <code>data-id</code> attributes to various elements</li>
         </ul>
       </td>
+    </tr>
+    <tr>
+      <td>Persist data to local storage, display/use that data</td>
+      <td>
+        <ul>
+          <li>Fetched and saved image data from Unsplash API as an array of objects</li>
+          <li>5 user interactions/values as strings, arrays, and objects</li>
+          <li>Images displayed on the page and in modals</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>TABLE 2</strong>: Create a Node.js web server using Express.js</td>
+      <td>Express server with 2 query parameters and middleware</td>
     </tr>
   </tbody>
 </table>
@@ -435,7 +429,7 @@ Contributions are welcome! If you'd like to help improve this project, please re
 - Save everything to a MySQL database instead of `localStorage`
 - Allow user to fetch only landscape, portrait, or square-ish image formats
 - Allow user to uncheck showing any saved image in the lightbox slider
-- Use `srcset` for DOM images on different devices for performance reasons
+- Use `srcset` for DOM images on different devices for improved performance
 - Allow the user to have more than one board
 - Get the image slider to go full-screen
 - Dark/Light mode option
@@ -450,17 +444,17 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ChatGPT writes better copy than I do. ChatGPT was used for the following:
 
-1. I asked ChatGPT for help on project ideas. I gave it a list of my hobbies and it suggested ideas and the Unsplash idea was the most interesting to me.
-2. It generated the "Project Structure" code block above.
+1. I asked ChatGPT for help on project ideas. I gave it a list of my hobbies and its Unsplash idea was the most interesting to me.
+2. It generated the "Project Structure" directory tree block above.
 3. I had boilerplate for `CONTRIBUTING.md` from previous projects. It wrote the content I have for this project and the paragraph of text for that section.
 4. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
 5. ChatGPT gave me an outline for the "How it Works" section
-6. I asked ChatGPT about including robots.txt and sitemap.xml. It suggested to add them and wrote the contents for sitemap.xml.
+6. I asked ChatGPT about including `robots.txt` and `sitemap.xml` files. It suggested to add them and wrote the contents for `sitemap.xml`.
 7. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, and Express)
 
 ### CODE
 
-1. ChatGPT helped me with the code to "contain" the image in the image cards, specifically using `aspect-ratio` and `object-fit`:
+1. ChatGPT helped me with the code to "contain" the images in the image cards, specifically using `aspect-ratio` and `object-fit`:
 
 ```css
 .result-image {
@@ -502,7 +496,7 @@ Design & UI:
 8. [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
 9. [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
 10. [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties
-11. [Google Fonts](https://fonts.google.com/): Downloaded the woff2 files for DM Sans, Inter, and Allura
+11. [Google Fonts](https://fonts.google.com/): Downloaded the `woff2` files for _DM Sans_, _Inter_, and _Allura_
 12. [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
 13. [Boostrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page
 

@@ -10,6 +10,7 @@ const corsOptions = {
 	origin: `http://localhost:${port}`,
 };
 
+// Middleware
 app.use(cors(corsOptions));
 app.use(compression());
 app.use(express.static('./public'));
