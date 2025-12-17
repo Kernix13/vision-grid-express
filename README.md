@@ -1,8 +1,7 @@
 # VisionGrid
 
 <!-- Take a new home page screenshot when I am done -->
-<div align="center"><img width="694" height="410" alt="image" src="https://github.com/user-attachments/assets/d8b461a8-fb64-4f7d-97ba-1a99b5bcf174" />
-</div>
+<div align="center"><img width="686" height="415" alt="image" src="https://github.com/user-attachments/assets/a2efd3fa-04e1-44fb-8287-90f362e7a82c" /></div>
 
 <br>
 
