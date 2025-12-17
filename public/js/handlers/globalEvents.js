@@ -41,7 +41,7 @@ export function toggleMenu() {
 }
 
 /**
- * * ⚠️ SKIP THIS CODE - I copied it from CodePen a few years ago
+ * * ⚠️ SKIP ALL CODE BELOW - I copied it from CodePen a few years ago
  * * CodePen: https://codepen.io/Coding_Journey/pen/LMrLQV
  * Display or hide back-to-top btn based on scrollY
  */
