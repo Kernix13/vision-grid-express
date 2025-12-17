@@ -9,6 +9,7 @@ import {
 	handleLoadMoreBtn,
 	handleSearchTermBtn,
 	initHomePage,
+	removeCardOnBtnClick,
 } from './handlers/indexEvents.js';
 import { removeImageCard } from './ui/cards.js';
 import { addRemoveClass } from './ui/classUtils.js';
@@ -63,15 +64,7 @@ searchTerms.addEventListener('click', handleSearchTermBtn);
 searchGrid.addEventListener('click', addCardImageToModal);
 
 // 9. Remove card when Save/Remove button is clicked
-searchGrid.addEventListener('click', (e) => {
-	removeImageCard(e);
-
-	// Remove the results title if the user saves or removes every image?
-	const cardImages = searchGrid.querySelectorAll('img');
-	if (cardImages.length === 0) {
-		addRemoveClass(resultsTitle, 'none', 'block');
-	}
-});
+searchGrid.addEventListener('click', removeCardOnBtnClick);
 
 // 10. Close image modal listener on close button click
 close.addEventListener('click', () => {

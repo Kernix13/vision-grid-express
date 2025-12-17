@@ -1,5 +1,5 @@
 import { getSearchResults } from '../api/unsplash.js';
-import { createImgCard } from '../ui/cards.js';
+import { createImgCard, removeImageCard } from '../ui/cards.js';
 import { addRemoveClass } from '../ui/classUtils.js';
 import { setModalContent } from '../ui/modal.js';
 import {
@@ -151,4 +151,17 @@ export function addCardImageToModal(event) {
 	modalBg.classList.add('show-modal');
 	modalBg.hidden = false;
 	setModalContent(innerModal, cardImgObj.imageRegular, cardId);
+}
+
+export function removeCardOnBtnClick(event) {
+	const cardBtn = event.target.closest('.results-buttons button');
+		if (!cardBtn) return;
+	
+		removeImageCard(event);
+	
+		// Remove the results title if the user saves or removes last card?
+		const cardImages = searchGrid.querySelectorAll('img');
+		if (cardImages.length === 0) {
+			addRemoveClass(resultsTitle, 'none', 'block');
+		}
 }
