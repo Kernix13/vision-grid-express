@@ -88,9 +88,11 @@ window.addEventListener('click', (e) => {
 });
 
 // 12. Close image modal listener on Escape key keydown
-document.addEventListener('keydown', (e) => {
-	if (e.key === 'Escape') modalBg.classList.remove('show-modal');
-	modalBg.hidden = true;
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    modalBg.classList.remove('show-modal');
+    modalBg.hidden = true;
+  }
 });
 
 /**
