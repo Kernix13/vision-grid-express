@@ -68,7 +68,7 @@ h1 {
 .about-card ul li {
 	padding-left: 0.5rem;
 	margin-bottom: 0.25rem;
-	margin-left: 1.0625rem;
+	margin-left: 1rem;
 
 	&::marker,
 	&::marker {

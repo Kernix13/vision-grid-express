@@ -1,11 +1,9 @@
 # VisionGrid
 
 <!-- Take a new home page screenshot when I am done -->
-<div align="center"><img width="709" height="413" alt="image" src="https://github.com/user-attachments/assets/1ebd46a5-0f35-4edf-a1cd-08ce900148ba" /></div>
+<div align="center"><img width="686" height="415" alt="image" src="https://github.com/user-attachments/assets/a2efd3fa-04e1-44fb-8287-90f362e7a82c" /></div>
 
 <br>
-
-<!-- Go to https://shields.io/badges, try for-the-badge, flat or flat-square -->
 
 <div id="back-to-top"></div>
 
@@ -18,8 +16,6 @@ VisualGrid is a client-side web app for visual project planning and goal-setting
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
 ## Getting Started
-
-<!-- The steps look too small - see how H3 looks after next push -->
 
 <br>
 
@@ -145,7 +141,7 @@ npm run check
 
 ## Tech Stack
 
-<!-- See all devicons here: https://github.com/devicons/devicon -->
+<!-- The images in the 1st column are devicons. See all devicons here: https://github.com/devicons/devicon -->
 
 This is the current state of my project as of December 12th, 2025:
 
@@ -283,7 +279,7 @@ This is the current state of my project as of December 12th, 2025:
 
 ## Project Structure
 
-<!-- try python, bash or yml -->
+<!-- try python, bash or yml as alternate languages for a directory tree block -->
 
 ```python
 /
@@ -327,12 +323,6 @@ This is the current state of my project as of December 12th, 2025:
 -->
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
-
-<!-- ## Additional Notes
-
-- The project uses `localStorage` to persist saved images data and notes.
-- The project uses self-hosted Google Fonts (Inter, DM Sans).
--->
 
 <br>
 
@@ -424,17 +414,24 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ## Use of AI
 
-### README Copy
+I asked ChatGPT for help on project ideas. I gave it a list of my hobbies/interests and its Unsplash idea was the most interesting to me.
 
-ChatGPT writes better copy than I do. ChatGPT was used for the following:
+ChatGPT writes better copy than I do so I asked it to write some of the text in my README and for my HTML pages.
 
-1. I asked ChatGPT for help on project ideas. I gave it a list of my hobbies and its Unsplash idea was the most interesting to me.
-2. It generated the "Project Structure" directory tree block above.
-3. I had boilerplate for `CONTRIBUTING.md` from previous projects. It wrote the content I have for this project and the paragraph of text for that section.
-4. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
-5. ChatGPT gave me an outline for the "How it Works" section
-6. I asked ChatGPT about including `robots.txt` and `sitemap.xml` files. It suggested to add them and wrote the contents for `sitemap.xml`.
-7. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, and Express)
+### README Copy & Other Files
+
+1. It generated the "Project Structure" directory tree block above.
+2. I had boilerplate for `CONTRIBUTING.md` from previous projects. It wrote the content I have in there now for this project and the paragraph of text for that section.
+3. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
+4. ChatGPT gave me an outline for the "How it Works" section
+5. I asked ChatGPT about including `robots.txt` and `sitemap.xml` files. It suggested to add them and wrote the contents for `sitemap.xml`.
+6. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, and Express)
+
+### HTML Copy
+
+1. ChatGPT wrote the H1 title and H2 sub-title for index.html.
+2. It wrote the H2 heading in the footer.
+3. On the About page, it wrote the text for the Intro, Quick Start, and Tips & Best Practices sections. It also edited/revised my bullet points in the other sections on about.html.
 
 ### CODE
 
@@ -509,7 +506,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!--
 ## ~~To-Do~~ (REMOVE THIS SECTION BY FRIDAY)
 
-> 8 LEFT - 3 important
+> 7 LEFT - 3 important
 
 ### Important
 
@@ -519,40 +516,16 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### Questions/Other
 
-4. Can I call checkUserInput for the error message in the catch block of getSearchREsults instead of handleFormSubmit?
-5. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
-6. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
+4. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
+5. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
 
 ### Bugs
 
-7. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
-8. The delete modal close btn "x" has an odd border that I noticed in other nrowsers - remove it
+6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+7. The delete modal close btn "x" has an odd border that I noticed in other nrowsers - remove it
 
 -->
-<!-- 4. Add JSDoc comments? Yes, if I have time but not for every function! -->
-
-<!--
-  Blockers:
-  📌 1.
- -->
-
-<!--
-  CHECKLIST: ✅ = Done, 📌 = Not Done, ❓ = Questionable section
-  1. Shields.io badges ✅
-  2. Project Overview ✅
-  3. Tech Stack ✅
-  4. Getting Started ✅
-  5. How It Works ✅
-  6. Project Structure ✅
-  7. Additional Notes ❓
-  8. Capstone Requirements ✅
-  9. Contributing ✅
-  10. Future Improvements ✅
-  11. Use of AI 📌
-  12. License ✅
-  13. Acknowledgments & Resourceses ✅
-  - CODE_OF_CONDUCT.md file: Edit/Rewrite 📌
- -->
+<!-- - Add JSDoc comments? Yes, if I have time but not for every function! -->
 
 <!--
   ICONS: https://icons.getbootstrap.com/
@@ -570,3 +543,5 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
   - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
   - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates
  -->
+
+<!-- Go to https://shields.io/badges, try for-the-badge, flat or flat-square -->
