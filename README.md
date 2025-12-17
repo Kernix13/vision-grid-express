@@ -100,9 +100,9 @@ npm run check
 <br>
 
 <img width="755" height="371" alt="image" src="https://github.com/user-attachments/assets/fa09c707-0417-42d5-80cb-9e0dd8a2e1da" />
-<p align="center"><em>Home page image modal</em></p>
+<p align="center"><em>Home page image modal with Save, Remove and navigation buttons</em></p>
 
-<br> <br>
+<br>
 
 - Image Search
   - Enter a search phrase to fetch 12 images from the Unsplash API.
@@ -124,7 +124,7 @@ npm run check
 <img width="932" height="408" alt="image" src="https://github.com/user-attachments/assets/cfdd8b24-17ad-40ae-93d8-2fdc8cb62b10" />
 <p align="center"><em>Board page thumbnails strip on right & image with editable text field</em></p>
 
-<br> <br>
+<br>
 
 - Saved Images Display
   - View all saved images in a large, clean layout.
