@@ -7,8 +7,6 @@
 
 <div id="back-to-top"></div>
 
-> ### BUILD A GOOD SAMPLE BOARD PAGE AND THEN GET SCREENSHOTS FOR HEADER AND FOR "How It Works" SECTION
-
 ## Project Overview
 
 VisualGrid is a client-side web app for visual project planning and goal-setting. Users can search the Unsplash API, save images to a personalized board, and attach notes or goal statements to each item. The app includes modal image views, a full-screen slider, localStorage persistence, and tools for organizing, annotating, and revisiting saved images.
@@ -98,8 +96,6 @@ npm run check
 
 ### Home / Search Page
 
-> _Image of home page modal here_
-
 - Image Search
   - Enter a search phrase to fetch 12 images from the Unsplash API.
   - Past search terms are saved and can be revisited, each automatically loading the next page of results.
@@ -114,8 +110,6 @@ npm run check
   - The "Load More" button fetches the next page of images for the current search term.
 
 ### Vision Board Page
-
-> _Image of thumbnail strip and an image-text element and maybe the settings screen open lower down and/or board page modal - that is 2-3 screenshots_
 
 - Saved Images Display
   - View all saved images in a large, clean layout.
