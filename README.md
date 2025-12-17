@@ -469,29 +469,29 @@ p.innerHTML = img.notes || 'You can add or edit notes here...';
 
 Code/Technical:
 
-1. Code:You module lesson material, suggested videos, and Q&A in Slack
-2. [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples
-3. Traversy Media Discord server: help with npm packages, specifically Biome
-4. [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`
+1. Code:You module lesson material, suggested videos, and Q&A in Slack.
+2. [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples for JavaScript, CSS, and some HTML attributes.
+3. Traversy Media Discord server: help with npm packages, specifically Biome.
+4. [Express Crash Course](https://www.youtube.com/watch?v=CnH3kAXSrmU) by [Traversy Media](https://www.youtube.com/@TraversyMedia): Specifically using `req.query` in `server.js`.
 5. [React Full Course for free 2024 - BroCode](https://youtu.be/CgkZ7MvWUAA): his example of array destructuring for moving To-Do items was what I needed for reordering saved images on the board page.
-6. Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues
-7. Wes Bos' [JavaScript30 course](https://javascript30.com/), JavaScript Drum Kit video on using the `transitionend` event type for my transitions for the image card removals.
-<!-- ?. [Guide to Finding Closest Target](https://www.devzery.com/post/closest-target) -->
+6. Google DevTools Lighthouse reports for finding and fixing Performance and Accessibility issues.
+7. [JavaScript30 course](https://javascript30.com/) by Wes Bos: Day 1, JavaScript Drum Kit video on using the `transitionend` event type for my transitions for the image card removals.
+8. [Guide to Finding Closest Target](https://www.devzery.com/post/closest-target): This was useful for the issues I was having handling event delegation.
 
 Design & UI:
 
-8. [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
-9. [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design
-10. [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties
-11. [Google Fonts](https://fonts.google.com/): Downloaded the `woff2` files for _DM Sans_, _Inter_, and _Allura_
-12. [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
-13. [Boostrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page
+1. [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
+2. [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design.
+3. [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties.
+4. [Google Fonts](https://fonts.google.com/): Downloaded the `woff2` files for _DM Sans_, _Inter_, and _Allura_.
+5. [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
+6. [Boostrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page.
 
 Accessibility:
 
-14. [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for making color palette choices
-15. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements
-16. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages
+1. [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for making color palette choices.
+2. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements.
+3. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages.
 
 <!-- - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey) -->
 
@@ -512,23 +512,22 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!--
 ## ~~To-Do~~ (REMOVE THIS SECTION BY FRIDAY)
 
-> 7 LEFT - 3 important
+> 5 LEFT -> 2 important
 
 ### Important
 
-1. ⚠️ BUILD A GOOD SAMPLE BOARD PAGE AND THEN GET SCREENSHOTS FOR HEADER AND FOR "How It Works" SECTION
-2. **HOME**: Add a confirmation for the "clear all" button
-3. **BOARD**: Add an option to remove all saved images, otherwise, the user has to manually click "x" and confirm for each saved image (EASY - settings form?)
+1. **HOME**: Add a confirmation for the "clear all" button
+2. **BOARD**: Add an option to remove all saved images, otherwise, the user has to manually click "x" and confirm for each saved image (EASY - settings form?)
 
 ### Questions/Other
 
-4. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
-5. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
+3. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
+4. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
+5. Look into Vercel for live version
 
 ### Bugs
 
-6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
-7. The delete modal close btn "x" has an odd border that I noticed in other nrowsers - remove it
+5. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 
 -->
 <!-- - Add JSDoc comments? Yes, if I have time but not for every function! -->
