@@ -110,25 +110,25 @@ export function handleLoadMoreBtn() {
  * * 4. Fetch more images if a past search term button is clicked
  */
 export function handleSearchTermBtn(event) {
-	const savedSearches = getLocalStorage('search-phrases') || [];
-	// EVENT DELEGATION: clicked button inside search-terms container
-	const btn = event.target.closest('button');
-	if (!btn) return;
+  const savedSearches = getLocalStorage('search-phrases') || [];
+  // EVENT DELEGATION: clicked button inside search-terms container
+  const btn = event.target.closest('button');
+  if (!btn) return;
 
-	const searchTerm = btn.textContent;
+  const searchTerm = btn.textContent;
 
-	// Increment page number for search term clicked
-	const page = incrementSearchPage(searchTerm);
+  // Increment page number for search term clicked
+  const page = incrementSearchPage(searchTerm);
 
-	searchGrid.textContent = '';
+  searchGrid.textContent = '';
 
-	// Fetch data
-	getSearchResults(searchTerm, page);
-	// Render search related heading and buttons
-	renderSearchEls();
-	// Save values to localStorage: 'last-search' & 'search-phrases'
-	setLocalStorage('last-search', searchTerm);
-	saveSearchTerm(searchTerm, savedSearches);
+  // Fetch data
+  getSearchResults(searchTerm, page);
+  // Save values to localStorage: 'last-search' & 'search-phrases'
+  setLocalStorage('last-search', searchTerm);
+  saveSearchTerm(searchTerm, savedSearches);
+  // Render search related heading and buttons
+  renderSearchEls();
 }
 
 /**
