@@ -5,23 +5,6 @@
 
 <br>
 
-<p align="center">
-<a href="https://github.com/Kernix13/vision-grid-express/commits/main/">
-<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/y/Kernix13/vision-grid-express?style=for-the-badge&label=Commits" /></a>
-<a href="https://github.com/Kernix13/vision-grid-express/issues">
-<img alt="GitHub Issues" src="https://img.shields.io/github/issues/Kernix13/vision-grid-express?style=for-the-badge" /></a>
-<a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
-<a href="https://github.com/Kernix13/vision-grid-express/pulls?q=is%3Apr+is%3Aclosed">
-<img alt="GitHub Closed Pull Requests" src="https://img.shields.io/github/issues-pr-closed/Kernix13/vision-grid-express?style=for-the-badge&color=%236b61ef" /></a>
-<a href="https://github.com/Kernix13/vision-grid-express/blob/main/LICENSE">
-<img alt="License: MIT" src="https://img.shields.io/github/license/Kernix13/vision-grid-express?style=for-the-badge" /></a>
-<!-- <a href="https://github.com/Kernix13/vision-grid-express">
-<img alt="GitHub Repo Stars" src="https://img.shields.io/github/stars/Kernix13/vision-grid-express?style=for-the-badge" /></a> -->
-
-</p>
-
-<br>
-
 <!-- Go to https://shields.io/badges, try for-the-badge, flat or flat-square -->
 
 <div id="back-to-top"></div>
