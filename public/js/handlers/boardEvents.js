@@ -115,6 +115,7 @@ export function handleThumbnailBtns(event) {
 	const thumbModal = document.getElementById('thumb-modal');
 	// EVENT DELEGATION: clicked button inside .thumbnails container
 	const btn = event.target.closest('button');
+	if (!btn) return;
 	// EVENT DELEGATION: image tied to button click inside .thumb-item container
 	const thumbItem = event.target.closest('.thumb-item');
 	if (!thumbItem) return;
