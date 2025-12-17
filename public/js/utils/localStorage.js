@@ -1,13 +1,13 @@
-export function setLocalStorage(str, val) {
-	return localStorage.setItem(str, JSON.stringify(val));
+export function setLocalStorage(key, val) {
+	return localStorage.setItem(key, JSON.stringify(val));
 }
 
-export function getLocalStorage(str) {
-	return JSON.parse(localStorage.getItem(str));
+export function getLocalStorage(key) {
+	return JSON.parse(localStorage.getItem(key));
 }
 
-export function removeLocalStorage(str) {
-	return localStorage.removeItem(str);
+export function removeLocalStorage(key) {
+	return localStorage.removeItem(key);
 }
 
 export function incrementSearchPage(searchTerm) {
