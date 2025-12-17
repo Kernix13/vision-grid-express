@@ -96,7 +96,9 @@ npm run check
 
 ### Home / Search Page
 
-<div align="center"><img width="755" height="371" alt="image" src="https://github.com/user-attachments/assets/fa09c707-0417-42d5-80cb-9e0dd8a2e1da" /></div>
+<br>
+
+<img width="755" height="371" alt="image" src="https://github.com/user-attachments/assets/fa09c707-0417-42d5-80cb-9e0dd8a2e1da" />
 
 <br>
 
@@ -115,7 +117,9 @@ npm run check
 
 ### Vision Board Page
 
-<div align="center"><img width="932" height="408" alt="image" src="https://github.com/user-attachments/assets/cfdd8b24-17ad-40ae-93d8-2fdc8cb62b10" /></div>
+<br>
+
+<img width="932" height="408" alt="image" src="https://github.com/user-attachments/assets/cfdd8b24-17ad-40ae-93d8-2fdc8cb62b10" />
 
 <br>
 
