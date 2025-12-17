@@ -26,7 +26,8 @@ export function closeModal() {
 }
 
 /**
- * * Toggle mobile menu - this function is from previous projects
+ * * ⚠️ SKIP THIS CODE - this function is from previous projects
+ * * Toggle mobile menu
  */
 export function toggleMenu() {
 	/* Toggle active class */
@@ -40,7 +41,8 @@ export function toggleMenu() {
 }
 
 /**
- * * Code from CodePen: https://codepen.io/Coding_Journey/pen/LMrLQV
+ * * ⚠️ SKIP THIS CODE - I copied it from CodePen a few years ago
+ * * CodePen: https://codepen.io/Coding_Journey/pen/LMrLQV
  * Display or hide back-to-top btn based on scrollY
  */
 export function scrollFunction() {
