@@ -2,6 +2,7 @@
 
 <!-- Take a new home page screenshot when I am done -->
 <div align="center"><img width="686" height="415" alt="image" src="https://github.com/user-attachments/assets/a2efd3fa-04e1-44fb-8287-90f362e7a82c" /></div>
+<p align="center"><em>Home page search resuls image cards</em></p>
 
 <br>
 
@@ -99,6 +100,7 @@ npm run check
 <br>
 
 <img width="755" height="371" alt="image" src="https://github.com/user-attachments/assets/fa09c707-0417-42d5-80cb-9e0dd8a2e1da" />
+<p align="center"><em>Home page image modal</em></p>
 
 <br> <br>
 
@@ -120,6 +122,7 @@ npm run check
 <br>
 
 <img width="932" height="408" alt="image" src="https://github.com/user-attachments/assets/cfdd8b24-17ad-40ae-93d8-2fdc8cb62b10" />
+<p align="center"><em>Board page thumbnails strip on right & image with editable text field</em></p>
 
 <br> <br>
 
