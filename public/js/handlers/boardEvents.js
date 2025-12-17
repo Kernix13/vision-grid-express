@@ -141,7 +141,6 @@ export function handleThumbnailBtns(event) {
  */
 export function handleSliderPlayBtn() {
 	const savedImages = getLocalStorage('saved-images');
-	// I have not tested this yet because I have saved images and I'm not done testing
 	if (!savedImages || savedImages.length === 0) return;
 	innerModal.classList.add('play');
 	modalBg.classList.add('show-modal');
