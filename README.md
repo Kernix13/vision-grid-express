@@ -460,6 +460,7 @@ ChatGPT writes better copy than I do so I asked it to write some of the text in 
 ```js
 // in boardEvents.js > saveUserText:
 imgObj.notes = editable.innerHTML.trim();
+
 // in savedImages.js > addSavedImagesToDom:
 p.innerHTML = img.notes || 'You can add or edit notes here...';
 ```
