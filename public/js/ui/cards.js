@@ -3,7 +3,9 @@ import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 // Create a card for each image in 'fetched-search-results'
 export function createImgCard(arr) {
 	const searchGrid = document.getElementById('search-grid');
+
 	arr.forEach((obj, i) => {
+		// Container for the image and buttons
 		const imgCard = document.createElement('div');
 		imgCard.className = 'image-card';
 		imgCard.id = obj.id;
@@ -16,6 +18,7 @@ export function createImgCard(arr) {
 		image.className = 'result-image';
 		image.src = obj.imageSmall;
 		image.alt = obj.description;
+		
 		// These conditionals are to improve lighthouse performance score
 		if (i === 0) image.fetchPriority = 'high';
 		if (i !== 0) image.loading = 'lazy';
@@ -33,12 +36,8 @@ export function createImgCard(arr) {
 		removeBtn.className = 'remove';
 		removeBtn.textContent = 'Remove';
 
-		btnsContainer.append(saveBtn);
-		btnsContainer.append(removeBtn);
-
-		imgCard.append(imgContainer);
-		imgCard.append(btnsContainer);
-
+		btnsContainer.append(saveBtn, removeBtn);
+		imgCard.append(imgContainer, btnsContainer);
 		searchGrid.append(imgCard);
 	});
 }

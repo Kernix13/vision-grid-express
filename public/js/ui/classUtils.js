@@ -1,4 +1,4 @@
-// Adds and removes a class for elements to either show or hide element
+// Adds & removes a class from an element on home page to show/hide element
 export function addRemoveClass(element, add, remove) {
 	element.classList.add(add);
 	element.classList.remove(remove);
@@ -10,7 +10,7 @@ export function addRemoveClass(element, add, remove) {
 	}
 }
 
-// Toggle display of settings form and thumbnails strip
+// Toggle display of settings form and thumbnails strip on board page
 export function toggleDisplay(el, btn, str) {
 	el.classList.toggle('onscreen');
 

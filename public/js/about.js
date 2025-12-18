@@ -23,5 +23,4 @@ backToTopButton.addEventListener('click', smoothScrollBackToTop);
 /**
  * * Set Copyright year in footer
  */
-const year = document.getElementById('year');
-year.textContent = copyrightYear();
+document.getElementById('year').textContent = copyrightYear();

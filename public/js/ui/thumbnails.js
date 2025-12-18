@@ -86,6 +86,7 @@ export function moveImage(id, direction) {
 
 // Scroll to page image when thumbnail is clicked
 export function selectImage(id) {
+	// Container for page image and its editable text element
 	const imageText = document.getElementById(id);
 	if (!imageText) return;
 
@@ -94,15 +95,17 @@ export function selectImage(id) {
 
 // Function that removes the page image and thumbnail with delete modal confirmation
 export function deleteImage(id) {
+	// Container for thumbnail and button container
 	const thumbItem = document.querySelector(`[data-id="${id}"]`);
-	const imageTextItem = document.getElementById(id);
+	// Container for page image and its editable text element
+	const imageText = document.getElementById(id);
 
 	const savedImages = getLocalStorage('saved-images');
 	const newSavedImages = savedImages.filter((img) => img.id !== id);
 
 	setLocalStorage('saved-images', newSavedImages);
 	thumbItem.remove();
-	imageTextItem.remove();
+	imageText.remove();
 }
 
 export function closeDeleteModal() {
@@ -111,7 +114,7 @@ export function closeDeleteModal() {
 	thumbModal.hidden = true;
 }
 
-// HELPER FUNCTION: used in addThumbnailsToDom
+// HELPER FUNCTION: used in addThumbnailsToDom for up, down, delete
 function createThumbnailBtn(str1, str2, str3) {
 	const btn = document.createElement('button');
 	btn.textContent = str1;

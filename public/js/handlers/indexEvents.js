@@ -32,6 +32,7 @@ const innerModal = document.querySelector('.modal');
 export function initHomePage() {
 	const savedSearches = getLocalStorage('search-phrases');
 	const images = getLocalStorage('fetched-search-results');
+	
 	if (!savedSearches || !images) {
 		setLocalStorage('search-phrases', []);
 	} else {
@@ -55,7 +56,7 @@ export function handleFormSubmit(event) {
 	event.preventDefault();
 	const savedSearches = getLocalStorage('search-phrases') || [];
 
-	// Handle bad input characters - can I call checkUserInput in getSearchResults instead?
+	// Handle bad input characters
 	const errorElement = document.querySelector('.error-message');
 	if (checkUserInput(input, errorElement)) return;
 

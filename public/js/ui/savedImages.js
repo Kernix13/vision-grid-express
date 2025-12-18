@@ -42,7 +42,7 @@ export function addSavedImagesToDom() {
 	});
 }
 
-// Global variable needed for stopImageSlider called in closeModal
+// Global variable for stopImageSlider which is called in closeModal
 let sliderInterval = null;
 
 export function playImageSlider() {

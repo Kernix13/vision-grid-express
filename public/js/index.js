@@ -11,8 +11,6 @@ import {
 	initHomePage,
 	removeCardOnBtnClick,
 } from './handlers/indexEvents.js';
-import { removeImageCard } from './ui/cards.js';
-import { addRemoveClass } from './ui/classUtils.js';
 import { clearSearchElements } from './ui/searchEls.js';
 import { copyrightYear } from './utils/currentYear.js';
 
@@ -104,5 +102,4 @@ clearSearches.addEventListener('click', (e) => {
 /**
  * * Set Copyright year in footer
  */
-const year = document.getElementById('year');
-year.textContent = copyrightYear();
+document.getElementById('year').textContent = copyrightYear();

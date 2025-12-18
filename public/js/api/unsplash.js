@@ -1,6 +1,7 @@
 import { createImgCard } from '../ui/cards.js';
 import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 
+// Fetch json results from Unsplash API fetch in server.js
 export async function getSearchResults(searchTerm, page) {
 	const searchGrid = document.getElementById('search-grid');
 	const DOMAIN = 'http://localhost:8080';
@@ -16,7 +17,7 @@ export async function getSearchResults(searchTerm, page) {
 		const data = await response.json();
 		const results = await data.results;
 
-		// Pull out important properties for each image + 3 added properties
+		// Pull out important properties for each image + add 3 properties
 		const resultsObject = await results.map((result) => {
 			return {
 				id: result.id,
@@ -36,9 +37,11 @@ export async function getSearchResults(searchTerm, page) {
 
 		// Save results to localStorage for use on index.html
 		setLocalStorage('fetched-search-results', resultsObject);
+		
+		// Render image cards for each of the 12 images fetched
 		searchGrid.textContent = '';
-		// Display image cards for each of the 12 images fetched
 		createImgCard(getLocalStorage('fetched-search-results'), searchGrid);
+		
 		return data;
 	} catch (err) {
 		console.error(err);

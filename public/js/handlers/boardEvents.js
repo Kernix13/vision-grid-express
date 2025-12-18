@@ -33,8 +33,8 @@ export function initBoardPage() {
 		addSavedImagesToDom();
 		addThumbnailsToDom();
 
+		// If user has checked a timing for slider, add checked attribute
 		const time = getLocalStorage('slider-time');
-
 		radioBtns.forEach((radio) => {
 			if (time && radio.value === time) {
 				radio.setAttribute('checked', '');
@@ -42,8 +42,10 @@ export function initBoardPage() {
 		});
 	}
 
+	// Set the h1 to default of load user's edit
 	const boardTitle = getLocalStorage('board-title') || 'Your Project Board';
 	h1.textContent = boardTitle;
+
 	input.value = boardTitle;
 }
 
@@ -104,6 +106,7 @@ export function handleThumbnailClick(event) {
 
 	thumbItem.classList.add('selected');
 	setLocalStorage('selected-thumb', thumbItem.dataset.id);
+	
 	// Scroll to the page image for the thumbnail clicked
 	selectImage(id);
 }

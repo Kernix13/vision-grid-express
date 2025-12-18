@@ -123,9 +123,8 @@ settingsBtn.addEventListener('click', () => {
 
 // 18. Set the H1 text to value set by user in settings form input field
 input.addEventListener('input', () => {
-	const value = input.value;
-	h1.textContent = value;
-	setLocalStorage('board-title', value);
+	h1.textContent = input.value;
+	setLocalStorage('board-title', input.value);
 });
 
 // 19. Image slider Play button listener
@@ -139,5 +138,4 @@ allTimes.forEach((time) => {
 /**
  * * Set Copyright year in footer
  */
-const year = document.getElementById('year');
-year.textContent = copyrightYear();
+document.getElementById('year').textContent = copyrightYear();

@@ -69,18 +69,20 @@ export function addSearchTerm(parent, arr) {
 
 // Buttons that clears the home page search related elements and buttons
 export function clearSearchElements() {
+	// 1. Reset local storage
 	setLocalStorage('search-phrases-page', []);
-
 	removeLocalStorage('fetched-search-results');
 	removeLocalStorage('last-search');
 	removeLocalStorage('search-phrases');
 
+	// 2. Clear DOM content
 	searchTerms.textContent = '';
 	resultsTitle.textContent = '';
 	searchGrid.textContent = '';
 	loadMore.textContent = '';
 	clearSearches.textContent = '';
 
+	// 3. Hide UI elements
 	addRemoveClass(clearSearches, 'none', 'inline');
 	addRemoveClass(loadMore, 'none', 'inline');
 	addRemoveClass(resultsTitle, 'none', 'block');

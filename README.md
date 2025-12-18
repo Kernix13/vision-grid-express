@@ -409,9 +409,11 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ## Future Improvements
 
+- [ ] Add a confirmation modal for the "clear all" button
+- [ ] Add an option for the user to remove all saved images
+- [ ] Allow user to uncheck showing any saved image in the lightbox slider
 - [ ] Save everything to a MySQL database instead of `localStorage`
 - [ ] Allow user to fetch only landscape, portrait, or square-ish image formats
-- [ ] Allow user to uncheck showing any saved image in the lightbox slider
 - [ ] Use `srcset` for DOM images on different devices for improved performance
 - [ ] Allow the user to have more than one board
 - [ ] Get the image slider to go full-screen
@@ -515,22 +517,27 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 <!--
 ## ~~To-Do~~ (REMOVE THIS SECTION BY FRIDAY)
 
-> 5 LEFT -> 2 important
+- 🎯 how to hide an api key using Vercel - Serverless or Edge Function?
+- 🎯 how to hide an api key using Netlify - Netlify Function?
+- 🎯 how to hide an api key using Render - EASY! ✅
+
+> 7 LEFT -> 2 important
 
 ### Important
 
-1. **HOME**: Add a confirmation for the "clear all" button
+1. **HOME**: Add a confirmation modal for the "clear all" button
 2. **BOARD**: Add an option to remove all saved images, otherwise, the user has to manually click "x" and confirm for each saved image (EASY - settings form?)
 
 ### Questions/Other
 
 3. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
 4. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
-5. Look into Vercel for live version
+5. Look into Vercel or Render for live version
+6. imgContainer in cards.js - I am creating a container only for the fetch image - why?
 
 ### Bugs
 
-5. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+7. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 
 -->
 <!-- - Add JSDoc comments? Yes, if I have time but not for every function! -->

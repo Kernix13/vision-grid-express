@@ -3,7 +3,7 @@ import { getLocalStorage, setLocalStorage } from '../utils/localStorage.js';
 const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 
-// Add image + other elements to modal on image or play button click
+// Add image + other elements to modal on image click or play button click
 export function setModalContent(element, imgSrc, id) {
   element.textContent = '';
 
@@ -27,13 +27,15 @@ export function setModalContent(element, imgSrc, id) {
     images = getLocalStorage('saved-images');
     modalImg = images.find(img => img.id === id);
 
-    // quoteContainer - img and editable blockquote
-    const quoteContainer = document.createElement('div');
-    quoteContainer.className = 'img-quote';
-    quoteContainer.append(image);
+    // imgQuoteContainer - container for image and editable blockquote
+    const imgQuoteContainer = document.createElement('div');
+    imgQuoteContainer.className = 'img-quote';
+    imgQuoteContainer.append(image);
 
-    editableQuote(quoteContainer, modalImg);
-    element.append(quoteContainer);
+		// Create and append the editable blockquote element
+    editableQuote(imgQuoteContainer, modalImg);
+
+    element.append(imgQuoteContainer);
   } else {
     modalNav(btnsContainer, id, innerModal);
     images = getLocalStorage('fetched-search-results');
@@ -43,10 +45,10 @@ export function setModalContent(element, imgSrc, id) {
     modalSaveRemove(btnsContainer, id, innerModal);
   }
 
-  // To determine landscape vs portrait, adds a class, may not be useful
+  // Determines landscape vs portrait vs square adds a class (may not be useful)
   detectAspectRatio(modalImg, element);
+
   element.append(btnsContainer);
-  console.log('setModalContent in modal.js');
 }
 
 /* HELPER FUNCTION 1: prev and next buttons */
@@ -98,7 +100,7 @@ function modalNav(btnsElement, imgId, modalElement) {
 			} else {
 				domImage = domImageContainer.querySelector('.result-image').src;
 			}
-			// Recursive call of setModalContent
+
 			setModalContent(modalElement, domImage, nextImageObj.id);
 		});
 
@@ -144,7 +146,6 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 				const domImageContainer = document.getElementById(nextImageObj.id);
 				const domImage = domImageContainer.querySelector('.result-image');
 
-				// Recursively call setModalContent
 				setModalContent(modalElement, domImage.src, nextImageObj.id);
 			}
 
@@ -160,7 +161,6 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 
 /* HELPER FUNCTION 3: Detect aspect ratio of image (mainly for the CSS) */
 function detectAspectRatio(img, el) {
-	// Convert localStorage values to number
 	const w = Number(img.width);
 	const h = Number(img.height);
 	// Calculate aspect ratio
@@ -179,7 +179,7 @@ function detectAspectRatio(img, el) {
 	}
 }
 
-/* HELPER FUNCTION 4: Create editable blockquote in board page modal */
+/* HELPER FUNCTION 4: Create & append editable blockquote for board page modal */
 function editableQuote(el, image) {
 	const quote = document.createElement('blockquote');
 	quote.className = 'editable-quote';
