@@ -152,7 +152,7 @@ npm run check
 
 <!-- The images in the 1st column are devicons. See all devicons here: https://github.com/devicons/devicon -->
 
-This is the current state of my project as of December 12th, 2025:
+This is the current state of my project as of December 17th, 2025:
 
 <table>
   <thead>
@@ -409,15 +409,15 @@ Contributions are welcome! If you'd like to help improve this project, please re
 
 ## Future Improvements
 
-- Save everything to a MySQL database instead of `localStorage`
-- Allow user to fetch only landscape, portrait, or square-ish image formats
-- Allow user to uncheck showing any saved image in the lightbox slider
-- Use `srcset` for DOM images on different devices for improved performance
-- Allow the user to have more than one board
-- Get the image slider to go full-screen
-- Dark/Light mode option
-- Add a quote generator API that pairs an inspirational quote with each image
-- Add a music API for motivational music during lightbox slideshow
+- [ ] Save everything to a MySQL database instead of `localStorage`
+- [ ] Allow user to fetch only landscape, portrait, or square-ish image formats
+- [ ] Allow user to uncheck showing any saved image in the lightbox slider
+- [ ] Use `srcset` for DOM images on different devices for improved performance
+- [ ] Allow the user to have more than one board
+- [ ] Get the image slider to go full-screen
+- [ ] Dark/Light mode option
+- [ ] Add a quote generator API that pairs an inspirational quote with each image
+- [ ] Add a music API for motivational music during lightbox slideshow
 
 <br>
 
