@@ -113,9 +113,9 @@ npm run check
   - Click any image to view a larger, aspect-correct version in a modal.
 - Modal Viewer
   - Navigate through all images currently loaded on the page.
-  - Save or remove images from within the modal.
+  - You can also save or remove images from within the modal.
 - Load More
-  - The "Load More" button fetches the next page of images for the current search term.
+  - The "Load More" button fetches the next page of images for the current search.
 
 ### Vision Board Page
 
@@ -143,8 +143,8 @@ npm run check
   - These affirmations are shown in the full-screen slider instead of your page notes.
 - Lightbox Slider
   - A full-screen modal that cycles through saved images.
-  - Adjustable timing between slides.
-  - Displays the image's affirmation/goal statement created in the modal.
+  - The slider also displays the image's affirmation/goal statement created in the modal.
+  - Adjustable timing between slides (6, 8, 10, 15 or 20 seconds).
 
 <div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
 
@@ -520,8 +520,9 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 - 🎯 how to hide an api key using Vercel - Serverless or Edge Function?
 - 🎯 how to hide an api key using Netlify - Netlify Function?
 - 🎯 how to hide an api key using Render - EASY! ✅
+- RENDER: "Your free instance will spin down with inactivity, which can delay requests by 50 seconds or more" - https://vision-grid.onrender.com/
 
-> 7 LEFT -> 2 important
+> 6 LEFT -> 2 important
 
 ### Important
 
@@ -530,14 +531,13 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 
 ### Questions/Other
 
-3. Change the hrefs in robots.txt, sitemap.xml, and SEO tags when/if I go live
-4. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
-5. Look into Vercel or Render for live version
-6. imgContainer in cards.js - I am creating a container only for the fetch image - why?
+3. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
+4. Look into Vercel or Render for live version
+5. imgContainer in cards.js - I am creating a container only for the fetch image - why?
 
 ### Bugs
 
-7. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 
 -->
 <!-- - Add JSDoc comments? Yes, if I have time but not for every function! -->

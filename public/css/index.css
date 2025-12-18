@@ -76,7 +76,7 @@ input[type="search"]:focus {
 .search-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 1.5rem;
+	gap: 3rem 1.5rem;
 	justify-items: center;
 }
 
@@ -87,7 +87,7 @@ input[type="search"]:focus {
 	width: 100%;
 	border-radius: 0.25rem;
 	border: 1px solid var(--primary-muted-2);
-	box-shadow: 0 2px 8px 1px var(--primary-muted-2);
+	box-shadow: 0 2px 8px 2px var(--primary-muted-2);
 	overflow: hidden; /* Contain image scaling */
 	transition:
 		opacity 300ms ease,
