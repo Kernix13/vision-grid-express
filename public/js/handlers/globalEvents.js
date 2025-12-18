@@ -19,12 +19,12 @@ setAriaExpanded();
  * * Close Home and Board page modal
  */
 export function closeModal() {
-  modalBg.classList.remove('show-modal');
-  modalBg.hidden = true;
-  if (innerModal.classList.contains('play')) {
-    innerModal.classList.remove('play');
-    stopImageSlider();
-  }
+	modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+	if (innerModal.classList.contains('play')) {
+		innerModal.classList.remove('play');
+		stopImageSlider();
+	}
 }
 
 /**

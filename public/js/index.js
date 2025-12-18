@@ -18,7 +18,6 @@ import { copyrightYear } from './utils/currentYear.js';
 const form = document.getElementById('search-form');
 const searchTerms = document.getElementById('search-terms');
 const clearSearches = document.getElementById('clear-searches');
-const resultsTitle = document.getElementById('results-title');
 const searchGrid = document.getElementById('search-grid');
 const loadMore = document.getElementById('load-more');
 // Image modal elements:
@@ -79,11 +78,11 @@ window.addEventListener('click', (e) => {
 });
 
 // 12. Close image modal listener on Escape key keydown
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    modalBg.classList.remove('show-modal');
-    modalBg.hidden = true;
-  }
+document.addEventListener('keydown', (e) => {
+	if (e.key === 'Escape') {
+		modalBg.classList.remove('show-modal');
+		modalBg.hidden = true;
+	}
 });
 
 /**

@@ -106,7 +106,7 @@ export function handleThumbnailClick(event) {
 
 	thumbItem.classList.add('selected');
 	setLocalStorage('selected-thumb', thumbItem.dataset.id);
-	
+
 	// Scroll to the page image for the thumbnail clicked
 	selectImage(id);
 }

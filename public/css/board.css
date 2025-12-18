@@ -410,7 +410,6 @@ input[type="radio"] {
 .play-slider {
 	cursor: pointer;
 	font-size: 1.125rem;
-	font: inherit;
 	color: var(--dark-gray);
 	padding: 0.375rem 0.75rem;
 	background-color: var(--white);

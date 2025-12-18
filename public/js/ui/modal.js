@@ -5,50 +5,50 @@ const innerModal = document.querySelector('.modal');
 
 // Add image + other elements to modal on image click or play button click
 export function setModalContent(element, imgSrc, id) {
-  element.textContent = '';
+	element.textContent = '';
 
-  const image = document.createElement('img');
-  image.src = imgSrc;
-  image.className = 'modal-image';
+	const image = document.createElement('img');
+	image.src = imgSrc;
+	image.className = 'modal-image';
 
-  const btnsContainer = document.createElement('div');
-  btnsContainer.className = 'modal-buttons';
+	const btnsContainer = document.createElement('div');
+	btnsContainer.className = 'modal-buttons';
 
-  let images = [];
-  let modalImg = {};
-  const page = window.location.pathname;
+	let images = [];
+	let modalImg = {};
+	const page = window.location.pathname;
 
-  // Load modal elements based on the page
-  if (page === '/board.html') {
-    // Add prev/next navigation only if play btn has not been clicked
-    if (!innerModal.classList.contains('play')) {
-      modalNav(btnsContainer, id, innerModal);
-    }
-    images = getLocalStorage('saved-images');
-    modalImg = images.find(img => img.id === id);
+	// Load modal elements based on the page
+	if (page === '/board.html') {
+		// Add prev/next navigation only if play btn has not been clicked
+		if (!innerModal.classList.contains('play')) {
+			modalNav(btnsContainer, id, innerModal);
+		}
+		images = getLocalStorage('saved-images');
+		modalImg = images.find((img) => img.id === id);
 
-    // imgQuoteContainer - container for image and editable blockquote
-    const imgQuoteContainer = document.createElement('div');
-    imgQuoteContainer.className = 'img-quote';
-    imgQuoteContainer.append(image);
+		// imgQuoteContainer - container for image and editable blockquote
+		const imgQuoteContainer = document.createElement('div');
+		imgQuoteContainer.className = 'img-quote';
+		imgQuoteContainer.append(image);
 
 		// Create and append the editable blockquote element
-    editableQuote(imgQuoteContainer, modalImg);
+		editableQuote(imgQuoteContainer, modalImg);
 
-    element.append(imgQuoteContainer);
-  } else {
-    modalNav(btnsContainer, id, innerModal);
-    images = getLocalStorage('fetched-search-results');
-    modalImg = images.find(img => img.id === id);
+		element.append(imgQuoteContainer);
+	} else {
+		modalNav(btnsContainer, id, innerModal);
+		images = getLocalStorage('fetched-search-results');
+		modalImg = images.find((img) => img.id === id);
 
-    element.append(image);
-    modalSaveRemove(btnsContainer, id, innerModal);
-  }
+		element.append(image);
+		modalSaveRemove(btnsContainer, id, innerModal);
+	}
 
-  // Determines landscape vs portrait vs square adds a class (may not be useful)
-  detectAspectRatio(modalImg, element);
+	// Determines landscape vs portrait vs square adds a class (may not be useful)
+	detectAspectRatio(modalImg, element);
 
-  element.append(btnsContainer);
+	element.append(btnsContainer);
 }
 
 /* HELPER FUNCTION 1: prev and next buttons */

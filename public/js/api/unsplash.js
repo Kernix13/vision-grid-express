@@ -37,11 +37,11 @@ export async function getSearchResults(searchTerm, page) {
 
 		// Save results to localStorage for use on index.html
 		setLocalStorage('fetched-search-results', resultsObject);
-		
+
 		// Render image cards for each of the 12 images fetched
 		searchGrid.textContent = '';
 		createImgCard(getLocalStorage('fetched-search-results'), searchGrid);
-		
+
 		return data;
 	} catch (err) {
 		console.error(err);

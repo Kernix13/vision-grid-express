@@ -18,7 +18,7 @@ export function createImgCard(arr) {
 		image.className = 'result-image';
 		image.src = obj.imageSmall;
 		image.alt = obj.description;
-		
+
 		// These conditionals are to improve lighthouse performance score
 		if (i === 0) image.fetchPriority = 'high';
 		if (i !== 0) image.loading = 'lazy';
