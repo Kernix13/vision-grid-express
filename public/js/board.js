@@ -8,11 +8,11 @@ import {
 	saveUserText,
 } from './handlers/boardEvents.js';
 import {
-	closeModal,
 	scrollFunction,
 	smoothScrollBackToTop,
 	toggleMenu,
 } from './handlers/globalEvents.js';
+import { closeModal } from './ui/savedImages.js';
 import { toggleDisplay } from './ui/classUtils.js';
 import { closeDeleteModal, deleteImage } from './ui/thumbnails.js';
 import { copyrightYear } from './utils/currentYear.js';

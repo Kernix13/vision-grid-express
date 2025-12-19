@@ -1,6 +1,7 @@
 import { getLocalStorage } from '../utils/localStorage.js';
 import { setModalContent } from './modal.js';
 
+const modalBg = document.getElementById('modal-bg');
 const innerModal = document.querySelector('.modal');
 const radioBtns = document.querySelectorAll('.radio-option input');
 
@@ -79,4 +80,14 @@ export function stopImageSlider() {
 			time.removeAttribute('checked');
 		}
 	});
+}
+
+
+export function closeModal() {
+	modalBg.classList.remove('show-modal');
+	modalBg.hidden = true;
+	if (innerModal.classList.contains('play')) {
+		innerModal.classList.remove('play');
+		stopImageSlider();
+	}
 }

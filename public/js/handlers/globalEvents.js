@@ -1,7 +1,3 @@
-import { stopImageSlider } from '../ui/savedImages.js';
-
-const modalBg = document.getElementById('modal-bg');
-const innerModal = document.querySelector('.modal');
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const backToTopButton = document.querySelector('#back-to-top-btn');
@@ -15,18 +11,6 @@ function setAccessibilityAtrributes() {
 	}
 }
 setAccessibilityAtrributes();
-
-/**
- * * Close Home and Board page modal
- */
-export function closeModal() {
-	modalBg.classList.remove('show-modal');
-	modalBg.hidden = true;
-	if (innerModal.classList.contains('play')) {
-		innerModal.classList.remove('play');
-		stopImageSlider();
-	}
-}
 
 /**
  * * ⚠️ SKIP THIS CODE - this function is from previous projects
