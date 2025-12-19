@@ -12,8 +12,8 @@ import {
 	smoothScrollBackToTop,
 	toggleMenu,
 } from './handlers/globalEvents.js';
-import { closeModal } from './ui/savedImages.js';
 import { toggleDisplay } from './ui/classUtils.js';
+import { closeModal } from './ui/savedImages.js';
 import { closeDeleteModal, deleteImage } from './ui/thumbnails.js';
 import { copyrightYear } from './utils/currentYear.js';
 import { getLocalStorage, setLocalStorage } from './utils/localStorage.js';
@@ -124,7 +124,7 @@ settingsBtn.addEventListener('click', () => {
 window.addEventListener('click', (e) => {
 	const isNotSettingsForm = !settingsForm.contains(e.target);
 	const isNotSettingsBtn = !settingsBtn.contains(e.target);
-	const isOnScreen = settingsForm.classList.contains('onscreen')
+	const isOnScreen = settingsForm.classList.contains('onscreen');
 
 	if (isNotSettingsForm && isNotSettingsBtn && isOnScreen) {
 		toggleDisplay(settingsForm, settingsBtn, 'Settings');

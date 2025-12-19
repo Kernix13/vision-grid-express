@@ -82,7 +82,6 @@ export function stopImageSlider() {
 	});
 }
 
-
 export function closeModal() {
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
