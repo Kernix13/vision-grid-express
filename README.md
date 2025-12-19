@@ -1,7 +1,7 @@
 # VisionGrid
 
 <div align="center"><img width="686" height="415" alt="image" src="https://github.com/user-attachments/assets/a2efd3fa-04e1-44fb-8287-90f362e7a82c" /></div>
-<p align="center"><em>Home page search resuls image cards</em></p>
+<p align="center"><em>Home page search results image cards</em></p>
 
 <br>
 
@@ -137,7 +137,7 @@ npm run check
   - Click the page image or editable text box to close the thumbnail strip.
 - Affirmation / Goal Statement
   - Click any saved image on the page to open a modal with a larger view.
-  - Add an affirmation or goal statement for that image (115 character limit).
+  - Add an affirmation or goal statement for that image (115-character limit).
   - Navigate to other saved images within the modal to quickly update each affirmation.
   - These affirmations are shown in the full-screen slider instead of your page notes.
 - Lightbox Slider
@@ -486,7 +486,7 @@ Design & UI:
 3. [Kevin Powell](https://www.youtube.com/@KevinPowell) videos on CSS Grid, modals, and many other useful CSS properties.
 4. [Google Fonts](https://fonts.google.com/): Downloaded the `woff2` files for _DM Sans_, _Inter_, and _Allura_.
 5. [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
-6. [Boostrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page.
+6. [Bootstrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page.
 
 Accessibility:
 

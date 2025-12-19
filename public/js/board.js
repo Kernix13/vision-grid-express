@@ -78,13 +78,11 @@ document.addEventListener('keydown', (e) => {
 });
 
 /**
- * * Thumbnails listners
+ * * Thumbnails listeners
  */
 // 10. Show/hide thumbnails strip & change button label
 thumbnailsBtn.addEventListener('click', () => {
 	toggleDisplay(thumbnails, thumbnailsBtn, 'Thumbnails');
-	thumbnails.removeAttribute('inert');
-	thumbnails.setAttribute('aria-hidden', 'false');
 });
 
 // 11. Add/remove 'selected' class on click of any thumbnail image + scroll to page image
@@ -112,13 +110,22 @@ cancelBtn.addEventListener('click', closeDeleteModal);
 deleteClose.addEventListener('click', closeDeleteModal);
 
 /**
- * * Settings form listners
+ * * Settings form listeners
  */
 // 17. Show/Hide settings form & change button label
 settingsBtn.addEventListener('click', () => {
 	toggleDisplay(settingsForm, settingsBtn, 'Settings');
-	settingsForm.removeAttribute('inert');
-	settingsForm.setAttribute('aria-hidden', 'false');
+});
+
+// 18. Close settings form on window click
+window.addEventListener('click', (e) => {
+	const isNotSettingsForm = !settingsForm.contains(e.target);
+	const isNotSettingsBtn = !settingsBtn.contains(e.target);
+	const isOnScreen = settingsForm.classList.contains('onscreen')
+
+	if (isNotSettingsForm && isNotSettingsBtn && isOnScreen) {
+		toggleDisplay(settingsForm, settingsBtn, 'Settings');
+	}
 });
 
 // 18. Set the H1 text to value set by user in settings form input field
