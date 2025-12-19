@@ -1,6 +1,5 @@
 # VisionGrid
 
-<!-- Take a new home page screenshot when I am done -->
 <div align="center"><img width="686" height="415" alt="image" src="https://github.com/user-attachments/assets/a2efd3fa-04e1-44fb-8287-90f362e7a82c" /></div>
 <p align="center"><em>Home page search resuls image cards</em></p>
 
@@ -150,7 +149,7 @@ npm run check
 
 ## Tech Stack
 
-<!-- The images in the 1st column are devicons. See all devicons here: https://github.com/devicons/devicon -->
+<!-- See all devicons here: https://github.com/devicons/devicon -->
 
 This is the current state of my project as of December 17th, 2025:
 
@@ -199,7 +198,6 @@ This is the current state of my project as of December 17th, 2025:
           <li>ES Modules, async code using the Fetch API, and <code>localStorage</code> for client-side persistence</li>
           <li>Modern JavaScript features: array destructuring, spread operator, and template literals</li>
           <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>, <code>map</code>
-          <!-- <li>UI interactions: mobile menu, back-to-top button, and modals</li> -->
           </li>
           <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, <code>input</code>, <code>transitionend</code>, and <code>DOMContentLoaded</code> listeners; event delegation for dynamic elements</li>
         </ul>
@@ -265,7 +263,6 @@ This is the current state of my project as of December 17th, 2025:
           <li>Branch-based development using pull requests and merge commits</li>
           <li>Contributing: MIT License, CONTRIBUTING.md, and CODE_OF_CONDUCT.md</li>
           <li><code>.github</code> folder for Issues and Pull Request templates</li>
-          <!-- <li>Comprehensive README using open-source best practices</li> -->
         </ul>
       </td>
     </tr>
@@ -288,7 +285,7 @@ This is the current state of my project as of December 17th, 2025:
 
 ## Project Structure
 
-<!-- try python, bash or yml as alternate languages for a directory tree block -->
+<!-- Use python, bash or yml as languages for a directory tree block -->
 
 ```python
 /
@@ -338,8 +335,6 @@ This is the current state of my project as of December 17th, 2025:
 ---
 
 ## Capstone Requirements
-
-<!-- HTML table syntax required or else editing the table in VS Code would be difficult -->
 
 ### Feature Implementation
 
@@ -499,8 +494,6 @@ Accessibility:
 2. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements.
 3. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages.
 
-<!-- - CodePen [Back to Top Button with HTML, CSS and JavaScript](https://codepen.io/Coding_Journey/pen/LMrLQV) by [Coding Journey](https://codepen.io/Coding_Journey) -->
-
 <br>
 
 ## License
@@ -523,7 +516,7 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 - 🎯 how to hide an api key using Render - EASY! ✅
 - RENDER: "Your free instance will spin down with inactivity, which can delay requests by 50 seconds or more" - https://vision-grid.onrender.com/
 
-> 6 LEFT -> 2 important
+> 7 LEFT -> 2 important
 
 ### Important
 
@@ -535,18 +528,14 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 3. Why when I wrapped sliderTime value in Number() did my setting of localStorage break?
 4. Look into Vercel or Render for live version
 5. imgContainer in cards.js - I am creating a container only for the fetch image - why?
+6. h1 on index on small screens needs more line-height
 
 ### Bugs
 
-6. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
+7. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 
--->
-<!-- - Add JSDoc comments? Yes, if I have time but not for every function! -->
+- Add JSDoc comments? Yes, if I have time but not for every function!
 
-<!--
-  ICONS: https://icons.getbootstrap.com/
-  ICONS: https://ionic.io/ionicons
-  ICONS: https://www.svgrepo.com/
 -->
 
 <!--
