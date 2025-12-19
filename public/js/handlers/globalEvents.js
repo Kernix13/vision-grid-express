@@ -7,13 +7,14 @@ const navMenu = document.getElementById('nav-menu');
 const backToTopButton = document.querySelector('#back-to-top-btn');
 
 // If device is 962px (menu media query) or less wide, add aria-expanded attribute
-function setAriaExpanded() {
+function setAccessibilityAtrributes() {
 	const width = document.documentElement.clientWidth;
 	if (width <= 962) {
 		hamburger.setAttribute('aria-expanded', false);
+		navMenu.setAttribute('inert', '');
 	}
 }
-setAriaExpanded();
+setAccessibilityAtrributes();
 
 /**
  * * Close Home and Board page modal
@@ -36,10 +37,16 @@ export function toggleMenu() {
 	hamburger.classList.toggle('active');
 	navMenu.classList.toggle('active');
 
-	/* Toggle aria-expanded & aria-hidden values */
+	/* Toggle/remove aria-expanded & aria-hidden values & inert */
 	const menuOpen = navMenu.classList.contains('active');
 	hamburger.setAttribute('aria-expanded', menuOpen);
 	navMenu.setAttribute('aria-hidden', !menuOpen);
+
+	if (menuOpen) {
+		navMenu.removeAttribute('inert');
+	} else {
+		navMenu.setAttribute('inert', '');
+	}
 }
 
 /**
