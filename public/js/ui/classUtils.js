@@ -13,14 +13,14 @@ export function addRemoveClass(element, add, remove) {
 // Toggle display of settings form and thumbnails strip on board page
 export function toggleDisplay(el, btn, str) {
 	el.classList.toggle('onscreen');
-	el.classList.toggle('offscreen');
-	
 
 	if (el.classList.contains('onscreen')) {
+		el.classList.remove('offscreen');
 		btn.textContent = `Hide ${str}`;
 		el.removeAttribute('inert');
 		el.setAttribute('aria-hidden', 'false');
 	} else {
+		el.classList.add('offscreen');
 		btn.textContent = `Show ${str}`;
 		el.setAttribute('inert', '');
 		el.setAttribute('aria-hidden', 'true');

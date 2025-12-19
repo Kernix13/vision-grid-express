@@ -95,7 +95,10 @@ thumbnails.addEventListener('click', handleThumbnailBtns);
 imgTextContainer.addEventListener('click', () => {
 	if (thumbnails.classList.contains('onscreen')) {
 		thumbnails.classList.remove('onscreen');
+		thumbnails.classList.add('offscreen');
 		thumbnailsBtn.innerText = 'Show Thumbnails';
+		thumbnails.setAttribute('inert', '');
+		thumbnails.setAttribute('aria-hidden', 'true');
 	}
 });
 
