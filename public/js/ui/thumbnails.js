@@ -3,6 +3,7 @@ import { addSavedImagesToDom } from './savedImages.js';
 
 // Add thumbnail version user saved images to the page on board.html
 export function addThumbnailsToDom() {
+	console.log('addThumbnailsToDom')
 	const savedImages = getLocalStorage('saved-images');
 
 	const thumbnails = document.querySelector('.thumbnails');
@@ -55,6 +56,7 @@ export function addThumbnailsToDom() {
 
 // More the thumbnail & page image up or down
 export function moveImage(id, direction) {
+	console.log('moveImage')
 	const savedImages = getLocalStorage('saved-images');
 	const idx = savedImages.findIndex((img) => img.id === id);
 	if (idx === -1) return;
@@ -86,6 +88,7 @@ export function moveImage(id, direction) {
 
 // Scroll to page image when thumbnail is clicked
 export function selectImage(id) {
+	console.log('selectImage')
 	// Container for page image and its editable text element
 	const imageText = document.getElementById(id);
 	if (!imageText) return;
@@ -95,6 +98,7 @@ export function selectImage(id) {
 
 // Function that removes the page image and thumbnail with delete modal confirmation
 export function deleteImage(id) {
+	console.log('deleteImage')
 	// Container for thumbnail and button container
 	const thumbItem = document.querySelector(`[data-id="${id}"]`);
 	// Container for page image and its editable text element
@@ -109,6 +113,7 @@ export function deleteImage(id) {
 }
 
 export function closeDeleteModal() {
+	console.log('closeDeleteModal')
 	const thumbModal = document.getElementById('thumb-modal');
 	thumbModal.classList.remove('show-modal');
 	thumbModal.hidden = true;

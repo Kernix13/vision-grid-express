@@ -5,6 +5,7 @@ const innerModal = document.querySelector('.modal');
 
 // Add image + other elements to modal on image click or play button click
 export function setModalContent(element, imgSrc, id) {
+	console.log('setModalContent')
 	element.textContent = '';
 
 	const image = document.createElement('img');
@@ -53,6 +54,7 @@ export function setModalContent(element, imgSrc, id) {
 
 /* HELPER FUNCTION 1: prev and next buttons */
 function modalNav(btnsElement, imgId, modalElement) {
+	console.log('modalNav')
 	const navItems = [
 		{ name: 'prev', symbol: '<', direction: -1 },
 		{ name: 'next', symbol: '>', direction: 1 },
@@ -111,6 +113,7 @@ function modalNav(btnsElement, imgId, modalElement) {
 /* HELPER FUNCTION 2: Save and Remove buttons from modal + nav to next item */
 function modalSaveRemove(btnsElement, imgId, modalElement) {
 	const arr = ['Save', 'Remove'];
+	console.log('modalSaveRemove')
 
 	arr.forEach((item) => {
 		const btn = document.createElement('button');
@@ -161,6 +164,7 @@ function modalSaveRemove(btnsElement, imgId, modalElement) {
 
 /* HELPER FUNCTION 3: Detect aspect ratio of image (mainly for the CSS) */
 function detectAspectRatio(img, el) {
+	console.log('detectAspectRatio')
 	const w = Number(img.width);
 	const h = Number(img.height);
 	// Calculate aspect ratio

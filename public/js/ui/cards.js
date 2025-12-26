@@ -45,7 +45,6 @@ export function createImgCard(arr) {
 // remove the image/image card on click of Save or Remove button
 export function removeImageCard(event) {
 	const images = getLocalStorage('fetched-search-results');
-	const savedImages = getLocalStorage('saved-images') || [];
 	if (
 		event.target.classList.contains('save') ||
 		event.target.classList.contains('remove')
@@ -57,6 +56,7 @@ export function removeImageCard(event) {
 
 		// Save button only
 		if (event.target.className === 'save') {
+			const savedImages = getLocalStorage('saved-images') || [];
 			const savedImg = images.find((img) => img.id === id);
 			if (!savedImg) return;
 			savedImages.push(savedImg);

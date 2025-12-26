@@ -6,6 +6,7 @@ import {
 	addSearchTerm,
 	renderSearchEls,
 	saveSearchTerm,
+	addSearchText,
 } from '../ui/searchEls.js';
 import { checkUserInput } from '../utils/checkUserInput.js';
 import {
@@ -54,8 +55,7 @@ export function initHomePage() {
  */
 export function handleFormSubmit(event) {
 	event.preventDefault();
-	const savedSearches = getLocalStorage('search-phrases') || [];
-
+	
 	// Handle bad input characters
 	const errorElement = document.querySelector('.error-message');
 	if (checkUserInput(input, errorElement)) return;
@@ -71,9 +71,12 @@ export function handleFormSubmit(event) {
 
 		// Save 3 values to localStorage
 		setLocalStorage('last-search', input.value);
+
+		const savedSearches = getLocalStorage('search-phrases') || [];
 		saveSearchTerm(input.value, savedSearches);
-		const newSearch = { search: input.value, page: searchPage };
+
 		const searchPhrasesPage = getLocalStorage('search-phrases-page') || [];
+		const newSearch = { search: input.value, page: searchPage };
 		searchPhrasesPage.push(newSearch);
 		setLocalStorage('search-phrases-page', searchPhrasesPage);
 
@@ -104,18 +107,18 @@ export function handleLoadMoreBtn() {
 	// Fetch data
 	getSearchResults(lastSearch, page);
 	// Render search related heading and buttons
-	renderSearchEls();
+	// renderSearchEls();
 }
 
 /**
  * * 4. Fetch more images if a past search term button is clicked
  */
 export function handleSearchTermBtn(event) {
-	const savedSearches = getLocalStorage('search-phrases') || [];
 	// EVENT DELEGATION: clicked button inside search-terms container
 	const btn = event.target.closest('button');
 	if (!btn) return;
-
+	
+	const savedSearches = getLocalStorage('search-phrases');
 	const searchTerm = btn.textContent;
 
 	// Increment page number for search term clicked
@@ -125,9 +128,11 @@ export function handleSearchTermBtn(event) {
 
 	// Fetch data
 	getSearchResults(searchTerm, page);
+
 	// Save values to localStorage: 'last-search' & 'search-phrases'
 	setLocalStorage('last-search', searchTerm);
 	saveSearchTerm(searchTerm, savedSearches);
+
 	// Render search related heading and buttons
 	renderSearchEls();
 }
@@ -136,10 +141,11 @@ export function handleSearchTermBtn(event) {
  * * 6. Search images grid: open image in modal on image click
  */
 export function addCardImageToModal(event) {
-	const images = getLocalStorage('fetched-search-results');
 	// EVENT DELEGATION: clicked image inside search-grid container
 	const img = event.target.closest('img.result-image');
 	if (!img) return;
+	
+	const images = getLocalStorage('fetched-search-results');
 
 	// EVENT DELEGATION: the card for the image clicked
 	const card = img.closest('.image-card');

@@ -11,6 +11,7 @@ const resultsTitle = document.getElementById('results-title');
 const searchGrid = document.getElementById('search-grid');
 const loadMore = document.getElementById('load-more');
 
+// This should not be in this file
 export function saveSearchTerm(str, arr) {
 	// Make sure the search term is not the last search term
 	if (str !== arr[arr.length - 1]) {
@@ -26,7 +27,7 @@ export function saveSearchTerm(str, arr) {
 	}
 }
 
-// Does this function make sense?
+// Does this function make sense? NO! 🚫
 export function renderSearchEls() {
 	// Display load more button & button text
 	loadMore.hidden = false;
@@ -42,7 +43,7 @@ export function renderSearchEls() {
 	addSearchText(clearSearches, loadMoreText);
 }
 
-// Adds the textcontent and a span class for 3 elements on the home page
+// Adds the textcontent and a span class for elements on the home page
 export function addSearchText(el, text, spanClass) {
 	el.textContent = '';
 	el.textContent = text;
