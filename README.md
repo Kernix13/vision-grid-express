@@ -1,17 +1,15 @@
-# VisionGrid
+<h1 id="back-to-top">VisionGrid</h1>
 
-<div align="center"><img width="686" height="415" alt="image" src="https://github.com/user-attachments/assets/a2efd3fa-04e1-44fb-8287-90f362e7a82c" /></div>
+<div align="center"><img width="686" height="415" alt="Home page search results image cards" src="https://github.com/user-attachments/assets/a2efd3fa-04e1-44fb-8287-90f362e7a82c" /></div>
 <p align="center"><em>Home page search results image cards</em></p>
 
 <br>
-
-<div id="back-to-top"></div>
 
 ## Project Overview
 
 VisualGrid is a client-side web app for visual project planning and goal-setting. Users can search the Unsplash API, save images to a personalized board, and attach notes or goal statements to each item. The app includes modal image views, a full-screen slider, localStorage persistence, and tools for organizing, annotating, and revisiting saved images.
 
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 ## Getting Started
 
@@ -78,7 +76,7 @@ npm run check
 ### Getting an Unsplash API key
 
 1. Go to the [Unsplash website](https://unsplash.com/) & click the hamburger icon in the top right.
-2. Under the Product heading click Developers/API which takes you to [Unsplash Developers](https://unsplash.com/developers).
+2. Under the Product heading, click [Developers / API](https://unsplash.com/developers).
 3. Click the button labeled "_Register as a developer_".
 4. Fill out the form and click _Join_ to register your account: first name, last name, email address, username, and password.
 5. Click the button labeled "_You apps_".
@@ -90,7 +88,7 @@ npm run check
 
 - **NOTE**: During this process you will be sent an email to the email address you entered above. Click the link in the email to "Confirm your account". You also may need to go back to the developers page and "Your apps" again to get to your Keys.
 
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 ## How It Works
 
@@ -98,7 +96,7 @@ npm run check
 
 <br>
 
-<img width="755" height="371" alt="image" src="https://github.com/user-attachments/assets/fa09c707-0417-42d5-80cb-9e0dd8a2e1da" />
+<img width="755" height="371" alt="view of the image modal with nav buttons and save and remove buttons" src="https://github.com/user-attachments/assets/fa09c707-0417-42d5-80cb-9e0dd8a2e1da" />
 <p align="center"><em>Home page image modal with Save, Remove and navigation buttons</em></p>
 
 <br>
@@ -120,7 +118,7 @@ npm run check
 
 <br>
 
-<img width="932" height="408" alt="image" src="https://github.com/user-attachments/assets/cfdd8b24-17ad-40ae-93d8-2fdc8cb62b10" />
+<img width="932" height="408" alt="view of the board page image & editable text field, thumbnails strip, and buttons" src="https://github.com/user-attachments/assets/cfdd8b24-17ad-40ae-93d8-2fdc8cb62b10" />
 <p align="center"><em>Board page thumbnails strip on right & image with editable text field</em></p>
 
 <br>
@@ -145,11 +143,9 @@ npm run check
   - The slider also displays the image's affirmation/goal statement created in the modal.
   - Adjustable timing between slides (6, 8, 10, 15 or 20 seconds).
 
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 ## Tech Stack
-
-<!-- See all devicons here: https://github.com/devicons/devicon -->
 
 This is the current state of my project as of December 17th, 2025:
 
@@ -165,7 +161,7 @@ This is the current state of my project as of December 17th, 2025:
     <tr>
       <td><img
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-          width="48" height="48" alt="html icon" title="HTML5" /></td>
+          width="48" height="48" alt="HTML5" title="HTML5" /></td>
       <td>
         <ul>
           <li>Meta + SEO tags: title, description, Open Graph, and Twitter card tags</li>
@@ -178,7 +174,7 @@ This is the current state of my project as of December 17th, 2025:
     <!-- CSS -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-          width="40" height="40" alt="css icon" title="CSS3" /></td>
+          width="40" height="40" alt="CSS3" title="CSS3" /></td>
       <td>
         <ul>
           <li>Mobile-first design with media queries using various breakpoints</li>
@@ -192,7 +188,7 @@ This is the current state of my project as of December 17th, 2025:
     <tr>
       <td><img
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-          width="40" height="40" alt="javascript icon" title="JavaScript" /></td>
+          width="40" height="40" alt="JavaScript" title="JavaScript" /></td>
       <td>
         <ul>
           <li>ES Modules, async code using the Fetch API, and <code>localStorage</code> for client-side persistence</li>
@@ -206,7 +202,7 @@ This is the current state of my project as of December 17th, 2025:
     <!-- Node.js -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
-          width="40" height="40" alt="nodejs icon" title="Node.js" /></td>
+          width="40" height="40" alt="Node.js" title="Node.js" /></td>
       <td>
         <ul>
           <li>Local development server environment</li>
@@ -219,7 +215,7 @@ This is the current state of my project as of December 17th, 2025:
     <!-- npm -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg"
-          width="40" height="40" alt="npm icon" title="npm" /></td>
+          width="40" height="40" alt="npm" title="npm" /></td>
       <td>
         <ul>
           <li>Managing dependencies with <code>package.json</code></li>
@@ -230,7 +226,7 @@ This is the current state of my project as of December 17th, 2025:
     </tr>
     <!-- Express.js -->
     <tr>
-      <td><img src="./assets/express.svg" width="40" height="40" alt="Express icon" title="Express.js" />
+      <td><img src="./assets/express.svg" width="40" height="40" alt="Express" title="Express.js" />
       </td>
       <td>
         <ul>
@@ -243,7 +239,7 @@ This is the current state of my project as of December 17th, 2025:
     <!-- Git -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40"
-          height="40" alt="Git icon" title="Git" /></td>
+          height="40" alt="Git" title="Git" /></td>
       <td>
         <ul>
           <li>Version control using add > commit > push workflow</li>
@@ -255,7 +251,7 @@ This is the current state of my project as of December 17th, 2025:
     </tr>
     <!-- GitHub -->
     <tr>
-      <td><img src="./assets/github-original.svg" width="40" height="40" alt="GitHub icon" title="GitHub" />
+      <td><img src="./assets/github-original.svg" width="40" height="40" alt="GitHub" title="GitHub" />
       </td>
       <td>
         <ul>
@@ -269,7 +265,7 @@ This is the current state of my project as of December 17th, 2025:
     <!-- VS Code -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
-          width="40" height="40" alt="VS Code icon" title="VS Code" /></td>
+          width="40" height="40" alt="Visual Studio Code" title="VS Code" /></td>
       <td>
         <ul>
           <!-- <li>Customized VS Code settings (<code>settings.json</code>) and project-level configuration (<code>.vscode/</code>) to control formatting tools</li> -->
@@ -281,7 +277,7 @@ This is the current state of my project as of December 17th, 2025:
   </tbody>
 </table>
 
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 ## Project Structure
 
@@ -319,16 +315,7 @@ This is the current state of my project as of December 17th, 2025:
 │   └── fonts/              # DM Sans and Inter .woff2 files
 ```
 
-<!--
-  Project Tree Structure generators:
-  1. ChatGPT is best IMO
-  2. https://tree.nathanfriend.com/
-  3. https://ascii-tree-generator.com/
-  4. VSCode File Tree Generator extension
-  5. npm tree-cli: https://www.npmjs.com/package/tree-cli
--->
-
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 <br>
 
@@ -394,11 +381,11 @@ This is the current state of my project as of December 17th, 2025:
   </tbody>
 </table>
 
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 ## Contributing
 
-Contributions are welcome! If you'd like to help improve this project, please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on how to get started, our workflow, and code style expectations.
+Contributions are welcome! If you'd like to help improve this project, please read our [contribution guidelines](./CONTRIBUTING.md) on how to get started, our workflow, and code style expectations.
 
 <br>
 
@@ -460,7 +447,7 @@ imgObj.notes = editable.innerHTML.trim();
 p.innerHTML = img.notes || 'You can add or edit notes here...';
 ```
 
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 ## Acknowledgments & Resources
 
@@ -468,7 +455,7 @@ p.innerHTML = img.notes || 'You can add or edit notes here...';
 
 <br>
 
-Code/Technical:
+### Code/Technical:
 
 1. Code:You module lesson material, suggested videos, and Q&A in Slack.
 2. [MDN CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties) for syntax and examples for JavaScript, CSS, and some HTML attributes.
@@ -479,7 +466,7 @@ Code/Technical:
 7. [JavaScript30 course](https://javascript30.com/) by Wes Bos: Day 1, JavaScript Drum Kit video on using the `transitionend` event type for my transitions for the image card removals.
 8. [Guide to Finding Closest Target](https://www.devzery.com/post/closest-target): This was useful for the issues I was having handling event delegation.
 
-Design & UI:
+### Design & UI:
 
 1. [Traversy Media Favicon Generator](https://webutils.io/tool/favicon-generator) for generating my favicons.
 2. [Gary Simon UI Design Course](https://designcourse.com/) for design fundamentals, and component & layout design.
@@ -488,7 +475,7 @@ Design & UI:
 5. [What Font Chrome extension](https://chromewebstore.google.com/detail/whatfont/jabopobgcpjmedljpbcaablpmlmfcogm?hl=en) for verifying that my Google fonts were loading, and checking the displayed font size and weight for elements.
 6. [Bootstrap icons](https://icons.getbootstrap.com/) for SVG icons used on each HTML page.
 
-Accessibility:
+### Accessibility:
 
 1. [WebAim Contrast Checker](https://webaim.org/resources/contrastchecker/) for making color palette choices.
 2. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements.
@@ -500,21 +487,10 @@ Accessibility:
 
 This project is licensed under the [MIT License](./LICENSE).
 
-<!--
-  ❗How to add a license:
-https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository
-  ❗
--->
-
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 <!--
-## ~~To-Do~~ (REMOVE THIS SECTION BY FRIDAY)
-
-- 🎯 how to hide an api key using Vercel - Serverless or Edge Function?
-- 🎯 how to hide an api key using Netlify - Netlify Function?
-- 🎯 how to hide an api key using Render - EASY! ✅
-- RENDER: "Your free instance will spin down with inactivity, which can delay requests by 50 seconds or more" - https://vision-grid.onrender.com/
+## To-Do
 
 > 7 LEFT -> 2 important
 
@@ -535,18 +511,37 @@ https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contr
 7. **BOARD**: Use of innerHTML for board page editable text is an issue! If I switch from localStorage to a database, I need to sanitize that. Or I would have to build some kind of markdown or rich text editor, but that may have the same problem.
 
 - Add JSDoc comments? Yes, if I have time but not for every function!
-
 -->
 
 <!--
-  Create a PR Template:
+  IMPORTANT LINKS
+
+  📌 Accessible Markdown:
+  - https://github.blog/developer-skills/github/5-tips-for-making-your-github-profile-page-accessible/
+
+  📌 Create a PR Template:
   - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository
   - https://axolo.co/blog/p/part-3-github-pull-request-template
   - https://github.com/Kernix13/github-actions-dotfiles/blob/main/dotfiles.md#dot-github-folder
 
-  Create an issues template
+  📌 Create an issues template
   - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository
   - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates
- -->
 
-<!-- Go to https://shields.io/badges, try for-the-badge, flat or flat-square -->
+  📌 Shields.io:
+  - Go to https://shields.io/badges, try for-the-badge, flat or flat-square
+
+  📌 How to add a license:
+  - https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository
+
+  📌 See all devicons here:
+  - https://github.com/devicons/devicon
+
+  📌 Project Tree Structure generators:
+  1. ChatGPT is best IMO: https://chatgpt.com/
+  2. https://tree.nathanfriend.com/
+  3. https://ascii-tree-generator.com/
+  4. VSCode File Tree Generator extension
+  5. npm tree-cli: https://www.npmjs.com/package/tree-cli
+
+ -->
