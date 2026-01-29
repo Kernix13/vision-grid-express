@@ -7,6 +7,7 @@ const radioBtns = document.querySelectorAll('.radio-option input');
 
 // Add user saved images to the page on board.html
 export function addSavedImagesToDom() {
+	console.log('addSavedImagesToDom')
 	const savedImages = getLocalStorage('saved-images');
 	const imgTextContainer = document.getElementById('img-text-container');
 	imgTextContainer.innerHTML = '';
@@ -56,6 +57,7 @@ export function addSavedImagesToDom() {
 let sliderInterval = null;
 
 export function playImageSlider() {
+	console.log('playImageSlider')
 	const savedImages = getLocalStorage('saved-images');
 	// Get the user setting or use 6 seconds as default for slider
 	const sliderTime = getLocalStorage('slider-time') || 6;
@@ -83,6 +85,7 @@ export function playImageSlider() {
 }
 
 export function stopImageSlider() {
+	console.log('stopImageSlider')
 	clearInterval(sliderInterval);
 	radioBtns.forEach((time) => {
 		if (time.checked) {
@@ -92,6 +95,7 @@ export function stopImageSlider() {
 }
 
 export function closeModal() {
+	console.log('closeModal')
 	modalBg.classList.remove('show-modal');
 	modalBg.hidden = true;
 	if (innerModal.classList.contains('play')) {

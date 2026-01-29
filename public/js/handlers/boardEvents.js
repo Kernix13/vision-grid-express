@@ -53,10 +53,11 @@ export function initBoardPage() {
  * * 5. Save editable text to local storage for each image object
  */
 export function saveUserText(event) {
-	const savedImages = getLocalStorage('saved-images');
 	// EVENT DELEGATION: .editable inside #img-text-container
 	const editable = event.target.closest('.editable');
 	if (!editable) return;
+
+	const savedImages = getLocalStorage('saved-images');
 
 	// EVENT DELEGATION: container element for saved image and editable element
 	const imageText = editable.closest('.image-text');
@@ -91,9 +92,12 @@ export function addPageImageToModal(event) {
  * * 11. Add/removes 'selected' class on click of any thumbnail image
  */
 export function handleThumbnailClick(event) {
+	// EVENT BUBBLING ISSUE: return if any element other than the img was clicked
+	const thumbImage = event.target.closest('.thumb-image');
+	if (!thumbImage) return;
+
 	// EVENT DELEGATION: image inside .thumbnails container
 	const thumbItem = event.target.closest('.thumb-item');
-	if (!thumbItem) return;
 
 	// Get the id of the image from the data-id value
 	const id = thumbItem.dataset.id;
@@ -146,6 +150,7 @@ export function handleThumbnailBtns(event) {
 export function handleSliderPlayBtn() {
 	const savedImages = getLocalStorage('saved-images');
 	if (!savedImages || savedImages.length === 0) return;
+	
 	innerModal.classList.add('play');
 	modalBg.classList.add('show-modal');
 	modalBg.hidden = false;
