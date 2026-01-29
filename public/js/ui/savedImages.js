@@ -21,7 +21,16 @@ export function addSavedImagesToDom() {
 		const image = document.createElement('img');
 		image.className = 'regular';
 		image.alt = img.description;
-		image.src = img.imageRegular;
+		image.src = img.imageSmall;
+
+		const imageMedium = `${img.imageRaw}&w=640&fit=max&auto=format`;
+
+		image.srcset = `
+			${img.imageSmall} 400w,
+			${imageMedium} 640w
+		`;
+		image.sizes = '(max-width: 769px) 100vw, (max-width: 1374px) 50vw, 625px';
+
 		// The next 4 lines are to try and get Lighthouse above 80%
 		if (i === 0) image.fetchPriority = 'high';
 		if (i !== 0) image.loading = 'lazy';

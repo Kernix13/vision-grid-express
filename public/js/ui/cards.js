@@ -19,6 +19,16 @@ export function createImgCard(arr) {
 		image.src = obj.imageSmall;
 		image.alt = obj.description;
 
+		const imageMedium = `${obj.imageRaw}&w=640&fit=max&auto=format`;
+
+		image.srcset = `
+			${obj.imageThumb} 200w, 
+			${obj.imageSmall} 400w,
+			${imageMedium} 640w,
+			${obj.imageRegular} 1080w
+		`;
+		image.sizes = '(max-width: 693px) 620px, 400px';
+
 		// These conditionals are to improve lighthouse performance score
 		if (i === 0) image.fetchPriority = 'high';
 		if (i !== 0) image.loading = 'lazy';

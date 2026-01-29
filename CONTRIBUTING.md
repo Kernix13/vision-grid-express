@@ -2,6 +2,8 @@
 
 Thanks for your interest in contributing!
 
+Please note that all contributors are expected to follow our [Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to uphold these guidelines.
+
 ## How to Contribute
 
 1. Check existing issues to avoid duplicates.
