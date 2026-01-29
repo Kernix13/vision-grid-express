@@ -10,6 +10,7 @@
 VisualGrid is a client-side web app for visual project planning and goal-setting. Users can search the Unsplash API, save images to a personalized board, and attach notes or goal statements to each item. The app includes modal image views, a full-screen slider, localStorage persistence, and tools for organizing, annotating, and revisiting saved images.
 
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
+
 ## Technologies Used
 
 | Tools      | Version    |
@@ -17,9 +18,6 @@ VisualGrid is a client-side web app for visual project planning and goal-setting
 | Node.js    | `v22.20.0` |
 | npm        | `10.9.3`   |
 | Express.js | `^5.2.0`   |
-| cors       | `^2.8.5`   |
-| dotenv     | `^17.2.3`  |
-| Biome      | `2.3.8`    |
 
 ## Getting Started
 
@@ -155,6 +153,7 @@ npm run check
 
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
+<!--
 ## Tech Stack
 
 This is the current state of my project as of December 17th, 2025:
@@ -167,7 +166,6 @@ This is the current state of my project as of December 17th, 2025:
     </tr>
   </thead>
   <tbody>
-    <!-- HTML -->
     <tr>
       <td><img
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
@@ -181,7 +179,6 @@ This is the current state of my project as of December 17th, 2025:
         </ul>
       </td>
     </tr>
-    <!-- CSS -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
           width="40" height="40" alt="CSS3" title="CSS3" /></td>
@@ -194,7 +191,6 @@ This is the current state of my project as of December 17th, 2025:
         </ul>
       </td>
     </tr>
-    <!-- JavaScript -->
     <tr>
       <td><img
           src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
@@ -209,20 +205,17 @@ This is the current state of my project as of December 17th, 2025:
         </ul>
       </td>
     </tr>
-    <!-- Node.js -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
           width="40" height="40" alt="Node.js" title="Node.js" /></td>
       <td>
         <ul>
           <li>Local development server environment</li>
-          <!-- <li>Custom npm scripts</li> -->
           <li>Environment variables (<code>process.env</code>) for API keys and configuration</li>
           <li>API routing and static file serving via Express.js</li>
         </ul>
       </td>
     </tr>
-    <!-- npm -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg"
           width="40" height="40" alt="npm" title="npm" /></td>
@@ -234,7 +227,6 @@ This is the current state of my project as of December 17th, 2025:
         </ul>
       </td>
     </tr>
-    <!-- Express.js -->
     <tr>
       <td><img src="./assets/express.svg" width="40" height="40" alt="Express" title="Express.js" />
       </td>
@@ -246,7 +238,6 @@ This is the current state of my project as of December 17th, 2025:
         </ul>
       </td>
     </tr>
-    <!-- Git -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40"
           height="40" alt="Git" title="Git" /></td>
@@ -255,11 +246,9 @@ This is the current state of my project as of December 17th, 2025:
           <li>Version control using add > commit > push workflow</li>
           <li>Local feature branch development with local merges</li>
           <li>Clean commit history with descriptive commit messages</li>
-          <!-- <li>Managed sensitive files using <code>.gitignore</code></li> -->
         </ul>
       </td>
     </tr>
-    <!-- GitHub -->
     <tr>
       <td><img src="./assets/github-original.svg" width="40" height="40" alt="GitHub" title="GitHub" />
       </td>
@@ -272,13 +261,11 @@ This is the current state of my project as of December 17th, 2025:
         </ul>
       </td>
     </tr>
-    <!-- VS Code -->
     <tr>
       <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
           width="40" height="40" alt="Visual Studio Code" title="VS Code" /></td>
       <td>
         <ul>
-          <!-- <li>Customized VS Code settings (<code>settings.json</code>) and project-level configuration (<code>.vscode/</code>) to control formatting tools</li> -->
           <li>Use the integrated terminal for Git commands, package management, and running Node.js/NPM scripts</li>
           <li>Resolved local branch merge conflicts using VS Code's built-in Merge Editor</li>
         </ul>
@@ -288,6 +275,8 @@ This is the current state of my project as of December 17th, 2025:
 </table>
 
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
+
+-->
 
 ## Project Structure
 
@@ -329,7 +318,7 @@ This is the current state of my project as of December 17th, 2025:
 
 <br>
 
----
+<!--
 
 ## Capstone Requirements
 
@@ -393,6 +382,8 @@ This is the current state of my project as of December 17th, 2025:
 
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
+-->
+
 ## Contributing
 
 Contributions are welcome! If you'd like to help improve this project, please read our [contribution guidelines](./CONTRIBUTING.md) on how to get started, our workflow, and code style expectations.
@@ -406,17 +397,15 @@ Contributions are welcome! If you'd like to help improve this project, please re
 - [ ] Allow user to uncheck showing any saved image in the lightbox slider
 - [ ] Save everything to a MySQL database instead of `localStorage`
 - [ ] Allow user to fetch only landscape, portrait, or square-ish image formats
-- [ ] Use `srcset` for DOM images on different devices for improved performance
 - [ ] Allow the user to have more than one board
 - [ ] Get the image slider to go full-screen
 - [ ] Dark/Light mode option
 - [ ] Add a quote generator API that pairs an inspirational quote with each image
 - [ ] Add a music API for motivational music during lightbox slideshow
 
-> for srcset -> https://unsplash.com/documentation#dynamically-resizable-images - see suported parameters
-
 <br>
 
+<!--
 ## Use of AI
 
 I asked ChatGPT for help on project ideas. I gave it a list of my hobbies/interests and its Unsplash idea was the most interesting to me.
@@ -461,6 +450,9 @@ p.innerHTML = img.notes || 'You can add or edit notes here...';
 
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
+-->
+
+<!--
 ## Acknowledgments & Resources
 
 > _The following resources were helpful during the design and development process_
@@ -493,7 +485,7 @@ p.innerHTML = img.notes || 'You can add or edit notes here...';
 2. [VisBug Chrome extension](https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc) for _quickly_ checking contrast ratio for page elements.
 3. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages.
 
-<br>
+-->
 
 ## License
 
