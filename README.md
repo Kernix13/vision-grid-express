@@ -416,6 +416,8 @@ Contributions are welcome! If you'd like to help improve this project, please re
 - [ ] Add a quote generator API that pairs an inspirational quote with each image
 - [ ] Add a music API for motivational music during lightbox slideshow
 
+> for srcset -> https://unsplash.com/documentation#dynamically-resizable-images - see suported parameters
+
 <br>
 
 ## Use of AI
