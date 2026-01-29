@@ -11,7 +11,16 @@
 
 VisualGrid is a client-side web app for visual project planning and goal-setting. Users can search the Unsplash API, save images to a personalized board, and attach notes or goal statements to each item. The app includes modal image views, a full-screen slider, localStorage persistence, and tools for organizing, annotating, and revisiting saved images.
 
-<div align="right">&#8673; <a href="#back-to-top" title="Table of Contents">Back to Top</a></div>
+## Technologies Used
+
+| Tools      | Version    |
+| :--------- | :--------- |
+| Node.js    | `v22.20.0` |
+| npm        | `10.9.3`   |
+| Express.js | `^5.2.0`   |
+| cors       | `^2.8.5`   |
+| dotenv     | `^17.2.3`  |
+| Biome      | `2.3.8`    |
 
 ## Getting Started
 
