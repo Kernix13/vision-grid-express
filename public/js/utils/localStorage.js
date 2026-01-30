@@ -5,12 +5,13 @@ export function setLocalStorage(key, val) {
 
 export function getLocalStorage(key) {
 	console.trace('getLocalStorage: ', key)
-	return JSON.parse(localStorage.getItem(key));
+	const item = localStorage.getItem(key);
+	return item === null ? null : JSON.parse(item);
 }
 
 export function removeLocalStorage(key) {
 	console.trace('removeLocalStorage: ', key)
-	return localStorage.removeItem(key);
+	localStorage.removeItem(key);
 }
 
 export function incrementSearchPage(searchTerm) {
