@@ -11,9 +11,9 @@ VisualGrid is a client-side web app for visual project planning and goal-setting
 
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
-## Technologies Used
+## Requirements
 
-| Tools      | Version    |
+| Tool       | Version    |
 | :--------- | :--------- |
 | Node.js    | `v22.20.0` |
 | npm        | `10.9.3`   |
@@ -34,9 +34,6 @@ cd vision-grid-express
 
 # Install dependencies
 npm install
-
-# Open the project in VS Code
-code .
 ```
 
 <br>
@@ -51,7 +48,7 @@ PORT=port_number
 
 <br>
 
-4. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` to ``8080` or with the port you want to use.
+4. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` to `8080` or with the port you want to use.
 5. Delete the file `.env.example`.
 6. Start the development server:
 
@@ -67,7 +64,7 @@ npm run dev
 Server is running http://localhost:8080
 ```
 
-You can now search for images, save images to your board page, add notes for each saved image, etc.
+You can now search for images using the Unsplash API, save images to your board page, add notes for each saved image, etc.
 
 <br>
 
@@ -139,7 +136,7 @@ npm run check
   - Clicking on any thumbnail takes you to that image on the page.
   - Reorder saved images by moving them up or down.
   - Delete images and their notes from your project.
-  - Choose to show or hide the image in the lightbox slider (WIP)
+  - Choose to show or hide the image in the lightbox slider (_WIP_)
   - Click the page image or editable text box to close the thumbnail strip.
 - Affirmation / Goal Statement
   - Click any saved image on the page to open a modal with a larger view.
@@ -153,130 +150,7 @@ npm run check
 
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
-<!--
-## Tech Stack
-
-This is the current state of my project as of December 17th, 2025:
-
-<table>
-  <thead>
-    <tr>
-      <th>Tech</th>
-      <th>Use</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
-          width="48" height="48" alt="HTML5" title="HTML5" /></td>
-      <td>
-        <ul>
-          <li>Meta + SEO tags: title, description, Open Graph, and Twitter card tags</li>
-          <li>Site identity: full favicon set (<code>.png</code>, <code>.ico</code>, and sizes for cross-browser support)</li>
-          <li>Semantic HTML, skip-to-main link, and use of <code>hidden</code>, <code>inert</code>, <code>aria-*</code> and <code>data-*</code> attributes</li>
-          <li>Supporting files: <code>sitemap.xml</code>, <code>robots.txt</code></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-          width="40" height="40" alt="CSS3" title="CSS3" /></td>
-      <td>
-        <ul>
-          <li>Mobile-first design with media queries using various breakpoints</li>
-          <li>Layout techniques: Flexbox, Grid, and CSS positioning (relative, absolute, fixed)</li>
-          <li>Animations using CSS transitions and <code>@keyframes</code></li>
-          <li>CSS Nesting, custom properties for colors, <code>@font-face</code> for Google fonts</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><img
-          src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-          width="40" height="40" alt="JavaScript" title="JavaScript" /></td>
-      <td>
-        <ul>
-          <li>ES Modules, async code using the Fetch API, and <code>localStorage</code> for client-side persistence</li>
-          <li>Modern JavaScript features: array destructuring, spread operator, and template literals</li>
-          <li>High-Order Array methods used: <code>find</code>, <code>findIndex</code>, <code>filter</code>, <code>forEach</code>, <code>map</code>
-          </li>
-          <li>Event handling: <code>click</code>, <code>submit</code>, <code>focusout</code>, <code>input</code>, <code>transitionend</code>, and <code>DOMContentLoaded</code> listeners; event delegation for dynamic elements</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
-          width="40" height="40" alt="Node.js" title="Node.js" /></td>
-      <td>
-        <ul>
-          <li>Local development server environment</li>
-          <li>Environment variables (<code>process.env</code>) for API keys and configuration</li>
-          <li>API routing and static file serving via Express.js</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/npm/npm-original-wordmark.svg"
-          width="40" height="40" alt="npm" title="npm" /></td>
-      <td>
-        <ul>
-          <li>Managing dependencies with <code>package.json</code></li>
-          <li>Configuring and running npm scripts for development workflow</li>
-          <li>Packages used: Express, CORS, dotenv, compression, Biome</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><img src="./assets/express.svg" width="40" height="40" alt="Express" title="Express.js" />
-      </td>
-      <td>
-        <ul>
-          <li>Express server for basic routing and for handling Unsplash API requests securely</li>
-          <li>Static file serving via <code>express.static</code> middleware</li>
-          <li>CORS and gzip/deflate compression using third-party middleware</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="40"
-          height="40" alt="Git" title="Git" /></td>
-      <td>
-        <ul>
-          <li>Version control using add > commit > push workflow</li>
-          <li>Local feature branch development with local merges</li>
-          <li>Clean commit history with descriptive commit messages</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><img src="./assets/github-original.svg" width="40" height="40" alt="GitHub" title="GitHub" />
-      </td>
-      <td>
-        <ul>
-          <li>Issues with labels for task tracking and bug reporting</li>
-          <li>Branch-based development using pull requests and merge commits</li>
-          <li>Contributing: MIT License, CONTRIBUTING.md, and CODE_OF_CONDUCT.md</li>
-          <li><code>.github</code> folder for Issues and Pull Request templates</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg"
-          width="40" height="40" alt="Visual Studio Code" title="VS Code" /></td>
-      <td>
-        <ul>
-          <li>Use the integrated terminal for Git commands, package management, and running Node.js/NPM scripts</li>
-          <li>Resolved local branch merge conflicts using VS Code's built-in Merge Editor</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
-
--->
+<br>
 
 ## Project Structure
 
@@ -318,78 +192,6 @@ This is the current state of my project as of December 17th, 2025:
 
 <br>
 
-<!--
-
-## Capstone Requirements
-
-### Feature Implementation
-
-- Integrate an API into your project: Fetch images from the Unsplash API: `/api/photos`
-- At least one media query: 8 different media query breakpoints across 5 CSS files
-- Have at least two pages/routes: `index.html`, `board.html`, `about.html`
-
-### Features List (Table 1 & 2)
-
-<table>
-  <thead>
-    <tr>
-      <th>Requirement</th>
-      <th>Implementation</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-      <td><em>Analyze</em> data that is stored in various data structures</td>
-      <td>Retrieve API JSON, save as <code>localStorage</code> objects and strings, used in many functions</td>
-    </tr>
-    <tr>
-      <td>Create a function with 2 or more params with a <code>return</code> value</td>
-      <td>
-      <ul>
-        <li><code>createThumbnailBtn</code> in thumbnails.js</li>
-        <li><code>checkUserInput</code> in checkUserInput.js</li>
-        <li><code>setLocalStorage</code> in localStorage.js</li>
-      </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Display information about the data in your app</td>
-      <td>
-        <ul>
-          <li>Images displayed in 3 different sizes in image cards and in modals</li>
-          <li>Image <code>alt_descriptions</code> added as <code>img</code> <code>alt</code> attribute</li>
-          <li>Add image <code>id</code> as <code>id</code> and <code>data-id</code> attributes to various elements</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Persist data to local storage, display/use that data</td>
-      <td>
-        <ul>
-          <li>Fetched and saved image data from Unsplash API as an array of objects in localStorage</li>
-          <li>5 user interactions/values as strings, arrays, and objects saved to localStorage</li>
-          <li>Images displayed on the page and in modals</li>
-          <li>Settings form data saved to localStorage</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><strong><ins>TABLE 2</ins></strong>: Create a Node.js web server using Express.js</td>
-      <td>Express server with 2 query parameters and middleware</td>
-    </tr>
-  </tbody>
-</table>
-
-<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
-
--->
-
-## Contributing
-
-Contributions are welcome! If you'd like to help improve this project, please read our [contribution guidelines](./CONTRIBUTING.md) on how to get started, our workflow, and code style expectations.
-
-<br>
-
 ## Future Improvements
 
 - [ ] Add a confirmation modal for the "clear all" button
@@ -404,53 +206,6 @@ Contributions are welcome! If you'd like to help improve this project, please re
 - [ ] Add a music API for motivational music during lightbox slideshow
 
 <br>
-
-<!--
-## Use of AI
-
-I asked ChatGPT for help on project ideas. I gave it a list of my hobbies/interests and its Unsplash idea was the most interesting to me.
-
-ChatGPT writes better copy than I do so I asked it to write some of the text in my README and for my HTML pages.
-
-### README Copy & Other Files
-
-1. It generated the "Project Structure" directory tree block above.
-2. I had boilerplate for `CONTRIBUTING.md` from previous projects. It wrote the content I have in there now for this project and the paragraph of text for that section.
-3. I asked ChatGPT about including a `.env.sample` or `.env.example` file. It told me that `.env.example` was more commonly used so I created that file.
-4. ChatGPT gave me an outline for the "How it Works" section
-5. I asked ChatGPT about including `robots.txt` and `sitemap.xml` files. It suggested to add them and wrote the contents for `sitemap.xml`.
-6. ChatGPT edited some of my bullet points in my Tech Stack section, and wrote the points for the tech I am unfamilar with (Node, npm, and Express)
-
-### HTML Copy
-
-1. ChatGPT wrote the H1 title and H2 sub-title for index.html.
-2. It wrote the H2 heading in the footer.
-3. On the About page, it wrote the text for the Intro, Quick Start, and Tips & Best Practices sections. It also edited/revised my bullet points in the other sections on about.html.
-
-### CODE
-
-1. ChatGPT helped me with the code to "contain" the images in the image cards, specifically using `aspect-ratio` and `object-fit`:
-
-```css
-.result-image {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-```
-
-2. Although I was able to save the `contenteditable` text to `localStorage`, I could not figure out how to preserve line breaks. ChatGPT suggested `innerHTML`:
-
-```js
-// in boardEvents.js > saveUserText:
-imgObj.notes = editable.innerHTML.trim();
-
-// in savedImages.js > addSavedImagesToDom:
-p.innerHTML = img.notes || 'You can add or edit notes here...';
-```
-
-<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
-
--->
 
 <!--
 ## Acknowledgments & Resources
@@ -486,6 +241,10 @@ p.innerHTML = img.notes || 'You can add or edit notes here...';
 3. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages.
 
 -->
+
+## Contributing
+
+Contributions are welcome! If you'd like to help improve this project, please read our [contribution guidelines](./CONTRIBUTING.md) on how to get started, our workflow, and code style expectations.
 
 ## License
 
