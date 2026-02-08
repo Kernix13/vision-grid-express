@@ -311,4 +311,10 @@ This project is licensed under the [MIT License](./LICENSE).
   4. VSCode File Tree Generator extension
   5. npm tree-cli: https://www.npmjs.com/package/tree-cli
 
+  📌 Shields.io:
+  - https://img.shields.io/badge/ + LABEL-MESSAGE + -COLOR
+  - https://img.shields.io/badge/LABEL-MESSAGE-COLOR
+  - https://img.shields.io/badge/Node.js-v22.20.0-339933
+  - LABEL-MESSAGE = Node.js-v22.20.0
+  - COLOR = 339933
  -->
