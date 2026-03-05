@@ -1,11 +1,10 @@
-<h1 id="back-to-top">VisionGrid</h1>
+<h1 id="back-to-top">VisionGrid – Goal Planning and Vision Board Web App</h1>
 
 ![Node.js](https://img.shields.io/badge/Node.js-v22.20.0-339933)
 ![Express](https://img.shields.io/badge/Express-v5.2.0-333333)
 ![npm](https://img.shields.io/badge/npm-v10.9.3-CB3837)
 
 <div align="center"><img width="686" height="415" alt="Home page search results image cards" src="https://github.com/user-attachments/assets/a2efd3fa-04e1-44fb-8287-90f362e7a82c" /></div>
-<p align="center"><em>Home page search results image cards</em></p>
 
 <br>
 
