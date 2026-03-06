@@ -4,15 +4,11 @@
 ![Express](https://img.shields.io/badge/Express-v5.2.0-333333)
 ![npm](https://img.shields.io/badge/npm-v10.9.3-CB3837)
 
-<div align="center"><img width="686" height="415" alt="Home page search results image cards" src="./assets/visual-grid-home-page.webp" /></div>
-
-<br>
-
 VisualGrid is a client-side web app for visual project planning and goal setting that helps users collect inspiration and organize ideas using images from the Unsplash API.
 
 Users can attach notes or goal statements to each image and revisit their saved ideas later. The app includes modal image previews, a full-screen slider, and localStorage persistence for managing and organizing saved images.
 
-<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
+<div align="center"><img width="686" height="415" alt="Home page search results image cards" src="./assets/visual-grid-home-page.webp" /></div>
 
 ## Requirements
 
