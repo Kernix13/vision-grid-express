@@ -8,7 +8,13 @@ VisualGrid is a client-side web app for visual project planning and goal setting
 
 Users can attach notes or goal statements to each image and revisit their saved ideas later. The app includes modal image previews, a full-screen slider, and localStorage persistence for managing and organizing saved images.
 
+<br>
+
 <div align="center"><img width="686" height="415" alt="Home page search results image cards" src="./assets/visual-grid-home-page.webp" /></div>
+
+<p align="center"><em>Home page image modal with Save, Remove and navigation buttons</em></p>
+
+<br>
 
 ## Requirements
 
