@@ -1,16 +1,16 @@
-<h1 id="back-to-top">VisionGrid – Goal Planning and Vision Board Web App</h1>
+<h1 id="back-to-top">VisualGrid – Visual Project Planning App Using the Unsplash API</h1>
 
 ![Node.js](https://img.shields.io/badge/Node.js-v22.20.0-339933)
 ![Express](https://img.shields.io/badge/Express-v5.2.0-333333)
 ![npm](https://img.shields.io/badge/npm-v10.9.3-CB3837)
 
-<div align="center"><img width="686" height="415" alt="Home page search results image cards" src="https://github.com/user-attachments/assets/a2efd3fa-04e1-44fb-8287-90f362e7a82c" /></div>
+<div align="center"><img width="686" height="415" alt="Home page search results image cards" src="./assets/visual-grid-home-page.webp" /></div>
 
 <br>
 
-## Project Overview
+VisualGrid is a client-side web app for visual project planning and goal setting that helps users collect inspiration and organize ideas using images from the Unsplash API.
 
-VisualGrid is a client-side web app for visual project planning and goal-setting. Users can search the Unsplash API, save images to a personalized board, and attach notes or goal statements to each item. The app includes modal image views, a full-screen slider, localStorage persistence, and tools for organizing, annotating, and revisiting saved images.
+Users can attach notes or goal statements to each image and revisit their saved ideas later. The app includes modal image previews, a full-screen slider, and localStorage persistence for managing and organizing saved images.
 
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
@@ -104,7 +104,7 @@ npm run check
 
 <br>
 
-<img width="755" height="371" alt="view of the image modal with nav buttons and save and remove buttons" src="https://github.com/user-attachments/assets/fa09c707-0417-42d5-80cb-9e0dd8a2e1da" />
+<img width="755" height="371" alt="view of the image modal with nav buttons and save and remove buttons" src="./assets/image-modal-view.webp" />
 <p align="center"><em>Home page image modal with Save, Remove and navigation buttons</em></p>
 
 <br>
@@ -126,7 +126,7 @@ npm run check
 
 <br>
 
-<img width="932" height="408" alt="view of the board page image & editable text field, thumbnails strip, and buttons" src="https://github.com/user-attachments/assets/cfdd8b24-17ad-40ae-93d8-2fdc8cb62b10" />
+<img width="932" height="408" alt="view of the board page image & editable text field, thumbnails strip, and buttons" src="./assets/project-board-page.webp" />
 <p align="center"><em>Board page thumbnails strip on right & image with editable text field</em></p>
 
 <br>
@@ -197,18 +197,28 @@ npm run check
 
 ## Future Improvements
 
-- [ ] Add a confirmation modal for the "clear all" button
-- [ ] Add an option for the user to remove all saved images
-- [ ] Allow user to uncheck showing any saved image in the lightbox slider
-- [ ] Save everything to a MySQL database instead of `localStorage`
-- [ ] Allow user to fetch only landscape, portrait, or square-ish image formats
-- [ ] Allow the user to have more than one board
-- [ ] Get the image slider to go full-screen
-- [ ] Dark/Light mode option
-- [ ] Add a quote generator API that pairs an inspirational quote with each image
-- [ ] Add a music API for motivational music during lightbox slideshow
+- Add a confirmation modal for the "clear all" button
+- Add an option for the user to remove all saved images
+- Allow user to uncheck showing any saved image in the lightbox slider
+- Save everything to a MySQL database instead of `localStorage`
+- Allow user to fetch only landscape, portrait, or square-ish image formats
+- Allow the user to have more than one board
+- Get the image slider to go full-screen
+- Dark/Light mode option
+- Add a quote generator API that pairs an inspirational quote with each image
+- Add a music API for motivational music during lightbox slideshow
 
 <br>
+
+## Contributing
+
+Contributions are welcome! If you'd like to help improve this project, please read our [contribution guidelines](./CONTRIBUTING.md) on how to get started, our workflow, and code style expectations.
+
+## License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 <!--
 ## Acknowledgments & Resources
@@ -244,16 +254,6 @@ npm run check
 3. [WAVE Evaluation Tool Chrome extension](https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh) for a web accessibility report on my pages.
 
 -->
-
-## Contributing
-
-Contributions are welcome! If you'd like to help improve this project, please read our [contribution guidelines](./CONTRIBUTING.md) on how to get started, our workflow, and code style expectations.
-
-## License
-
-This project is licensed under the [MIT License](./LICENSE).
-
-<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 <!--
 ## To-Do
