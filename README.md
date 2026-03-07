@@ -128,7 +128,7 @@ npm run check
 
 <br>
 
-<img width="932" height="408" alt="view of the board page image & editable text field, thumbnails strip, and buttons" src="./assets/project-board-page.webp" />
+<img width="932" height="408" alt="Your vision board - view of the main visual project planning page for your goals" src="./assets/project-board-page.webp" />
 <p align="center"><em>Board page thumbnails strip on right & image with editable text field</em></p>
 
 <br>
