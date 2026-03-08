@@ -16,91 +16,7 @@ Users can attach notes or goal statements to each image and revisit their saved 
 
 <br>
 
-## Requirements
-
-| Tool       | Version    |
-| :--------- | :--------- |
-| Node.js    | `v22.20.0` |
-| npm        | `10.9.3`   |
-| Express.js | `^5.2.0`   |
-
-## Getting Started
-
-<br>
-
-1. Clone this repo and install dependencies:
-
-```bash
-# Clone this repo
-git clone https://github.com/Kernix13/vision-grid-express.git
-
-# Change into project directory
-cd vision-grid-express
-
-# Install dependencies
-npm install
-```
-
-<br>
-
-2. Create a `.env` file in the project root.
-3. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
-
-```env
-CLIENT_ID=your_unsplash_client_id
-PORT=port_number
-```
-
-<br>
-
-4. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` to `8080` or with the port you want to use.
-5. Delete the file `.env.example`.
-6. Start the development server:
-
-```sh
-npm run dev
-```
-
-<br>
-
-7. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
-
-```sh
-Server is running http://localhost:8080
-```
-
-You can now search for images using the Unsplash API, save images to your board page, add notes for each saved image, etc.
-
-<br>
-
-8. **(OPTIONAL)**: Run Biome for linting and formatting checks on your files:
-
-```sh
-npm run check
-```
-
-<br>
-
-<!-- Consider an h3 here for the app.get function in server.js where 3 other params would be good options: per_page, color, and orientation -->
-
-### Getting an Unsplash API key
-
-1. Go to the [Unsplash website](https://unsplash.com/) & click the hamburger icon in the top right.
-2. Under the Product heading, click [Developers / API](https://unsplash.com/developers).
-3. Click the button labeled "_Register as a developer_".
-4. Fill out the form and click _Join_ to register your account: first name, last name, email address, username, and password.
-5. Click the button labeled "_You apps_".
-6. Click the box with the text "_New Application_".
-7. Under the heading "**_API Use and Guidelines_**", check all of the checkboxes, Read the _Terms of Use_ documentation then click _Accept terms_.
-8. You are presented with a popup asking to enter an _Application name_ and _Description_. Enter a name and description then click "_Create application_".
-9. Go to your application's detail page by clicking on your app name. You can get there by clicking Your apps on the developers main page.
-10. Scroll down to the **_Keys_** section that displays application id, access key, and secret key. The access key is the API key that you will need for this project
-
-- **NOTE**: During this process you will be sent an email to the email address you entered above. Click the link in the email to "Confirm your account". You also may need to go back to the developers page and "Your apps" again to get to your Keys.
-
-<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
-
-## How It Works
+## Features
 
 ### Home / Search Page
 
@@ -156,6 +72,84 @@ npm run check
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 <br>
+
+## Demo / Live Site
+
+Try the project here: https://vision-grid.onrender.com/
+
+<br>
+
+## Technologies Used
+
+| Tool       | Version    |
+| :--------- | :--------- |
+| Node.js    | `v22.20.0` |
+| npm        | `10.9.3`   |
+| Express.js | `^5.2.0`   |
+
+## Installation
+
+<br>
+
+1. Clone this repo and install dependencies:
+
+```bash
+# Clone this repo
+git clone https://github.com/Kernix13/vision-grid-express.git
+
+# Change into project directory
+cd vision-grid-express
+
+# Install dependencies
+npm install
+```
+
+<br>
+
+2. Create a `.env` file in the project root. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
+
+```env
+CLIENT_ID=your_unsplash_client_id
+PORT=port_number
+```
+
+<br>
+
+3. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` to `8080` or with the port you want to use. Delete the file `.env.example`.
+
+### Getting an Unsplash API key
+
+Visit https://unsplash.com/developers and create an API application.
+
+## Usage
+
+1. Start the development server:
+
+```sh
+npm run dev
+```
+
+<br>
+
+2. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
+
+```sh
+Server is running http://localhost:8080
+```
+
+You can now search for images using the Unsplash API, save images to your board page, add notes for each saved image, etc.
+
+<br>
+
+3. **(OPTIONAL)**: Run Biome for linting and formatting checks on your files:
+
+```sh
+npm run check
+```
+
+<br>
+
+<div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
 
 ## Project Structure
 
