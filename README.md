@@ -16,9 +16,32 @@ Users can attach notes or goal statements to each image and revisit their saved 
 
 <br>
 
+## Table of Contents
+
+1. [Features](#features)
+   1. [Search Page](#search-page)
+   1. [Vision Board Page](#vision-board-page)
+1. [Live Demo](#live-demo)
+1. [Technologies Used](#technologies-used)
+1. [Getting Started](#getting-started)
+   1. [Getting an Unsplash API key](#getting-an-unsplash-api-key)
+1. [Project Structure](#project-structure)
+1. [Future Improvements](#future-improvements)
+1. [Contributing](#contributing)
+1. [License](#license)
+
+<br>
+
 ## Features
 
-### Home / Search Page
+<!--
+  Look into what "Features" actually means.
+  1. For me and this project it is geared towards the UI/UX -> the user
+  2. For other repos it seems to revolve around the tech stack
+  - Are both valid, or should I change mine?
+ -->
+
+### Search Page
 
 <br>
 
@@ -73,7 +96,7 @@ Users can attach notes or goal statements to each image and revisit their saved 
 
 <br>
 
-## Demo / Live Site
+## Live Demo
 
 Try the project here: https://vision-grid.onrender.com/
 
@@ -87,7 +110,7 @@ Try the project here: https://vision-grid.onrender.com/
 | npm        | `10.9.3`   |
 | Express.js | `^5.2.0`   |
 
-## Installation
+## Getting Started
 
 <br>
 
@@ -117,13 +140,7 @@ PORT=port_number
 
 3. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` to `8080` or with the port you want to use. Delete the file `.env.example`.
 
-### Getting an Unsplash API key
-
-Visit https://unsplash.com/developers and create an API application.
-
-## Usage
-
-1. Start the development server:
+4. Start the development server:
 
 ```sh
 npm run dev
@@ -131,7 +148,7 @@ npm run dev
 
 <br>
 
-2. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
+5. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
 
 ```sh
 Server is running http://localhost:8080
@@ -141,11 +158,17 @@ You can now search for images using the Unsplash API, save images to your board 
 
 <br>
 
-3. **(OPTIONAL)**: Run Biome for linting and formatting checks on your files:
+6. **(OPTIONAL)**: Run Biome for linting and formatting checks on your files:
 
 ```sh
 npm run check
 ```
+
+<br>
+
+### Getting an Unsplash API key
+
+Visit https://unsplash.com/developers and create an API application.
 
 <br>
 
