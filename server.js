@@ -7,7 +7,10 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 const corsOptions = {
-	origin: `http://localhost:${port}`,
+	origin: [
+    "http://localhost:8080",
+    "https://vision-grid.onrender.com"
+  ]
 };
 
 // Middleware

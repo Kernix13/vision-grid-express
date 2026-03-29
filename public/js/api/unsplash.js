@@ -8,7 +8,8 @@ export async function getSearchResults(searchTerm, page) {
 
 	const endpoint = `/api/photos?query=${encodeURIComponent(searchTerm)}&page=${page}`;
 	try {
-		const response = await fetch(DOMAIN + endpoint);
+		const response = await fetch(endpoint);
+		// const response = await fetch(DOMAIN + endpoint);
 
 		if (!response.ok) {
 			throw new Error(`Response status: ${response.status}`);
