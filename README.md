@@ -23,7 +23,7 @@ Users can attach notes or goal statements to each image and revisit their saved 
    1. [Vision Board Page](#vision-board-page)
 1. [Live Demo](#live-demo)
 1. [Technologies Used](#technologies-used)
-1. [Getting Started](#getting-started)
+1. [Installation and Usage](#installation-and-usage)
    1. [Getting an Unsplash API key](#getting-an-unsplash-api-key)
 1. [Project Structure](#project-structure)
 1. [Future Improvements](#future-improvements)
@@ -110,61 +110,51 @@ Try the project here: https://vision-grid.onrender.com/
 | npm        | `10.9.3`   |
 | Express.js | `^5.2.0`   |
 
-## Getting Started
+## Installation and Usage
 
-<br>
+1. Clone this repo:
 
-1. Clone this repo and install dependencies:
+   ```bash
+   git clone https://github.com/Kernix13/vision-grid-express.git
+   cd vision-grid-express
+   ```
 
-```bash
-# Clone this repo
-git clone https://github.com/Kernix13/vision-grid-express.git
+2. Install dependencies
 
-# Change into project directory
-cd vision-grid-express
+   ```sh
+   npm install
+   ```
 
-# Install dependencies
-npm install
-```
+3. Create a `.env` file in the project root. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
+   ```sh
+   cp .env.example .env
+   ```
+4. Add the replacement env-vars to the `.env` file then delete `.env.example`:
 
-<br>
+   ```env
+   CLIENT_ID=your_unsplash_client_id
+   PORT=port_number
+   ```
 
-2. Create a `.env` file in the project root. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
+5. Start the development server:
 
-```env
-CLIENT_ID=your_unsplash_client_id
-PORT=port_number
-```
+   ```sh
+   npm run dev
+   ```
 
-<br>
+6. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
 
-3. Replace the string `your_unsplash_client_id` with your Unsplash API Client ID, and `port_number` to `8080` or with the port you want to use. Delete the file `.env.example`.
-
-4. Start the development server:
-
-```sh
-npm run dev
-```
-
-<br>
-
-5. <kbd>CTRL</kbd> + click the link `http://localhost:8080` in the terminal to open up `localhost` on port `8080`:
-
-```sh
-Server is running http://localhost:8080
-```
+   ```sh
+   Server is running http://localhost:8080
+   ```
 
 You can now search for images using the Unsplash API, save images to your board page, add notes for each saved image, etc.
 
-<br>
+7. **(OPTIONAL)**: Run Biome for linting and formatting checks on your files:
 
-6. **(OPTIONAL)**: Run Biome for linting and formatting checks on your files:
-
-```sh
-npm run check
-```
-
-<br>
+   ```sh
+   npm run check
+   ```
 
 ### Getting an Unsplash API key
 
