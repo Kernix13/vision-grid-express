@@ -125,10 +125,12 @@ Try the project here: https://vision-grid.onrender.com/
    npm install
    ```
 
-3. Create a `.env` file in the project root. Copy the lines in `.env.example` and paste them into your newly created `.env` file.
+3. Create a `.env` file in the project root.
+
    ```sh
    cp .env.example .env
    ```
+
 4. Add the replacement env-vars to the `.env` file then delete `.env.example`:
 
    ```env
@@ -158,11 +160,14 @@ You can now search for images using the Unsplash API, save images to your board 
 
 ### Getting an Unsplash API key
 
-Visit https://unsplash.com/developers and create an API application.
-
-<br>
+1. Create a free Unsplash account.
+2. Visit the [Unsplash Developer Portal](https://unsplash.com/developers) and click on **Your apps**.
+3. Click the **New Application** button and follow the prompts.
+4. Scroll to **Keys** and copy your Access key.
 
 <div align="right">&#8673; <a href="#back-to-top">Back to Top</a></div>
+
+<br>
 
 ## Project Structure
 
