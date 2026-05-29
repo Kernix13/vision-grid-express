@@ -42,6 +42,7 @@ export async function getSearchResults(searchTerm, page) {
 		// Render image cards for each of the 12 images fetched
 		createImgCard(getLocalStorage('fetched-search-results'), searchGrid);
 
+		console.log(data.results);
 		return data;
 	} catch (err) {
 		console.error(err);
