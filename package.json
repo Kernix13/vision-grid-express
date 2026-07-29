@@ -19,6 +19,6 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.3.8",
-		"nodemon": "^3.1.10"
+		"nodemon": "^3.1.14"
 	}
 }
